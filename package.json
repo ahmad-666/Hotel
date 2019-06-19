@@ -1,0 +1,24 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "description": "hotel booking site",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "ahmad",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "autoprefixer": "^9.4.9",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-clean-easy": "^1.0.2",
+    "sass": "^1.18.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  },
+  "parcelCleanPaths" : ["dist","build/*.*"]
+}
