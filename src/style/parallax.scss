@@ -1,10 +1,11 @@
-@import './hamburger.scss' ;
 @import './mixins.scss' ;
+@include hamburger ;
 #parallax{
     width:100vw ;
     height: 100vh ;
     position: relative ;
     overflow: hidden;
+    border: 1px solid blue ;
 }
 #parallax .bg{
     width: 100% ;
@@ -49,9 +50,9 @@
         "hotel hotel hotel hotel hotel hotel home home home home home home"
         "hotel hotel hotel hotel hotel hotel home home home home home home" ;
     direction: ltr ;
-       
+    display: none ;
 }
-#grid > * {border:1px solid blue ;}
+#grid > * {position: relative ; cursor: pointer;}
 #close{grid-area: close ;}
 #hotel{grid-area: hotel ;}
 #residence{grid-area: residence ;}
@@ -61,4 +62,69 @@
 #apartment{grid-area: apartment ;}
 #home{grid-area: home ;}
 #villa{grid-area: villa ;}
-
+#grid .img{
+    width: 0%;
+    height: 100%;
+    position: absolute ;
+    left: 0;
+    top: 0;
+    background-position: center center ;
+    background-repeat: no-repeat ;
+    background-size: 100% 100% ;
+    z-index: 1;
+}
+#residence .img{background-image: url('../assets/imgs/residence.jpg');}
+#suite .img{background-image: url('../assets/imgs/suite.jpg');}
+#villa .img{background-image: url('../assets/imgs/villa.jpg');}
+#hotel .img{background-image: url('../assets/imgs/hotel.jpg');}
+#inn .img{background-image: url('../assets/imgs/inn.jpg');}
+#motel .img{background-image: url('../assets/imgs/motel.jpg');}
+#apartment .img{background-image: url('../assets/imgs/apartment.jpg');}
+#home .img{background-image: url('../assets/imgs/home.jpg');}
+#grid .img::before{
+    content: '' ;
+    position: absolute ;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50,50,50,.75) ;
+}
+#grid .color,#grid #black{
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute ;
+    z-index: 2;
+}
+#grid #close #black{background-color: #353841 ;}
+#grid #residence .color{background-color: #B09270 ;} ;
+#grid #suite .color{background-color: #C3CEE4 ;} ;
+#grid #villa .color{background-color: #86A9D1 ;} ;
+#grid #hotel .color{background-color: #F9C557 ;} ;
+#grid #inn .color{background-color: #AC865C ; } ;
+#grid #motel .color{background-color: #353841; } ;
+#grid #apartment .color{background-color: #F6A744 ;} ;
+#grid #home .color{background-color: #5097BB ; } ;
+#grid .fa-times{
+    color: white ;
+    font-size: 4em ;
+    position: absolute ;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) ;
+    opacity: 0;
+}
+#grid p {
+    display: inline-block ;
+    width: 100% ;
+    text-align: center ;
+    position: absolute ;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    color: white ;
+    font-size: 3em ;
+    z-index: 3;
+    opacity: 0 ;
+}
