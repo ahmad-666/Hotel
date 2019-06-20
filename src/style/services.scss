@@ -1,17 +1,26 @@
+@import './variables.scss' ;
 #services{
-    width: 60em ;
+    width: 100% ;
     height: auto;
     position: relative ;
-    right: 50% ;
-    transform: translateX(50%) ;
     padding: 3em 0em ;
+    overflow: hidden; 
+    margin-top: $sectionsDist ;
 }
-#services h2{color: rgb(30,30,30) ;}
+#services h2{
+    color: rgb(30,30,30) ;
+    position: absolute ;
+    right: 10%;
+    top: 0 ;
+}
 #services span{
     display: inline-block ;
-    width: 20% ;
-    background-color: #e53935  ;
-    height: 1px ;
+    width: 20em ;
+    position: absolute ;
+    right: 10% ;
+    top: 20% ;
+    background-color: rgba(128, 128, 128, 0.438)  ;
+    height: 1px ;   
 }
 #flex-services {
     width: 100% ;
@@ -23,11 +32,13 @@
     flex-wrap: wrap ;
     align-content: space-around ;
     padding: 1em ;
+    position: relative ;
+    top: 2em  ;
 }
 #flex-services > a {
     display: inline-block ;
-    width: 8em ;
-    height: 8em;
+    width: 10em ;
+    height: 10em;
     display: flex ;
     flex-direction: column ;
     justify-content: space-around ;

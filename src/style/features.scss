@@ -1,0 +1,40 @@
+#features{
+    width: 100% ;
+    height: auto;
+    position: relative ;
+    overflow: hidden;  
+    padding: 3em 0 ;
+    margin-top: 6em ;
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-evenly ;
+    align-items: center ;
+    flex-wrap: wrap ;
+    align-content: space-evenly ;
+}
+#features > span{
+    width: 80% ;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.438)  ;
+    position: absolute ;
+    top: 0 ;
+    right: 10% ;
+}
+#features .feature{
+    width: 12em ;
+    height: 12em;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: space-evenly ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+    align-content: flex-end ;
+}
+.feature .fas{
+    font-size: 5em ;
+    color: rgb(91, 142, 209) ;
+}
+.feature h5 {
+    color: rgb(70, 67, 67) ;
+    font-size: 1em ;
+}

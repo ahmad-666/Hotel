@@ -20,6 +20,10 @@
 html, body {
   height: 100%;
 }
+
+body {
+  overflow-x: hidden;
+}
 #hamburger {
   display: inline-block;
   width: auto;
@@ -94,7 +98,6 @@ html, body {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  border: 1px solid blue;
 }
 
 #parallax .bg {
@@ -312,25 +315,28 @@ html, body {
   opacity: 0;
 }
 #services {
-  width: 60em;
+  width: 100%;
   height: auto;
   position: relative;
-  right: 50%;
-  -webkit-transform: translateX(50%);
-     -moz-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-          transform: translateX(50%);
   padding: 3em 0em;
+  overflow: hidden;
+  margin-top: 6em;
 }
 
 #services h2 {
   color: #1e1e1e;
+  position: absolute;
+  right: 10%;
+  top: 0;
 }
 
 #services span {
   display: inline-block;
-  width: 20%;
-  background-color: #e53935;
+  width: 20em;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  background-color: rgba(128, 128, 128, 0.438);
   height: 1px;
 }
 
@@ -366,12 +372,14 @@ html, body {
       -ms-flex-line-pack: distribute;
           align-content: space-around;
   padding: 1em;
+  position: relative;
+  top: 2em;
 }
 
 #flex-services > a {
   display: inline-block;
-  width: 8em;
-  height: 8em;
+  width: 10em;
+  height: 10em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -431,6 +439,341 @@ html, body {
 
 #flex-services > a:hover p {
   color: white;
+}
+.suggestions {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 3em 0;
+  margin-top: 6em;
+}
+
+.suggestions .fade {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+}
+
+.fade.left {
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(transparent));
+  background-image: -webkit-linear-gradient(left, white, transparent);
+  background-image: -moz-linear-gradient(left, white, transparent);
+  background-image: linear-gradient(to right, white, transparent);
+}
+
+.fade.right {
+  right: 0%;
+  background-image: -webkit-gradient(linear, right top, left top, from(white), to(transparent));
+  background-image: -webkit-linear-gradient(right, white, transparent);
+  background-image: -moz-linear-gradient(right, white, transparent);
+  background-image: linear-gradient(to left, white, transparent);
+}
+
+.suggestions h2 {
+  color: #1e1e1e;
+  position: absolute;
+  right: 10%;
+  z-index: 3;
+  top: 0;
+}
+
+.suggestions .line {
+  display: inline-block;
+  width: 20em;
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  right: 10%;
+  background-color: rgba(128, 128, 128, 0.438);
+  height: 1px;
+}
+
+.carsousel {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-animation: carouselAnime 15s linear 0s infinite alternate;
+     -moz-animation: carouselAnime 15s linear 0s infinite alternate;
+          animation: carouselAnime 15s linear 0s infinite alternate;
+  margin-top: 3em;
+}
+
+@-webkit-keyframes carouselAnime {
+  from {
+    -webkit-transform: translateX(0em);
+            transform: translateX(0em);
+  }
+  to {
+    -webkit-transform: translateX(-webkit-calc(100% - (5 * 15em)));
+            transform: translateX(calc(100% - (5 * 15em)));
+  }
+}
+
+@-moz-keyframes carouselAnime {
+  from {
+    -moz-transform: translateX(0em);
+         transform: translateX(0em);
+  }
+  to {
+    -moz-transform: translateX(-moz-calc(100% - (5 * 15em)));
+         transform: translateX(calc(100% - (5 * 15em)));
+  }
+}
+
+@keyframes carouselAnime {
+  from {
+    -webkit-transform: translateX(0em);
+       -moz-transform: translateX(0em);
+            transform: translateX(0em);
+  }
+  to {
+    -webkit-transform: translateX(-webkit-calc(100% - (5 * 15em)));
+       -moz-transform: translateX(-moz-calc(100% - (5 * 15em)));
+            transform: translateX(calc(100% - (5 * 15em)));
+  }
+}
+.carsousel > a {
+  width: 15em;
+  height: 15em;
+  -webkit-box-shadow: 0 0 0.5em 0.05em rgba(50, 50, 50, 0.3);
+          box-shadow: 0 0 0.5em 0.05em rgba(50, 50, 50, 0.3);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  margin-left: 40px;
+  background-color: white;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.carsousel img {
+  width: 100%;
+  height: 50%;
+}
+
+.carsousel h4 {
+  color: #323232;
+}
+
+.carsousel p {
+  color: #323232;
+  font-size: 0.8em;
+}
+
+.carsousel .stars {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+     -moz-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  position: relative;
+  bottom: 0.5em;
+}
+
+.carsousel .fas {
+  color: #dfc329;
+  font-size: 1.5em;
+}
+
+.discount {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  padding: 0.3em;
+  background-color: #cf405d;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: white;
+  -webkit-border-top-left-radius: 30px;
+          border-top-left-radius: 30px;
+  -webkit-border-bottom-left-radius: 30px;
+          border-bottom-left-radius: 30px;
+}
+#features {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 3em 0;
+  margin-top: 6em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+     -moz-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: space-evenly;
+      -ms-flex-line-pack: space-evenly;
+          align-content: space-evenly;
+}
+
+#features > span {
+  width: 80%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.438);
+  position: absolute;
+  top: 0;
+  right: 10%;
+}
+
+#features .feature {
+  width: 12em;
+  height: 12em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+     -moz-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: flex-end;
+      -ms-flex-line-pack: end;
+          align-content: flex-end;
+}
+
+.feature .fas {
+  font-size: 5em;
+  color: #5b8ed1;
+}
+
+.feature h5 {
+  color: #464343;
+  font-size: 1em;
+}
+#footer {
+  width: 100%;
+  height: 22em;
+  position: relative;
+  right: 0;
+  margin-top: 6em;
+}
+
+#footer svg {
+  position: relative;
+}
+
+#footer #path {
+  fill: url("#grad");
 }
 
 /*# sourceMappingURL=/main.c48f6146.css.map */
