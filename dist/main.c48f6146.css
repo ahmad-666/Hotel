@@ -522,9 +522,9 @@ body {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  -webkit-animation: carouselAnime 15s linear 0s infinite alternate;
-     -moz-animation: carouselAnime 15s linear 0s infinite alternate;
-          animation: carouselAnime 15s linear 0s infinite alternate;
+  -webkit-animation: carouselAnime 5s linear 0s infinite alternate;
+     -moz-animation: carouselAnime 5s linear 0s infinite alternate;
+          animation: carouselAnime 5s linear 0s infinite alternate;
   margin-top: 3em;
 }
 
@@ -762,7 +762,7 @@ body {
 }
 #footer {
   width: 100%;
-  height: 22em;
+  height: 25em;
   position: relative;
   right: 0;
   margin-top: 6em;
@@ -772,8 +772,117 @@ body {
   position: relative;
 }
 
-#footer #path {
+#footer path {
   fill: url("#grad");
+}
+
+#footer #content {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 32%;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+     -moz-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+#footer ul {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+#footer ul > * {
+  margin-top: 30px;
+}
+
+#footer h5 {
+  color: white;
+  font-size: 1.2em;
+  -webkit-transform: translateX(20px);
+     -moz-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+#footer #support h5 {
+  -webkit-transform: translateX(0px);
+     -moz-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+#footer h5:not(:first-of-type) {
+  -webkit-transform: translateX(20px);
+     -moz-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+#footer a, #footer li {
+  text-decoration: none;
+  color: #e6e6e6;
+  font-size: 0.9em;
+}
+
+#footer .fas, #footer .fab {
+  -webkit-transform: translateX(20px);
+     -moz-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
 /*# sourceMappingURL=/main.c48f6146.css.map */
