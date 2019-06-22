@@ -1,0 +1,14 @@
+.input-field .fas{
+    font-size: 2em ;
+    right: .2em ;
+}
+.input-field > label {
+    right: 3em ;
+}
+input[type=text]:not(.browser-default):focus:not([readonly])~label{
+    transform: translateY(-1.5em) ;
+    color: #009688 ;
+}
+input[type=text]:not(.browser-default):focus:not([readonly])~i{
+    color: #009688 !important;
+}
