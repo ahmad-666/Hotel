@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <div class="slider">
         <ul class="slides">
@@ -28,29 +27,218 @@
                 <h4 class="caption center-align valign">رزرو تنها با چند کلیک</h4>
             </li>
         </ul>
-    </div>  
+    </div>
     <form action="#" method="GET" id="search">
         <div class="input-field">
             <input id="dest" type="text" class="autocomplete">
             <i class="fas fa-map-marker-alt prefix grey-text"></i>
-            <label for="dest" class="labelFix">مقصد</label>
-        </div> 
+            <label for="dest" class="active labelFix">مقصد</label>
+        </div>
         <div class="input-field">
             <input id="guests" type="number">
             <i class="fas fa-user-friends prefix grey-text"></i>
-            <label for="guests" class="labelFix">تعداد مهمان</label>
+            <label for="guests" class="active labelFix">تعداد مهمان</label>
         </div>
         <div class="input-field">
             <input id="in" type="text">
             <i class="fas fa-calendar-alt prefix grey-text"></i>
-            <label for="in" class="labelFix"> تاریخ ورود </label>
-        </div>   
+            <label for="in" class="active labelFix"> تاریخ ورود </label>
+        </div>
         <div class="input-field">
             <input id="out" type="text">
             <i class="fas fa-calendar-alt prefix grey-text"></i>
-            <label for="out" class="labelFix"> تاریخ خروج </label>
-        </div>  
+            <label for="out" class="active labelFix"> تاریخ خروج </label>
+        </div>
     </form>
+    <form id="filters" action="#" method="GET">
+        <div id="price">
+            <h5>قیمت(بر حسب تومان)</h5>         
+            <span class="divider"></span>
+        </div>
+        <div id="types">
+            <h5>بر اساس اقامتگاه</h5>
+            <div class="type">
+                <label>
+                    <input type="checkbox">
+                    <span>هتل</span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="type">
+                <label>
+                    <input type="checkbox">
+                    <span>اقامتگاه</span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="type">
+                <label>
+                    <input type="checkbox">
+                    <span>مسافرخانه</span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="type">
+                <label>
+                    <input type="checkbox">
+                    <span>مهمان پذیر</span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="type">
+                <label>
+                    <input type="checkbox">
+                    <span>سوییت</span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="type">
+                <label>
+                    <input type="checkbox">
+                    <span>هتل آپارتمان</span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="type">
+                <label>
+                    <input type="checkbox">
+                    <span>خانه</span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="type">
+                <label>
+                    <input type="checkbox">
+                    <span>ویلا</span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>    
+            <span class="divider"></span>
+        </div>
+        <div id="stars">
+            <h5>تعداد ستاره</h5>
+            <div class="star">
+                <label>
+                    <input type="checkbox">
+                    <span>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                    </span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="star">
+                <label>
+                    <input type="checkbox">
+                    <span>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                    </span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="star">
+                <label>
+                    <input type="checkbox">
+                    <span>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                    </span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="star">
+                <label>
+                    <input type="checkbox">
+                    <span>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                    </span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <div class="star">
+                <label>
+                    <input type="checkbox">
+                    <span>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                        <i class="fas fa-star yellow-text text-accent-4"></i>
+                    </span>
+                </label>
+                <span class="left badge teal white-text">10</span>
+            </div>
+            <span class="divider"></span>
+        </div>
+        <div id="features">
+            <h5>بر اساس امکانات</h5>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۱</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۲</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۳</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۴</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۵</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۶</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۷</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۸</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۹</span>
+                </label>
+            </div>
+            <div class="feature">
+                <label>
+                    <input type="checkbox">
+                    <span>امکان شماره ۱۰</span>
+                </label>
+            </div>
+        </div>
+    </form>
+    <div id="range"></div>
     <script src="./src/js/hotels.js"></script>
 </body>
 

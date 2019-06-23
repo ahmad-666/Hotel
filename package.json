@@ -23,7 +23,8 @@
     "animejs": "^3.0.1",
     "lib": "^4.0.2",
     "m": "^1.5.4",
-    "materialize-css": "^1.0.0-rc.2"
+    "materialize-css": "^1.0.0-rc.2",
+    "nouislider": "^14.0.1"
   },
   "parcelCleanPaths": [
     "dist",
