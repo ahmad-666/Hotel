@@ -1,44 +1,50 @@
 #filters{
-    border: 1px solid rgba(200,200,200,.8) ;
-    width: fit-content ;
-    height: auto;
-    padding: 3em 3em 3em 0 ;
+    // width: fit-content ;
+    // height: auto;
+    // padding: 0  ;
     display: flex ;
     flex-direction: column ;
-    justify-content: space-evenly ;
+    justify-content: flex-start ;
     align-items: flex-start ;
     flex-wrap: nowrap ;
-    margin: 4em 2em 0 0 ;
+    // margin: 4em 2em 0 0 ;
 }
 #filters > *:not(:first-child) {
-    margin-top: 2em;
+    margin-top: 4em;
 }
-#filters > * {
-    width: fit-content ;
+#filters > *:not(.divider) {
+    width: 100% ;
     height: auto;
+    padding: 0 2em 0 0 ;
 }
 span.divider{
     display: inline-block ;
-    width: 16em ;
-    right: -2em ;
-    position: relative ;
-    margin-top: 1em;
+    width: 100% ;
+    height: 1px;
+    // right:  ;
+    // position: relative ;
 }
-#filters label{
-    position: relative;
-    right: 2em ;
+// #filters label{
+//     position: relative;
+//     // right: 2em ;
+// }
+[type="checkbox"]+span:not(.lever){
+    // for grab both checkbox and label
+    right: 1.8em ;
 }
 [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after{
-    right: -2em ;
+    // for grab just checkbox
+    right: -1.8em ;
 }
 #filters h5{
     color: rgb(40,40,40) ;
-    font-size: 1.5em ;
-    
+    font-size: 1.5em ;  
+    // right: -1em ;
+    position: relative ;
 }
 #filters #price h5{margin-bottom: 3em ;}
 #range{  
-    width: 90% ;
+    width: 100% ;
     height: 10px;
     position: relative ;
     right: -.5em ;

@@ -7,6 +7,7 @@ import '../style/services.scss' ;
 import '../style/suggestions.scss' ;
 import '../style/features.scss' ;
 import '../style/footer.scss' ;
+import '../style/responsive.scss' ;
 //load scripts
 import './parallax' ;
 import './grid-animation' ;
