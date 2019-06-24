@@ -6,10 +6,12 @@ import './../../node_modules/materialize-css/dist/css/materialize.min.css' ;
 import '../style/slider.scss' ;
 import '../style/search.scss' ;
 import '../style/filters.scss' ;
+import '../style/hotels-container.scss' ;
 //import '../style/footer.scss' ;
 //load scripts
 import 'materialize-css' ;
 import './slider' ;
 import './search' ;
 import './filters' ;
+import './hotels-container' ;
 //import './footer' ;

@@ -34,17 +34,21 @@ span.divider{
 #filters h5{
     color: rgb(40,40,40) ;
     font-size: 1.5em ;
+    
 }
-
+#filters #price h5{margin-bottom: 3em ;}
 #range{  
-    margin-top: 400px ;
-    width: 800px ;
+    width: 90% ;
     height: 10px;
     position: relative ;
-    right: 50% ;
-    transform: translateX(50%) ;
-    margin-bottom: 100px ;
+    right: -.5em ;
 }
-.newC{
-    border-radius: 50% ;
+#range *{outline: none ;}
+.ranger-handle{
+    width: 1.5em !important;
+    height: 1.5em !important;
+    border-radius: 50% !important;
+    background-color: teal ;
+    border: none !important ;
+    box-shadow: none !important ;
 }
