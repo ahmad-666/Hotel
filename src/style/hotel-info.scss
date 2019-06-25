@@ -7,11 +7,13 @@
     align-items: flex-start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
+    overflow: hidden;
 }
 #hotel-info .section{
     width: 50% ;
     height: 100vh;
     padding: 0 ;
+    overflow: hidden;
 }
 .section.right{
     display: flex ;
@@ -63,30 +65,53 @@
     background-size: 100% 100% ;
 }
 #slider-items{
-    width: 100% ; 
+    width: fit-content ; 
     height: auto;
-    padding: 1em ;
     position: absolute ;
     bottom: 0 ;
     right: 0;
     display: flex ; 
     flex-direction: row ;
-    justify-content: space-evenly ;
+    justify-content: flex-start ;
     align-items: center ;
     flex-wrap: nowrap ;
-    overflow: hidden;
+    transition: all .5s ease-in-out ;
 }
-#slider-items .fa-arrow {
-    color: rgb(230,230,230) ;
-    font-size: 1.5em ;
+#slider-items .slide{
+    width: 12em ;
+    height: 12em;
+    margin: 0 0 0 2em ;
+    cursor: pointer;
+    background-position: center center ;
+    background-size: 100% 100% ;
+    background-repeat: no-repeat ;
+    position: relative ;
+}
+#slider-items .slide:nth-child(1){background-image: url('../assets/imgs/slider/slider1.jpg');}
+#slider-items .slide:nth-child(2){background-image: url('../assets/imgs/slider/slider2.jpg');}
+#slider-items .slide:nth-child(3){background-image: url('../assets/imgs/slider/slider3.jpg');}
+#slider-items .slide:nth-child(4){background-image: url('../assets/imgs/slider/slider4.jpg');}
+#slider-items .slide:nth-child(5){background-image: url('../assets/imgs/slider/slider5.jpg');}
+#slider-items .slide:nth-child(6){background-image: url('../assets/imgs/slider/slider6.jpg');}
+#slider-items .slide:nth-child(7){background-image: url('../assets/imgs/slider/slider7.jpg');}
+#slider-items .slide::before{
+    content: '' ;
     position: absolute ;
-    top: 50% ;
-    transform: translateY(-50%) ;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40,40,40,.8) ;
 }
-#slider-items .fa-arrow:nth-child(1){right: 5% ;}
-#slider-items .fa-arrow:nth-child(2){left: 5% ;}
-#slider-items img{
-    width: 10em ;
-    height: 10em;
+#slider-items .slide.active::before{
+    background-color: transparent ;
 }
+#slider .fas {
+    color: rgb(230,230,230) ;
+    font-size: 3em ;
+    position: absolute ;
+    top: 90% ;
+    cursor: pointer;
+}
+#slider .fa-arrow-right{right: 0% ;}
+#slider .fa-arrow-left{left: 0% ;}
+
 
