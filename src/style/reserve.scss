@@ -1,0 +1,59 @@
+#reserve{
+    width: 100% ;
+    height: auto;
+    margin: 6em 2em ;
+}
+table.highlight>tbody>tr:hover{
+    background-color: #17c5c521 ;
+}
+#reserve tbody tr{
+    border-bottom: 1px solid rgb(215,215,215) ;
+}
+#reserve tbody td{
+    color: rgb(40,40,40) ;
+}
+#reserve .fa-male{
+    font-size: 1.2em ;
+}
+#reserve .features .fas{
+    font-size: 1.2em ;
+    margin: 0 .5em ;
+}
+#reserve .original.has-dicsount {
+    position: relative ; 
+}
+#reserve .original.has-dicsount::before {
+    content: '' ;
+    width: 8em ;
+    height: 1px;
+    background-color: teal ;
+    position: absolute ;
+    top: 50% ;
+    right: calc(50% - 4em) ;
+    transform: translateY(-50%) ;
+}
+#reserve input[type="number"]{
+   width: 10em ;
+}
+#reserve .reserve a{
+    display: block ;
+    width: 9em ;
+    height: auto;
+    padding: .3em 0 ;
+    font-size: 1.5em ;
+    position: relative ;
+    right: calc(50% - 4.5em) ;
+    margin-top: 15px ;
+}
+@media only screen and (max-width: 992px){
+    table.responsive-table thead {
+        display: block;
+        float: right;
+    }
+    #reserve tbody tr{
+        border-bottom: none ;
+        border-right: 1px solid rgb(215,215,215) ;
+    }
+}
+
+

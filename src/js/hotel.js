@@ -5,10 +5,12 @@ import '../style/init.scss' ;
 import './../../node_modules/materialize-css/dist/css/materialize.min.css' ;
 import '../style/hotel-info.scss' ;
 import '../style/tabs.scss' ;
-//import '../style/footer.scss' ;
-//import '../style/responsive.scss' ;
+import '../style/reserve.scss' ;
+import '../style/footer.scss' ;
+import '../style/responsive.scss' ;
 //load scripts
 import 'materialize-css' ;
 import './hotel-info' ;
 import './tabs' ;
-//import './footer' ;
+import './reserve' ;
+import './footer' ;
