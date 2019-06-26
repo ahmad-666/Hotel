@@ -1,0 +1,138 @@
+#tabs{
+    width: 80% ;
+    height: auto;
+    margin-top: 10em  ;
+    position: relative ;
+    right: 50% ;
+    transform: translateX(50%) ;
+    border: 1px solid rgb(230,230,230) ;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+    background-color: rgba(0, 128, 128, 0.13) ;
+}
+#tabs > *:not(.tabs){
+    padding: 2em ;
+    font-size: 1.2em ;
+}
+#about p{color: rgb(40,40,40) ;}
+#map-dist #map{
+    width: 100% ;
+    height: 20em;
+    background: url('../assets/imgs/map.jpg') center center no-repeat ;
+    background-size: 100% 100% ;
+}
+#map-dist #dist{
+    width: 100% ;
+    height: auto;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-evenly ;
+    align-items: center ;
+    flex-wrap: wrap ;
+    align-content: space-around ;
+    margin-top: 4em;
+}
+#dist .place{
+    width: fit-content ;
+    height: auto;
+    color: teal ;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+    margin: 1.5em 1em ;
+}
+.place h6 {
+    margin: 0 ;
+    font-size: 1em ;
+}
+.place .time{color: rgb(40,40,40);}
+
+#comments{
+    width: 100% ;
+    height: auto;
+    display: flex ;
+    flex-direction: column;
+    justify-content: flex-start ;
+    align-items: center  ;
+    flex-wrap: nowrap ;
+}
+#comments .comment:not(:first-child){margin-top: 4em ;}
+#comments .comment{
+    width: 100% ;
+    height: auto;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start;
+    align-items: flex-start  ;
+    flex-wrap: wrap ;
+    align-content: flex-start;
+    padding: 2em ;
+    border: 2px solid rgb(230,230,230) ;
+}
+.comment > * {
+    height: auto;
+    // margin: 1em ;
+}
+.comment .info{width: 25% ;}
+.comment .content{width: 70% ;}
+.comment .scores{width: 100% ;}
+.comment .info{
+    display: flex ;
+    flex-direction: column ;
+    justify-content: flex-start ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+}
+.comment .info > *{
+    margin: .5em 0 ;
+}
+.info img{
+    width: 7em ;
+    height: 7em;
+    border-radius: 50% ;
+    background-position: center center ;
+    background-size: 100% 100% ;
+}
+.info .name , .info .date{
+    color: rgb(130, 130, 130) ;
+    font-size: .8em ;
+}
+.comment .content{
+    padding: 2em ;
+    color: rgb(40,40,40) ;
+    font-size: 1em ;
+    // border: 1px solid rgba(0, 128, 128, 0.753) ;
+    background-color: rgba(23, 197, 197, 0.13) ;
+    border-radius: 60px ;
+}
+.comment .scores{
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-evenly ;
+    align-items: center ;
+    flex-wrap: wrap ;
+    align-content: flex-start ;
+}
+.scores .score{
+    width: fit-content ;
+    height: auto;
+    color: rgb(40,40,40) ;
+    margin: .5em ;
+    text-align: center ;
+}
+.score > * {
+    display: inline-block ;
+}
+.score .polygon{
+    width: fit-content ;
+    height: auto ;
+    padding: 1em ;
+    color: white ;
+    background-color: teal ;
+    font-size: 1em ;
+    
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+}
