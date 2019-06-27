@@ -4,7 +4,7 @@
     height: auto;
     position: relative ;
     overflow: hidden;  
-    padding: 3em 0 ;
+    padding: 2em 4em ;
     margin-top: $sectionsDist ;
 }
 .suggestions .fade{
@@ -22,20 +22,22 @@
     right: 0%;
     background-image: linear-gradient(to left , white , transparent);
 }
-.suggestions h2 {
-    color: rgb(30,30,30) ;
+.suggestions p {
+    color: rgb(40,40,40) ;
     position: absolute ;
-    right: 10%;
     z-index: 3; 
-    top: 0 ;
+    font-size: 2em ;
+    font-weight: 700 ;
 }
+.carsousel a p {position: relative ; color: rgb(40,40,40);}
 .suggestions .line {
     display: inline-block ;
-    width: 20em ;
+    width: 25em ;
+    // right: 4em ;
+    // top: 20% ;
     position: absolute ;
     z-index: 3;
-    top: 15% ;
-    right: 10% ;
+    margin-top: 4.5em ;
     background-color: rgba(128, 128, 128, 0.438)  ;
     height: 1px ;
 }
@@ -47,16 +49,16 @@
     justify-content: flex-start ;
     align-items: center ;
     flex-wrap: nowrap ;
-    animation: carouselAnime 5s linear 0s infinite alternate;
-    margin-top: 3em ;
+    animation: carouselAnime 20s linear 0s infinite alternate;
+    margin-top: 8em ;
 }
 @keyframes carouselAnime{
     from{transform: translateX(0em);}
     to{transform: translateX(calc(100% - (5 * 15em)));}
 }
 .carsousel > a {
-    width: 15em ;
-    height: 15em ;
+    width: 18em ;
+    height: 18em ;
     box-shadow: 0 0 .5em .05em rgba(50,50,50,.3) ;
     display: flex ;
     flex-direction: column ;
@@ -73,11 +75,10 @@
     width: 100% ;
     height: 50%;
 }
-.carsousel h4{
-    color: rgb(50,50,50) ;
+.carsousel p.title{
+    font-size: 1.2em ;
 }
-.carsousel p {
-    color: rgb(50,50,50) ;
+.carsousel p.price {
     font-size: .8em ;
 }
 .carsousel .stars{

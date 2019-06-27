@@ -17,7 +17,7 @@
 }
 #search .input-field{
     width: 15em ;
-    margin: 2em ;
+    margin: 2em 4em ;
 }
 .input-field .fas{
     font-size: 2em ;
@@ -35,4 +35,14 @@ input[type=number]:not(.browser-default):focus:not([readonly])~i{
 .input-field>label:not(.label-icon).labelFix.active {
     transform: translateY(-1.3em) scale(1) ;
 }
-
+form button[type="submit"]{
+    width: fit-content ;
+    height: auto;
+    padding: .5em 2em ;
+    font-family: byekan ;
+}
+form button[type="submit"] .fas{
+    position: relative ;
+    // top: 90% ;
+    transform: translateY(10%) ;
+}
