@@ -3,9 +3,9 @@
     width: 100% ;
     height: auto;
     position: relative ;
-    padding: 2em 4em ;
+    padding: 0 2em ;
     overflow: hidden; 
-    margin-top: $sectionsDist ;
+    margin-top: 8em ;
 }
 #services p:nth-child(1){
     font-size: 2em ;
@@ -14,7 +14,7 @@
 }
 #services span{
     display: inline-block ;
-    width: 25em ;
+    width: 20em ;
     margin-top: 2em ;
     background-color: rgba(128, 128, 128, 0.438)  ;
     height: 1px ;   
@@ -27,9 +27,9 @@
     justify-content: space-evenly ;
     align-items: center ;
     flex-wrap: wrap ;
-    align-content: space-around ;
-    padding: 1em ;
-    margin-top: 2em ;
+    align-content: center ;
+    padding: 2em ;
+    margin-top: 0 ;
 }
 #flex-services > a {
     display: inline-block ;
@@ -37,7 +37,7 @@
     height: 10em;
     display: flex ;
     flex-direction: column ;
-    justify-content: space-around ;
+    justify-content: space-evenly ;
     align-items: center ;
     flex-wrap: nowrap ;
     background-color: white ;
@@ -45,6 +45,7 @@
     cursor: pointer ;
     transition: all .6s ease-in-out ;
     text-decoration: none ;
+    margin: 1em ;
 }
 #services .fas{
     color: #fb636f ;
@@ -61,3 +62,9 @@
 }
 #flex-services > a:hover i{color: white ;}
 #flex-services > a:hover p{color: white ;}
+@media screen and (max-width: 1200px){
+    #services{font-size: 16px;}
+}
+@media screen and (max-width: 650px){
+    #services{font-size: 12px;}
+}

@@ -3,14 +3,14 @@
     height: auto;
     position: relative ;
     overflow: hidden;  
-    padding: 3em 0 ;
+    padding: 0 2em ;
     margin-top: 6em ;
     display: flex ;
     flex-direction: row;
     justify-content: space-evenly ;
     align-items: center ;
     flex-wrap: wrap ;
-    align-content: space-evenly ;
+    align-content: center ;
 }
 #features > span{
     width: 80% ;
@@ -21,14 +21,14 @@
     right: 10% ;
 }
 #features .feature{
-    width: 12em ;
-    height: 12em;
+    width: 10em ;
+    height: 10em;
     display: flex ;
     flex-direction: column ;
     justify-content: space-evenly ;
     align-items: center ;
     flex-wrap: nowrap ;
-    align-content: flex-end ;
+    margin: 1em ;
 }
 .feature .fas{
     font-size: 5em ;
@@ -37,4 +37,10 @@
 .feature h5 {
     color: rgb(70, 67, 67) ;
     font-size: 1em ;
+}
+@media screen and (max-width:1400px){
+    #features{font-size: 16px;}
+}
+@media screen and (max-width:800px){
+    #features{font-size: 12px;}
 }

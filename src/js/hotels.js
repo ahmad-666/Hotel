@@ -11,7 +11,6 @@ import '../style/filters.scss' ;
 import '../style/curr-filters.scss' ;
 import '../style/hotels-container.scss' ;
 import '../style/footer.scss' ;
-import '../style/responsive.scss' ;
 //load scripts
 import 'materialize-css' ;
 import './slider' ;

@@ -1,0 +1,148 @@
+header{
+    width: 100vw ;
+    height: 100vh;
+    position: relative ;
+    background: url('../assets/imgs/bg.jpg') center center no-repeat ;
+    background-size: 100% 100% ;
+    background-attachment: fixed ;
+    overflow: hidden;
+}
+header::before{
+    content: '' ;
+    width: 100% ;
+    height: 100%;
+    position: absolute ;
+    top: 0 ;
+    right: 0 ;
+    background-color: rgba(30,30,30,.6) ;
+    z-index: 2;
+}
+header .cloud{
+    width: 100%;
+    height: 50%;
+    position: absolute ;
+    top: 0 ; 
+    left: 0;
+    background-size: 75% 100% ;
+    background-position: 0 0 ;
+    background-repeat: repeat ;
+    z-index: 1;
+    animation: cloud 30s linear 0s infinite alternate ;
+}
+header .cloud:nth-child(1){background-image: url('../assets/imgs/cloud1.png');}
+header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
+@keyframes cloud{
+    from{}
+    to{background-position: 400% 100% ;}
+}
+#nav{
+    width: 100% ;
+    height: auto;
+    padding: 2em 0 ;
+    position: absolute ;
+    right: 0 ;
+    top: 0 ;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+    z-index: 4 ;
+    background-color: transparent ;
+    transition: all .6s ease-in-out ;
+}
+#nav a{
+    width: fit-content ;
+    height: auto;
+    color: white ;
+    font-size: 1.2em ;
+    text-align: center ;
+    margin: 0 3em ;
+    padding: .3em 1.5em ;
+    white-space: nowrap ;
+}
+#nav a .fas{
+    position: relative; 
+    top: .2em ;
+    right: -.2em ;
+}
+#nav a:nth-child(1){
+    border: 1.5px solid white ;
+    border-radius: 40px ;
+}
+#hamburger{
+    width: fit-content ;
+    height: auto;
+    position: absolute ;
+    left: 3em;
+    top: 2em ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: flex-start ;
+    align-items: flex-end ;
+    flex-wrap: nowrap ;
+    color: white ;
+    cursor: pointer;
+}
+#hamburger span{
+    display: inline-block ;
+    height: 2px;
+    background-color: white ;
+    transition: width .4s ease-in-out ;
+    margin-top: .5em ;
+}
+#hamburger span:nth-child(1){width: 3em ;}
+#hamburger span:nth-child(2){width: 2em}
+#hamburger span:nth-child(3){width: 3em ;}
+#hamburger:hover span:nth-child(1){width:2em ;}
+#hamburger:hover span:nth-child(2){width:3em ;}
+#hamburger:hover span:nth-child(3){width:2em ;}
+#slogan{
+    width: fit-content ;
+    height: auto;
+    padding: 2em ;
+    position: absolute ;
+    top: 50% ;
+    right: 50%;
+    transform: translate(50%,-50%) ;
+    z-index: 4 ;
+    color: rgb(255, 245, 245) ; 
+}
+#slogan #brand-name{
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: center  ;
+    flex-wrap: nowrap ;
+}
+#brand-name > * {
+    margin: 0 .3em ; 
+}
+#brand-name h1{
+    font-size: 3.3em ;
+    white-space: nowrap ;
+}
+#brand-name .line{
+    width: 25vw ;
+    height: .25em;
+    background-color: rgb(255, 245, 245) ;
+}
+#slogan h4{
+   font-size: 1.2em ;
+   margin-top: 1em ;
+   text-align: center ;
+}
+@media screen and (max-width:900px){
+    header{font-size: 16px;}
+}
+@media screen and (max-width:700px){
+    header{font-size: 12px;}
+}
+@media screen and (max-width:750px){
+    #nav a{margin: 0 1.5em ; }
+    #hamburger{ left: 1.5em ;}
+}
+@media screen and (max-width:550px){
+    #nav a{margin: 0 .8em ;}
+    #hamburger{ left: .8em ;}
+}

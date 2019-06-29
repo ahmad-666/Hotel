@@ -3,7 +3,7 @@ let w = window.innerWidth ;
 let h = document.querySelector('#footer').clientHeight ;
 let params = {
     curveControlX: w/2,
-    curveControlY: 2*h/3,
+    curveControlY: 1.2*h/3,
     curvefinalX: w,
     curvefinalY: 0,
     line1X: 0,
@@ -20,7 +20,7 @@ window.addEventListener('resize',e=>{
     w = window.innerWidth ;
     h = document.querySelector('#footer').clientHeight ;
     params.curveControlX = w/2 ;
-    params.curveControlY = 2*h/3 ;
+    params.curveControlY = 1.2*h/3 ;
     params.curvefinalX = w ;
     params.curvefinalY = 0 ;
     params.line1X = 0 ;

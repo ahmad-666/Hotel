@@ -2,8 +2,8 @@
     // width: 100% ;
     // height: auto;
     display: grid ;
-    grid-template-columns: repeat(auto-fit,minmax(20em,1fr)) ;
-    grid-auto-rows: 20em ;
+    grid-template-columns: repeat(auto-fit,minmax(17em,1fr)) ;
+    grid-auto-rows: 17em ;
 }
 #hotels .hotel{
     margin: 2em ;
@@ -47,7 +47,7 @@
 #hotels .front > *{
     width: fit-content ;
     height: auto;
-    font-size: 1.2em ;
+    font-size: 1em ;
 }
 #hotels .front > *:not(.stars){
     color: rgb(230,230,230) ;
@@ -107,15 +107,15 @@
     position: absolute ;
     top: 0% ;
     right: 5% ;
-    font-size: 1em ;
+    font-size: .8em ;
 }
 #hotels .back .fas{
     color: rgb(200,200,200) ;
-    font-size: 1em ;
+    font-size: .8em ;
     margin: 0 .5em ;
 }
 #hotels .price{
-    font-size: 1em ;
+    font-size: .8em ;
     color: rgb(200,200,200) ;
     position: absolute ;
     top: 35% ;

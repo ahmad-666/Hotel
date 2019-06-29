@@ -7,14 +7,14 @@
     grid-template-areas:
         "filters curr-filters curr-filters curr-filters curr-filters curr-filters" 
         "filters hotels hotels hotels hotels hotels" ;
-    margin-top: 10em ;
-        
+    margin-top: 10em ;      
 }
 #grid #filters{
     grid-area: filters ;
     border: 1px solid rgba(200,200,200,.8) ;
 }
 #grid #curr-filters{
+    height: auto ;
     grid-area: curr-filters ;
     border: 1px solid rgba(200,200,200,.8) ; 
     margin: 0 5em 0 2em ;

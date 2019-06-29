@@ -2,30 +2,48 @@
     width: 80% ;
     height: auto;
     display: flex ;
-    flex-direction: row ;
     justify-content: space-evenly ;
     align-items: center ;
     flex-wrap: wrap ;
-    align-content: space-between ;
+    align-content: center ;
     position: relative ;
     right: 50% ;
     transform: translateX(50%) ;
-    border: 1px solid rgba(200,200,200,.8) ;
-    background-color: white ;
     margin-top: 5em ;
-    padding: 0 2em ;
+    padding: 0 1em ;
+    border: 1px solid rgba(200,200,200,.8) ;
 }
-#search .input-field{
-    width: 15em ;
-    margin: 2em 4em ;
+#search > *{
+    width: 10em ;
+    height: 4em;
+    margin: 1em ;
+}
+form button[type="submit"]{
+    font-family: byekan ;
+    font-size: 1em ;
+    height: 2em ;
+    // height: 3em;
+    // position: relative ;
+    // top: 50% ;
+    // transform: translateY(-50%) ;
 }
 .input-field .fas{
-    font-size: 2em ;
+    position: relative ;
+    font-size: 1em ;
+    top: -2em ;
     right: -1.5em ;
+}
+.input-field label{
+    font-size: .8em ;
+    top: .5em ;
+}
+#search button[type="submit"] .fas{
+    font-size: 1.2em ;
+    transform: translateY(15%) ;   
 }
 input[type=text]:not(.browser-default):focus:not([readonly])~label ,
 input[type=number]:not(.browser-default):focus:not([readonly])~label{
-    transform: translateY(-1.3em) scale(1);
+    // transform: translateY(-1.3em) scale(1);
     color: #009688 ;
 }
 input[type=text]:not(.browser-default):focus:not([readonly])~i ,
@@ -35,14 +53,8 @@ input[type=number]:not(.browser-default):focus:not([readonly])~i{
 .input-field>label:not(.label-icon).labelFix.active {
     transform: translateY(-1.3em) scale(1) ;
 }
-form button[type="submit"]{
-    width: fit-content ;
-    height: auto;
-    padding: .5em 2em ;
-    font-family: byekan ;
-}
-form button[type="submit"] .fas{
-    position: relative ;
-    // top: 90% ;
-    transform: translateY(10%) ;
+@media screen and (max-width:700px){
+    #search > *{
+        margin: .5em 1em ;
+    }
 }

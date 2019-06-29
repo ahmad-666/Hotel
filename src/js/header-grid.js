@@ -1,20 +1,39 @@
 import anime from 'animejs' ;
 let hamburgerMenu = document.querySelector('#hamburger') ;
 let closeIcon = document.querySelector('#grid .fa-times') ;
+let close = document.querySelector('#grid #close') ;
 let gridContainer = document.querySelector('#grid') ;
 let gridItemsColors = document.querySelectorAll('#grid .color') ;
 let blackGrid = document.querySelector('#grid #black') ;
 let gridItemsImages = document.querySelectorAll('#grid .img') ;
 let gridItemsTexts = document.querySelectorAll('#grid p') ;
 let menuOpen = false ;
-hamburgerMenu.addEventListener('click',e=>{
-    if(!menuOpen) gridOpenAnimation() ;
-    else gridCloseAnimation() ;
+let all = document.querySelectorAll('body > *:not(#grid)') ;
+let prevDisplayProps = [] ;
+all.forEach(elm=>{
+    prevDisplayProps.push(window.getComputedStyle(elm,null).getPropertyValue('display')) ;
+})
+let currScroll = null ;
+hamburgerMenu.addEventListener('click',e=>{  
+    if(!menuOpen) {  
+        currScroll = window.scrollY ;
+        if(window.innerWidth <= 650) {all.forEach(elm=>{elm.style.display = 'none' ;})}
+        gridOpenAnimation() ;
+    }
     menuOpen = !menuOpen ;
 })
-closeIcon.addEventListener('click',e=>{
-    if(menuOpen) gridCloseAnimation() ;
-    else gridOpenAnimation() ;
+close.addEventListener('click',e=>{
+    if(menuOpen) {
+        if(window.innerWidth <= 650) {        
+            all.forEach((elm,i)=>{elm.style.display = prevDisplayProps[i] ;})
+        }
+        window.scrollTo({
+            top: currScroll ,
+            left: 0 ,
+            behavior: 'smooth'
+        }) ;
+        gridCloseAnimation() ;
+    }
     menuOpen = !menuOpen ;
 })
 function gridOpenAnimation(){
@@ -112,3 +131,4 @@ function gridCloseAnimation(){
         }
     },900)
 }
+
