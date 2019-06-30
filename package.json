@@ -21,6 +21,7 @@
     "@babel/polyfill": "^7.2.5",
     "@fortawesome/fontawesome-free": "^5.9.0",
     "animejs": "^3.0.1",
+    "gh-pages": "^2.0.1",
     "lib": "^4.0.2",
     "m": "^1.5.4",
     "materialize-css": "^1.0.0-rc.2",
