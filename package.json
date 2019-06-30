@@ -31,5 +31,6 @@
   "parcelCleanPaths": [
     "dist",
     "build/*.*"
-  ]
+  ],
+  "homepage": "https://ahmad-666.github.io/Hotel"
 }
