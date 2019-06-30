@@ -50,64 +50,35 @@ tooltips.forEach(elm=>{
 })
 //-------------Slider----------------------------
 //-----------------------------------------------
-import imgsObj from '../assets/imgs/slider/*.*' ;
-//format of imgsObj : 
-//{<imgname>:{<imgForamt>:<imgPath>},...}
-let imgsPath = [] ;
-for(let imgName in imgsObj){
-    let imgNameTemp = imgsObj[imgName] ;
-    for(let imgFormat in imgNameTemp){
-        imgsPath.push(imgNameTemp[imgFormat]) ;
-    }
-}
-let getStyle = (elm,prop)=> window.getComputedStyle(elm,null).getPropertyValue(prop) ;
+import imgs from '../assets/imgs/slider/*.*' ;
+console.log(imgs) ;
 let slider = document.querySelector('#slider') ;
-let bgImage = document.querySelector('#slider img') ;
-let slides = document.querySelectorAll('#slider-items .slide') ;
-let slidesNum = slides.length ;
-let slidesContainer = document.querySelector('#slider-items') ;
-let rightArrow = document.querySelector('#slider .fa-arrow-right');
-let leftArrow = document.querySelector('#slider .fa-arrow-left');
-let currIndex = 0 ;
-let rightOffset = 0 ;
-let offsetValue = 12 ; //12em is size of each image
-changeImage(currIndex) ;
-function changeImage(targetIndex){
-    bgImage.setAttribute('src',imgsPath[targetIndex]) ;
-    bgImage.setAttribute('alt',imgsPath[targetIndex]) ;
+let currImg = document.querySelector('#slider img.curr') ;
+let nextImg = document.querySelector('#slider img.next') ;
+let dotsContainer = document.querySelector('#slider #dot-container') ;
+let dots = [] ;
+let slidesNum = 7 ;
+let currSlide = 0 ;
+initSlider() ;
+function initSlider(){
+    initDots() ;
+    initImgs() ;
 }
-leftArrow.addEventListener('click',e=>{
-    if(Math.abs(rightOffset - offsetValue) < (slidesNum)*(offsetValue) ){
-        //currIndex++ ;      
-        rightOffset -= offsetValue ;
-        slidesContainer.style.right = `${rightOffset}em` ;
-        // slides.forEach((slide,i)=>{
-        //     if(slide.classList.contains('active')) slide.classList.remove('active') ;
-        //     if(i==currIndex) slide.classList.add('active') ;
-        //     changeImage(currIndex) ;
-        // })
+function initDots(){
+    for(let i=0 ; i<slidesNum ; i++){
+        let dot = document.createElement('SPAN') ;
+        dot.classList.add('circle') ;
+        if(i==0) dot.classList.add('active') ;
+        dots.push(dot) ;
+        dotsContainer.appendChild(dot) ;
     }
-    
-})
-rightArrow.addEventListener('click',e=>{
-    if(rightOffset + offsetValue <= 0 ){     
-        //currIndex-- ;
-        rightOffset += offsetValue ;
-        slidesContainer.style.right = `${rightOffset}em` ;
-        // slides.forEach((slide,i)=>{
-        //     if(slide.classList.contains('active')) slide.classList.remove('active') ;
-        //     if(i==currIndex) slide.classList.add('active') ;
-        //     changeImage(currIndex) ;
-        // })
-    }   
-}) ;
-slides.forEach((slide,i)=>{
-    slide.addEventListener('click',e=>{
-        slides.forEach(s=>{
-            if(s.classList.contains('active')) s.classList.remove('active') ;
+    dots.forEach(dot=>{
+        dot.addEventListener('click',e=>{
+            dots.forEach(d=>d.classList.remove('active')) ;
+            e.target.classList.add('active') ;        
         })
-        e.target.classList.add('active') ;
-        currIndex = i ;
-        changeImage(currIndex) ;
     })
-})
+}
+function initImgs(){
+    //currImg =
+}

@@ -52,66 +52,53 @@
     width: 100% ;
     height: 100%;
     position: relative ;
-    top: 0;
-    right: 0 ;
 }
-#slider > img {
-    position: relative ;
-    top: 0 ; 
-    right: 0 ;
+#slider img{
     width: 100% ;
-    height: 100% ;
-    background-position: center center ;
-    background-size: 100% 100% ;
-}
-#slider-items{
-    width: fit-content ; 
-    height: auto;
-    position: absolute ;
-    bottom: 0 ;
-    right: 0;
-    display: flex ; 
-    flex-direction: row ;
-    justify-content: flex-start ;
-    align-items: center ;
-    flex-wrap: nowrap ;
-    transition: all .5s ease-in-out ;
-}
-#slider-items .slide{
-    width: 12em ;
-    height: 12em;
-    margin: 0 0 0 2em ;
-    cursor: pointer;
+    height: 100%;
     background-position: center center ;
     background-size: 100% 100% ;
     background-repeat: no-repeat ;
-    position: relative ;
-}
-#slider-items .slide:nth-child(1){background-image: url('../assets/imgs/slider/slider1.jpg');}
-#slider-items .slide:nth-child(2){background-image: url('../assets/imgs/slider/slider2.jpg');}
-#slider-items .slide:nth-child(3){background-image: url('../assets/imgs/slider/slider3.jpg');}
-#slider-items .slide:nth-child(4){background-image: url('../assets/imgs/slider/slider4.jpg');}
-#slider-items .slide:nth-child(5){background-image: url('../assets/imgs/slider/slider5.jpg');}
-#slider-items .slide:nth-child(6){background-image: url('../assets/imgs/slider/slider6.jpg');}
-#slider-items .slide:nth-child(7){background-image: url('../assets/imgs/slider/slider7.jpg');}
-#slider-items .slide::before{
-    content: '' ;
     position: absolute ;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(40,40,40,.8) ;
+    top: 0 ;
+    right: 0;
+    transition: all .8s ease-in-out ;
 }
-#slider-items .slide.active::before{
-    background-color: transparent ;
+#slider img.curr{
+    transform: translateX(0%) scaleX(1) ;
+    opacity: 1;
+    filter: blur(0px) ;
 }
-#slider .fas {
-    color: rgb(230,230,230) ;
-    font-size: 3em ;
+#slider img.next{
+    transform: translateX(100%) scaleX(4) ;
+    opacity: 0;
+    filter: blur(10px) ;
+}
+#slider #dot-container{
+    width: fit-content ;
+    height: auto;
     position: absolute ;
-    top: 90% ;
+    left: 5%;
+    top: 50% ;
+    transform: translateY(-50%) ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: space-evenly ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+}
+#slider .circle{
+    width: 1.5em ;
+    height: 1.5em;
+    border-radius: 50% ;
+    background-color: rgb(40,40,40) ;
+    margin: 1em 0 ;
     cursor: pointer;
+    transition: all .3s ease-in-out ;
 }
-#slider .fa-arrow-right{right: 0% ;}
-#slider .fa-arrow-left{left: 0% ;}
-
-
+#slider .circle.active{
+    transform: scale(1.5) ;
+} 
+@media screen and (max-width:1500px){
+    #hotel-info{font-size: 15px ;}
+}

@@ -45,6 +45,9 @@ table.highlight>tbody>tr:hover{
     right: calc(50% - 4.5em) ;
     margin-top: 15px ;
 }
+@media screen and (max-width:1500px){
+    #reserve{font-size: 15px;}
+}
 @media only screen and (max-width: 992px){
     table.responsive-table thead {
         display: block;
