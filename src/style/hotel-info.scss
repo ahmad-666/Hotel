@@ -52,27 +52,41 @@
     width: 100% ;
     height: 100%;
     position: relative ;
+    overflow: hidden ;
 }
-#slider img{
+#slider .img{
     width: 100% ;
     height: 100%;
-    background-position: center center ;
-    background-size: 100% 100% ;
-    background-repeat: no-repeat ;
+    position: absolute ;
+    right: 0 ;
+    top: 0 ;
+    transform: translateX(100%) scaleX(4) ;
+    filter: blur(10px) ;
+    opacity: 0;
+    // transition: all .6s ease-in-out ;
+    // this will added via js 
+}
+#slider .img img{
+    width: 100% ;
+    height: 100%;
     position: absolute ;
     top: 0 ;
-    right: 0;
-    transition: all .8s ease-in-out ;
+    right: 0 ;
+    background-position: center center ;
+    background-repeat: no-repeat ;
+    background-size: 100% 100% ;
 }
-#slider img.curr{
-    transform: translateX(0%) scaleX(1) ;
-    opacity: 1;
-    filter: blur(0px) ;
-}
-#slider img.next{
-    transform: translateX(100%) scaleX(4) ;
-    opacity: 0;
-    filter: blur(10px) ;
+#slider .img .desc{
+    width: 100% ;
+    height: auto;
+    padding: 2em ;
+    position: absolute ;
+    text-align: center ;
+    font-size: 1em ;
+    color: white ;
+    background-color: rgba(40,40,40,.8) ;
+    bottom: 0 ;
+    right: 0 ;
 }
 #slider #dot-container{
     width: fit-content ;
@@ -87,18 +101,21 @@
     align-items: center ;
     flex-wrap: nowrap ;
 }
-#slider .circle{
+#slider .dot{
+    display: inline-block ;
     width: 1.5em ;
-    height: 1.5em;
+    height: 1.5em ;
     border-radius: 50% ;
-    background-color: rgb(40,40,40) ;
-    margin: 1em 0 ;
+    background-color: rgb(50,50,50) ;
+    margin: 1em ;
+    border: none ;
+    transition:' all .4s ease-in-out' ; 
     cursor: pointer;
-    transition: all .3s ease-in-out ;
 }
-#slider .circle.active{
-    transform: scale(1.5) ;
-} 
+#slider .dot.active{
+    transform: scale(2.5) ;
+    border: .2em solid white ;
+}
 @media screen and (max-width:1500px){
     #hotel-info{font-size: 15px ;}
 }

@@ -50,35 +50,33 @@ tooltips.forEach(elm=>{
 })
 //-------------Slider----------------------------
 //-----------------------------------------------
-import imgs from '../assets/imgs/slider/*.*' ;
-console.log(imgs) ;
-let slider = document.querySelector('#slider') ;
-let currImg = document.querySelector('#slider img.curr') ;
-let nextImg = document.querySelector('#slider img.next') ;
-let dotsContainer = document.querySelector('#slider #dot-container') ;
-let dots = [] ;
-let slidesNum = 7 ;
-let currSlide = 0 ;
+let dots = document.querySelectorAll('#slider .dot') ;
+let imgs = document.querySelectorAll('#slider .img') ;
 initSlider() ;
 function initSlider(){
-    initDots() ;
-    initImgs() ;
+    imgs[0].style.transform = 'translateX(0%) scaleX(1)' ;
+    imgs[0].style.filter = 'blur(0)' ;
+    imgs[0].style.opacity = '1' ;
+    imgs.forEach(img=>img.style.transition= 'all .6s ease-in-out' )
 }
-function initDots(){
-    for(let i=0 ; i<slidesNum ; i++){
-        let dot = document.createElement('SPAN') ;
-        dot.classList.add('circle') ;
-        if(i==0) dot.classList.add('active') ;
-        dots.push(dot) ;
-        dotsContainer.appendChild(dot) ;
-    }
-    dots.forEach(dot=>{
-        dot.addEventListener('click',e=>{
-            dots.forEach(d=>d.classList.remove('active')) ;
-            e.target.classList.add('active') ;        
-        })
+dots.forEach(dot=>{
+    dot.addEventListener('click',e=>{
+        let currSlideIndex = null ;
+        dots.forEach(d=>{
+            if(d.classList.contains('active')) currSlideIndex = d.getAttribute('data-target') ;
+            d.classList.remove('active');
+        }) ;
+        e.target.classList.add('active') ;
+        let nextSlideIndex = e.target.getAttribute('data-target') ;
+        changeSlide(currSlideIndex,nextSlideIndex) ;
     })
-}
-function initImgs(){
-    //currImg =
+})
+function changeSlide(curr,next){
+    imgs[curr].style.transform = 'translateX(100%) scaleX(4)' ;
+    imgs[curr].style.filter = 'blur(10px)' ;
+    imgs[curr].style.opacity = '0' ;
+    imgs[next].style.transform = 'translateX(0%) scaleX(1)' ;
+    imgs[next].style.filter = 'blur(0px)' ;
+    imgs[next].style.opacity = '1' ;
+    
 }
