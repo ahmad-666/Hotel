@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build *.html --public-url ./"
+    "build": "parcel build *.html --public-url ./",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "ahmad",
