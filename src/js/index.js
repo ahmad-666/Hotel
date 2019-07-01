@@ -18,5 +18,6 @@ import 'materialize-css'
 import './header' ;
 import './header-grid' ;
 import './search' ;
+import './suggestions' ;
 import './footer' ;
 import './modals'
