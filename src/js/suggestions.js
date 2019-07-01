@@ -1,6 +1,4 @@
 import anime from 'animejs';
-let sliders = document.querySelectorAll('.slider-wrapper .slider') ;
-let overlays = document.querySelectorAll('.slider .overlay') ;
 let discountSlider = document.querySelector('#discount .slider') ;
 let topSlider = document.querySelector('#top .slider') ;
 let suggestionSlider = document.querySelector('#suggestion .slider') ;
@@ -8,7 +6,7 @@ let suggestionSlider = document.querySelector('#suggestion .slider') ;
 //-----------------------------------------------
 //-----------------------------------------------
 //-----------------------------------------------
-let timer = 3000 ;
+let time = 2500 ;
 let discountAnim = null ;
 let topAnim = null ;
 let suggestionAnim = null ;
@@ -24,8 +22,8 @@ function discountAnimation(discountOffset){
         loop: true ,
         direction: 'alternate' ,
         easing: 'linear' ,
-        duration:discountSlider.childElementCount*timer,
-        right: discountOffset       
+        duration: (discountSlider.childElementCount-1)*time,
+        right: discountOffset      
     });
 }
 function topAnimation(topOffset){
@@ -34,7 +32,7 @@ function topAnimation(topOffset){
         loop: true ,
         direction: 'alternate' ,
         easing: 'linear' ,
-        duration: topSlider.childElementCount*timer,
+        duration: (topSlider.childElementCount-1)*time,
         right: topOffset       
     });
 }
@@ -44,7 +42,7 @@ function suggestionAnimation(suggestionOffset){
         loop: true ,
         direction: 'alternate' ,
         easing: 'linear' ,
-        duration: suggestionSlider.childElementCount*timer,
+        duration: (suggestionSlider.childElementCount-1)*time,
         right: suggestionOffset       
     });
 }
@@ -63,7 +61,40 @@ window.addEventListener('resize',e=>{
     topAnimation(topOffset) ;
     suggestionAnimation(suggestionOffset) ;
 });
-//Stop on hover--------------------------------------
+//Stop on hover----------------------------------
+//-----------------------------------------------
+//-----------------------------------------------
+//-----------------------------------------------
+let overlays = document.querySelectorAll('.slider .overlay') ;
+overlays.forEach(overlay=>{
+    overlay.addEventListener('mouseenter',e=>{
+        switch(e.target.parentNode){
+            case discountSlider:
+                discountAnim.pause() ;
+                break ;
+            case topSlider:
+                topAnim.pause() ;
+                break ;
+            case suggestionSlider:
+                suggestionAnim.pause() ;
+                break ;
+        }
+    })
+    overlay.addEventListener('mouseleave',e=>{
+        switch(e.target.parentNode){
+            case discountSlider:
+                discountAnim.play() ;
+                break ;
+            case topSlider:
+                topAnim.play() ;
+                break ;
+            case suggestionSlider:
+                suggestionAnim.play() ;
+                break ;
+        }
+    })
+})
+//prev-btn , next-btn----------------------------------
 //-----------------------------------------------
 //-----------------------------------------------
 //-----------------------------------------------

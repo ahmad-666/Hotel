@@ -40,7 +40,7 @@
     border-radius: 2em ;
     background-color: teal ;
     position: absolute ;
-    z-index: 2;
+    z-index: 3;
     top: 50% ;
     transform: translateY(-50%) ;
 }
@@ -79,7 +79,7 @@
     position: absolute ;
     top: 0 ;
     right: 0;
-    z-index: 3;
+    z-index: 2;
     cursor: pointer;
 }
 .slider-wrapper .slide{
