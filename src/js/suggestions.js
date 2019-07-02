@@ -1,100 +1,72 @@
-import anime from 'animejs';
+let offset = document.querySelector('.slider-wrapper .slide').clientWidth ;
 let discountSlider = document.querySelector('#discount .slider') ;
+let discountRight = 0 ;
+let discountThreshold = Math.abs(window.innerWidth - discountSlider.clientWidth)+offset ;
 let topSlider = document.querySelector('#top .slider') ;
+let topRight = 0 ;
+let topThreshold = Math.abs(window.innerWidth - topSlider.clientWidth)+offset ;
 let suggestionSlider = document.querySelector('#suggestion .slider') ;
-//Animation--------------------------------------
-//-----------------------------------------------
-//-----------------------------------------------
-//-----------------------------------------------
-let time = 2500 ;
-let discountAnim = null ;
-let topAnim = null ;
-let suggestionAnim = null ;
-let discountOffset = (discountSlider.clientWidth - window.innerWidth > 0) ? -(discountSlider.clientWidth - window.innerWidth) : 0  ;
-let topOffset = (topSlider.clientWidth - window.innerWidth > 0) ? -(topSlider.clientWidth - window.innerWidth) : 0  ;
-let suggestionOffset = (suggestionSlider.clientWidth - window.innerWidth > 0) ? -(suggestionSlider.clientWidth - window.innerWidth) : 0  ;
-discountAnimation(discountOffset) ;
-topAnimation(topOffset) ;
-suggestionAnimation(suggestionOffset) ;
-function discountAnimation(discountOffset){
-    discountAnim = anime({
-        targets: discountSlider ,
-        loop: true ,
-        direction: 'alternate' ,
-        easing: 'linear' ,
-        duration: (discountSlider.childElementCount-1)*time,
-        right: discountOffset      
-    });
+let suggestionRight = 0 ;
+let suggestionThreshold = Math.abs(window.innerWidth - suggestionSlider.clientWidth)+offset ;
+let prevBtns = document.querySelectorAll('.slider-wrapper .btn-right') ;
+let nextBtns = document.querySelectorAll('.slider-wrapper .btn-left') ;
+nextBtns.forEach(next=>next.addEventListener('click',nextAnimation));
+prevBtns.forEach(prev=>prev.addEventListener('click',prevAnimation));
+function nextAnimation(e){
+    let next = this ;
+    switch(next.parentNode){
+        case discountSlider.parentNode:
+            if(Math.abs(discountRight - offset) < discountThreshold){
+                discountRight -= offset
+                discountSlider.style.right = `${discountRight}px` ;
+            }        
+            break ;
+        case topSlider.parentNode:
+            if(Math.abs(topRight - offset) < topThreshold){
+                topRight -= offset
+                topSlider.style.right = `${topRight}px` ;
+            }        
+            break ;
+        case suggestionSlider.parentNode:
+            if(Math.abs(suggestionRight - offset) < suggestionThreshold){
+                suggestionRight -= offset
+                suggestionSlider.style.right = `${suggestionRight}px` ;
+            }        
+            break ;
+    }
 }
-function topAnimation(topOffset){
-    topAnim = anime({
-        targets: topSlider ,
-        loop: true ,
-        direction: 'alternate' ,
-        easing: 'linear' ,
-        duration: (topSlider.childElementCount-1)*time,
-        right: topOffset       
-    });
+function prevAnimation(e){
+    let prev = this ;
+    switch(prev.parentNode){
+        case discountSlider.parentNode:
+            if(discountRight + offset <= 0){
+                discountRight += offset
+                discountSlider.style.right = `${discountRight}px` ;
+            }        
+            break ;
+        case topSlider.parentNode:
+            if(topRight + offset <= 0){
+                topRight += offset
+                topSlider.style.right = `${topRight}px` ;
+            }        
+            break ;
+        case suggestionSlider.parentNode:
+            if(suggestionRight + offset <= 0){
+                suggestionRight += offset
+                suggestionSlider.style.right = `${suggestionRight}px` ;
+            }        
+            break ;
+    }
 }
-function suggestionAnimation(suggestionOffset){
-    suggestionAnim = anime({
-        targets: suggestionSlider ,
-        loop: true ,
-        direction: 'alternate' ,
-        easing: 'linear' ,
-        duration: (suggestionSlider.childElementCount-1)*time,
-        right: suggestionOffset       
-    });
-}
-//Window resize responsive----------------------
-//-----------------------------------------------
-//-----------------------------------------------
-//-----------------------------------------------
 window.addEventListener('resize',e=>{
-    discountOffset = (discountSlider.clientWidth - window.innerWidth > 0) ? -(discountSlider.clientWidth - window.innerWidth) : 0  ;
-    topOffset = (topSlider.clientWidth - window.innerWidth > 0) ? -(topSlider.clientWidth - window.innerWidth) : 0  ;
-    suggestionOffset = (suggestionSlider.clientWidth - window.innerWidth > 0) ? -(suggestionSlider.clientWidth - window.innerWidth) : 0  ;
-    discountAnim.reset() ;
-    topAnim.reset() ;
-    suggestionAnim.reset() ;
-    discountAnimation(discountOffset) ;
-    topAnimation(topOffset) ;
-    suggestionAnimation(suggestionOffset) ;
-});
-//Stop on hover----------------------------------
-//-----------------------------------------------
-//-----------------------------------------------
-//-----------------------------------------------
-let overlays = document.querySelectorAll('.slider .overlay') ;
-overlays.forEach(overlay=>{
-    overlay.addEventListener('mouseenter',e=>{
-        switch(e.target.parentNode){
-            case discountSlider:
-                discountAnim.pause() ;
-                break ;
-            case topSlider:
-                topAnim.pause() ;
-                break ;
-            case suggestionSlider:
-                suggestionAnim.pause() ;
-                break ;
-        }
-    })
-    overlay.addEventListener('mouseleave',e=>{
-        switch(e.target.parentNode){
-            case discountSlider:
-                discountAnim.play() ;
-                break ;
-            case topSlider:
-                topAnim.play() ;
-                break ;
-            case suggestionSlider:
-                suggestionAnim.play() ;
-                break ;
-        }
-    })
+    discountSlider.style.right = 0 ;
+    topSlider.style.right = 0 ;
+    suggestionSlider.style.right = 0 ;
+    discountRight = 0 ;
+    topRight = 0 ;
+    suggestionRight = 0 ;
+    offset = document.querySelector('.slider-wrapper .slide').clientWidth ;
+    discountThreshold = Math.abs(window.innerWidth - discountSlider.clientWidth)+offset ;
+    topThreshold = Math.abs(window.innerWidth - topSlider.clientWidth)+offset ;
+    suggestionThreshold = Math.abs(window.innerWidth - suggestionSlider.clientWidth)+offset ;
 })
-//prev-btn , next-btn----------------------------------
-//-----------------------------------------------
-//-----------------------------------------------
-//-----------------------------------------------

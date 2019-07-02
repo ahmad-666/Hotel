@@ -12,6 +12,15 @@
     font-weight: 700 ;
     margin: 0 1em 0 0 ;
 }
+.slider-wrapper > a {
+    text-decoration: none ;
+    width: fit-content ;
+    font-size: 1.1em ;
+    position: absolute ;
+    left: 4em ;
+    top: 0 ;
+}
+.slider-wrapper > a .fas{transform: translateY(10%) ;}
 .slider-wrapper .line{
     display: inline-block ;
     width: 20em ;
@@ -45,7 +54,6 @@
     transform: translateY(-50%) ;
 }
 .slider-wrapper .btn i {
-    display: inline-block ;
     position: absolute ;
     top: 50% ;
     right: 50% ;
@@ -72,15 +80,8 @@
     align-items: center ;
     flex-wrap: nowrap ;
     position: relative ;
-}
-.slider-wrapper .overlay{
-    width: 100% ;
-    height: 100%;
-    position: absolute ;
-    top: 0 ;
-    right: 0;
-    z-index: 2;
-    cursor: pointer;
+    right: 0 ;
+    transition: all .6s ease-in-out ;
 }
 .slider-wrapper .slide{
     width: 15em ;
