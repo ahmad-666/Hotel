@@ -27,31 +27,32 @@
             </li>
         </ul>
     </div>
-    <form action="#" method="GET" id="search">
-            <div class="input-field">
-                <input id="dest" type="text" class="autocomplete">
-                <i class="fas fa-map-marker-alt prefix grey-text"></i>
-                <label for="dest" class="active labelFix">مقصد</label>
-            </div>
-            <div class="input-field">
-                <input id="guests" type="number">
-                <i class="fas fa-user-friends prefix grey-text"></i>
-                <label for="guests" class="active labelFix">تعداد مهمان</label>
-            </div>
-            <div class="input-field">
-                <input id="in" type="text">
-                <i class="fas fa-calendar-alt prefix grey-text"></i>
-                <label for="in" class="active labelFix"> تاریخ ورود </label>
-            </div>
-            <div class="input-field">
-                <input id="out" type="text">
-                <i class="fas fa-calendar-alt prefix grey-text"></i>
-                <label for="out" class="active labelFix"> تاریخ خروج </label>
-            </div>
-            <button type="submit" class="btn waves-effect waves-light">
-                جست و جو
-                <i class="fas fa-search"></i>
-            </button>
+    <form action="#!" method="GET" id="search" autocomplete="off" enctype="text/plain" name="search">
+        <div class="input-field">
+            <input id="dest" name="dest" type="text" class="autocomplete">
+            <i class="fas fa-map-marker-alt prefix grey-text"></i>
+            <label for="dest" class="active labelFix"> مقصد </label>
+        </div>
+        <!-- <div class="input-field">
+            <input id="guests" name="guests" type="number">
+            <i class="fas fa-user-friends prefix grey-text"></i>
+            <label for="guests" class="active labelFix"> تعداد مهمان </label>
+        </div> -->
+        <div class="input-field">
+            <input id="in" name="in" type="text">
+            <i class="fas fa-calendar-alt prefix grey-text"></i>
+            <label for="in" class="active labelFix"> تاریخ ورود </label>
+        </div>
+        <div class="input-field">
+            <input id="out" name="out" type="text">
+            <i class="fas fa-calendar-alt prefix grey-text"></i>
+            <label for="out" class="active labelFix"> تاریخ خروج </label>
+        </div>
+        <input type="submit" value="جست و جو" class="teal white-text lighten-1">
+        <!-- <button type="submit" class="btn waves-effect waves-light">
+            جست و جو
+            <i class="fas fa-search"></i>
+        </button> -->
     </form>
     <div id="grid">  
         <form id="filters" action="#" method="GET">
@@ -287,7 +288,6 @@
             </div>       
         </div>
         <div id="hotels">
-
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -302,6 +302,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -320,6 +321,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -327,7 +329,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -344,6 +346,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -362,6 +365,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -369,7 +373,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -386,6 +390,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -404,6 +409,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -411,7 +417,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -428,6 +434,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -446,6 +453,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -453,7 +461,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -470,6 +478,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -488,6 +497,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -495,7 +505,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -512,6 +522,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -530,6 +541,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -537,7 +549,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -554,6 +566,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -572,6 +585,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -579,7 +593,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -596,6 +610,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -614,6 +629,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -621,7 +637,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -638,6 +654,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -656,6 +673,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -663,7 +681,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -680,6 +698,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -698,6 +717,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -705,7 +725,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -722,6 +742,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -740,6 +761,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -747,7 +769,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -764,6 +786,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -782,6 +805,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -789,7 +813,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -806,6 +830,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -824,6 +849,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -831,7 +857,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -848,6 +874,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -866,6 +893,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -873,7 +901,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -890,6 +918,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -908,6 +937,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -915,7 +945,7 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
             <div class="hotel">
@@ -932,6 +962,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         مشهد
                     </div>
+                    <div class="score">5 امتیاز (10رای)</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -950,6 +981,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
+                    
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -957,9 +989,54 @@
                             تومان
                         </div>
                     </div>
-                    <a href="#" class="btn btn-large teal white-text pulse"> مشاهده اطلاعات رزرو </a>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
                 </div>
             </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>                
+                        <i class="fas fa-wifi tooltipped"></i>
+                        <i class="fas fa-tv tooltipped"></i>
+                        <i class="fas fa-dumbbell tooltipped"></i>
+                        <i class="fas fa-swimming-pool tooltipped"></i>
+                        <i class="fas fa-shower tooltipped"></i>
+                        <i class="fas fa-utensils tooltipped"></i>
+                    </div>
+                    
+                    <div class="left section">
+                        <h5>شروع قیمت(یک شب یک نفر)</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-large teal white-text"> مشاهده اطلاعات رزرو </a>
+                </div>
+            </div>
+            <button class="btn btn-large teal lighte-1 white-text"> نمایش بیشتر </button>
         </div>
     </div>
     <div id="footer">

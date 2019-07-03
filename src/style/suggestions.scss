@@ -93,6 +93,7 @@
     align-items: center ;
     flex-wrap: nowrap ;
     overflow: hidden;
+    position: relative;
 }
 .slider-wrapper .slide img {
     width: 100% ;
@@ -114,39 +115,18 @@
 .slider-wrapper .slide .stars{
     color: gold ;
 }
-// .discount{
-//     position: absolute ;
-//     width: fit-content ;
-//     height: auto ;
-//     padding: .3em ;
-//     background-color: rgb(207, 64, 93) ;
-//     right: 0 ;
-//     top: 50% ;
-//     transform: translateY(-50%) ;
-//     color: white ;
-//     border-top-left-radius: 30px ;
-//     border-bottom-left-radius: 30px ;
-// }
-// @media screen and (max-width:1400px){
-//     .suggestions{font-size: 16px}
-//     .carsousel{     animation: carouselAnime 10s linear 0s infinite alternate;}
-//     @keyframes carouselAnime{
-//         from{transform: translateY(-1em) translateX(0em);}
-//         to{transform: translateY(-1em) translateX(calc(100% - (5 * 15em)));}
-//     }
-// }
-// @media screen and (max-width:900px){
-//     .carsousel{  animation: carouselAnime 15s linear 0s infinite alternate;}
-//     @keyframes carouselAnime{
-//         from{transform: translateY(-1em) translateX(0em);}
-//         to{transform: translateY(-1em) translateX(calc(100% - (3 * 15em)));}
-//     }
-// }
-// @media screen and (max-width:600px){
-//     .suggestions{font-size: 12px}
-//     .carsousel{  animation: carouselAnime 20s linear 0s infinite alternate;}
-//     @keyframes carouselAnime{
-//         from{transform: translateY(-1em) translateX(0em);}
-//         to{transform: translateY(-1em) translateX(calc(100% - (1.5 * 15em)));}
-//     }
-// }
+.slider-wrapper .slider .discount{
+    position: absolute ;
+    width: fit-content ;
+    height: auto ;
+    padding: .3em ;
+    font-size: 1em ;
+    background-color: rgb(207, 64, 93) ;
+    right: 0 ;
+    top: 50% ;
+    transform: translateY(-50%) ;
+    color: white ;
+    border-top-left-radius: 1.5em ;
+    border-bottom-left-radius: 1.5em ;
+}
+

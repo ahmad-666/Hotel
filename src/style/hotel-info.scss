@@ -30,11 +30,11 @@
     height: auto;
     color: rgb(230,230,230) ; 
 }
-#type p , #city p {
+#type p , #city p , #score p {
     margin-right: .5em ;
     display: inline-block ;  
 }
-#name , #type p , #city p {font-size: 2em ;}
+#name , #type p , #city p , #score p {font-size: 2em ;}
 #type .fas , #city .fas{font-size: 1.5em;}
 #features {
     display: flex ;
@@ -112,8 +112,7 @@
     cursor: pointer;
 }
 #slider .dot.active{
-    transform: scale(2.5) ;
-    border: .2em solid white ;
+    transform: scale(2) ;
 }
 @media screen and (max-width:1500px){
     #hotel-info{font-size: 15px ;}

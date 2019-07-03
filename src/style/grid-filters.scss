@@ -7,23 +7,27 @@
     margin-top: 6em ;      
 }
 #grid #sort{
+    height: fit-content  ;
     grid-column: 1/3;
     grid-row: 1/2;
     margin: 1em .5em 0 0; 
 }
 #grid #filters{
+    height: fit-content  ;
     grid-column: 1/3;
     grid-row: 2/3;
     border: 1px solid rgba(200,200,200,.8) ;
     margin: 2.5em .5em 0 0;  
 }
 #grid #curr-filters{
+    height: fit-content  ;
     grid-column: 4/11;
     grid-row: 1/2;
     margin-left: .5em;  
     margin: 0 0 0 .5em;  
 }
 #grid #hotels{
+    height: fit-content  ;
     grid-column: 4/11;
     grid-row: 2/3;
     border: 1px solid rgba(200,200,200,.8) ;  
