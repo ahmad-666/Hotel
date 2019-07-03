@@ -1,0 +1,6 @@
+body > *:not(header):not(#grid):not(#search):not(#footer):not(.modal):not(#copyright):nth-child(even){
+    background-color: rgb(245,245,245) ;
+}
+body > *:not(header):not(#grid):not(#search):not(#footer):not(.modal):not(#copyright):nth-child(odd){
+    background-color: white ;
+}

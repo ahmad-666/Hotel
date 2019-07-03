@@ -9,7 +9,7 @@
     position: relative ;
     right: 50% ;
     transform: translateX(50%) ;
-    margin-top: 5em ;
+    margin-top: 4em ;
     padding: 0 1em ;
     border: 1px solid rgba(200,200,200,.8) ;
 }
@@ -52,6 +52,18 @@ input[type=number]:not(.browser-default):focus:not([readonly])~i{
 }
 .input-field>label:not(.label-icon).labelFix.active {
     transform: translateY(-1.3em) scale(1) ;
+}
+#search input[type="submit"]{
+    width: 7em ;
+    height: 3em;
+    font-family: byekan ;
+    font-size: 1em ;
+    border:none ;
+    cursor: pointer;
+    border-radius: 2em ;
+}
+#search .dropdown-content li{
+    text-align: right ;
 }
 @media screen and (max-width:700px){
     #search > *{

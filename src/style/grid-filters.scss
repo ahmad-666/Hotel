@@ -2,25 +2,31 @@
     width: 100% ;
     height: auto;
     display: grid ;
-    grid-template-columns: repeat(6,1fr) ;
+    grid-template-columns: repeat(10,1fr) ;
     grid-auto-rows: minmax(0,auto);
-    grid-template-areas:
-        "filters curr-filters curr-filters curr-filters curr-filters curr-filters" 
-        "filters hotels hotels hotels hotels hotels" ;
-    margin-top: 10em ;      
+    margin-top: 6em ;      
+}
+#grid #sort{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin: 1em .5em 0 0; 
 }
 #grid #filters{
-    grid-area: filters ;
+    grid-column: 1/3;
+    grid-row: 2/3;
     border: 1px solid rgba(200,200,200,.8) ;
+    margin: 2.5em .5em 0 0;  
 }
 #grid #curr-filters{
-    height: auto ;
-    grid-area: curr-filters ;
-    border: 1px solid rgba(200,200,200,.8) ; 
-    margin: 0 5em 0 2em ;
+    grid-column: 4/11;
+    grid-row: 1/2;
+    margin-left: .5em;  
+    margin: 0 0 0 .5em;  
 }
 #grid #hotels{
-    grid-area: hotels ;
-    border: 1px solid rgba(200,200,200,.8) ;    
-    margin: 5em 5em 0 2em ;
+    grid-column: 4/11;
+    grid-row: 2/3;
+    border: 1px solid rgba(200,200,200,.8) ;  
+    margin: 2em 0 0 .5em;  
+    // margin: 5em 5em 0 2em ;
 }

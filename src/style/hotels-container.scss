@@ -2,11 +2,11 @@
     // width: 100% ;
     // height: auto;
     display: grid ;
-    grid-template-columns: repeat(auto-fit,minmax(17em,1fr)) ;
-    grid-auto-rows: 17em ;
+    grid-template-columns: repeat(auto-fit,minmax(15em,1fr)) ;
+    grid-auto-rows: 15em ;
 }
 #hotels .hotel{
-    margin: 2em ;
+    margin: .5em ;
     position: relative ;
     transform-style: preserve-3d ;
     transform-origin: center center ;

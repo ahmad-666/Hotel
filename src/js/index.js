@@ -10,8 +10,12 @@ import '../style/search.scss' ;
 import '../style/services.scss' ;
 import '../style/suggestions.scss' ;
 import '../style/features.scss' ;
+import '../style/sponsers.scss' ;
 import '../style/footer.scss' ;
+import '../style/index.scss' ;
+import '../style/copyright.scss' ;
 import '../style/modals.scss' ;
+
 //load scripts
 import 'materialize-css'
 // import './navbar';
@@ -20,5 +24,6 @@ import './header-grid' ;
 import './search' ;
 import './services' ;
 import './suggestions' ;
+import './sponsers' ;
 import './footer' ;
 import './modals'

@@ -2,32 +2,30 @@
     width: 100% ;
     height: auto;
     position: relative ;
-    margin-top: 6em ;
+    margin-top: 4em ;
     overflow: hidden;
-    padding: 0 0 1em 0 ;
+    padding: 1em 0 4em 0 ;
 }
 .slider-wrapper h4{
+    width: fit-content ;
     font-size: 2em ;
     color: rgb(40,40,40) ;
     font-weight: 700 ;
     margin: 0 1em 0 0 ;
+    border-bottom: .8px solid #80808070 ;
+    padding-bottom: .6em ;
 }
 .slider-wrapper > a {
     text-decoration: none ;
     width: fit-content ;
     font-size: 1.1em ;
     position: absolute ;
-    left: 4em ;
-    top: 0 ;
+    right: 50% ;
+    transform: translateX(50%) ;
+    bottom: .5em ;
+    z-index: 4;
 }
 .slider-wrapper > a .fas{transform: translateY(10%) ;}
-.slider-wrapper .line{
-    display: inline-block ;
-    width: 20em ;
-    height: .8px;
-    background-color: #80808070 ;
-    margin: 1em 1em 0 0 ;
-}
 .slider-wrapper .fade{
     width: 25% ;
     height: 100%;
