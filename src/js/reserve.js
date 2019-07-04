@@ -1,15 +1,21 @@
 //Increase/Decrease room-num
 //--------------------------
 //--------------------------
-let increaseBtn = document.querySelector('.room button#increase') ;
-let decreaseBtn = document.querySelector('.room button#decrease') ;
-let roomNum = document.querySelector('.room .room-num input[type="number"]') ;
-increaseBtn.addEventListener('click',e=>{
-    roomNum.value++ ;
+let increaseBtns = document.querySelectorAll('.room button#increase') ;
+let decreaseBtns = document.querySelectorAll('.room button#decrease') ;
+increaseBtns.forEach(increaseBtn=>{
+    increaseBtn.addEventListener('click',function(e){
+        let guestNum = this.parentNode.querySelector('input[type="number"]');
+        guestNum.value++ ;
+    })
 })
-decreaseBtn.addEventListener('click',e=>{
-    (roomNum.value-1>=0)?(roomNum.value--):(roomNum.value) ;
+decreaseBtns.forEach(decreaseBtn=>{
+    decreaseBtn.addEventListener('click',function(e){
+        let guestNum = this.parentNode.querySelector('input[type="number"]');
+        if(guestNum.value-1>=0) guestNum.value-- ;
+    })
 })
+
 //features tooltip
 //--------------------------
 //--------------------------
@@ -29,3 +35,10 @@ tooltips.forEach(tooltip=>{
 //Open calender grid
 //--------------------------
 //--------------------------
+let showCalenderBtns = document.querySelectorAll('#rooms .room .show-calender button') ;
+showCalenderBtns.forEach(showCalenderBtn=>{
+    showCalenderBtn.addEventListener('click',function(e){
+        let calender = this.parentNode.parentNode.querySelector('.calender') ;
+        calender.classList.toggle('show-calender-grid') ;
+    })
+})
