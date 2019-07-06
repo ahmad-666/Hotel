@@ -1,0 +1,77 @@
+.calender{
+    width: fit-content ;
+    height: auto;
+    background-color: white ;
+    box-shadow: 0 0 .5em .05em rgba(30,30,30,.5) ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: flex-start ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+}
+.calender > div{
+    width: 100% ;
+    height: auto;
+    margin: 0 0 1em 0 ;
+}
+.calender .month-year{
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-evenly ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+    padding: .5em ;
+}
+.calender .month-year .fas{
+    color: teal ;
+    font-size: 2em ;
+    cursor: pointer;
+}
+.calender .days{
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-evenly ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+}
+.calender .days > div{
+    display: flex ;
+    flex-direction: column ;
+    justify-content: flex-start ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+}
+.calender .days span {
+    width: 2em ;
+    height: 2em;
+    margin: .5em ;
+    cursor: pointer;
+    transition: all .2s linear ;
+    font-size: .8em ;
+    line-height: 2em ;
+    text-align: center ;
+    color: rgb(50,50,50) ;
+}
+.calender .days span:not(:first-child):not(.curr):not(.past):hover{
+    color: white ;
+    background-color: teal ;
+}
+.calender .days div span:nth-child(1){
+    cursor: auto;
+    transition: none ;
+    color: grey ;
+    font-size: 1em ;
+}
+.calender .days span.curr {
+    border-radius: 50% ;
+    color: white ;
+    background-color: orangered ;
+    cursor: auto;
+    transition: none ;
+}
+.calender .days span.past {
+    color: rgb(179, 179, 179) ;
+    cursor: auto;
+    transition: none ;
+
+}

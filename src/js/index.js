@@ -7,6 +7,7 @@ import '../style/init.scss' ;
 import '../style/header.scss' ;
 import '../style/header-grid.scss' ;
 import '../style/search.scss' ;
+import '../style/calender.scss' ;
 import '../style/services.scss' ;
 import '../style/suggestions.scss' ;
 import '../style/features.scss' ;
@@ -22,6 +23,7 @@ import 'materialize-css'
 import './header' ;
 import './header-grid' ;
 import './search' ;
+import './calender' ;
 import './services' ;
 import './suggestions' ;
 import './sponsers' ;
