@@ -3,12 +3,13 @@
     height: auto;
     background-color: white ;
     box-shadow: 0 0 .5em .05em rgba(30,30,30,.5) ;
-    display: flex ;
+    display: none ;
     flex-direction: column ;
     justify-content: flex-start ;
     align-items: center ;
     flex-wrap: nowrap ;
 }
+.show-calender{display: flex ;}
 .calender > div{
     width: 100% ;
     height: auto;
@@ -23,9 +24,15 @@
     padding: .5em ;
 }
 .calender .month-year .fas{
-    color: teal ;
+    color: white ;
     font-size: 2em ;
     cursor: pointer;
+    width: 1.2em ;
+    height: 1.2em;
+    border-radius: 50% ;
+    text-align: center ;
+    line-height: 1.2em ;
+    background-color: teal
 }
 .calender .days{
     display: flex ;
@@ -51,8 +58,9 @@
     line-height: 2em ;
     text-align: center ;
     color: rgb(50,50,50) ;
+    border-radius: 7px ;
 }
-.calender .days span:not(:first-child):not(.curr):not(.past):hover{
+.calender .days span:not(:first-child):not(.past):hover{
     color: white ;
     background-color: teal ;
 }
@@ -66,12 +74,10 @@
     border-radius: 50% ;
     color: white ;
     background-color: orangered ;
-    cursor: auto;
-    transition: none ;
 }
 .calender .days span.past {
-    color: rgb(179, 179, 179) ;
-    cursor: auto;
+    background-color: rgb(226, 226, 226) ;
+    color: rgb(136, 136, 136)  ;
+    cursor: auto ;
     transition: none ;
-
 }
