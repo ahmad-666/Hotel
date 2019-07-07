@@ -14,7 +14,7 @@ header::before{
     position: absolute ;
     top: 0 ;
     right: 0 ;
-    background-color: rgba(30,30,30,.6) ;
+    background-color: rgba(30,30,30,.5) ;
     z-index: 2;
 }
 header .cloud{
@@ -27,7 +27,7 @@ header .cloud{
     background-position: 0 0 ;
     background-repeat: repeat ;
     z-index: 1;
-    animation: cloud 30s linear 0s infinite alternate ;
+    animation: cloud 45s linear 0s infinite alternate ;
 }
 header .cloud:nth-child(1){background-image: url('../assets/imgs/cloud1.png');}
 header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
@@ -122,9 +122,11 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
 #brand-name > * {
     margin: 0 .3em ; 
 }
-#brand-name h1{
-    font-size: 3.3em ;
-    white-space: nowrap ;
+#brand-name img{
+    width: 22em ;
+    height: 6em;
+    background-image: url('../assets/imgs/mt.png') center center no-repeat ;
+    background-size: 100% 100% ;
 }
 #brand-name .line{
     width: 25vw ;
