@@ -67,17 +67,17 @@
     justify-content: space-evenly;
     align-items: center  ;
     flex-wrap: wrap ;
-    align-content: space-evenly;
-    padding: 2em ;
+    align-content: flex-start;
+    padding: 1em ;
     border: 2px solid rgb(230,230,230) ;
 }
 .comment > * {
     height: auto;
-    margin: 1em ;
+    margin: .5em ;
 }
-.comment .info{width: 10em ;}
-.comment .content{width: 40em ;}
-.comment .scores{width: 20em ;}
+.comment .info{width: 6em ;}
+.comment .content{width: 30em ;}
+.comment .scores{width: 16em ;}
 .comment .info{
     display: flex ;
     flex-direction: column ;
@@ -89,8 +89,8 @@
     margin: .5em 0 ;
 }
 .info img{
-    width: 7em ;
-    height: 7em;
+    width: 6em ;
+    height: 6em;
     border-radius: 50% ;
     background-position: center center ;
     background-size: 100% 100% ;
@@ -126,11 +126,11 @@
     display: inline-block ;
 }
 .score .polygon{
-    width: 4em ;
-    height: 4em ;
+    width: 3em ;
+    height: 3em ;
     border-radius: 50% ;
     text-align: center ;
-    line-height: 4.5em ;
+    line-height: 3.3em ;
     color: white ;
     background-color: teal ;
     font-size: 1em ; 

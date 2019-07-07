@@ -52,25 +52,39 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
     transition: all .6s ease-in-out ;
 }
 #nav a{
-    width: 7em ;
+    width: fit-content ;
     height: 3em;
     color: rgb(50,50,50) ;
     font-size: 1.2em ;
     text-align: center ;
-    margin: 0 1em ;
+    margin: 0 2em ;
     white-space: nowrap ;
-    line-height: 2.8em;
+    line-height: 3em;
 }
 #nav a .fas{
     position: relative; 
     top: .2em ;
     right: -.2em ;
 }
+#nav a:first-child{
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+}
+#nav a:first-child > * {margin: 0 .1em ;}
+#nav a:first-child p{
+    font-size: 1.2em ;
+    font-weight: 700 ;
+}
 #nav img{
     width: 3em ;
     height: 3em;
 }
+
 #nav a:nth-child(2){
+    width: 7em ;
     border: 1.5px solid rgb(50,50,50) ;
     border-radius: 40px ;
 }
