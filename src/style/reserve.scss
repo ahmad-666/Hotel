@@ -22,15 +22,15 @@
     grid-template-areas:  
         "info info price price reserve reserve"
         "features features features features features features"
-        "show-calender show-calender show-calender show-calender show-calender show-calender"
+        "calender-show calender-show calender-show calender-show calender-show calender-show"
         "calender calender calender calender calender calender"; 
 }
 #rooms .room .info{grid-area: info ;}
 #rooms .room .price{grid-area: price ;}
 #rooms .room .reserve{grid-area: reserve ;}
 #rooms .room .features{grid-area: features ;}
-#rooms .room .show-calender{grid-area: show-calender ;}
-#rooms .room .calender{grid-area: calender ; }
+#rooms .room .calender-show{grid-area: calender-show ;}
+#rooms .room .room-calender{grid-area: calender ; }
 #rooms .room .info , #rooms .room .price , #rooms .room .reserve{
     display: flex;
     flex-direction: column ;
@@ -99,9 +99,9 @@
 }
 .room .reserve .room-num button span{
     position: absolute ;
-    top: 45% ;
+    top: 50% ;
     right: 50%;
-    transform: translate(50%,-50%) ;
+    transform: translate(50%,-40%) ;
     font-size: 1.5em ;
     width: fit-content ;
     height: auto ;
@@ -152,10 +152,10 @@ input[type='number']::-webkit-inner-spin-button {
     margin: 1em;
     cursor: pointer;
 }
-.room .show-calender{
+.room .calender-show{
     text-align: center ;
 }
-.room .show-calender button{
+.room .calender-show button{
     font-family: 1.5em ;
     border-radius: 1.5em ;
     font-family: byekan ;
@@ -163,10 +163,10 @@ input[type='number']::-webkit-inner-spin-button {
     border: none ;   
     cursor: pointer;
 }
-.room .show-calender button i {
+.room .calender-show button i {
     transform: translateY(20%) ;
 }
-.room .calender{
+.room .room-calender{
     width: 100% ;
     height: auto;
     display: none ;
@@ -175,7 +175,7 @@ input[type='number']::-webkit-inner-spin-button {
     grid-gap: .5em ;
 }
 .show-calender-grid{display: grid !important;}
-.room .calender .date{
+.room .room-calender .date{
     display: flex; 
     flex-direction: column ;
     justify-content: space-evenly ;
@@ -184,21 +184,21 @@ input[type='number']::-webkit-inner-spin-button {
     font-size: .9em ;
     color: white ;
 }
-.room .calender .date{
+.room .room-calender .date{
     background-color: #55bd8a  ;
 }
-.room .calender .date.full{
+.room .room-calender .date.full{
     background-color: #eb5754  ;
 }
-.room .calender .date .price{
+.room .room-calender .date .price{
     color: white !important ;
     border:none !important;
     font-size: .9em !important;
 }
-.room .calender .date.discount .price{
+.room .room-calender .date.discount .price{
     position: relative;
 }
-.room .calender .date.discount .price::before{
+.room .room-calender .date.discount .price::before{
     content: '' ;
     width: 100% ;
     height: 2px;

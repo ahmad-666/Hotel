@@ -1,4 +1,4 @@
-let sort = document.querySelector('#grid #sort select') ;
+let sort = document.querySelector('#sort select') ;
 M.FormSelect.init(sort) ;
 let arrow = document.querySelector('.select-wrapper .caret');
 arrow.style.opacity = 0 ;

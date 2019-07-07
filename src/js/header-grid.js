@@ -44,8 +44,8 @@ function gridOpenAnimation(){
     });
     tl.add({
         targets: [blackGrid,gridItemsColors] ,
-        duration: 200 ,
-        delay: anime.stagger(200),
+        duration: 100 ,
+        delay: anime.stagger(100),
         width: '100%' ,
         begin: function(){gridContainer.style.display = 'grid' ;}
     },0);
@@ -54,11 +54,11 @@ function gridOpenAnimation(){
         duration: 1 ,
         easing: 'linear',
         width: '100%' 
-    },1800) ;
+    },900) ;
     tl.add({
         targets: gridItemsColors ,
-        duration: 200 ,
-        delay: anime.stagger(200),
+        duration: 100 ,
+        delay: anime.stagger(100),
         width: 0 ,
         begin: function(anim){
             anim.animatables.forEach(elm=>{
@@ -66,18 +66,18 @@ function gridOpenAnimation(){
                 elm.target.style.right = 0 ;
             })
         }
-    },1801) ;
+    },901) ;
    tl.add({
        targets: closeIcon ,
        opacity: 1
    },200) ;
    tl.add({
        targets: gridItemsTexts ,
-       delay: anime.stagger(200) ,
-       duration: 500 ,
+       delay: anime.stagger(100) ,
+       duration: 250 ,
        opacity: 1 ,
        top: '50%' 
-   },2000)
+   },1100)
 }
 function gridCloseAnimation(){
     let tl = anime.timeline({
@@ -88,19 +88,19 @@ function gridCloseAnimation(){
     tl.add({
         targets: '#grid .fa-times' ,
         opacity: 0 ,
-        duration: 300 ,
+        duration: 150 ,
     },0)
     tl.add({
         targets: gridItemsTexts ,
         opacity: 0 ,
         top: '75%' ,
-        duration: 300 ,
-        delay: anime.stagger(300)
+        duration: 150 ,
+        delay: anime.stagger(150)
     },0)   
     tl.add({
         targets: ['#grid #black',gridItemsImages] ,
-        duration: 200,
-        delay: anime.stagger(200),
+        duration: 100,
+        delay: anime.stagger(100),
         width: 0 ,
         begin: function(anim){
             anim.animatables.forEach(elm=>{
@@ -129,6 +129,6 @@ function gridCloseAnimation(){
             })
             
         }
-    },900)
+    },450)
 }
 

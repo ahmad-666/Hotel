@@ -38,8 +38,8 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
 #nav{
     width: 100% ;
     height: auto;
-    padding: 1em 0 ;
-    position: absolute ;
+    padding: .5em 0 ;
+    position: relative ;
     right: 0 ;
     top: 0 ;
     display: flex ;
@@ -48,26 +48,30 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
     align-items: center ;
     flex-wrap: nowrap ;
     z-index: 4 ;
-    background-color: transparent ;
+    background-color: rgb(245,245,245) ;
     transition: all .6s ease-in-out ;
 }
 #nav a{
-    width: fit-content ;
-    height: auto;
-    color: white ;
+    width: 7em ;
+    height: 3em;
+    color: rgb(50,50,50) ;
     font-size: 1.2em ;
     text-align: center ;
-    margin: 0 3em ;
-    padding: .3em 1.5em ;
+    margin: 0 1em ;
     white-space: nowrap ;
+    line-height: 2.8em;
 }
 #nav a .fas{
     position: relative; 
     top: .2em ;
     right: -.2em ;
 }
-#nav a:nth-child(1){
-    border: 1.5px solid white ;
+#nav img{
+    width: 3em ;
+    height: 3em;
+}
+#nav a:nth-child(2){
+    border: 1.5px solid rgb(50,50,50) ;
     border-radius: 40px ;
 }
 #hamburger{
@@ -82,13 +86,12 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
     justify-content: flex-start ;
     align-items: flex-end ;
     flex-wrap: nowrap ;
-    color: white ;
     cursor: pointer;
 }
 #hamburger span{
     display: inline-block ;
     height: 2px;
-    background-color: white ;
+    background-color: rgb(50,50,50) ;
     transition: width .4s ease-in-out ;
     margin-top: .5em ;
 }

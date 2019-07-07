@@ -35,10 +35,10 @@ tooltips.forEach(tooltip=>{
 //Open calender grid
 //--------------------------
 //--------------------------
-let showCalenderBtns = document.querySelectorAll('#rooms .room .show-calender button') ;
+let showCalenderBtns = document.querySelectorAll('#rooms .room .calender-show button') ;
 showCalenderBtns.forEach(showCalenderBtn=>{
     showCalenderBtn.addEventListener('click',function(e){
-        let calender = this.parentNode.parentNode.querySelector('.calender') ;
+        let calender = this.parentNode.parentNode.querySelector('.room-calender') ;
         calender.classList.toggle('show-calender-grid') ;
     })
 })

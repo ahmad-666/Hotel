@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
+    <div id="nav">
+        <a href="#!">
+            <img src="./src/assets/imgs/logo.png" alt="logo.png">
+        </a>
+        <a href="#!">
+            <i class="fas fa-sign-in-alt"></i>
+            ورود
+        </a>
+        <a href="#!">
+            <i class="fas fa-user"></i>
+            ثبت نام
+        </a>
+        <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="grid">
+        <div id="close">
+            <div id="black"></div>
+            <i class="fas fa-times"></i>
+        </div>
+        <div id="suite">
+            <div class="img"></div>
+            <div class="color"></div>
+            <p>سوییت</p>
+        </div>
+        <div id="residence">
+            <div class="img"></div>
+            <div class="color"></div>
+            <p>اقامتگاه</p>
+        </div>
+        <div id="villa">
+            <div class="img"></div>
+            <div class="color"></div>
+            <p>ویلا</p>
+        </div>
+        <div id="hotel">
+            <div class="img"></div>
+            <div class="color"></div>
+            <p>هتل</p>
+        </div>
+        <div id="inn">
+            <div class="img"></div>
+            <div class="color"></div>
+            <p>مسافر خانه</p>
+        </div>
+        <div id="motel">
+            <div class="img"></div>
+            <div class="color"></div>
+            <p>مهمان پذیر</p>
+        </div>
+        <div id="apartment">
+            <div class="img"></div>
+            <div class="color"></div>
+            <p>هتل آپارتمان</p>
+        </div>
+        <div id="home">
+            <div class="img"></div>
+            <div class="color"></div>
+            <p>خانه</p>
+        </div>
+    </div>
     <div class="slider">
         <ul class="slides">
             <li>
@@ -42,11 +108,161 @@
             <input id="in" name="in" type="text">
             <i class="fas fa-calendar-alt prefix grey-text"></i>
             <label for="in" class="active labelFix"> تاریخ ورود </label>
+            <div class="calender">
+                <div class="month-year">
+                    <i class="fas fa-angle-right"></i>
+                    <div class="info">
+                        <span class="month"></span>
+                        <span class="year"></span>
+                    </div>
+                    <i class="fas fa-angle-left"></i>
+                </div>
+                <div class="days">
+                    <div class="saturdays week-days">
+                        <span>ش</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sundays week-days">
+                        <span>ی</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mondays week-days">
+                        <span>د</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="thursdays week-days">
+                        <span>س</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="wednesdays week-days">
+                        <span>چ</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="tuesdays week-days">
+                        <span>پ</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="fridays week-days">
+                        <span>ج</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="input-field">
             <input id="out" name="out" type="text">
             <i class="fas fa-calendar-alt prefix grey-text"></i>
             <label for="out" class="active labelFix"> تاریخ خروج </label>
+            <div class="calender">
+                <div class="month-year">
+                    <i class="fas fa-angle-right"></i>
+                    <div class="info">
+                        <span class="month"></span>
+                        <span class="year"></span>
+                    </div>
+                    <i class="fas fa-angle-left"></i>
+                </div>
+                <div class="days">
+                    <div class="saturdays week-days">
+                        <span>ش</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sundays week-days">
+                        <span>ی</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mondays week-days">
+                        <span>د</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="thursdays week-days">
+                        <span>س</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="wednesdays week-days">
+                        <span>چ</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="tuesdays week-days">
+                        <span>پ</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="fridays week-days">
+                        <span>ج</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
         </div>
         <input type="submit" value="جست و جو" class="teal white-text lighten-1">
         <!-- <button type="submit" class="btn waves-effect waves-light">
@@ -54,10 +270,10 @@
             <i class="fas fa-search"></i>
         </button> -->
     </form>
-    <div id="grid">  
+    <div id="hotels-grid">
         <form id="filters" action="#" method="GET">
             <div id="price">
-                <h5>قیمت(بر حسب تومان)</h5>         
+                <h5>قیمت(بر حسب تومان)</h5>
                 <div id="range"></div>
             </div>
             <span class="divider"></span>
@@ -68,57 +284,57 @@
                         <input type="checkbox">
                         <span>هتل</span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="type">
                     <label>
                         <input type="checkbox">
                         <span>اقامتگاه</span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="type">
                     <label>
                         <input type="checkbox">
                         <span>مسافرخانه</span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="type">
                     <label>
                         <input type="checkbox">
                         <span>مهمان پذیر</span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="type">
                     <label>
                         <input type="checkbox">
                         <span>سوییت</span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="type">
                     <label>
                         <input type="checkbox">
                         <span>هتل آپارتمان</span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="type">
                     <label>
                         <input type="checkbox">
                         <span>خانه</span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="type">
                     <label>
                         <input type="checkbox">
                         <span>ویلا</span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
-                </div>    
+                    <span class="left badge teal-text">10</span>
+                </div>
             </div>
             <span class="divider"></span>
             <div id="stars">
@@ -130,7 +346,7 @@
                             <i class="fas fa-star yellow-text text-accent-4"></i>
                         </span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="star">
                     <label>
@@ -140,7 +356,7 @@
                             <i class="fas fa-star yellow-text text-accent-4"></i>
                         </span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="star">
                     <label>
@@ -151,7 +367,7 @@
                             <i class="fas fa-star yellow-text text-accent-4"></i>
                         </span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="star">
                     <label>
@@ -163,7 +379,7 @@
                             <i class="fas fa-star yellow-text text-accent-4"></i>
                         </span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
                 <div class="star">
                     <label>
@@ -176,7 +392,7 @@
                             <i class="fas fa-star yellow-text text-accent-4"></i>
                         </span>
                     </label>
-                    <span class="left badge teal white-text">10</span>
+                    <span class="left badge teal-text">10</span>
                 </div>
             </div>
             <span class="divider"></span>
@@ -250,9 +466,9 @@
                 <option value="discount">بیشترین تخفیف</option>
                 <option value="score">بیشترین امتیاز</option>
                 <option value="low-price">ارزان ترین</option>
-                <option value="high-price"> گران ترین </option>      
+                <option value="high-price"> گران ترین </option>
             </select>
-        </div> 
+        </div>
         <div id="curr-filters">
             <h5>فیلترهای انتخاب شده</h5>
             <div class="chip deep-orange lighten-1 white-text">
@@ -279,13 +495,13 @@
                 <i class="close material-icons">close</i>
             </div>
             <div class="chip deep-orange lighten-1 white-text">
-                    امکان شماره 2
+                امکان شماره 2
                 <i class="close material-icons">close</i>
             </div>
             <div class="chip deep-orange lighten-1 lighten-1 white-text">
                 امکان شماره 3
                 <i class="close material-icons">close</i>
-            </div>       
+            </div>
         </div>
         <div id="hotels">
             <div class="hotel">
@@ -313,7 +529,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -321,7 +537,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -357,7 +573,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -365,7 +581,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -401,7 +617,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -409,7 +625,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -445,7 +661,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -453,7 +669,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -489,7 +705,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -497,7 +713,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -533,7 +749,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -541,7 +757,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -577,7 +793,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -585,7 +801,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -621,7 +837,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -629,7 +845,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -665,7 +881,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -673,7 +889,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -709,7 +925,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -717,7 +933,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -753,7 +969,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -761,7 +977,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -797,7 +1013,7 @@
                 </div>
                 <div class="back">
                     <div class="right section">
-                        <h5>امکانات</h5>                
+                        <h5>امکانات</h5>
                         <i class="fas fa-wifi tooltipped"></i>
                         <i class="fas fa-tv tooltipped"></i>
                         <i class="fas fa-dumbbell tooltipped"></i>
@@ -805,7 +1021,7 @@
                         <i class="fas fa-shower tooltipped"></i>
                         <i class="fas fa-utensils tooltipped"></i>
                     </div>
-                    
+
                     <div class="left section">
                         <h5>شروع قیمت(یک شب یک نفر)</h5>
                         <div class="price">
@@ -820,66 +1036,320 @@
         </div>
     </div>
     <div id="footer">
-        <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs>
-                <linearGradient id="grad" x1="0%" y1="50%" x2="100%" y2="50%" gradientUnits="objectBoundingBox">
-                    <stop offset="0%" stop-color="#7aa9dd"/>
-                    <stop offset="100%" stop-color="#4188d8"/>              
-                </linearGradient>
-            </defs>
-            <path id="path"></path>
-        </svg>
+        <!-- <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="grad" x1="0%" y1="50%" x2="100%" y2="50%" gradientUnits="objectBoundingBox">
+                        <stop offset="0%" stop-color="#7aa9dd" />
+                        <stop offset="100%" stop-color="#4188d8" />
+                    </linearGradient>
+                </defs>
+                <path id="path"></path>
+            </svg> -->
         <div id="content">
             <ul id="support">
                 <h5> پشتیبانی </h5>
-                <li> 
-                    <a href="#"> درباره ما </a> 
-                </li>
-                <li> 
-                    <a href="#"> قوانین </a> 
+                <li>
+                    <a href="#about-us" class="modal-trigger"> درباره ما </a>
                 </li>
                 <li>
-                    <a href="#"> سوال های متداول </a>          
+                    <a href="#rules" class="modal-trigger"> قوانین </a>
+                </li>
+                <li>
+                    <a href="#faq" class="modal-trigger"> سوالات متداول </a>
                 </li>
             </ul>
             <ul class="contact-us">
                 <h5> ارتباط با ما </h5>
                 <li>
-                    <a href="#"> 
+                    <a href="#">
                         <i class="fab fa-telegram-plane"></i>
-                        تلگرام 
-                    </a>   
+                        تلگرام
+                    </a>
                 </li>
                 <li>
                     <a href="#">
                         <i class="fab fa-instagram"></i>
-                        اینستاگرام 
-                    </a>      
+                        اینستاگرام
+                    </a>
                 </li>
                 <li>
                     <a href="#">
                         <i class="fab fa-twitter"></i>
-                        توییتر 
-                    </a>         
+                        توییتر
+                    </a>
                 </li>
                 <li>
-                    <a href="#"> 
+                    <a href="#">
                         <i class="fas fa-envelope"></i>
-                        ایمیل 
-                    </a>                   
+                        ایمیل
+                    </a>
                 </li>
             </ul>
             <ul id="address">
                 <h5> آدرس </h5>
-                <li> 
+                <li>
                     <i class="fas fa-map-marker-alt"></i>
                     بلوار سید رضی - سید رضی 57 - پلاک 000
                 </li>
                 <li>
                     <i class="fas fa-phone"></i>
-                    تلفن : 05137826600  
+                    تلفن : 05137826600
                 </li>
             </ul>
+        </div>
+    </div>
+    <div id="copyright">
+        <p>
+            <i class="far fa-copyright"></i>
+            طراحی شده توسط
+            <a href="http://www.ittoos.com/">ittoos</a>
+        </p>
+    </div>
+    <div id="about-us" class="modal">
+        <div class="modal-content">
+            <h4>در باره ما</h4>
+            <p>
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-light btn btn-large teal white-text">
+                بستن
+            </a>
+        </div>
+    </div>
+    <div id="rules" class="modal">
+        <div class="modal-content">
+            <h4>قوانین</h4>
+            <p>
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-light btn btn-large teal white-text">
+                بستن
+            </a>
+        </div>
+    </div>
+    <div id="faq" class="modal">
+        <div class="modal-content">
+            <h4>سوالات متداول</h4>
+            <p>
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+                متن متن متن متن متن متن متن
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-light btn btn-large teal white-text">
+                بستن
+            </a>
         </div>
     </div>
     <a href="hotel.html">some other page</a>

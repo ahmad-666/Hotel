@@ -19,7 +19,6 @@ import '../style/modals.scss' ;
 
 //load scripts
 import 'materialize-css'
-// import './navbar';
 import './header' ;
 import './header-grid' ;
 import './search' ;
@@ -27,5 +26,5 @@ import './calender' ;
 import './services' ;
 import './suggestions' ;
 import './sponsers' ;
-import './footer' ;
+//import './footer' ;
 import './modals'

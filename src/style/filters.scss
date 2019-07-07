@@ -32,9 +32,27 @@ span.divider{
     // for grab both checkbox and label
     right: 1.8em ;
 }
-[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after{
+#filters .type , #filters .star , #filters .feature {
+    margin: 1em 0 ;
+}
+[type="checkbox"]+span:not(.lever):before , [type="checkbox"]:not(.filled-in)+span:not(.lever):after{
     // for grab just checkbox
     right: -1.8em ;
+    
+}
+[type="checkbox"]:not(.filled-in)+span:not(.lever):before{
+    width: 2em ;
+    height: 2em;
+    border-radius: .5em ;
+    transform: translate(1em,-.5em) ;
+}
+[type="checkbox"]:checked+span:not(.lever):before{
+    top: -.6em;
+    left: -.5em ;
+    width: 1em;
+    height: 2.1em ;
+    border-radius: 0 ;
+    transform: rotate(40deg);
 }
 #filters h5{
     color: rgb(40,40,40) ;

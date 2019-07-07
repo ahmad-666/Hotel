@@ -3,4 +3,5 @@ body > *:not(header):not(#grid):not(#search):not(#footer):not(.modal):not(#copyr
 }
 body > *:not(header):not(#grid):not(#search):not(#footer):not(.modal):not(#copyright):nth-child(odd){
     background-color: white ;
+    margin-top: 0 ;
 }
