@@ -25,12 +25,13 @@
     top: 0 ;
     right: 0 ;
     backface-visibility: hidden;
+    border-radius: 1.5em ;
 }
 #hotels .back{
     transform: rotateY(180deg) translateZ(.01px);
 }
 #hotels .front{
-    background: url('../assets//imgs/hotel-img.jpg') center center no-repeat ;
+    background: url('../assets/imgs/hotel-img.jpg') center center no-repeat ;
     background-size: 100% 100%;
     display: flex ;
     flex-direction: column ;
@@ -45,6 +46,7 @@
     height: 100%;
     position: absolute ;
     background-color: rgba(40,40,40,.6) ;
+    border-radius: 1.5em ;
 }
 #hotels .front > *{
     width: fit-content ;
@@ -71,6 +73,7 @@
     top: 0% ;
     border-top-left-radius: 1.5em ;
     border-bottom-left-radius: 1.5em ;
+    border-top-right-radius: 1.5em ;
 }
 #hotels .discount span{
     margin-right: 1em;
@@ -99,9 +102,14 @@
     align-items: center ;
     flex-wrap: wrap ; 
     align-content: space-evenly ;
+    border-top-right-radius: 1.5em ;
+    border-bottom-right-radius: 1.5em ;
 }
 #hotels .left{
     background-color: rgb(50,50,50);
+    border-top-left-radius: 1.5em ;
+    border-bottom-left-radius: 1.5em ;
+
 }
 
 #hotels h5{
