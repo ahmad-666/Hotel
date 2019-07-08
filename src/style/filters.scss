@@ -28,6 +28,9 @@ span.divider{
 //     position: relative;
 //     // right: 2em ;
 // }
+#filters label span{
+    font-size: 1.2em ;
+}
 [type="checkbox"]+span:not(.lever){
     // for grab both checkbox and label
     right: 1.8em ;
@@ -56,16 +59,18 @@ span.divider{
 }
 #filters h5{
     color: rgb(40,40,40) ;
-    font-size: 1.5em ;  
-    // right: -1em ;
+    font-size: 1.3em ;  
+    right: -1em ;
     position: relative ;
 }
 #filters #price h5{margin-bottom: 3em ;}
 #range{  
-    width: 100% ;
+    width: 75% ;
     height: 10px;
     position: relative ;
-    right: -.5em ;
+    
+    right: 47% ;
+    transform: translateX(50%) ;
 }
 #range *{outline: none ;}
 .ranger-handle{
@@ -76,7 +81,10 @@ span.divider{
     border: none !important ;
     box-shadow: none !important ;
 }
-@media screen and (max-width: 1500px){
-    #filters{font-size: 16px ;}
-    #filters label span{font-size: 14px;}
+#range{
+    font-size: 17px ;
 }
+// @media screen and (max-width: 1500px){
+//     #filters{font-size: 16px ;}
+//     #filters label span{font-size: 14px;}
+// }

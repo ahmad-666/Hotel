@@ -42,7 +42,7 @@
 }
 #footer h5{
     color: white ;
-    font-size: 1.2em ;
+    font-size: 1.4em ;
     transform: translateX(20px) ;
 }
 #footer #support h5 { transform: translateX(0px) ;}
@@ -52,7 +52,8 @@
 #footer a , #footer li {
     text-decoration: none ;
     color: rgb(230,230,230) ;
-    font-size: .9em ;
+    font-size: 1em ;
+    font-weight: 500 ;
 }
 #footer .fas , #footer .fab{transform: translateX(20px) ;}
 @media screen and (max-width:800px){

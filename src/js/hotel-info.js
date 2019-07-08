@@ -1,6 +1,6 @@
 //-------------Tooltip----------------------------
 //------------------------------------------------
-let tooltips = document.querySelectorAll('#features .tooltipped');
+let tooltips = document.querySelectorAll('#hotel-features .tooltipped');
 let wifiTooltipHTML = "<span class='white-text'> وای فای </span>" ;
 let tvTooltipHTML = "<span class='white-text'> تلویزیون </span>" ;
 let dumbbellTooltipHTML = "<span class='white-text'> باشگاه </span>" ;

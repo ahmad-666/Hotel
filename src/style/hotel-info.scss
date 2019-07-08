@@ -1,5 +1,5 @@
 #hotel-info{
-    width: 100vw ;
+    width: 100% ;
     height: auto;
     display: flex ;
     flex-direction: row ;
@@ -10,12 +10,12 @@
     overflow: hidden;
 }
 #hotel-info .section{
-    width: 50% ;
     height: 100vh;
     padding: 0 ;
     overflow: hidden;
 }
 .section.right{
+    width: 30% ;
     display: flex ;
     flex-direction: column ;
     justify-content: space-evenly ;
@@ -31,13 +31,14 @@
     color: rgb(230,230,230) ; 
     font-size: .8em ;
 }
+.section.left{width: 70% ;}
 #type p , #city p , #score p {
     margin-right: .5em ;
     display: inline-block ;  
 }
 #name , #type p , #city p , #score p {font-size: 2em ;}
 #type .fas , #city .fas{font-size: 1.5em;}
-#features {
+#hotel-features {
     display: flex ;
     flex-direction: row ;
     justify-content: flex-start ;
@@ -45,7 +46,7 @@
     flex-wrap: wrap ;
     align-content: flex-start ;
 }
-#features .fas{
+#hotel-features .fas{
     font-size: 1.5em ;
     margin: 1em 0 1em 1.5em ;
 }

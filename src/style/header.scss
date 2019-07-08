@@ -1,6 +1,6 @@
 header{
-    width: 100vw ;
-    height: 100vh;
+    width: 100% ;
+    height: 100%;
     position: relative ;
     background: url('../assets/imgs/bg.jpg') center center no-repeat ;
     background-size: 100% 100% ;
@@ -57,7 +57,7 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
     color: rgb(50,50,50) ;
     font-size: 1.2em ;
     text-align: center ;
-    margin: 0 2em ;
+    margin: 0 1em ;
     white-space: nowrap ;
     line-height: 3em;
 }
@@ -85,7 +85,6 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
 
 #nav a:nth-child(2){
     width: 7em ;
-    border: 1.5px solid rgb(50,50,50) ;
     border-radius: 40px ;
 }
 #hamburger{
