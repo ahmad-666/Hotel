@@ -1,5 +1,5 @@
 .calender{
-    width: fit-content ;
+    width: 20em ;
     height: auto;
     background-color: white ;
     box-shadow: 0 0 .5em .05em rgba(30,30,30,.5) ;
@@ -8,20 +8,26 @@
     justify-content: flex-start ;
     align-items: center ;
     flex-wrap: nowrap ;
+    position: relative ;
+    z-index: 10;
 }
 .show-calender{display: flex ;}
 .calender > div{
     width: 100% ;
     height: auto;
     margin: 0 0 1em 0 ;
+    flex-shrink: 0 ;
 }
 .calender .month-year{
     display: flex ;
     flex-direction: row ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
     padding: .5em ;
+}
+.calender .month-year > *{
+    flex-shrink: 0 ;
 }
 .calender .month-year .fas{
     color: white ;
@@ -37,7 +43,7 @@
 .calender .days{
     display: flex ;
     flex-direction: row ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
 }
@@ -47,10 +53,12 @@
     justify-content: flex-start ;
     align-items: center ;
     flex-wrap: nowrap ;
+    flex-shrink: 0 ;
 }
 .calender .days span {
     width: 2em ;
     height: 2em;
+    flex-shrink: 0 ;
     margin: .5em ;
     cursor: pointer;
     transition: all .2s linear ;

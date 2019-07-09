@@ -26,14 +26,14 @@
     height: auto;
     display: flex ;
     flex-direction: row ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: wrap ;
     align-content: space-around ;
     margin-top: 4em;
 }
 #dist .place{
-    width: fit-content ;
+    width: auto ;
     height: auto;
     color: teal ;
     display: flex ;

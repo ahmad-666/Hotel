@@ -52,7 +52,7 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
     transition: all .6s ease-in-out ;
 }
 #nav a{
-    width: fit-content ;
+    width: auto ;
     height: 3em;
     color: rgb(50,50,50) ;
     font-size: 1.2em ;
@@ -88,7 +88,7 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
     border-radius: 40px ;
 }
 #hamburger{
-    width: fit-content ;
+    width: auto ;
     height: auto;
     position: absolute ;
     left: 3em;
@@ -115,7 +115,7 @@ header .cloud:nth-child(2){background-image: url('../assets/imgs/cloud2.png');}
 #hamburger:hover span:nth-child(2){width:3em ;}
 #hamburger:hover span:nth-child(3){width:2em ;}
 #slogan{
-    width: fit-content ;
+    width: auto ;
     height: auto;
     padding: 2em ;
     position: absolute ;

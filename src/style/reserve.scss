@@ -34,7 +34,7 @@
 #rooms .room .info , #rooms .room .price , #rooms .room .reserve{
     display: flex;
     flex-direction: column ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
     color: rgb(40,40,40) ;
@@ -48,7 +48,7 @@
 .room .guests{
     display: flex ;
     flex-direction: column;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
     text-align: center ;
@@ -85,7 +85,7 @@
     width: 60% ;
     display: flex ;
     flex-direction: row ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
 }
@@ -103,7 +103,7 @@
     right: 50%;
     transform: translate(50%,-40%) ;
     font-size: 1.5em ;
-    width: fit-content ;
+    width: auto ;
     height: auto ;
 }
 .room .reserve input[type="number"]{
@@ -138,7 +138,7 @@ input[type='number']::-webkit-inner-spin-button {
     font-size: 2em ;
 }
 .room .features .features-wrapper{
-    width: fit-content ;
+    width: auto ;
     height: auto;
     display: inline-flex ;
     flex-direction: row ;
@@ -178,7 +178,7 @@ input[type='number']::-webkit-inner-spin-button {
 .room .room-calender .date{
     display: flex; 
     flex-direction: column ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
     font-size: .9em ;

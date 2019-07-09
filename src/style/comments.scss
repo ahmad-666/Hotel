@@ -9,7 +9,7 @@
 }
 #comments .comment:not(:first-child){margin-top: 4em ;}
 #comments .comment{
-    width: fit-content ;
+    width: auto ;
     height: auto;
     padding: 1em ;
     border: 2px solid rgb(230,230,230) ;
@@ -65,13 +65,13 @@
 .comment .scores{
     display: flex ;
     flex-direction: row ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: wrap ;
     align-content: flex-start ;
 }
 .scores .score{
-    width: fit-content ;
+    width: auto ;
     height: auto;
     color: rgb(40,40,40) ;
     margin: .5em ;

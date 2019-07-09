@@ -7,7 +7,7 @@
     padding: 1em 0 ;
 }
 #services h4{
-    width: fit-content ;
+    width: auto ;
     font-size: 2em ;
     font-weight: 700 ;
     color: rgb(40,40,40) ;
@@ -33,7 +33,7 @@
 #services label{
     display: flex ;
     flex-direction: column ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
     transition: all .4s ease-in-out ;
@@ -41,6 +41,9 @@
     border-radius: 1.5em ;
     box-shadow: 0 0 .5em 0.01em rgba(50,50,50,.3) ;
     cursor: pointer;
+}
+#services label > *{
+    flex-shrink: 0 ;
 }
 #services label input[type="checkbox"]{
     width: 0 ;
@@ -57,7 +60,7 @@
 #services label i.white-text{color: white;} 
 #services label p.white-text{color: white;}
 #services > p {
-    width: fit-content ;
+    width: auto ;
     height: auto;
     margin-right: 2em ;
     cursor: pointer ;

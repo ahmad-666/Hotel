@@ -7,7 +7,7 @@
     overflow-x : hidden;
 }
 #sponsers h4{
-    width: fit-content ;
+    width: auto ;
     font-size: 2em ;
     font-weight: 700 ;
     color: rgb(40,40,40) ;
@@ -16,7 +16,7 @@
     margin-right: 1em;
 }
 #sponsers .my-slider{
-    width: fit-content ;
+    width: auto ;
     height: auto;
     display: flex ;
     flex-direction: row ;
@@ -30,6 +30,7 @@
 }
 #sponsers .my-slider .my-slide{
     text-decoration: none ;
+    flex-shrink: 0 ;
     width: 13em ;
     height: 13em;
     margin: 0 1em ;

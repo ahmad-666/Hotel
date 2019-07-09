@@ -18,7 +18,7 @@
     width: 30% ;
     display: flex ;
     flex-direction: column ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: flex-start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
@@ -26,7 +26,7 @@
     background-color: #1e1e1e ;
 }
 .section.right > * {
-    width: fit-content ;
+    width: auto ;
     height: auto;
     color: rgb(230,230,230) ; 
     font-size: .8em ;
@@ -90,7 +90,7 @@
     right: 0 ;
 }
 #slider #dot-container{
-    width: fit-content ;
+    width: auto ;
     height: auto;
     position: absolute ;
     left: 5%;
@@ -98,7 +98,7 @@
     transform: translateY(-50%) ;
     display: flex ;
     flex-direction: column ;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
 }
