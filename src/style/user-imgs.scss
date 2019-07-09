@@ -1,0 +1,75 @@
+#comments{
+    .images{
+        display: flex ;
+        flex-direction: row ;
+        justify-content: flex-start ;
+        align-items: flex-start ;
+        flex-wrap: wrap ;
+        align-content: flex-start ;
+        .img{
+            width: 6em ;
+            height: 6em;
+            background-position: center center ;
+            background-repeat: no-repeat ;
+            background-size: 100% 100% ;
+            border-radius: 1em ;
+            margin: 1em ;
+            position: relative;
+            cursor: pointer;
+            &::before{
+                content: '' ;
+                width: 100% ;
+                height: 100% ;
+                position: absolute ;
+                background-color: rgba(30,30,30,.6) ;
+                transition: all .4s ease-in-out ;
+                border-radius: 1em ;
+            }
+            &:hover::before{background-color: rgba(30,30,30,0);}
+            &:nth-child(1){background-image: url('../assets/imgs/slide1.jpg');}
+            &:nth-child(2){background-image: url('../assets/imgs/slide2.jpg');}
+            &:nth-child(3){background-image: url('../assets/imgs/slide3.jpg');}
+            &:nth-child(4){background-image: url('../assets/imgs/slide4.jpg');}
+            &:nth-child(5){background-image: url('../assets/imgs/slide1.jpg');}
+            &:nth-child(6){background-image: url('../assets/imgs/slide2.jpg');}
+            &:nth-child(7){background-image: url('../assets/imgs/slide3.jpg');}
+            &:nth-child(8){background-image: url('../assets/imgs/slide4.jpg');}
+            &:nth-child(9){background-image: url('../assets/imgs/slide1.jpg');}
+        }
+    }
+}
+.full-img{
+    width: 100% ;
+    height: 100%;
+    position: fixed ;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    div{
+        width: 100% ;
+        height: 100%;
+        background-position: center center ;
+        background-repeat: no-repeat ;
+        background-size: 100% 100% ;
+    }
+    p{
+        width: 100% ;
+        height: auto;
+        color: white ;
+        text-align: center ;
+        padding: 1em ;
+        background-color: rgba(30,30,30,.8) ;
+        font-size: 1.5em ;
+        position: absolute ;
+        right: 0 ;
+        bottom: 0 ;
+    }
+    i{
+        position: absolute ;
+        top: 2% ;
+        right: 2% ;
+        font-size: 3em ;
+        color: white ;
+        cursor: pointer;
+    }
+}
