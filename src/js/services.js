@@ -3,7 +3,7 @@
 //----------------------------------
 let checkboxes = document.querySelectorAll('#services label input[type="checkbox"]') ;
 checkboxes.forEach((checkbox,i)=>{
-    checkbox.addEventListener('input',function(e){
+    checkbox.addEventListener('click',function(e){
         this.parentNode.classList.toggle('red-bg') ;
         this.parentNode.querySelector('i').classList.toggle('white-text') ;
         this.parentNode.querySelector('p').classList.toggle('white-text') ;
