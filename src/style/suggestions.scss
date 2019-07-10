@@ -7,6 +7,7 @@
     padding: 1em 0 4em 0 ;
 }
 .slider-wrapper h4{
+    display: inline-block ;
     width: auto ;
     font-size: 2em ;
     color: rgb(40,40,40) ;
@@ -27,7 +28,7 @@
 }
 .slider-wrapper > a .fas{transform: translateY(10%) ;}
 .slider-wrapper .fade{
-    width: 25% ;
+    width: 20% ;
     height: 100%;
     position: absolute ;
     z-index: 1;
@@ -48,8 +49,7 @@
     background-color: teal ;
     position: absolute ;
     z-index: 3;
-    top: 50% ;
-    transform: translateY(-50%) ;
+    top: 35% ;
 }
 .slider-wrapper .btn i {
     position: absolute ;
@@ -87,7 +87,7 @@
     flex-shrink: 0 ;
     border-radius: 1em ;
     margin: 0 1em ;
-    box-shadow: 0 0 .5em .05em rgba(100,100,100,.5) ;
+    box-shadow: 0 0 .2em .05em rgba(100,100,100,.3) ;
     display: flex ;
     flex-direction: column ;
     justify-content: space-between ;
@@ -124,10 +124,48 @@
     font-size: 1em ;
     background-color: rgb(207, 64, 93) ;
     right: 0 ;
-    top: 50% ;
+    top: 25% ;
     transform: translateY(-50%) ;
     color: white ;
     border-top-left-radius: 1.5em ;
     border-bottom-left-radius: 1.5em ;
 }
-
+@media screen and (max-width:1000px){
+    .slider-wrapper h4{font-size: 1.7em ;}
+}
+@media screen and (max-width:800px){
+    .slider-wrapper{font-size: 15px ;}
+    .slider-wrapper .btn{
+        font-size: 11px ;
+    }
+    // .slider-wrapper .slider{overflow-x: scroll;padding-bottom: 1em ;}
+    
+}
+@media screen and (max-width:500px){
+    .slider-wrapper h4{font-size: 1.5em ;}
+    .slider-wrapper .btn{
+        font-size: 9px ;
+    }
+    .slider-wrapper .fade{
+        display: none ;
+    }
+}
+@media screen and (max-width:360px){
+    // .slider-wrapper{font-size: 9px ;}
+    
+}
+@media screen and (max-width:300px){
+    .slider-wrapper h4{font-size: 1.2em ;}
+    .slider-wrapper .btn{
+        font-size: 8px ;
+    }
+}
+@media screen and (max-width:280px){
+    .slider-wrapper{font-size: 12px ;}
+}
+@media screen and (max-width:200px){
+    .slider-wrapper{font-size: 9px ;}
+    .slider-wrapper .btn{
+        font-size: 6px ;
+    }
+}

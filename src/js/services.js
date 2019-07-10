@@ -1,29 +1,6 @@
 //for set grid-auto-rows vis js to always have same width/height
 //----------------------------------
 //----------------------------------
-let grid = document.querySelector('#services form') ;
-let colNum = null ;
-let rowHeight = null ; //same as width of each col 
-setColNum() ;
-setHeight() ;
-function setColNum(){
-    if(window.innerWidth>1300) colNum = 8 ;
-    else if(window.innerWidth<=1300 && window.innerWidth>850) colNum = 6 ;
-    else if(window.innerWidth<=850 && window.innerWidth>550) colNum = 4 ;
-    else if(window.innerWidth<=550) colNum = 2 ;
-}
-function setHeight(){
-    rowHeight = grid.clientWidth/colNum ;
-    grid.style.gridAutoRows = `${rowHeight}px` ;
-}
-window.addEventListener('resize',e=>{
-    setColNum() ;
-    setHeight() ;
-    //grid.style.height = `calc(${rowHeight}px + 1.5em)` ;
-})
-//change background when we click on label
-//-----------------------------------------
-//-----------------------------------------
 let checkboxes = document.querySelectorAll('#services label input[type="checkbox"]') ;
 checkboxes.forEach((checkbox,i)=>{
     checkbox.addEventListener('input',function(e){
@@ -35,34 +12,30 @@ checkboxes.forEach((checkbox,i)=>{
 //Show all button
 //-----------------------------------------
 //-----------------------------------------
-grid.style.height = `calc(${rowHeight}px + 1.5em)` ;
-let showAll = document.querySelector('#services > p') ;
-let isShowAll = false ;
-let icon = document.createElement('i') ;
-initShowAll() ;
-function initShowAll(){
-    showAll.textContent = 'نمایش همه' ;
+let form = document.querySelector('#services form') ;
+let showElm = document.querySelector('#services > p') ;
+let icon = null ;
+showAllInit() ;
+function showAllInit(){
+    icon = document.createElement('i') ;
     icon.classList.add('fas','fa-angle-down') ;
-    showAll.appendChild(icon) ;
+    showElm.textContent = 'نمایش همه' ;
+    showElm.appendChild(icon) ;
 }
-showAll.addEventListener('click',e=>{
-    if(!isShowAll){
-        //grid.style.height = 'auto' ;
-        grid.style.height = 'auto' ;
-        showAll.textContent = 'نمایش کمتر' ;
+showElm.addEventListener('click',function(e){
+    form.classList.toggle('show-all') ;
+    if(form.classList.contains('show-all')){
+        showElm.textContent = 'نمایش کمتر' ;
         icon.classList.remove('fa-angle-down') ;
         icon.classList.add('fa-angle-up') ;
-        showAll.appendChild(icon) ;
+        showElm.appendChild(icon) ;
     }
     else{
-        grid.style.height = `calc(${rowHeight}px + 1.5em)` ;
-        //grid.style.height = `20em` ;
-        showAll.textContent = 'نمایش همه' ;
+        showElm.textContent = 'نمایش همه' ;
         icon.classList.remove('fa-angle-up') ;
         icon.classList.add('fa-angle-down') ;
-        showAll.appendChild(icon) ;
+        showElm.appendChild(icon) ;
     }
-    isShowAll = !isShowAll ;
 })
 
 

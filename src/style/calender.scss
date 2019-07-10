@@ -1,5 +1,5 @@
 .calender{
-    width: 20em ;
+    width: 200% ;
     height: auto;
     background-color: white ;
     box-shadow: 0 0 .5em .05em rgba(30,30,30,.5) ;
@@ -8,14 +8,15 @@
     justify-content: flex-start ;
     align-items: center ;
     flex-wrap: nowrap ;
-    position: relative ;
+    position: absolute ;
+    top: 90% ;
+    right: -50% ;
     z-index: 10;
 }
 .show-calender{display: flex ;}
 .calender > div{
     width: 100% ;
     height: auto;
-    margin: 0 0 1em 0 ;
     flex-shrink: 0 ;
 }
 .calender .month-year{
@@ -66,7 +67,7 @@
     line-height: 2em ;
     text-align: center ;
     color: rgb(50,50,50) ;
-    border-radius: 7px ;
+    border-radius: .4em ;
 }
 .calender .days span:not(:first-child):not(.past):hover{
     color: white ;
@@ -88,4 +89,16 @@
     color: rgb(136, 136, 136)  ;
     cursor: auto ;
     transition: none ;
+}
+@media screen and (max-width:700px){
+    .calender{font-size: 16px ; top: 100% ;}
+}
+@media screen and (max-width:550px){
+    .calender{width: 150% ;right: -25%;}  
+}
+@media screen and (max-width:380px){
+    .calender{font-size: 12px ;}
+}
+@media screen and (max-width:300px){
+    .calender{font-size: 10px ; width: 180% ;}
 }
