@@ -3,7 +3,7 @@
     height: auto;
     position: relative ;
     overflow: hidden;  
-    padding: 0 2em ;
+    padding: 1em ;
     margin-top: 4em ;
     display: flex ;
     flex-direction: row;
@@ -20,7 +20,7 @@
     justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
-    margin: 2em 0em ;
+    margin: 1em ;
 }
 .feature .fas{
     font-size: 5em ;
@@ -30,9 +30,9 @@
     color: rgb(70, 67, 67) ;
     font-size: 1em ;
 }
-@media screen and (max-width:1400px){
+@media screen and (max-width:1000px){
     #features{font-size: 16px;}
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:550px){
     #features{font-size: 12px;}
 }

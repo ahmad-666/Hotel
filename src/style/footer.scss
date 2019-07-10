@@ -9,16 +9,15 @@
     background-position: 50% 0% , center center ;
     background-repeat: no-repeat, no-repeat ;
     background-size: 10em 10em, 100% 100% ;
-   
 }
 #footer svg{position: relative ;}
 #footer path{fill: url('#grad') ;}
 #footer #content{
     width: 100% ;
     height: auto;
-    position: absolute ;
-    top: 35% ;
-    right: 0;
+    position: relative ;
+    top: 8em ;
+    right: 0%;
     display: flex ;
     flex-direction: row ;
     justify-content: space-around ;
@@ -32,7 +31,7 @@
     list-style: none ;  
     display: flex ;
     flex-direction: column ;
-    justify-content: flex-start ;
+    justify-content: space-around ;
     align-items: flex-start ;
     flex-wrap: nowrap ;
     margin: 0 2em ;
@@ -56,12 +55,33 @@
     font-weight: 500 ;
 }
 #footer .fas , #footer .fab{transform: translateX(20px) ;}
-@media screen and (max-width:800px){
+@media screen and (max-width:1000px){
+    #footer{
+        background-size: 7em 7em, 100% 100% ;
+        background-position: 50% 15% , center center ;
+    }
+}
+@media screen and (max-width:850px){
     #footer{font-size: 16px;}
 }
-@media screen and (max-width:620px){
-    #footer{height: 35em;}
+@media screen and (max-width:675px){
+    #footer{
+        height: 32em ;
+        background-image: url('../assets/imgs/logo.png') , url('../assets/imgs/footer1.svg') ; ;
+        background-position: 50% 0% , center center ;
+
+    }
+    #footer #content{top: 5em ;}
 }
-// @media screen and (max-width:340px){
-//     #footer{height: 55em;}
-// }
+@media screen and (max-width:330px){
+    #footer{
+        font-size: 12px;
+        height: 34em;
+    }
+}
+@media screen and (max-width:255px){
+    #footer{
+        height: 37em ;
+    }
+    #footer #content{top: 6em ;}
+}

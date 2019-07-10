@@ -96,9 +96,10 @@
 @media screen and (max-width:550px){
     .calender{width: 150% ;right: -25%;}  
 }
-@media screen and (max-width:380px){
-    .calender{font-size: 12px ;}
+@media screen and (max-width:360px){
+    // .calender{font-size: 12px ;}
+    .calender{width: 250% ;}
 }
-@media screen and (max-width:300px){
-    .calender{font-size: 10px ; width: 180% ;}
+@media screen and (max-width:260px){
+    .calender{width: 400% ;}
 }

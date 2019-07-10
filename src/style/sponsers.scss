@@ -7,6 +7,7 @@
     overflow-x : hidden;
 }
 #sponsers h4{
+    display: inline-block ;
     width: auto ;
     font-size: 2em ;
     font-weight: 700 ;
@@ -31,8 +32,8 @@
 #sponsers .my-slider .my-slide{
     text-decoration: none ;
     flex-shrink: 0 ;
-    width: 13em ;
-    height: 13em;
+    width: 12em ;
+    height: 12em;
     margin: 0 1em ;
     box-shadow: 0 0 .5em .01em rgba(60,60,60,.3) ;
     position: relative ;
@@ -56,4 +57,14 @@
     color: rgb(50,50,50) ;
     font-size: 1em ;
     font-weight: 600 ;
+}
+@media screen and (max-width:900px){
+    #sponsers{font-size: 16px;}
+}
+
+@media screen and (max-width:550px){
+    #sponsers{font-size: 12px ;}
+}
+@media screen and (max-width:320px){
+    #sponsers h4{font-size: 1.5em ;}
 }
