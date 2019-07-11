@@ -1,7 +1,32 @@
-#sort input {
+#sort-curr{
+    width: 100% ;
+    height: auto;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+    padding: 1em ;
+    margin-top: 4em ;
+}
+#sort-curr > *{
+    margin: 1em ;
+}
+.sort{
+    width: 20em ;
+    height: auto;
+    flex-shrink: 0 ;
+}
+.sort input {
     font-family: byekan ;
 }
-#sort p{
+.sort p{
     font-size: .8em;
     color: rgb(40,40,40) ;
+}
+@media screen and (max-width: 1500px){
+    .sort{font-size: 15px ;}
+}
+@media screen and (max-width: 1035px){
+    .sort{display: none ;}
 }

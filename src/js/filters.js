@@ -19,8 +19,40 @@ HTMLElement.prototype.pseudoStyle = function(element,prop,value){
     _head.appendChild(_sheet);
     return this;
 };
-let range = document.querySelector('#range');
-noUiSlider.create(range, {
+let range = document.querySelectorAll('.range');
+noUiSlider.create(range[0], {
+    orientation: 'horizontal' ,
+    direction: 'rtl',
+    animate: true,
+    animationDuration: 300,
+    behaviour: 'tap', 
+    range: {
+        'min': [0],
+        'max': [2000000]
+    },
+    start: [0,2000000],
+    connect: [false,true,false],
+    step: 100000,
+    tooltips: [
+        wNumb({
+            decimals: 0, 
+            thousand: '.', 
+            suffix: ' تومان' 
+        }) ,
+        wNumb({
+            decimals: 0, 
+            thousand: '.', 
+            suffix: ' تومان' 
+        })      
+    ] ,
+    format: wNumb({ 
+        decimals: 0, 
+        thousand: '.', 
+        suffix: ' تومان'
+    })
+});
+document.querySelector('.noUi-target').style.border = 'none' ;
+noUiSlider.create(range[1], {
     orientation: 'horizontal' ,
     direction: 'rtl',
     animate: true,
@@ -69,6 +101,7 @@ handlers.forEach((handler,i)=>{
 let tooltips = document.querySelectorAll('.noUi-tooltip') ;
 tooltips.forEach(tooltip=>{
     tooltip.style.left = '2em';
+    tooltip.style.fontSize = '.8em';
 })
 // tooltips.forEach((t,i)=>{
 //     if(i==0) t.style.right = '500px';

@@ -5,6 +5,8 @@
     font-size: 1em ;
     text-align: center ;
     background-color: rgb(245, 245, 245) ;
+    position: relative ;
+    z-index: 99 ;
 }
 #copyright i{
     transform: translateY(20%) ;

@@ -1,14 +1,22 @@
 #hotels{
     // width: 100% ;
     // height: auto;
-    display: grid ;
-    grid-template-columns: repeat(auto-fit,minmax(15em,1fr)) ;
-    grid-auto-rows: 15em ;
+    width: 75em ;
+    height: auto;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-around ;
+    align-items: start ;
+    flex-wrap: wrap ;
+    align-content: flex-start ;
+    padding: 1em 1em 7em 1em ;
     position: relative ;
-    padding-bottom: 7em ;
+    border: 1px solid rgb(230,230,230) ;
 }
 #hotels .hotel{
-    margin: .5em ;
+    width: 15em ;
+    height: 15em;
+    margin: 1em ;
     position: relative ;
     transform-style: preserve-3d ;
     transform-origin: center center ;
@@ -25,7 +33,7 @@
     top: 0 ;
     right: 0 ;
     backface-visibility: hidden;
-    border-radius: 1.5em ;
+    border-radius: 1em ;
 }
 #hotels .back{
     transform: rotateY(180deg) translateZ(.01px);
@@ -35,7 +43,7 @@
     background-size: 100% 100%;
     display: flex ;
     flex-direction: column ;
-    justify-content: space-around ;
+    justify-content: flex-start ;
     align-items: center ;
     flex-wrap: nowrap;
     transform: rotateY(0deg) translateZ(.01px);
@@ -46,12 +54,14 @@
     height: 100%;
     position: absolute ;
     background-color: rgba(40,40,40,.6) ;
-    border-radius: 1.5em ;
+    border-radius: 1em ;
 }
 #hotels .front > *{
-    width: auto ;
+    width: 100% ;
     height: auto;
     font-size: 1em ;
+    margin: 1em 0 ;
+    text-align: center ;
 }
 #hotels .front > *:not(.stars){
     color: rgb(230,230,230) ;
@@ -71,9 +81,10 @@
     position: absolute ;
     right: 0 ;
     top: 0% ;
-    border-top-left-radius: 1.5em ;
-    border-bottom-left-radius: 1.5em ;
-    border-top-right-radius: 1.5em ;
+    border-top-left-radius: 1em ;
+    border-bottom-left-radius: 1em ;
+    border-top-right-radius: 1em ;
+    margin: 0 ;
 }
 #hotels .discount span{
     margin-right: 1em;
@@ -96,19 +107,28 @@
 }
 #hotels .right{
     background-color: rgb(30,30,30);
+    border-top-right-radius: 1em ;
+    border-bottom-right-radius: 1em ;
+}
+#hotels .right .features{
+    width: 100% ;
+    height: auto;
     display: flex ;
+    position: relative ;
+    top: 20% ;
     flex-direction: row ;
     justify-content: space-around ;
-    align-items: center ;
-    flex-wrap: wrap ; 
-    align-content: space-around ;
-    border-top-right-radius: 1.5em ;
-    border-bottom-right-radius: 1.5em ;
+    align-items: start ;
+    flex-wrap: wrap ;
+    align-content: flex-start ;
+}
+#hotels .right .features > * {
+    margin: .5em  ;
 }
 #hotels .left{
     background-color: rgb(50,50,50);
-    border-top-left-radius: 1.5em ;
-    border-bottom-left-radius: 1.5em ;
+    border-top-left-radius: 1em ;
+    border-bottom-left-radius: 1em ;
 
 }
 
@@ -122,27 +142,27 @@
 #hotels .back .fas{
     color: rgb(200,200,200) ;
     font-size: .8em ;
-    margin: 0 .5em ;
 }
 #hotels .price{
     font-size: .8em ;
     color: rgb(200,200,200) ;
     position: absolute ;
-    top: 35% ;
+    top: 30% ;
     transform: translateY(-50%) ;
     right: 5% ;
 }
 #hotels a{
-    width: auto ;
+    width: 10em ;
     height: auto;
     position: absolute ;
+    font-size: .8em ;
     z-index: 2;
     right: 50%;
     transform: translateX(50%) ;
     bottom: 0;
 }
 #hotels button{
-    width: 50% ;
+    width: 15em ;
     height: 2.5em !important ;
     position: absolute ;
     bottom: .5em ;
@@ -151,4 +171,51 @@
     border-radius: 2em ;
     font-size: 1.5em ;
     font-family: byekan ;
+}
+@media screen and (max-width:1200px){
+    #hotels{font-size: 16px;}
+    // #hotels a{font-size: .8em;}
+}
+@media screen and (max-width:550px){
+    #hotels .hotel{
+        width: 17em ;
+        height: 17em;
+    }
+    #hotels .front > *{
+        margin: 1.3em 0 ;
+    }
+    #hotels .discount{
+        margin: 0 ;
+    }
+    #hotels button{width: 8em ;}
+}
+@media screen and (max-width:360px){
+    #hotels .hotel{
+        width: 90% ;
+        height: 14em;
+    }
+    #hotels .front > *{
+        margin: .9em 0 ;
+    }
+    #hotels .discount{
+        margin: 0 ;
+    }
+    // #hotels button{width: 8em ;}
+}
+@media screen and (max-width:286px){
+    #hotels .price{
+       
+        top: 40% ;
+    }
+    // #hotels button{width: 8em ;}
+}
+@media screen and (max-width:220px){
+    #hotels{
+        font-size: 12px;
+    }
+    #hotels .price{
+       
+        top: 45% ;
+    }
+    // #hotels button{width: 8em ;}
 }

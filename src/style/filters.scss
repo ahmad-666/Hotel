@@ -1,18 +1,32 @@
-#filters{
-    // width: auto ;
-    // height: auto;
-    // padding: 0  ;
+#filters-hotels{
+    width: 100% ;
+    height: auto;
+    display: flex ;
+    flex-direction: row;
+    justify-content: flex-start ;
+    align-items: start ;
+    flex-wrap: nowrap ;
+    padding: 1em ;
+}
+#filters-hotels > * {
+    margin: 1em ;
+}
+.filters{
+    width: 20em ;
+    height: auto;
     display: flex ;
     flex-direction: column ;
     justify-content: flex-start ;
     align-items: flex-start ;
     flex-wrap: nowrap ;
+    border: 1px solid rgb(230,230,230) ;
+    flex-shrink: 0 ;
     // margin: 4em 2em 0 0 ;
 }
-#filters > *:not(:first-child) {
+.filters > *:not(:first-child) {
     margin-top: 1em;
 }
-#filters > *:not(.divider) {
+.filters > *:not(.divider) {
     width: 100% ;
     height: auto;
     padding: 0 2em 0 0 ;
@@ -28,14 +42,14 @@ span.divider{
 //     position: relative;
 //     // right: 2em ;
 // }
-#filters label span{
+.filters label span{
     font-size: 1.2em ;
 }
 [type="checkbox"]+span:not(.lever){
     // for grab both checkbox and label
     right: 1.8em ;
 }
-#filters .type , #filters .star , #filters .feature {
+.filters .type , .filters .star , .filters .feature {
     margin: 1em 0 ;
 }
 [type="checkbox"]+span:not(.lever):before , [type="checkbox"]:not(.filled-in)+span:not(.lever):after{
@@ -57,14 +71,14 @@ span.divider{
     border-radius: 0 ;
     transform: rotate(40deg);
 }
-#filters h5{
+.filters h5{
     color: rgb(40,40,40) ;
     font-size: 1.3em ;  
     right: -1em ;
     position: relative ;
 }
-#filters #price h5{margin-bottom: 3em ;}
-#range{  
+.filters .price h5{margin-bottom: 3em ;}
+.range{  
     width: 75% ;
     height: 10px;
     position: relative ;
@@ -72,7 +86,7 @@ span.divider{
     right: 47% ;
     transform: translateX(50%) ;
 }
-#range *{outline: none ;}
+.range *{outline: none ;}
 .ranger-handle{
     width: 1.5em !important;
     height: 1.5em !important;
@@ -81,11 +95,21 @@ span.divider{
     border: none !important ;
     box-shadow: none !important ;
 }
-#range{
+.range{
     font-size: 17px ;
 }
-// @media screen and (max-width: 1500px){
-//     #filters{font-size: 16px ;}
-//     #filters label span{font-size: 14px;}
-// }
+@media screen and (max-width: 1500px){
+    .filters{font-size: 17px ;}
+    // #filters label span{font-size: 14px;}
+}
+@media screen and (max-width: 1035px){
+    .filters{display: none ;}
+    #filters-hotels{
+        padding: .1em ;
+    }
+    #filters-hotels > * {
+        margin: .1em ;
+    }
+}
+
 

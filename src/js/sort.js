@@ -1,8 +1,8 @@
-let sort = document.querySelector('#sort select') ;
+let sort = document.querySelectorAll('.sort select') ;
 M.FormSelect.init(sort) ;
-let arrow = document.querySelector('.select-wrapper .caret');
-arrow.style.opacity = 0 ;
-let options = document.querySelectorAll('#sort .select-wrapper .dropdown-content li');
+let arrows = document.querySelectorAll('.select-wrapper .caret');
+arrows.forEach(arrow=>arrow.style.opacity = 0)
+let options = document.querySelectorAll('.sort .select-wrapper .dropdown-content li');
 options.forEach(opt=>{
     opt.style.textAlign = 'right' ;
 })   

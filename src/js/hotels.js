@@ -14,6 +14,7 @@ import '../style/filters.scss' ;
 import '../style/sort.scss' ;
 import '../style/curr-filters.scss' ;
 import '../style/hotels-container.scss' ;
+import '../style/mobile.scss' ;
 import '../style/footer.scss' ;
 import '../style/copyright.scss' ;
 import '../style/modals.scss' ;
@@ -28,5 +29,6 @@ import './filters' ;
 import './sort' ;
 import './curr-filters' ;
 import './hotels-container' ;
+import './mobile' ;
 //import './footer' ;
 import './modals'
