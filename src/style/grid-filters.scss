@@ -1,54 +1,36 @@
 #hotels-grid{
     width: 100% ;
     height: auto;
-    display: flex ;
-    flex-direction: row ;
-    justify-content: flex-start ;
-    align-items: start ;
-    flex-wrap: wrap ;
-    align-content: flex-start ;
-    margin-top: 3em ;
-    padding: 1em ;
-}
-#hotels-grid > *{
-    margin: 1em auto ;
+    display: grid ;
+    grid-template-columns: repeat(12,1fr) ;
+    grid-auto-rows: minmax(0,auto);
+    margin-top: 6em ;     
 }
 #hotels-grid #sort{
-    // width: 15em ;
-    // height: auto  ;
+    height: auto  ;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin: 1em .5em 0 0; 
+}
+#hotels-grid #filters{
+    height: auto  ;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    border: 1px solid rgba(200,200,200,.8) ;
+    margin: 2.5em .5em 0 0;  
 }
 #hotels-grid #curr-filters{
-    // width: 55em ;
-    // height: auto  ;
+    height: auto  ;
+    grid-column: 5/13;
+    grid-row: 1/2;
+    margin-left: .5em;  
+    margin: 0 0 0 .5em;  
 }
-#filters{
-    // width: 15em ;
-    // height: auto  ;
-    border: 1px solid rgba(200,200,200,.8) ;
-}
-#hotels{
-    // width: 55em ;
-    // height: auto  ;
+#hotels-grid #hotels{
+    height: auto  ;
+    grid-column: 5/13;
+    grid-row: 2/3;
     border: 1px solid rgba(200,200,200,.8) ;  
-}
-// @media screen and (max-width:1300px){
-//     #hotels-grid #sort{
-//         width: 15em ;
-//     }
-//     #hotels-grid #curr-filters{
-//         width: 45em ;
-//     }
-//     #hotels-grid #filters{
-//         width: 15em ;
-//     }
-//     #hotels-grid #hotels{
-//         width: 45em ;
-//     }
-// }
-.row {
-    margin: 2em auto;
-    // margin: 2em auto ;
-}
-.row .col{
-    margin: 1em 0;
+    margin: 2em 0 0 .5em;  
+    // margin: 5em 5em 0 2em ;
 }
