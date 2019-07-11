@@ -67,6 +67,9 @@ handlers.forEach((handler,i)=>{
     }
 });
 let tooltips = document.querySelectorAll('.noUi-tooltip') ;
+tooltips.forEach(tooltip=>{
+    tooltip.style.left = '2em';
+})
 // tooltips.forEach((t,i)=>{
 //     if(i==0) t.style.right = '500px';
 //     else if(i==0) t.style.left = "100px" ;

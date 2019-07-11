@@ -3,6 +3,7 @@
     top: 70% ;
     z-index: 2;
 }
+.slider h4{font-size: 2em ;}
 .slider .slides li::before{
     content: '' ;
     width: 100% ;
@@ -17,4 +18,10 @@
     background-position: center center ;
     background-repeat: no-repeat ;
     background-size: 100% 100% ;
+}
+@media screen and (max-width:800px){
+    .slider h4{font-size: 1.5em ;}
+}
+@media screen and (max-width:500px){
+    .slider h4{font-size: 1em ;}
 }
