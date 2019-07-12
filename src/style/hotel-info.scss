@@ -22,22 +22,22 @@
     align-items: flex-start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
-    padding: 0 5em !important ;
+    padding: 0 2em !important ;
     background-color: #1e1e1e ;
 }
-.section.right > * {
-    width: auto ;
-    height: auto;
-    color: rgb(230,230,230) ; 
-    font-size: .8em ;
-}
 .section.left{width: 70% ;}
-#type p , #city p , #score p {
+.section.right > * {
+    width: 100% ;
+    color: rgb(230,230,230) ; 
+    line-height: 2em ;
+    overflow-wrap: break-word ;
+}
+#type p , #city p {
     margin-right: .5em ;
     display: inline-block ;  
 }
-#name , #type p , #city p , #score p {font-size: 2em ;}
-#type .fas , #city .fas{font-size: 1.5em;}
+#name , #type p , #city p , #score p {font-size: 1.5em ;}
+#type .fas , #city .fas{font-size: 1em;}
 #hotel-features {
     display: flex ;
     flex-direction: row ;
@@ -47,8 +47,8 @@
     align-content: flex-start ;
 }
 #hotel-features .fas{
-    font-size: 1.5em ;
-    margin: 1em 0 1em 1.5em ;
+    font-size: 1em ;
+    margin: 1em ;
 }
 #slider{
     width: 100% ;
@@ -64,8 +64,6 @@
     top: 0 ;
     transform: translateX(100%) scaleX(4) ;
     opacity: 0;
-    // transition: all .6s ease-in-out ;
-    // this will added via js 
 }
 #slider .img img{
     width: 100% ;
@@ -110,12 +108,32 @@
     background-color: rgb(50,50,50) ;
     margin: 1em ;
     border: none ;
-    transition:' all .4s ease-in-out' ; 
+    transition: all .4s ease-in-out ; 
     cursor: pointer;
 }
 #slider .dot.active{
     transform: scale(2) ;
 }
-@media screen and (max-width:1500px){
-    #hotel-info{font-size: 15px ;}
+@media screen and (max-width:1200px){
+    #hotel-info{font-size: 15px; }
+}
+@media screen and (max-width:900px){
+    #hotel-info .section.right{
+        width: 100% ;
+        height: 50vh;
+    }
+    #hotel-info .section.left{
+        width: 100% ;
+        height: 70vh;
+    }
+}
+@media screen and (max-width:400px){
+    #hotel-info{font-size: 12px ;}
+    #hotel-info .section.right{
+        height: 100vh;
+    }
+    #hotel-info .section.left{
+        height: 100vh;
+    }
+    #hotel-info #dot-container{font-size: 8px ;}
 }

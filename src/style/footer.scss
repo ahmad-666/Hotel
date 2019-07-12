@@ -9,6 +9,7 @@
     background-position: 50% 0% , center center ;
     background-repeat: no-repeat, no-repeat ;
     background-size: 10em 10em, 100% 100% ;
+    z-index: 2;
 }
 #footer svg{position: relative ;}
 #footer path{fill: url('#grad') ;}
