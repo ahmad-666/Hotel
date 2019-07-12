@@ -19,18 +19,16 @@ decreaseBtns.forEach(decreaseBtn=>{
 //features tooltip
 //--------------------------
 //--------------------------
-let tooltips = document.querySelectorAll('#rooms .features .tooltipped') ;
+let tooltips = document.querySelectorAll('#rooms .room .tooltipped') ;
 let tooltipConfig = {
-    position: 'top' 
-}
-let wifiTooltip = 'وای فای' ;
+    position: 'top'
+} ;
 tooltips.forEach(tooltip=>{
-    if([...tooltip.classList].join().includes('wifi')){
-        M.Tooltip.init(tooltip,{
-            ...tooltipConfig ,
-            html: `<span class="white-text">${wifiTooltip}</span>`
-        })
-    }
+    let html = `<span class="white-text"> ${tooltip.getAttribute('data-text')} </span>` ;
+    M.Tooltip.init(tooltip,{
+        ...tooltipConfig ,
+        html
+    });
 })
 //Open calender grid
 //--------------------------
