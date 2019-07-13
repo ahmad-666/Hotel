@@ -5,7 +5,8 @@
     position: fixed ;
     top: 0 ;
     right: 0 ;
-    z-index: 5 ;
+    z-index: 6 ;
+    display: none ;
     @include grid(0,12) ;
     grid-template-areas:  
         "close close close suite suite suite inn inn inn motel motel motel"
@@ -17,7 +18,7 @@
         "hotel hotel hotel hotel hotel hotel home home home home home home"
         "hotel hotel hotel hotel hotel hotel home home home home home home" ;
     direction: ltr ;
-    display: none ;
+    
 }
 #grid > * {position: relative ; cursor: pointer;}
 #close{grid-area: close ;}
