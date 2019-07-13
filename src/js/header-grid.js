@@ -1,134 +1,97 @@
 import anime from 'animejs' ;
-let hamburgerMenu = document.querySelector('#hamburger') ;
-let closeIcon = document.querySelector('#grid .fa-times') ;
-let close = document.querySelector('#grid #close') ;
-let gridContainer = document.querySelector('#grid') ;
-let gridItemsColors = document.querySelectorAll('#grid .color') ;
-let blackGrid = document.querySelector('#grid #black') ;
-let gridItemsImages = document.querySelectorAll('#grid .img') ;
-let gridItemsTexts = document.querySelectorAll('#grid p') ;
-let menuOpen = false ;
-let all = document.querySelectorAll('body > *:not(#grid)') ;
-let prevDisplayProps = [] ;
+let hamburger = document.querySelector('#nav #hamburger') ;
+let gridWrapper = document.querySelector('#grid-menu') ;
+let colors = gridWrapper.querySelectorAll('.color') ;
+let imgs = gridWrapper.querySelectorAll('.img') ;
+let texts = gridWrapper.querySelectorAll('p');
+let closeIcon = gridWrapper.querySelector('.fa-times') ;
+let animationTime = 200 ;
+let mobileHamburger = document.querySelector('#mobile-nav a:last-child') ;
+let all = document.querySelectorAll('body > *:not(#grid-menu)') ;
+let prevDisplays = [] ; //previous display propery of 'all' elements
 all.forEach(elm=>{
-    prevDisplayProps.push(window.getComputedStyle(elm,null).getPropertyValue('display')) ;
-})
-let currScroll = null ;
-hamburgerMenu.addEventListener('click',e=>{  
-    if(!menuOpen) {  
-        currScroll = window.scrollY ;
-        if(window.innerWidth <= 650) {all.forEach(elm=>{elm.style.display = 'none' ;})}
-        gridOpenAnimation() ;
-    }
-    menuOpen = !menuOpen ;
-})
-close.addEventListener('click',e=>{
-    if(menuOpen) {
-        if(window.innerWidth <= 650) {        
-            all.forEach((elm,i)=>{elm.style.display = prevDisplayProps[i] ;})
-        }
-        window.scrollTo({
-            top: currScroll ,
-            left: 0 ,
-            behavior: 'smooth'
-        }) ;
-        gridCloseAnimation() ;
-    }
-    menuOpen = !menuOpen ;
-})
-function gridOpenAnimation(){
+    prevDisplays.push(window.getComputedStyle(elm,null).getPropertyValue('display'));
+}) 
+hamburger.addEventListener('click',openGrid) ;
+function openGrid(e){
+    gridWrapper.classList.toggle('show') ;
+    openingAnimation() ;
+}
+function openingAnimation(){
+    all.forEach(elm=>elm.style.display='none') ;
     let tl = anime.timeline({
-        direction: 'normal',
         loop: 1 ,
-        easing: 'easeOutQuad'
-    });
+        direction: 'normal' ,
+        easing: 'linear' 
+    }) ;
     tl.add({
-        targets: [blackGrid,gridItemsColors] ,
-        duration: 100 ,
-        delay: anime.stagger(100),
+        targets: colors ,
+        duration: animationTime ,
+        delay: anime.stagger(animationTime/2) ,
         width: '100%' ,
-        begin: function(){gridContainer.style.display = 'grid' ;}
-    },0);
+        // complete: function(){
+        //     all.forEach(elm=>elm.style.display='none') ;
+        // }
+    },0) ;
     tl.add({
-        targets: gridItemsImages ,
-        duration: 1 ,
-        easing: 'linear',
-        width: '100%' 
-    },900) ;
+        targets: closeIcon ,
+        duration: animationTime ,
+        delay: 0 ,
+        opacity: 1
+    },animationTime) ;
     tl.add({
-        targets: gridItemsColors ,
-        duration: 100 ,
-        delay: anime.stagger(100),
-        width: 0 ,
-        begin: function(anim){
-            anim.animatables.forEach(elm=>{
-                elm.target.style.left = '' ;
-                elm.target.style.right = 0 ;
-            })
-        }
-    },901) ;
-   tl.add({
-       targets: closeIcon ,
-       opacity: 1
-   },200) ;
-   tl.add({
-       targets: gridItemsTexts ,
-       delay: anime.stagger(100) ,
-       duration: 250 ,
-       opacity: 1 ,
-       top: '50%' 
-   },1100)
+        targets: imgs ,
+        duration: animationTime ,
+        delay: anime.stagger(animationTime/2) ,
+        width: '100%' ,
+    },(animationTime*colors.length)/6) ;
+    tl.add({
+        targets: texts ,
+        duration: animationTime ,
+        delay: anime.stagger(animationTime/2) ,
+        opacity: 1
+    },(animationTime*colors.length)/3) ;
 }
-function gridCloseAnimation(){
+closeIcon.addEventListener('click',closeGrid) ;
+function closeGrid(e){
+    closingAnimation() ;
+}
+function closingAnimation(){
+    all.forEach((elm,i)=>elm.style.display=prevDisplays[i]) ;
     let tl = anime.timeline({
-        direction: 'normal',
         loop: 1 ,
-        easing: 'easeOutQuad'
-    });
+        direction: 'normal' ,
+        easing: 'linear' 
+    }) ;
     tl.add({
-        targets: '#grid .fa-times' ,
-        opacity: 0 ,
-        duration: 150 ,
-    },0)
+        targets: texts ,
+        duration: animationTime ,
+        delay: anime.stagger(animationTime/2) ,
+        opacity: 0
+    },0) ;
     tl.add({
-        targets: gridItemsTexts ,
-        opacity: 0 ,
-        top: '75%' ,
-        duration: 150 ,
-        delay: anime.stagger(150)
-    },0)   
+        targets: imgs ,
+        duration: animationTime ,
+        delay: anime.stagger(animationTime/2) ,
+        width: '0%' 
+    },animationTime*2) ;
     tl.add({
-        targets: ['#grid #black',gridItemsImages] ,
-        duration: 100,
-        delay: anime.stagger(100),
-        width: 0 ,
-        begin: function(anim){
-            anim.animatables.forEach(elm=>{
-                elm.target.style.left = '' ;
-                elm.target.style.right = 0 ;
-            })
-        },
+        targets: closeIcon ,
+        duration: animationTime ,
+        delay: 0 ,
+        opacity: 0
+    },animationTime*2) ;
+    tl.add({
+        targets: colors ,
+        duration: animationTime ,
+        delay: anime.stagger(animationTime/2) ,
+        width: '0%' ,    
         complete: function(){
-            gridContainer.style.display = 'none' ;
-            gridItemsImages.forEach(elm=>{
-                elm.style.width = 0 ;
-                elm.style.left = 0 ;
-            })
-            gridItemsColors.forEach(elm=>{
-                elm.style.width = 0 ;
-                elm.style.left = 0 ;
-                elm.style.right = '' ;
-            })
-            blackGrid.style.width = 0 ;
-            blackGrid.style.left = 0 ;
-            blackGrid.style.right = '' ;
-            closeIcon.style.opacity = 0 ;
-            gridItemsTexts.forEach(elm=>{
-                elm.style.opacity = 0 ;
-                elm.style.top = '75%' ;
-            })
-            
-        }
-    },450)
+            gridWrapper.classList.toggle('show') ;
+        } 
+    },animationTime*3) ;
+    
+    
+    
 }
-
+mobileHamburger.addEventListener('click',openGrid) ;

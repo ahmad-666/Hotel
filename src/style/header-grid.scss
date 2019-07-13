@@ -1,127 +1,161 @@
-@import './mixins.scss' ;
-#grid{
+#grid-menu{
     width: 100% ;
     height: 100%;
     position: fixed ;
     top: 0 ;
-    right: 0 ;
-    z-index: 6 ;
+    right: 0;
+    z-index: 6;
     display: none ;
-    @include grid(0,12) ;
-    grid-template-areas:  
-        "close close close suite suite suite inn inn inn motel motel motel"
-        "residence residence residence  suite suite suite inn inn inn motel motel motel"
-        "residence residence residence villa villa villa inn inn inn motel motel motel"
-        "residence residence residence villa villa villa inn inn inn motel motel motel"
-        "hotel hotel hotel hotel hotel hotel apartment apartment apartment apartment apartment apartment"
-        "hotel hotel hotel hotel hotel hotel apartment apartment apartment apartment apartment apartment"
-        "hotel hotel hotel hotel hotel hotel home home home home home home"
-        "hotel hotel hotel hotel hotel hotel home home home home home home" ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: start ;
+    flex-wrap: wrap ;
+    align-content: flex-start ;
     direction: ltr ;
-    
+    background-color: transparent !important ;
+    overflow: hidden;
 }
-#grid > * {position: relative ; cursor: pointer;}
-#close{grid-area: close ;}
-#hotel{grid-area: hotel ;}
-#residence{grid-area: residence ;}
-#inn{grid-area: inn ;}
-#motel{grid-area: motel ;}
-#suite{grid-area: suite ;}
-#apartment{grid-area: apartment ;}
-#home{grid-area: home ;}
-#villa{grid-area: villa ;}
-#grid .img{
-    width: 0%;
-    height: 100%;
-    position: absolute ;
-    left: 0;
-    top: 0;
-    background-position: center center ;
-    background-repeat: no-repeat ;
-    background-size: 100% 100% ;
-    z-index: 1;
-}
-#residence .img{background-image: url('../assets/imgs/residence.jpg');}
-#suite .img{background-image: url('../assets/imgs/suite.jpg');}
-#villa .img{background-image: url('../assets/imgs/villa.jpg');}
-#hotel .img{background-image: url('../assets/imgs/hotel.jpg');}
-#inn .img{background-image: url('../assets/imgs/inn.jpg');}
-#motel .img{background-image: url('../assets/imgs/motel.jpg');}
-#apartment .img{background-image: url('../assets/imgs/apartment.jpg');}
-#home .img{background-image: url('../assets/imgs/home.jpg');}
-#grid .img::before{
-    content: '' ;
-    position: absolute ;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(30,30,30,.75) ;
-}
-#grid .color,#grid #black{
-    width: 0%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute ;
-    z-index: 2;
-}
-#grid #close #black{background-color: #353841 ;}
-#grid #residence .color{background-color: #B09270 ;} ;
-#grid #suite .color{background-color: #C3CEE4 ;} ;
-#grid #villa .color{background-color: #86A9D1 ;} ;
-#grid #hotel .color{background-color: #F9C557 ;} ;
-#grid #inn .color{background-color: #AC865C ; } ;
-#grid #motel .color{background-color: #353841; } ;
-#grid #apartment .color{background-color: #F6A744 ;} ;
-#grid #home .color{background-color: #5097BB ; } ;
-#grid .fa-times{
-    color: white ;
-    font-size: 4em ;
-    position: absolute ;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%) ;
-    opacity: 0;
-}
-#grid p {
-    display: inline-block ;
-    width: 100% ;
-    text-align: center ;
-    position: absolute ;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%,-50%) ;
-    color: white ;
-    font-size: 3em ;
-    z-index: 3;
-    opacity: 0 ;
-}
-@media screen and (max-width:900px){
-    #grid{
-        font-size: 16px;
-        grid-template-areas:  
-            "close close close suite suite suite inn inn inn inn inn inn"
-            "residence residence residence villa villa villa motel motel motel motel motel motel" 
-            "hotel hotel hotel hotel hotel hotel apartment apartment apartment apartment apartment apartment"
-            "hotel hotel hotel hotel hotel hotel home home home home home home";
+#grid-menu.show{display: flex ;}
+.flex-section{
+    width: 50% ;
+    height: 50%;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: start ;
+    flex-wrap: wrap ;
+    align-content: flex-start ;
+    direction: ltr ;
+	.color{
+		width: 0% ;
+		height: 100%;
+		position: absolute ;
+		top: 0 ;
+		left: 0 ;
     }
-    
-}
-@media screen and (max-width:650px){
-    #grid{   
-        font-size: 12px;
-        height: 250% ;
+    .img{
+        width: 0% ;
+        height: 100%;
         position: absolute ;
-        grid-template-areas:  
-            "close close close close close close close close close close close close"
-            "suite suite suite suite suite suite suite suite suite suite suite suite"
-            "residence residence residence residence residence residence residence residence residence residence residence residence"
-            "villa villa villa villa villa villa villa villa villa villa villa villa"
-            "hotel hotel hotel hotel hotel hotel hotel hotel hotel hotel hotel hotel"
-            "inn inn inn inn inn inn inn inn inn inn inn inn"
-            "motel motel motel motel motel motel motel motel motel motel motel motel"
-            "apartment apartment apartment apartment apartment apartment apartment apartment apartment apartment apartment apartment"
-            "home home home home home home home home home home home home" ;
+        left: 0;
+        top: 0 ;
+        background-position: center center ;
+        background-repeat: no-repeat ;
+        background-size: 100% 100% ;
+        &::before{
+            content: '' ;
+            width: 100% ;
+            height: 100%;
+            position: absolute ;
+            top: 0;
+            left: 0;
+            background-color: rgb(30,30,30,.8) ;
+        }
     }
-
+    p{
+        width: 100% ;
+        text-align: center ;
+        font-size: 2em ;
+        color: white ;
+        z-index: 1;
+        position: absolute ;
+        top: 50% ;
+        right: 50%;
+        transform: translate(50%,-50%);
+        opacity: 0;
+    }
+}
+.flex-section > * {
+    position: relative;
+}
+#close{
+    width: 50% ;
+    height: 50%;
+    .color{background-color: #353841 ;}
+    .fa-times{
+        opacity: 0;
+        font-size: 5em ;
+        color: white ;
+        position: absolute ;
+        top: 50% ;
+        right: 50%;
+        transform: translate(50%,-50%) ;
+        cursor: pointer ;
+    }
+}
+#motel{
+	width: 50% ;
+	height: 50%;
+    .color{background-color: #636363 ;}
+    .img{background-image: url('../assets/imgs/motel.jpg');}
+}
+#inn{
+	width: 100% ;
+	height: 50%;
+    .color{background-color: #AC865C ;}
+    .img{background-image: url('../assets/imgs/inn.jpg');}
+}
+#hotel{
+	width: 100% ;
+	height: 100%;
+    .color{background-color: rgb(250, 190, 60) ;}
+    .img{background-image: url('../assets/imgs/hotel.jpg');}
+    p{font-size: 3em;}
+}
+#suite{
+	width: 100% ;
+	height: 50%;
+    .color{background-color: #C3CEE4 ;}
+    .img{background-image: url('../assets/imgs/suite.jpg');}
+}
+#home{
+	width: 50% ;
+	height: 50%;
+    .color{background-color: #5097BB ;}
+    .img{background-image: url('../assets/imgs/home.jpg');}
+}
+#apartment{
+	width: 50% ;
+	height: 50%;
+    .color{background-color: #F6A744 ;}
+    .img{background-image: url('../assets/imgs/apartment.jpg');}
+}
+#residence{
+	width: 50% ;
+	height: 100%;
+    .color{background-color: #B09270 ;}
+    .img{background-image: url('../assets/imgs/residence.jpg');}
+}
+#villa{
+	width: 50% ;
+	height: 100%;
+    .color{background-color: #86A9D1 ;}
+    .img{background-image: url('../assets/imgs/villa.jpg');}
+}
+@media screen and (max-width:1000px){
+    #grid-menu{font-size: 15px ;}
+}
+@media screen and (max-width: 700px){
+    #grid-menu{
+        position: absolute ;
+        height: auto;
+        flex-direction: column ;
+        justify-content: flex-start ;
+        align-items: start ;
+        flex-wrap: nowrap ;
+    }
+    .flex-section{
+        width: 100% ;
+        height: auto;
+        flex-direction: column ;
+        justify-content: flex-start ;
+        align-items: start ;
+        flex-wrap: nowrap ;
+    }
+    #close,#motel,#inn,#hotel,#suite,#home,#apartment,
+    #residence,#villa
+    {
+        width: 100% ;
+        height: 8em;      
+    }
 }
