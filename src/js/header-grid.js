@@ -8,13 +8,20 @@ let closeIcon = gridWrapper.querySelector('.fa-times') ;
 let animationTime = 200 ;
 let mobileHamburger = document.querySelector('#mobile-nav a:last-child') ;
 let all = document.querySelectorAll('body > *:not(#grid-menu)') ;
+let scroll = {
+    x:null ,
+    y:null 
+};
 let prevDisplays = [] ; //previous display propery of 'all' elements
 all.forEach(elm=>{
     prevDisplays.push(window.getComputedStyle(elm,null).getPropertyValue('display'));
 }) 
 hamburger.addEventListener('click',openGrid) ;
 function openGrid(e){
+    scroll.x = window.scrollX ;
+    scroll.y = window.scrollY ;
     gridWrapper.classList.toggle('show') ;
+    window.scrollTo(0,0) ;
     openingAnimation() ;
 }
 function openingAnimation(){
@@ -58,6 +65,7 @@ function closeGrid(e){
 }
 function closingAnimation(){
     all.forEach((elm,i)=>elm.style.display=prevDisplays[i]) ;
+    window.scrollTo(scroll.x,scroll.y) ;
     let tl = anime.timeline({
         loop: 1 ,
         direction: 'normal' ,

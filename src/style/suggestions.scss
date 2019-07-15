@@ -2,7 +2,7 @@
     width: 100% ;
     height: auto;
     position: relative ;
-    margin-top: 4em ;
+    margin-top: 2em ;
     overflow: hidden;
     padding: 1em 0 4em 0 ;
 }
@@ -25,6 +25,7 @@
     transform: translateX(50%) ;
     bottom: .5em ;
     z-index: 4;
+    color: #26a69a ;
 }
 .slider-wrapper > a .fas{transform: translateY(10%) ;}
 .slider-wrapper .fade{
@@ -50,6 +51,7 @@
     position: absolute ;
     z-index: 3;
     top: 35% ;
+    cursor: pointer;
 }
 .slider-wrapper .btn i {
     position: absolute ;
@@ -130,6 +132,7 @@
     border-top-left-radius: 1.5em ;
     border-bottom-left-radius: 1.5em ;
 }
+#top{background-color: rgb(245,245,245);}
 @media screen and (max-width:1000px){
     .slider-wrapper h4{font-size: 1.7em ;}
 }

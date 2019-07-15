@@ -70,7 +70,7 @@
 }
 #close{
     width: 50% ;
-    height: 50%;
+    height: 40%;
     .color{background-color: #353841 ;}
     .fa-times{
         opacity: 0;
@@ -85,13 +85,13 @@
 }
 #motel{
 	width: 50% ;
-	height: 50%;
+	height: 40%;
     .color{background-color: #636363 ;}
     .img{background-image: url('../assets/imgs/motel.jpg');}
 }
 #inn{
 	width: 100% ;
-	height: 50%;
+	height: 61%;
     .color{background-color: #AC865C ;}
     .img{background-image: url('../assets/imgs/inn.jpg');}
 }
@@ -156,6 +156,6 @@
     #residence,#villa
     {
         width: 100% ;
-        height: 8em;      
+        height: 12em;      
     }
 }
