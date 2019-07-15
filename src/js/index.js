@@ -13,6 +13,7 @@ import '../style/sponsers.scss' ;
 import '../style/footer.scss' ;
 import '../style/index.scss' ;
 import '../style/copyright.scss' ;
+import '../style/modals.scss' ;
 //load scripts
 import './header' ;
 import './header-grid' ;
@@ -21,3 +22,4 @@ import './search' ;
 import './services' ;
 import './suggestions' ;
 import './sponsers' ;
+import './modals' ;

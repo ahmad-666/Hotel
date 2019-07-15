@@ -33,8 +33,8 @@
     
 }
 #services label{
-    width: 10em ;
-    height: 10em;
+    width: 11em ;
+    height: 11em;
     margin: .8em ;
     display: flex ;
     flex-direction: column ;
@@ -56,9 +56,13 @@
 }
 #services label i , #services label p{
     color: #fb636f  ;
-    font-size: 2em ;
     transition: all .4s ease-in-out ;
+    width: 100% ;
+    text-align: center ;
+    overflow-wrap: nowrap ; 
 }
+#services label i {font-size: 2em ;}
+#services label p{font-size: 1.3em ;}
 // #services label:hover{background-color: #fb636f ; }
 // #services label:hover i , #services label:hover p{color: white ;}
 #services label.red-bg{background-color: #fb636f;}

@@ -17,4 +17,3 @@ if(totalSliderWidth > window.innerWidth) {
         right: -offset 
     })
 }
-
