@@ -114,173 +114,27 @@
             </a>
         </div>
     </div>
-    <form action="#!" method="GET" id="search" autocomplete="off" enctype="text/plain" name="search">
-        <div class="input-field">
-            <input id="dest" name="dest" type="text" class="autocomplete">
-            <i class="fas fa-map-marker-alt prefix grey-text"></i>
-            <label for="dest" class="active labelFix"> مقصد </label>
+    <form id="search" name="search" action="#!" method="GET" autocomplete="off" enctype="text/plain">
+        <div class="input-wrapper">
+            <input type="text" id="dest" name="dest" class="auto-complete">
+            <label for="dest">مقصد</label>
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="line"></span>
+            <ul data-auto="شهر۱,شهر۲,شهر۳,شهر۴,شهر۵"></ul>
         </div>
-        <div class="input-field">
-            <input id="in" name="in" type="text">
-            <i class="fas fa-calendar-alt prefix grey-text"></i>
-            <label for="in" class="active labelFix"> تاریخ ورود </label>
-            <div class="calender">
-                <div class="month-year">
-                    <i class="fas fa-angle-right"></i>
-                    <div class="info">
-                        <span class="month"></span>
-                        <span class="year"></span>
-                    </div>
-                    <i class="fas fa-angle-left"></i>
-                </div>
-                <div class="days">
-                    <div class="saturdays week-days">
-                        <span>ش</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="sundays week-days">
-                        <span>ی</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="mondays week-days">
-                        <span>د</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="thursdays week-days">
-                        <span>س</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="wednesdays week-days">
-                        <span>چ</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="tuesdays week-days">
-                        <span>پ</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="fridays week-days">
-                        <span>ج</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>              
-                </div>
-            </div>
+        <div class="input-wrapper">
+            <input type="text" id="in" name="in">
+            <label for="in">تاریخ ورود</label>
+            <i class="fas fa-calendar-alt"></i>
+            <span class="line"></span>
         </div>
-        <div class="input-field">
-            <input id="out" name="out" type="text">
-            <i class="fas fa-calendar-alt prefix grey-text"></i>
-            <label for="out" class="active labelFix"> تاریخ خروج </label>
-            <div class="calender">
-                <div class="month-year">
-                    <i class="fas fa-angle-right"></i>
-                    <div class="info">
-                        <span class="month"></span>
-                        <span class="year"></span>
-                    </div>
-                    <i class="fas fa-angle-left"></i>
-                </div>
-                <div class="days">
-                    <div class="saturdays week-days">
-                        <span>ش</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="sundays week-days">
-                        <span>ی</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="mondays week-days">
-                        <span>د</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="thursdays week-days">
-                        <span>س</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="wednesdays week-days">
-                        <span>چ</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="tuesdays week-days">
-                        <span>پ</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="fridays week-days">
-                        <span>ج</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>              
-                </div>
-            </div>
+        <div class="input-wrapper">
+            <input type="text" id="out" name="out">
+            <label for="out">تاریخ خروج</label>
+            <i class="fas fa-calendar-alt"></i>
+            <span class="line"></span>
         </div>
-        <input type="submit" value="جست و جو" class="teal white-text lighten-1">
+        <input type="submit" value="جست و جو">
     </form>
     <div id="services">
         <h4>جست و جو بر اساس خدمات</h4>

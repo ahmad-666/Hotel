@@ -1,115 +1,109 @@
 #filters-hotels{
     width: 100% ;
     height: auto;
+    padding: 1em ;
+    margin-top: 4em ;
     display: flex ;
-    flex-direction: row;
+    flex-direction: row ;
     justify-content: flex-start ;
     align-items: start ;
     flex-wrap: nowrap ;
-    padding: 1em ;
-}
-#filters-hotels > * {
-    margin: 1em ;
-}
-.filters{
-    width: 20em ;
-    height: auto;
-    display: flex ;
-    flex-direction: column ;
-    justify-content: flex-start ;
-    align-items: flex-start ;
-    flex-wrap: nowrap ;
-    border: 1px solid rgb(230,230,230) ;
-    flex-shrink: 0 ;
-    // margin: 4em 2em 0 0 ;
-}
-.filters > *:not(:first-child) {
-    margin-top: 1em;
-}
-.filters > *:not(.divider) {
-    width: 100% ;
-    height: auto;
-    padding: 0 2em 0 0 ;
-}
-span.divider{
-    display: inline-block ;
-    width: 100% ;
-    height: 1px;
-    // right:  ;
-    // position: relative ;
-}
-// #filters label{
-//     position: relative;
-//     // right: 2em ;
-// }
-.filters label span{
-    font-size: 1.2em ;
-}
-[type="checkbox"]+span:not(.lever){
-    // for grab both checkbox and label
-    right: 1.8em ;
-}
-.filters .type , .filters .star , .filters .feature {
-    margin: 1em 0 ;
-}
-[type="checkbox"]+span:not(.lever):before , [type="checkbox"]:not(.filled-in)+span:not(.lever):after{
-    // for grab just checkbox
-    right: -1.8em ;
-    
-}
-[type="checkbox"]:not(.filled-in)+span:not(.lever):before{
-    width: 2em ;
-    height: 2em;
-    border-radius: .5em ;
-    transform: translate(1em,-.5em) ;
-}
-[type="checkbox"]:checked+span:not(.lever):before{
-    top: -1.1em;
-    left: -.5em ;
-    width: 1em;
-    height: 2.1em ;
-    border-radius: 0 ;
-    transform: rotate(40deg);
-}
-.filters h5{
-    color: rgb(40,40,40) ;
-    font-size: 1.3em ;  
-    right: -1em ;
-    position: relative ;
-}
-.filters .price h5{margin-bottom: 3em ;}
-.range{  
-    width: 75% ;
-    height: 10px;
-    position: relative ;
-    
-    right: 47% ;
-    transform: translateX(50%) ;
-}
-.range *{outline: none ;}
-.ranger-handle{
-    width: 1.5em !important;
-    height: 1.5em !important;
-    border-radius: 50% !important;
-    background-color: teal ;
-    border: none !important ;
-    box-shadow: none !important ;
-}
-.range{
-    font-size: 17px ;
-}
-@media screen and (max-width: 1500px){
-    .filters{font-size: 17px ;}
-    // #filters label span{font-size: 14px;}
-}
-@media screen and (max-width: 1035px){
-    .filters{display: none ;}
-    #filters-hotels{
-        padding: .1em ;
-    }
-    #filters-hotels > * {
-        margin: .1em ;
+    #filters{
+        width: 25em ;
+        height: auto;
+        display: flex ;
+        flex-direction: column ;
+        justify-content: flex-start ;
+        align-items: start ;
+        flex-wrap: nowrap ;
+        margin-left: 2em ;
+        border: 1px solid rgb(230,230,230) ;
+        > * {
+            width: 100% ;
+            height: auto;
+            padding: 1em .5em 2em .5em ;
+            display: flex ;
+            flex-direction: column ;
+            justify-content: flex-start ;
+            align-items: start ;
+            flex-wrap: nowrap ;
+            border-bottom: 1px solid rgb(230,230,230) ;
+            h4{
+                width: 100% ;
+                height: auto;
+                overflow-wrap: nowrap ;
+                color: rgb(50,50,50) ;
+                font-weight: 600 ;
+                font-size: 1.2em ;
+                margin: .5em 0 1em 0 ;
+            }
+            div{
+                width: 100% ;
+                height: 3em;
+                margin: .2em 0 ;
+                position: relative ;
+                input[type="checkbox"]{
+                    width:  0 ;
+                    height: 0;
+                    position: absolute ;
+                    &:checked{
+                        ~label .rect{
+                            width: .8em ;
+                            height: 1.8em;
+                            border-top: 2px solid transparent ;
+                            border-left: 2px solid transparent ;
+                            border-right: 4px solid #26a69a ;
+                            border-bottom: 4px solid #26a69a ;
+                            border-radius: .1em ;
+                            transform: translate(.1em,-.4em) rotate(35deg) ;
+                        }
+                    }
+                }
+                label{
+                    width: auto ;
+                    height: auto;
+                    position: absolute ;
+                    right: 0em;
+                    top: 50% ;
+                    transform: translateY(-50%) ;
+                    font-size: 1em ;
+                    color: rgb(100,100,100);
+                    cursor: pointer;
+                    display: flex ;
+                    flex-direction: row ;
+                    justify-content: flex-start ;
+                    align-items: center ;
+                    flex-wrap: nowrap ;
+                    .rect{
+                        width: 2em ;
+                        height: 2em;
+                        border-radius: .3em ;
+                        border: 1.8px solid rgb(50,50,50) ;
+                        transition: all .15s ease-in-out ;
+                    }
+                    p{
+                        color: rgb(100,100,100) ;
+                        font-size: 1em ;
+                        margin-right: .5em ;
+                    }
+                    .fa-star{
+                        margin: 0 .1em ;
+                        color: gold ;
+                        font-size: 1em ;
+                        &:nth-child(2){
+                            margin-right: .6em;
+                        }
+                    }
+                }                      
+                .badge{
+                    position: absolute ;
+                    left: .3em;
+                    top: 50% ;
+                    transform: translateY(-50%) ;
+                    color: #26a69a ;
+                    font-size: 1em ;
+                }
+            }
+        }
     }
 }
-
-
