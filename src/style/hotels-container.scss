@@ -1,7 +1,7 @@
 #hotels{
     // width: 100% ;
     // height: auto;
-    width: 75em ;
+    width: 70% ;
     height: auto;
     display: flex ;
     flex-direction: row ;
@@ -9,13 +9,13 @@
     align-items: start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
-    padding: 1em 1em 7em 1em ;
+    padding: 1em 1em 4em 1em ;
     position: relative ;
     border: 1px solid rgb(230,230,230) ;
 }
 #hotels .hotel{
-    width: 16em ;
-    height: 16em;
+    width: 14em ;
+    height: 14em;
     margin: 1em ;
     position: relative ;
     transform-style: preserve-3d ;
@@ -60,7 +60,7 @@
 #hotels .front > *{
     width: 100% ;
     height: auto;
-    font-size: 1em ;
+    font-size: .8em ;
     text-align: center ;
     padding-right: .6em ;
     overflow-wrap: break-word ;
@@ -109,6 +109,7 @@
     height: 100% ;
     position: relative;
     overflow: hidden;
+    padding: .5em ;
 }
 #hotels .right{
     background-color: rgb(30,30,30);
@@ -118,17 +119,19 @@
 #hotels .right .features{
     width: 100% ;
     height: auto;
+    margin-top: .5em ;
     display: flex ;
-    position: relative ;
-    top: 20% ;
     flex-direction: row ;
     justify-content: flex-start ;
     align-items: start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
+    font-size: 1em ;
+
 }
 #hotels .right .features > * {
     margin: .5em  ;
+    cursor: pointer;
 }
 #hotels .left{
     background-color: rgb(50,50,50);
@@ -139,10 +142,8 @@
 
 #hotels h5{
     color: rgb(230,230,230) ;
-    position: absolute ;
-    top: 0% ;
-    right: 5% ;
     font-size: .8em ;
+    font-weight: lighter ;
 }
 #hotels .back .fas{
     color: rgb(200,200,200) ;
@@ -151,82 +152,33 @@
 #hotels .price{
     font-size: .8em ;
     color: rgb(200,200,200) ;
-    position: absolute ;
-    top: 30% ;
-    transform: translateY(-50%) ;
-    right: 5% ;
+    margin-top: .5em ;
 }
 #hotels a{
-    width: auto ;
-    height: auto;
+    display: inline-block ;
+    width: 7em ;
+    height: 3em;
+    text-align: center ;
+    line-height: 3em;
     position: absolute ;
     font-size: 1em ;
     z-index: 2;
     right: 50%;
     transform: translateX(50%) ;
     bottom: 0;
-    padding: .8em 3em ;
+    color: white ;
+    background-color: #26a69a ;
 }
 #hotels button{
-    width: 15em ;
-    height: 2.5em !important ;
-    position: absolute ;
-    bottom: .5em ;
-    right: 50% ;
-    transform: translateX(50%) ; 
-    border-radius: 1em ;
+    width: 12em ;
+    height: 3em;
+    text-align: center ;
+    line-height: 3em ;
+    color: white ;
+    background-color: #26a69a ;
+    border: none ;
+    border-radius: 2em;
     font-size: 1.5em ;
-    font-family: byekan ;
-}
-@media screen and (max-width:1200px){
-    #hotels{font-size: 16px;}
-    // #hotels a{font-size: .8em;}
-}
-@media screen and (max-width:550px){
-    // #hotels .hotel{
-    //     width: 17em ;
-    //     height: 17em;
-    // }
-    // #hotels .front > *{
-    //     margin: 1.3em 0 ;
-    // }
-    // #hotels .discount{
-    //     margin: 0 ;
-    // }
-    #hotels button{width: 8em ;}
-    // #hotels .front > *{
-    //     margin: 0em 0 ;
-    // }
-}
-@media screen and (max-width:360px){
-    #hotels .hotel{
-        width: 90% ;
-        height: 14em;
-    }
-    // #hotels .front > *{
-    //     margin: .9em 0 ;
-    // }
-    // #hotels .discount{
-    //     margin: 0 ;
-    // }
-    // #hotels .hotel .name{margin-top: 2em ;}
-
- 
-    // #hotels button{width: 8em ;}
-}
-@media screen and (max-width:286px){
-    // #hotels{font-size: 12px;}
-    #hotels .price{
-        top: 40% ;
-    }
-    // #hotels button{width: 8em ;}
-}
-@media screen and (max-width:235px){
-    #hotels{
-        font-size: 12px;
-    }
-    #hotels .price{
-        top: 30% ;
-    }
-    // #hotels button{width: 8em ;}
+    cursor: pointer;
+    margin-top: 2em ;
 }

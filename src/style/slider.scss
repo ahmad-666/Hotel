@@ -8,7 +8,7 @@
     flex-wrap: nowrap ;
     #slides{
         width: 100% ;
-        height: 40em;
+        height: 75vh;
         position: relative ;
         &::after{
             content: '' ;
@@ -37,13 +37,12 @@
             p{
                 width: 100% ;
                 height: auto;
-                font-weight: 700 ;
                 color: white ;
                 text-align: center ;
                 position: absolute ;
                 right: 0 ;
                 bottom: .5em ;
-                font-size: 2.5em ;
+                font-size: 2em ;
                 overflow-wrap: nowrap ; 
                 z-index: 1;
             }
@@ -60,8 +59,8 @@
         align-items: center ;
         flex-wrap: wrap ;
         .dot{
-            width: 2em ;
-            height: 2em;
+            width: 1.5em ;
+            height: 1.5em;
             border-radius: 50% ;
             background-color: rgb(230,230,230) ;
             transition: all .3s ease-in-out ;
@@ -87,4 +86,5 @@
 }
 @media screen and (max-width:290px){
     #slider{height: 100vh;}
+    #slider #slides .slide p{font-size: 1.4em ;}
 }

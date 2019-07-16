@@ -2,14 +2,14 @@
     width: 100% ;
     height: auto;
     padding: 1em ;
-    margin-top: 4em ;
+    margin-top: 1em ;
     display: flex ;
     flex-direction: row ;
     justify-content: flex-start ;
     align-items: start ;
     flex-wrap: nowrap ;
     #filters{
-        width: 25em ;
+        width: 25% ;
         height: auto;
         display: flex ;
         flex-direction: column ;
@@ -17,6 +17,7 @@
         align-items: start ;
         flex-wrap: nowrap ;
         margin-left: 2em ;
+        flex-shrink: 0 ;
         border: 1px solid rgb(230,230,230) ;
         > * {
             width: 100% ;
