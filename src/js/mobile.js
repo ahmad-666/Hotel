@@ -1,32 +1,56 @@
-let mobileFilter = document.querySelector('#mobile .fil') ;
-let mobileSort = document.querySelector('#mobile .srt') ;
-let mobileFilterWrapper = document.querySelector('#mobile-filter') ;
-let mobileSortWrapper = document.querySelector('#mobile-sort') ;
-mobileFilter.addEventListener('click',mobileFilterClick) ;
-function mobileFilterClick(e){
-    e.stopPropagation() ;
-    mobileFilterWrapper.classList.toggle('show') ;
-    if(mobileFilterWrapper.classList.contains('show')) document.addEventListener('click',docClick) ; 
-    else document.removeEventListener('click',docClick) ;
+let sortTrigger = document.querySelector('#mobile #mobile-sort') ;
+let filterTrigger = document.querySelector('#mobile #mobile-filter') ;
+let sort = document.querySelector('#sort-currFilters .input-wrapper') ;
+let filter = document.querySelector('#filters-hotels #filters') ;
+sortTrigger.addEventListener('click',sortHandler) ;
+filterTrigger.addEventListener('click',filterHandler) ;
+function sortHandler(e){
+    e.stopPropagation();
+    sort.classList.toggle('show') ;
+    filter.classList.remove('show') ;
+    document.addEventListener('click',sortDocHandler) ;
 }
-function docClick(e){
-    e.stopPropagation() ;
-    if(!mobileFilterWrapper.contains(e.target)) {
-        mobileFilterWrapper.classList.toggle('show') ;
-        document.removeEventListener('click',docClick) ;
-    }   
+function sortDocHandler(e){
+    e.stopPropagation();
+    let clickedElm = e.target ;
+    if(!sort.contains(clickedElm)) sort.classList.remove('show') ;
 }
-mobileSort.addEventListener('click',mobileSortClick) ;
-function mobileSortClick(e){
-    e.stopPropagation() ;
-    mobileSortWrapper.classList.toggle('show') ;
-    if(mobileSortWrapper.classList.contains('show')) document.addEventListener('click',docSortClick) ; 
-    else document.removeEventListener('click',docSortClick) ;
+function filterHandler(e){
+    e.stopPropagation();
+    filter.classList.toggle('show') ;
+    sort.classList.remove('show') ;
+    document.addEventListener('click',filterDocHandler) ;
 }
-function docSortClick(e){
-    e.stopPropagation() ;
-    if(!mobileSortWrapper.contains(e.target)) {
-        mobileSortWrapper.classList.toggle('show') ;
-        document.removeEventListener('click',docSortClick) ;
-    }   
+function filterDocHandler(e){
+    e.stopPropagation();
+    let clickedElm = e.target ;
+    if(!filter.contains(clickedElm)) filter.classList.remove('show') ;
+}
+let mobile = document.querySelector('#mobile') ;
+let currFilters = document.querySelector('#curr-filters') ;
+let footer = document.querySelector('#footer') ;
+let betweenCurrAndFooter = false ; //if #mobile is between currFilters and footer
+let less850 = false ; //if size of screen is less than 850
+if(window.innerWidth >= 850) less850 = false ;
+else less850 = true ;
+if(less850) window.addEventListener('scroll',scrollHandler) ;   
+else {
+    mobile.classList.remove('show') ;
+    window.removeEventListener('scroll',scrollHandler) ;   
+}
+window.addEventListener('resize',resizeHandler) ;
+function resizeHandler(e){
+    if(window.innerWidth >= 850) less850 = false ;
+    else less850 = true ;
+    if(less850) window.addEventListener('scroll',scrollHandler) ;   
+    else {
+        mobile.classList.remove('show') ;
+        window.removeEventListener('scroll',scrollHandler) ;  
+    }
+}
+function scrollHandler(e){
+    if(currFilters.getBoundingClientRect().top < window.innerHeight && footer.getBoundingClientRect().top > window.innerHeight) betweenCurrAndFooter = true ;
+    else betweenCurrAndFooter = false ;
+    if(betweenCurrAndFooter) mobile.classList.add('show') ;
+    else mobile.classList.remove('show') ;
 }

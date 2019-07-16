@@ -10,41 +10,41 @@
 
 <body>
     <div id="nav">
-            <a id="home" href="#!">
-                <img src="./src/assets/imgs/logo.png" alt="logo.png">      
-                <p>مستر اسکان</p>          
+        <a id="home" href="#!">
+            <img src="./src/assets/imgs/logo.png" alt="logo.png">
+            <p>مستر اسکان</p>
+        </a>
+        <a id="sign-in" href="#!">
+            <i class="fas fa-sign-in-alt"></i>
+            ورود
+        </a>
+        <a id="reg" href="#!">
+            <i class="fas fa-user"></i>
+            ثبت نام
+        </a>
+        <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <i class="fas fa-bars"></i>
+        <div id="mobile-nav">
+            <a href="#!" class="logo">
+                <img src="./src/assets/imgs/logo.png" alt="logo">
             </a>
-            <a id="sign-in" href="#!">
+            <a href="#!">
                 <i class="fas fa-sign-in-alt"></i>
                 ورود
             </a>
-            <a id="reg" href="#!">
+            <a href="#!">
                 <i class="fas fa-user"></i>
                 ثبت نام
             </a>
-            <div id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <i class="fas fa-bars"></i>
-            <div id="mobile-nav">
-                <a href="#!" class="logo">
-                    <img src="./src/assets/imgs/logo.png" alt="logo">
-                </a>
-                <a href="#!">
-                    <i class="fas fa-sign-in-alt"></i>
-                    ورود    
-                </a>
-                <a href="#!">
-                    <i class="fas fa-user"></i>
-                    ثبت نام 
-                </a>
-                <a href="#!">
-                    <i class="fas fa-hotel"></i>
-                    مکان های اقامتی    
-                </a>
-            </div>
+            <a href="#!">
+                <i class="fas fa-hotel"></i>
+                مکان های اقامتی
+            </a>
+        </div>
     </div>
     <div id="grid-menu">
         <div class="flex-section">
@@ -85,7 +85,7 @@
                 <div class="color"></div>
                 <div class="img"></div>
                 <p>هتل آپارتمان</p>
-            </a>       
+            </a>
         </div>
         <div class="flex-section">
             <a href="#!" id="residence">
@@ -117,7 +117,7 @@
             <div class="slide">
                 <img src="./src/assets/imgs/slide4.jpg" alt="slide4">
                 <p>رزرو تنها با چند کلیک</p>
-            </div>         
+            </div>
         </div>
         <div id="dots">
             <span class="dot active" data-slide="0"></span>
@@ -126,9 +126,9 @@
             <span class="dot" data-slide="3"></span>
         </div>
     </div>
-    <form id="search" name="search" action="#!" method="GET" autocomplete="off" enctype="text/plain" >
+    <form id="search" name="search" action="#!" method="GET" autocomplete="off" enctype="text/plain">
         <div class="input-wrapper">
-            <input type="text" id="dest" name="dest" class="auto-complete" >
+            <input type="text" id="dest" name="dest" class="auto-complete">
             <label for="dest">مقصد</label>
             <i class="fas fa-map-marker-alt"></i>
             <span class="line"></span>
@@ -165,25 +165,41 @@
             <div id="currs">
                 <span class="filter">
                     <i class="fas fa-times"></i>
-                    فیلتر 
+                    فیلتر
                 </span>
                 <span class="filter">
                     <i class="fas fa-times"></i>
-                    فیلتر 
+                    فیلتر
                 </span>
                 <span class="filter">
                     <i class="fas fa-times"></i>
-                    فیلتر 
+                    فیلتر
                 </span>
                 <span class="filter">
                     <i class="fas fa-times"></i>
-                    فیلتر 
+                    فیلتر
                 </span>
                 <span class="filter">
                     <i class="fas fa-times"></i>
-                    فیلتر 
-                </span>        
-            </div>       
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+            </div>
         </div>
     </div>
     <div id="filters-hotels">
@@ -199,7 +215,7 @@
                     <label for="filter-hotel">
                         <span class="rect"></span>
                         <p>هتل</p>
-                    </label>           
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -207,7 +223,7 @@
                     <label for="filter-residence">
                         <span class="rect"></span>
                         <p>اقامتگاه</p>
-                    </label>     
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -215,7 +231,7 @@
                     <label for="filter-inn">
                         <span class="rect"></span>
                         <p>مسافرخانه</p>
-                    </label>        
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -223,7 +239,7 @@
                     <label for="filter-motel">
                         <span class="rect"></span>
                         <p>مهمان پذیر</p>
-                    </label>           
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -231,7 +247,7 @@
                     <label for="filter-suite">
                         <span class="rect"></span>
                         <p>سوییت</p>
-                    </label>         
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -239,7 +255,7 @@
                     <label for="filter-apartment">
                         <span class="rect"></span>
                         <p>هتل آپارتمان</p>
-                    </label>         
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -247,7 +263,7 @@
                     <label for="filter-home">
                         <span class="rect"></span>
                         <p>خانه</p>
-                    </label>         
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -255,10 +271,10 @@
                     <label for="filter-villa">
                         <span class="rect"></span>
                         <p>ویلا</p>
-                    </label>        
+                    </label>
                     <span class="badge">10</span>
                 </div>
-                
+
             </div>
             <div id="stars">
                 <h4>بر اساس تعداد ستاره</h4>
@@ -267,7 +283,7 @@
                     <label for="oneStar">
                         <span class="rect"></span>
                         <i class="fas fa-star"></i>
-                    </label>        
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -276,7 +292,7 @@
                         <span class="rect"></span>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                    </label>         
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -286,7 +302,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                    </label>           
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -297,7 +313,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                    </label>        
+                    </label>
                     <span class="badge">10</span>
                 </div>
                 <div>
@@ -309,7 +325,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                    </label>    
+                    </label>
                     <span class="badge">10</span>
                 </div>
             </div>
@@ -319,38 +335,38 @@
                     <input type="checkbox" id="feature1" name="feature1" value="feature1">
                     <label for="feature1">
                         <span class="rect"></span>
-                        <p>امکان شماره ۱</p>
-                    </label>           
+                        <p>امکان شماره ۱ </p>
+                    </label>
                 </div>
                 <div>
                     <input type="checkbox" id="feature2" name="feature2" value="feature2">
                     <label for="feature2">
                         <span class="rect"></span>
                         <p>امکان شماره ۱</p>
-                    </label>           
+                    </label>
                 </div>
                 <div>
                     <input type="checkbox" id="feature3" name="feature3" value="feature3">
                     <label for="feature3">
                         <span class="rect"></span>
                         <p>امکان شماره ۱</p>
-                    </label>           
+                    </label>
                 </div>
                 <div>
                     <input type="checkbox" id="feature4" name="feature4" value="feature4">
                     <label for="feature4">
                         <span class="rect"></span>
                         <p>امکان شماره ۱</p>
-                    </label>           
+                    </label>
                 </div>
                 <div>
                     <input type="checkbox" id="feature5" name="feature5" value="feature5">
                     <label for="feature5">
                         <span class="rect"></span>
                         <p>امکان شماره ۱</p>
-                    </label>           
+                    </label>
                 </div>
-                
+
             </div>
         </form>
         <div id="hotels">
@@ -390,8 +406,6 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
                         </div>
                     </div>
                     <div class="left section">
@@ -403,7 +417,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -441,7 +455,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -453,7 +467,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -491,7 +505,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -503,7 +517,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -541,7 +555,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -553,7 +567,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -591,7 +605,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -603,7 +617,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -641,7 +655,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -653,7 +667,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -691,7 +705,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -703,7 +717,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -741,7 +755,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -753,7 +767,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -791,7 +805,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -803,7 +817,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -841,7 +855,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -853,7 +867,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -891,7 +905,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -903,7 +917,7 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <div class="hotel">
                 <div class="front">
                     <div class="discount">
@@ -941,7 +955,7 @@
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
                             <i class="fas fa-wifi" data-text="وای فای"></i>
-                            <i class="fas fa-wifi" data-text="وای فای"></i>          
+                            <i class="fas fa-wifi" data-text="وای فای"></i>
                         </div>
                     </div>
                     <div class="left section">
@@ -953,22 +967,32 @@
                     </div>
                     <a href="#"> رزرو </a>
                 </div>
-            </div>       
+            </div>
             <button> نمایش بیشتر </button>
         </div>
-    </div> 
+    </div>
+    <div id="mobile">
+        <div id="mobile-filter">
+            <i class="fas fa-filter"></i>
+            فیلتر
+        </div>
+        <div id="mobile-sort">
+            <i class="fas fa-sort-amount-up-alt"></i>
+            مرتب سازی
+        </div>
+    </div>
     <div id="footer">
         <div id="content">
             <ul id="support">
                 <h5> پشتیبانی </h5>
                 <li>
-                    <a href="#about-us" class="modal-trigger"> درباره ما </a>
+                    <a href="#!" data-modal="aboutus"> درباره ما </a>
                 </li>
                 <li>
-                    <a href="#rules" class="modal-trigger"> قوانین </a>
+                    <a href="#!" data-modal="rules"> قوانین </a>
                 </li>
                 <li>
-                    <a href="#faq" class="modal-trigger"> سوالات متداول </a>
+                    <a href="#!" data-modal="faq"> سوالات متداول </a>
                 </li>
             </ul>
             <ul class="contact-us">
@@ -1018,6 +1042,110 @@
             <a href="http://www.ittoos.com/">ittoos</a>
         </p>
     </div>
+    <div id="aboutus" class="modal">
+        <h4>درباره ما</h4>
+        <p>
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+        </p>
+        <button>بستن</button>
+    </div>
+    <div id="rules" class="modal">
+        <h4>قوانین</h4>
+        <p>
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+        </p>
+        <button>بستن</button>
+    </div>
+    <div id="faq" class="modal">
+        <h4>سوالات متداول</h4>
+        <p>
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+        </p>
+        <button>بستن</button>
+    </div>
+    <div id="black"></div>
     <a href="hotel.html">some other page</a>
     <script src="./src/js/hotels.js"></script>
 </body>

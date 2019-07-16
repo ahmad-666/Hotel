@@ -19,17 +19,7 @@ decreaseBtns.forEach(decreaseBtn=>{
 //features tooltip
 //--------------------------
 //--------------------------
-let tooltips = document.querySelectorAll('#rooms .room .tooltipped') ;
-let tooltipConfig = {
-    position: 'top'
-} ;
-tooltips.forEach(tooltip=>{
-    let html = `<span class="white-text"> ${tooltip.getAttribute('data-text')} </span>` ;
-    M.Tooltip.init(tooltip,{
-        ...tooltipConfig ,
-        html
-    });
-})
+
 //Open calender grid
 //--------------------------
 //--------------------------

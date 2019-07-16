@@ -8,6 +8,10 @@ let closeIcon = gridWrapper.querySelector('.fa-times') ;
 let animationTime = 200 ;
 let mobileHamburger = document.querySelector('#mobile-nav a:last-child') ;
 let all = document.querySelectorAll('body > *:not(#grid-menu)') ;
+all = [...all] ;
+all = all.filter(elm=>{
+    return (window.getComputedStyle(elm,null).getPropertyValue('display') != 'none') ;
+})
 let scroll = {
     x:null ,
     y:null 
@@ -25,7 +29,7 @@ function openGrid(e){
     openingAnimation() ;
 }
 function openingAnimation(){
-    all.forEach(elm=>elm.style.display='none') ;
+    all.forEach(elm=>elm.style.display = "none") ;
     let tl = anime.timeline({
         loop: 1 ,
         direction: 'normal' ,

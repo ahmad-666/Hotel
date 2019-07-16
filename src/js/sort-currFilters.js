@@ -1,7 +1,7 @@
 let inputWrapper = document.querySelector('#sort-currFilters .input-wrapper') ;
 let ul = inputWrapper.querySelector('ul') ;
 let input = inputWrapper.querySelector('input[type="text"]') ;
-inputWrapper.addEventListener('click',wrapperHandler) ;
+input.addEventListener('click',wrapperHandler) ;
 function wrapperHandler(e){  
     e.stopPropagation();
     ul.classList.add('show') ;
@@ -24,4 +24,12 @@ function docHandler(e){
         ul.classList.remove('show') ;
         document.removeEventListener('click',docHandler) ;
     }
+}
+
+let currFilters = document.querySelectorAll('#curr-filters .filter') ;
+currFilters.forEach(curr=>{
+    curr.addEventListener('click',currFilterHandler) ;
+})
+function currFilterHandler(e){
+    this.classList.add('hide') ;
 }

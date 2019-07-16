@@ -93,7 +93,20 @@
 }
 @media screen and (max-width:250px){
     #footer{
-        height: 36em;
-        
+        height: 52em;   
     }
+    #footer ul{
+        width: 95% ;
+        align-items: center ;
+    }
+    #footer h5{
+        transform: translateX(0px) ;
+    }
+    #footer .fas , #footer .fab{transform: translateX(0px)} ;
+}
+@media screen and (max-width:180px){
+    #footer{
+        height: 58em;   
+    }
+   
 }

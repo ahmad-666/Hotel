@@ -1,0 +1,349 @@
+#filters-hotels{
+    width: 100% ;
+    height: auto;
+    padding: 1em ;
+    margin-top: 1em ;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: start ;
+    flex-wrap: nowrap ;
+    #filters{
+        width: 25% ;
+        height: auto;
+        display: flex ;
+        flex-direction: column ;
+        justify-content: flex-start ;
+        align-items: start ;
+        flex-wrap: nowrap ;
+        margin-left: 2em ;
+        flex-shrink: 0 ;
+        border: 1px solid rgb(230,230,230) ;
+        > * {
+            width: 100% ;
+            height: auto;
+            padding: 1em .5em 2em .5em ;
+            display: flex ;
+            flex-direction: column ;
+            justify-content: flex-start ;
+            align-items: start ;
+            flex-wrap: nowrap ;
+            border-bottom: 1px solid rgb(230,230,230) ;
+            h4{
+                width: 100% ;
+                height: auto;
+                overflow-wrap: nowrap ;
+                color: rgb(50,50,50) ;
+                font-weight: 600 ;
+                font-size: 1.2em ;
+                margin: .5em 0 1em 0 ;
+            }
+            div{
+                width: 100% ;
+                min-height: 3em;
+                margin: .2em 0 ;
+                position: relative ;
+                input[type="checkbox"]{
+                    width:  0 ;
+                    height: 0;
+                    position: absolute ;
+                    &:checked{
+                        ~label .rect{
+                            width: .8em ;
+                            height: 1.8em;
+                            border-top: 2px solid transparent ;
+                            border-left: 2px solid transparent ;
+                            border-right: 4px solid #26a69a ;
+                            border-bottom: 4px solid #26a69a ;
+                            border-radius: .1em ;
+                            transform: translate(.1em,-.4em) rotate(35deg) ;
+                        }
+                    }
+                }
+                label{
+                    width: auto ;
+                    height: auto;
+                    // position: absolute ;
+                    // right: 0em;
+                    // top: 50% ;
+                    // transform: translateY(-50%) ;
+                    font-size: 1em ;
+                    color: rgb(100,100,100);
+                    cursor: pointer;
+                    display: flex ;
+                    flex-direction: row ;
+                    justify-content: flex-start ;
+                    align-items: center ;
+                    flex-wrap: nowrap ;
+                    .rect{
+                        width: 2em ;
+                        height: 2em;
+                        border-radius: .3em ;
+                        border: 1.8px solid rgb(50,50,50) ;
+                        transition: all .15s ease-in-out ;
+                        flex-shrink: 0 ;
+                    }
+                    p{
+                        color: rgb(100,100,100) ;
+                        font-size: 1em ;
+                        margin-right: .5em ;
+                    }
+                    .fa-star{
+                        margin: 0 .1em ;
+                        color: gold ;
+                        font-size: 1em ;
+                        &:nth-child(2){
+                            margin-right: .6em;
+                        }
+                    }
+                }                      
+                .badge{
+                    position: absolute ;
+                    left: .3em;
+                    top: 0% ;
+                    // transform: translateY(-50%) ;
+                    color: #26a69a ;
+                    font-size: 1em ;
+                }
+            }
+        }
+    }
+    #filters.show{display: flex ;}
+}
+#hotels{
+    width: 75% ;
+    height: auto;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-around ;
+    align-items: start ;
+    flex-wrap: wrap ;
+    align-content: flex-start ;
+    padding: 1em 1em 4em 1em ;
+    position: relative ;
+    border: 1px solid rgb(230,230,230) ;
+}
+#hotels .hotel{
+    width: 14em ;
+    height: 14em;
+    margin: 1em ;
+    position: relative ;
+    flex-shrink: 0 ;
+    transform-style: preserve-3d ;
+    transform-origin: center center ;
+    transform: perspective(1000px) rotateY(0deg) ;
+    transition: all .4s ease-in-out ;
+}
+#hotels .hotel:hover{
+    transform: perspective(1000px) rotateY(-180deg);
+}
+#hotels .front , #hotels .back{
+    width: 100% ;
+    height: 100%;
+    position: absolute ;
+    top: 0 ;
+    right: 0 ;
+    backface-visibility: hidden;
+    border-radius: 1em ;
+}
+#hotels .back{
+    transform: rotateY(180deg) translateZ(.01px);
+}
+#hotels .front{
+    background: url('../assets/imgs/hotel-img.jpg') center center no-repeat ;
+    background-size: 100% 100%;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: space-around ;
+    align-items: center ;
+    flex-wrap: nowrap;
+    transform: rotateY(0deg) translateZ(.01px);
+    overflow: hidden;
+}
+#hotels .front::before{
+    content: '' ;
+    width: 100% ;
+    height: 100%;
+    position: absolute ;
+    background-color: rgba(40,40,40,.6) ;
+    border-radius: 1em ;
+}
+#hotels .front > *{
+    width: 100% ;
+    height: auto;
+    font-size: 1em ;
+    text-align: center ;
+    padding-right: .6em ;
+    overflow-wrap: break-word ;
+}
+
+
+#hotels .front > *:not(.stars){
+    color: rgb(230,230,230) ;
+}
+#hotels .front > *:not(.discount){
+    position: relative ;
+}
+#hotels .hotel .name{margin-top: 2em ;}
+#hotels .stars{
+    color: #ffd600  ;
+}
+#hotels .discount{
+    width: auto ;
+    height: auto;
+    padding: .2em ;
+    background-color: #cf405d ;
+    position: absolute ;
+    right: 0 ;
+    top: 0% ;
+    border-top-left-radius: 1em ;
+    border-bottom-left-radius: 1em ;
+    border-top-right-radius: 1em ;
+    margin: 0 ;
+}
+#hotels .discount span{
+    margin-right: 1em;
+}
+#hotels .front .fas:not(.fa-star){
+    position: relative ;
+    right: -.5em ;
+}
+#hotels .back{
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: flex-start ;
+    flex-wrap: nowrap ;
+}
+#hotels .section{
+    width: 50% ;
+    height: 100% ;
+    position: relative;
+    overflow: hidden;
+    padding: .5em ;
+}
+#hotels .right{
+    background-color: rgb(30,30,30);
+    border-top-right-radius: 1em ;
+    border-bottom-right-radius: 1em ;
+}
+#hotels .right .features{
+    width: 100% ;
+    height: 65%;
+    margin-top: .5em ;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: start ;
+    flex-wrap: wrap ;
+    align-content: flex-start ;
+    font-size: 1em ;
+
+}
+#hotels .right .features > * {
+    margin: .5em  ;
+    cursor: pointer;
+}
+#hotels .left{
+    background-color: rgb(50,50,50);
+    border-top-left-radius: 1em ;
+    border-bottom-left-radius: 1em ;
+
+}
+
+#hotels h5{
+    color: rgb(230,230,230) ;
+    font-size: .8em ;
+    font-weight: lighter ;
+}
+#hotels .back .fas{
+    color: rgb(200,200,200) ;
+    font-size: .8em ;
+}
+#hotels .price{
+    font-size: .8em ;
+    color: rgb(200,200,200) ;
+    margin-top: .5em ;
+}
+#hotels a{
+    display: inline-block ;
+    width: 7em ;
+    height: 3em;
+    text-align: center ;
+    line-height: 3em;
+    position: absolute ;
+    font-size: 1em ;
+    z-index: 2;
+    right: 50%;
+    transform: translateX(50%) ;
+    bottom: 0;
+    color: white ;
+    background-color: #26a69a ;
+}
+#hotels button{
+    width: 12em ;
+    height: 3em;
+    text-align: center ;
+    line-height: 3em ;
+    color: white ;
+    background-color: #26a69a ;
+    border: none ;
+    border-radius: 2em;
+    font-size: 1.5em ;
+    cursor: pointer;
+    margin-top: 2em ;
+}
+@media screen and (max-width:1100px){
+    #filters-hotels{font-size: 15px;}
+}
+@media screen and (max-width:850px){
+    #filters-hotels{      
+        #filters{
+            display: none ;
+            width: 75vw ;
+            height: 60vh;
+            overflow: auto;
+            margin-left: 0em ;
+            background-color: white ;
+            box-shadow: 0 0 .2em .05em rgba(30,30,30,.5) ;
+            border: none ;
+            position: fixed ;
+            top: 50% ;
+            right: 50% ;
+            transform: translate(50%,-50%) ;
+            z-index: 5;
+        }
+    }
+    #hotels{
+        width: 100% ;
+    }
+    #hotels .hotel{
+        width: 15em ;
+        height: 15em;
+    }
+}
+@media screen and (max-width:550px){
+    #hotels .hotel{
+        width: 18em ;
+        height: 15em;
+    }
+}
+@media screen and (max-width:350px){
+    #filters-hotels{
+        font-size: 12px ;
+        #filters{
+            width: 90vw ;
+        }
+    }
+}
+@media screen and (max-width:280px){
+    #hotels .hotel{
+        width: 75vw ;
+        height: 75vw;
+    }
+}
+@media screen and (max-width:220px){
+    #hotels {
+        font-size: 10px ;
+    }
+}

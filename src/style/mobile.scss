@@ -1,119 +1,48 @@
 #mobile{
-    display: none ;
     width: 100% ;
     height: auto;
-    position: fixed ;
-    right: 0 ;
-    bottom: 0 ;
+    display: none ;
     flex-direction: row ;
     justify-content: flex-start ;
-    align-items: center ;
+    align-items: start ;
     flex-wrap: nowrap ;
-    background-color: rgb(240,240,240) ;
-    z-index: 1;
-}
-#mobile .fil , #mobile .srt{
-    width: 50% ;
-    height: auto;
-    padding: 1em ;
-    text-align: center ;
-    color: teal ;
-    font-size: 1.5em ;
-    cursor: pointer;
-}
-#mobile .fil{
-    border-left: .1em solid teal ;
-}
-#mobile-filter.show{
-    display: block ;
-}
-#mobile-sort.show{
-    display: block ;
-}
-#mobile-filter{
-    display: none ;
-    width: 80vw ;
-    height: 80vh;
-    overflow: auto ;
     position: fixed ;
-    right: 50% ;
-    top: 50% ;
-    transform: translate(50%,-50%) ;
-    z-index: 10;
-    padding: 1em ;
-    background-color: white ;
-    box-shadow: 0 0 .2em .05em rgba(40,40,40,.3) ;
-}
-#mobile-sort{
-    display: none ;
-    width: 80vw ;
-    height: 40vh;
-    overflow: auto ;
-    position: fixed ;
-    right: 50% ;
-    top: 50% ;
-    transform: translate(50%,-50%) ;
-    z-index: 10;
-    padding: 1em ;
-    background-color: white ;
-    box-shadow: 0 0 .2em .05em rgba(40,40,40,.3) ;
-}
-#mobile-filter .filters ,#mobile-sort .sort{
-    width: 100% ;
-    height: auto ;
-    border: none ;
-}
-#mobile-filter .type , #mobile-filter .star{
-    position: relative ;
-}
-#mobile-filter .badge{
-    position: absolute ;
-    left: 0;
-}
-#mobile-filter .types > * , #mobile-filter .stars > * , #mobile-filter .hotels-features > * {
-    position: relative ;
+    bottom: 0 ;
     right: 0 ;
-    width: 100% ;
-    padding: 0 ;
-    margin: 0 ;
-    margin-bottom: 1.5em ;
-} 
-#mobile-filter .filters > *:not(.divider){
-    padding: .1em ;
-}
-@media screen and (max-width: 1035px){
-    #mobile{display: flex ;}
-    // #mobile .sort{display: block ;}
-    #mobile-filter .filters{display: flex ;}
-    #mobile-sort .sort{display: block ;}   
-}
-@media screen and (max-width: 800px){
-    #mobile{font-size: 16px ;}
-}
-@media screen and (max-width: 700px){
-    #mobile-filter .filters {
-        font-size: 14px ;
+    background-color: rgb(240,240,240) ;
+    box-shadow: 0 0 .5em .08em rgba(30,30,30,.4) ;
+    div {
+        flex-shrink: 0 ;
+        width: 50% ;
+        height: 3em;
+        color: #26a69a ;
+        font-size: 1.5em ;
+        text-align: center ;
+        line-height: 3em ;
+        cursor: pointer;
     }
-    #mobile-filter .filters span{
-        font-size: 14px ;
+    #mobile-filter{
+        border-left: .1em solid #26a69a ;
     }
 }
-@media screen and (max-width: 360px){
-
-    #mobile-filter .filters {
-        font-size: 10px ;
-    }
-    #mobile-filter .range{
-        margin-top: 4em ;
-    }
-    #mobile-filter .filters span{
-        font-size: 10px ;
-    }
-    #mobile-sort .select{font-size: 2px}
+#mobile.show{display: flex ;}
+// @media screen and (max-width:850px){
+//     #mobile{display: flex ;}
+// }
+@media screen and (max-width:600px){
+    #mobile{font-size: 15px;}
 }
-@media screen and (max-width: 450px){
-    #mobile{font-size: 12px ;}
+@media screen and (max-width:400px){
+    #mobile{
+        div{
+            font-size: 1em ;
+            height: 4em;
+            line-height: 4em ;
+        }
+    }
 }
-@media screen and (max-width: 280px){
-    #mobile{font-size: 9px ;}
+@media screen and (max-width:250px){
+    #mobile{
+        font-size: 12px ;
+    }
 }

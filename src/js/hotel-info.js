@@ -1,17 +1,6 @@
 //-------------Tooltip----------------------------
 //------------------------------------------------
-let tooltips = document.querySelectorAll('#hotel-info .tooltipped') ;
-let tooltipConfig = {
-    position: 'top'
-};
-tooltips.forEach(tooltip=>{
-    let text = tooltip.getAttribute('data-text') ;
-    let html = `<span class="white-text"> ${text} </span>` ;
-    M.Tooltip.init(tooltip,{
-        ...tooltipConfig ,
-        html
-    })
-})
+
 //-------------Slider----------------------------
 //-----------------------------------------------
 let dots = document.querySelectorAll('#slider .dot') ;
