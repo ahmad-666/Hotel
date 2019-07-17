@@ -19,12 +19,12 @@
 }
 #services form{
     width: 100% ;
-    height: 13em ;
+    height: 12em ;
     text-align: center ;
     overflow: hidden;
     display: flex;
     flex-direction: row ;
-    justify-content: flex-start ;
+    justify-content: space-around ;
     align-items: flex-start;
     flex-wrap: wrap ;
     align-content: flex-start ;
@@ -33,9 +33,9 @@
     
 }
 #services label{
-    width: 11em ;
-    height: 11em;
-    margin: .8em ;
+    width: 10em ;
+    height: 10em;
+    margin: .5em ;
     display: flex ;
     flex-direction: column ;
     justify-content: space-around ;
@@ -112,7 +112,7 @@
 }
 @media screen and (max-width:500px){
     #services h4{font-size: 1.2em ;}
-    #services form{height: 8em ;}
+    #services form{height: 7.6em ;}
     #services label{
         font-size: 12px ;
     }

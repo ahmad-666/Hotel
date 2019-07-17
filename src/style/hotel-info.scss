@@ -20,7 +20,7 @@
     flex-direction: column ;
     justify-content: space-around ;
     align-items: flex-start ;
-    flex-wrap: wrap ;
+    flex-wrap: nowrap ;
     align-content: flex-start ;
     padding: 4em 2em 0 2em !important ;
     background-color: #1e1e1e ;
@@ -128,7 +128,7 @@
         height: 75vh;
     }
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:660px){
     #hotel-info{font-size: 12px ;}
     #hotel-info .section.right{
         height: auto;

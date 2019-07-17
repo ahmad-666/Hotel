@@ -12,16 +12,22 @@ function Slider(id){
 }
 Slider.prototype.prevBtnInit = function(){
     this.prevBtn.addEventListener('click',e=>{
-        this.offset = (this.slide.clientWidth) + parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-right')) + parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-left')) ;
-        this.visibleSlidesNum = Math.round(window.innerWidth / this.offset) ;
+        let slideWidth = this.slide.clientWidth;
+        let slideMarginRight = parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-right'));
+        let slideMarginLeft = parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-left'));
+        this.offset = slideWidth + slideMarginRight +  slideMarginLeft;
+        this.visibleSlidesNum = Math.floor(window.innerWidth / this.offset) ;
         this.threshold = 0 ;
         if(this.curPos+this.offset <= this.threshold ) this.slider.style.right = `${this.curPos+=this.offset}px` ;
     });
 }
 Slider.prototype.nextBtnInit = function(){
     this.nextBtn.addEventListener('click',e=>{
-        this.offset = (this.slide.clientWidth) + parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-right')) + parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-left')) ;
-        this.visibleSlidesNum = Math.round(window.innerWidth / this.offset) ;
+        let slideWidth = this.slide.clientWidth;
+        let slideMarginRight = parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-right'));
+        let slideMarginLeft = parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-left'));
+        this.offset = slideWidth + slideMarginRight +  slideMarginLeft;
+        this.visibleSlidesNum = Math.floor(window.innerWidth / this.offset) ;
         this.threshold = (this.slider.childElementCount - this.visibleSlidesNum+1)*this.offset ;
         if(Math.abs(this.curPos-this.offset) <= this.threshold) this.slider.style.right = `${this.curPos-=this.offset}px` ;
     });
@@ -32,6 +38,6 @@ discountSlider.nextBtnInit() ;
 let topSlider = new Slider('#top') ;
 topSlider.prevBtnInit() ;
 topSlider.nextBtnInit() ;
-let suggestiontSlider = new Slider('#suggestion') ;
-suggestiontSlider.prevBtnInit() ;
-suggestiontSlider.nextBtnInit() ;
+let suggestionsSlider = new Slider('#suggestion') ;
+suggestionsSlider.prevBtnInit() ;
+suggestionsSlider.nextBtnInit() ;

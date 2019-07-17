@@ -156,9 +156,12 @@
     }
     
 }
-@media screen and (max-width:360px){
+@media screen and (max-width:380px){
     // .slider-wrapper{font-size: 9px ;}
-    
+    .slider-wrapper .slider .slide {
+        width: 80vw ;
+        margin: 0 10vw ;
+    }
 }
 @media screen and (max-width:300px){
     .slider-wrapper h4{font-size: 1.2em ;}
