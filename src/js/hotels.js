@@ -7,6 +7,7 @@ import '../style/slider.scss' ;
 import '../style/search.scss' ;
 //import '../style/calender.scss' ;
 import '../style/sort-currFilters.scss' ;
+import '../../node_modules/nouislider/distribute/nouislider.min.css' ;
 import '../style/filters-hotelsContainer.scss' ;
 import '../style/mobile.scss' ;
 import '../style/footer.scss' ;
