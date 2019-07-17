@@ -19,7 +19,7 @@ import './header-grid' ;
 import './hotel-info' ;
 import './search' ;
 //import './calender';
-//import './tabs' ;
+import './tabs' ;
 import './comments' ;
 import './user-imgs' ;
 import './reserve' ;

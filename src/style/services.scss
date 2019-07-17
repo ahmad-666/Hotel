@@ -53,6 +53,7 @@
 #services label input[type="checkbox"]{
     width: 0 ;
     height: 0;
+    display: none ;
 }
 #services label i , #services label p{
     color: #fb636f  ;
@@ -98,7 +99,7 @@
     #services h4{font-size: 1.5em ;}
 }
 @media screen and (max-width:800px){
-    #services form{height: 10em ;}
+    #services form{height: 12em ;}
     #services label{
         width: 10em ;
         height: 10em;
@@ -120,6 +121,15 @@
     #services form{  
         justify-content: space-around ;
        
+    }
+    #services > p {
+        
+        // margin-top: 2em;
+        // position: relative ;
+        // right: 40% ;
+        // transform: translateX(50%) ;
+        // border: 1px solid blue ;
+        // text-align: center;
     }
 }
 @media screen and (max-width:300px){

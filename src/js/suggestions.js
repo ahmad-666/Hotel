@@ -22,7 +22,7 @@ Slider.prototype.nextBtnInit = function(){
     this.nextBtn.addEventListener('click',e=>{
         this.offset = (this.slide.clientWidth) + parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-right')) + parseInt(window.getComputedStyle(this.slide,null).getPropertyValue('margin-left')) ;
         this.visibleSlidesNum = Math.round(window.innerWidth / this.offset) ;
-        this.threshold = (this.slider.childElementCount - this.visibleSlidesNum + 1)*this.offset ;
+        this.threshold = (this.slider.childElementCount - this.visibleSlidesNum+1)*this.offset ;
         if(Math.abs(this.curPos-this.offset) <= this.threshold) this.slider.style.right = `${this.curPos-=this.offset}px` ;
     });
 }

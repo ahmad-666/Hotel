@@ -44,9 +44,9 @@
     background-image: linear-gradient(to left , white , transparent) ;
 }
 .slider-wrapper .btn{
-    width: 5em  ;
-    height: 5em;
-    border-radius: 2em ;
+    width: 4em  ;
+    height: 4em;
+    border-radius: 50% ;
     background-color: teal ;
     position: absolute ;
     z-index: 3;
@@ -59,7 +59,7 @@
     right: 50% ;
     transform: translate(50%,-50%) ;
     color: white ;
-    font-size: 2em ;
+    font-size: 1.6em ;
     cursor: pointer;
 }
 .slider-wrapper .btn.btn-left{
@@ -135,23 +135,26 @@
 #top{background-color: rgb(245,245,245);}
 @media screen and (max-width:1000px){
     .slider-wrapper h4{font-size: 1.7em ;}
+    .slider-wrapper{font-size: 15px ;}
 }
 @media screen and (max-width:800px){
-    .slider-wrapper{font-size: 15px ;}
     .slider-wrapper .btn{
         font-size: 11px ;
     }
-    // .slider-wrapper .slider{overflow-x: scroll;padding-bottom: 1em ;}
-    
+    .slider-wrapper .btn{
+        display: none ;
+    }
+    .slider-wrapper .fade{
+        display: none ;
+    }
+    .slider-wrapper .slider{overflow-x: auto;padding-bottom: 1em ;}  
 }
 @media screen and (max-width:500px){
     .slider-wrapper h4{font-size: 1.5em ;}
     .slider-wrapper .btn{
         font-size: 9px ;
     }
-    .slider-wrapper .fade{
-        display: none ;
-    }
+    
 }
 @media screen and (max-width:360px){
     // .slider-wrapper{font-size: 9px ;}

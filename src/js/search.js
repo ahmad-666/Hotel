@@ -1,4 +1,4 @@
-let inputs = document.querySelectorAll('#search .input-wrapper input[type="text"]') ;
+let inputs = document.querySelectorAll('#search .input-wrapper input[type="text"],input[type="number"]') ;
 inputs.forEach(input=>{
     input.addEventListener('change',inputHandler) ;
 })
@@ -7,10 +7,6 @@ function inputHandler(e){
     if(this.value.length>0) label.classList.add('up') ;
     else label.classList.remove('up') ;
 }
-
-
-
-
 //AutoComplete----------------------------
 //AutoComplete----------------------------
 //AutoComplete----------------------------
@@ -65,12 +61,13 @@ AutoComplete.prototype.liHandler = function(li,e){
     this.ul.innerHTML = "" ;
     this.ul.classList.remove('show') ;
 }
-
-let autoCompleteElm = document.querySelector('#search input[type="text"].auto-complete');
-let data = autoCompleteElm.parentElement.querySelector('ul').getAttribute('data-auto').split(',')
-let autoCompleteConfig = {
-    data ,
-    maxFinds: 5 ,
-    startFrom: 2
+if(document.querySelector('#search input[type="text"].auto-complete')) {
+    let autoCompleteElm = document.querySelector('#search input[type="text"].auto-complete');
+    let data = autoCompleteElm.parentElement.querySelector('ul').getAttribute('data-auto').split(',')
+    let autoCompleteConfig = {
+        data ,
+        maxFinds: 5 ,
+        startFrom: 2
+    }
+    new AutoComplete(autoCompleteElm,autoCompleteConfig) ;
 }
-new AutoComplete(autoCompleteElm,autoCompleteConfig) ;

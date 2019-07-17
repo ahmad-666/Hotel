@@ -47,6 +47,7 @@
                     width:  0 ;
                     height: 0;
                     position: absolute ;
+                    display: none ;
                     &:checked{
                         ~label .rect{
                             width: .8em ;
@@ -119,7 +120,7 @@
     align-items: start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
-    padding: 1em 1em 4em 1em ;
+    padding: 1em 1em 8em 1em ;
     position: relative ;
     border: 1px solid rgb(230,230,230) ;
 }
@@ -132,7 +133,7 @@
     transform-style: preserve-3d ;
     transform-origin: center center ;
     transform: perspective(1000px) rotateY(0deg) ;
-    transition: all .4s ease-in-out ;
+    transition: all .3s ease-in-out ;
 }
 #hotels .hotel:hover{
     transform: perspective(1000px) rotateY(-180deg);
@@ -281,7 +282,7 @@
     background-color: #26a69a ;
 }
 #hotels button{
-    width: 12em ;
+    width: 9em ;
     height: 3em;
     text-align: center ;
     line-height: 3em ;
@@ -292,6 +293,10 @@
     font-size: 1.5em ;
     cursor: pointer;
     margin-top: 2em ;
+    position: absolute ;
+    right: 50% ;
+    transform: translateX(50%) ;
+    bottom: 2em ;
 }
 @media screen and (max-width:1100px){
     #filters-hotels{font-size: 15px;}
@@ -346,4 +351,5 @@
     #hotels {
         font-size: 10px ;
     }
+    #hotels button{width: 100% ;}
 }

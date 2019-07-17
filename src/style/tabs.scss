@@ -1,81 +1,156 @@
 #tabs{
     width: 90% ;
     height: auto;
-    margin-top: 8em  ;
     position: relative ;
     right: 50% ;
     transform: translateX(50%) ;
-    border: 1px solid rgb(230,230,230) ;
-}
-.tabs .tab a:focus, .tabs .tab a:focus.active{
-    background-color: rgba(0, 128, 128, 0.13) ;
-}
-#tabs > *:not(.tabs){
-    padding: 1em ;
-    font-size: 1em ;
-}
-
-#about p{
-    color: rgb(40,40,40) ;
-    line-height: 3em ;
-}
-#map-dist #map{
-    width: 100% ;
-    height: 30em;
-    background: url('../assets/imgs/map.jpg') center center no-repeat ;
-    background-size: 100% 100% ;
-}
-#map-dist #dist{
-    width: 100% ;
-    height: auto;
-    display: flex ;
-    flex-direction: row ;
-    justify-content: flex-start ;
-    align-items: center ;
-    flex-wrap: wrap ;
-    align-content: flex-start;
-    margin-top: 2em;
-}
-#dist .place{
-    width: auto ;
-    height: auto;
-    color: teal ;
-    display: flex ;
-    flex-direction: row ;
-    justify-content: flex-start ;
-    align-items: center ;
-    flex-wrap: wrap ;
-    margin: 1em ;
-}
-#dist .place > * {
-    margin: .5em 0;
-}
-.place h6 {
-    margin: 0 ;
-    font-size: 1em ;
-}
-.place .time{color: rgb(40,40,40);}
-@media screen and (max-width:500px){
-    #tabs li.tab a{
-        font-size: 12px ;
+    border: 1px solid rgb(170,170,170) ;
+    margin-top: 4em ;
+    ul{
+        width: 100% ;
+        height: auto ;
+        position: relative ;
+        top: 0 ;
+        right: 0 ;
+        list-style: none ;
+        display: flex ;
+        flex-direction: row ;
+        justify-content: space-around ;
+        align-items: center ;
+        flex-wrap: nowrap ;
+        li{
+            width: 33.3% ;
+            height: 4em;
+            line-height: 3em ;
+            padding: .5em ;
+            font-size: 1em ;
+            color: #26a69a ; 
+            text-align: center ;
+            cursor: pointer;
+            background-color: white ;
+            transition: all .4s ease-in-out ;
+            position: relative;
+            &:hover{
+                background-color: rgb(245,245,245) ;
+            }
+            &::before{
+                content: '' ;
+                width: 0% ;
+                height: 2px;
+                background-color: #26a69a ;
+                position: absolute ;
+                right: 0 ;
+                bottom: 0 ;
+                transition: all .4s ease-in-out ;
+            }
+            &:hover::before{
+                width: 100% ;
+            }
+        }
+    }
+    #content{
+        width: 100% ;
+        height: auto;
+        position: relative;
+        #about,#map-dist,#comments{
+            width: 100% ;
+            height: auto;
+            display: none ;
+            padding: 1em ;
+            opacity: 0;
+            transition: all .3s ease-in-out ;
+        }
+        #about.show,#map-dist.show,#comments.show{opacity: 1;}
+        #about p {
+            font-size: .9em ;
+            font-weight: lighter ;
+            line-height: 3em ;
+            overflow-wrap: nowrap ;
+            color: rgb(50,50,50) ;
+        }
+        #map-dist{
+            #map{
+                width: 100% ;
+                height: 20em;
+                background: url('../assets/imgs/map.jpg') center center no-repeat ;
+                background-size: 100% 100% ;
+            }
+            #dist{
+                width: 100% ;
+                height: auto ;
+                margin-top: 1em ;
+                display: flex ;
+                flex-direction: row ;
+                justify-content: flex-start ;
+                align-items: center ;
+                flex-wrap: wrap ;
+                align-content: flex-start ;
+                .place{
+                    width: auto ;
+                    height: auto;
+                    margin: 1em ;
+                    display: flex ;
+                    flex-direction: row ;
+                    justify-content: flex-start ;
+                    align-items: center ;
+                    flex-wrap: wrap ;
+                    align-content: flex-start ;
+                    i,h6,p{margin: .1em ;}
+                    i{
+                        font-size: .8em ;
+                        color: #26a69a ;
+                    }
+                    h6{
+                        font-size: .8em ;
+                        color: #26a69a ;
+                        font-weight: normal ;
+                    }
+                    p {
+                        font-size: .8em ;
+                        color: rgb(50,50,50) ;
+                    }
+                }
+            }
+        }
     }
 }
-@media screen and (max-width:700px){
-    #tabs #about{font-size: 15px ;}
+@media screen and (max-width:780px){
+    #tabs ul{font-size: 16px ;}
+    #tabs #content{font-size: 16px ;}
 }
-@media screen and (max-width:450px){
-    #tabs #about{font-size: 10px ;}
+@media screen and (max-width:605px){
+    // #tabs ul{font-size: 12px ;}
+    #tabs ul{
+        overflow-x: auto ;
+        overflow-y: hidden ;
+        justify-content: flex-start ;
+    }
+    #tabs ul li {
+        width: 50% ;
+        flex-shrink: 0 ;
+    }  
 }
-@media screen and (max-width:900px){
-    #tabs #map-dist{font-size: 15px;}
+@media screen and (max-width: 560px){
+    #tabs #content #map-dist #dist{justify-content: space-around ;}
 }
-@media screen and (max-width:660px){
-    #map-dist #dist{justify-content: space-around ;}
+@media screen and (max-width:440px){
+    #tabs ul{font-size: 12px ;}
+    #tabs #content{font-size: 12px ;}
 }
-@media screen and (max-width:370px){
-    #tabs #map-dist{font-size: 12px;}
+@media screen and (max-width:320px){
+    #tabs ul li {
+        width: 75% ;
+    }  
+    #tabs #content #map-dist #map{height: 15em;}
 }
-// @media screen and (max-width:1500px){
-//     #tabs{font-size: 15px ;}
-//     #tabs #comments{font-size: 14px ;}
-// }
+@media screen and (max-width:240px){
+}
+@media screen and (max-width:230px){
+    #tabs #content #map-dist #dist{font-size: 9px ;}
+}
+@media screen and (max-width:220px){
+    #tabs ul li {
+        width: 80vw ;
+    }  
+    
+}

@@ -9,13 +9,13 @@
         flex-wrap: wrap ;
         align-content: flex-start ;
         .img{
-            width: 8em ;
-            height: 8em;
+            width: 6em ;
+            height: 6em;
             background-position: center center ;
             background-repeat: no-repeat ;
             background-size: 100% 100% ;
             border-radius: 1em ;
-            margin: 1em ;
+            margin: .5em ;
             position: relative;
             cursor: pointer;
             &::before{
@@ -74,4 +74,10 @@
         color: white ;
         cursor: pointer;
     }
+}
+@media screen and (max-width:850px){
+    .full-img{font-size: 15px ;}
+}
+@media screen and (max-width:400px){
+    .full-img{font-size: 12px ;}
 }

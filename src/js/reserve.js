@@ -1,8 +1,8 @@
 //Increase/Decrease room-num
 //--------------------------
 //--------------------------
-let increaseBtns = document.querySelectorAll('.room button#increase') ;
-let decreaseBtns = document.querySelectorAll('.room button#decrease') ;
+let increaseBtns = document.querySelectorAll('.room button.increase') ;
+let decreaseBtns = document.querySelectorAll('.room button.decrease') ;
 increaseBtns.forEach(increaseBtn=>{
     increaseBtn.addEventListener('click',function(e){
         let guestNum = this.parentNode.querySelector('input[type="number"]');
