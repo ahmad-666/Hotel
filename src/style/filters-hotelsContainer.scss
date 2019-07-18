@@ -38,11 +38,11 @@
                 font-size: 1.2em ;
                 margin: .5em 0 1em 0 ;
             }
-            div{
+            > div:not(#ranger){
                 width: 100% ;
                 min-height: 3em;
                 margin: .2em 0 ;
-                position: relative ;
+                position: relative ;       
                 input[type="checkbox"]{
                     width:  0 ;
                     height: 0;
@@ -106,6 +106,48 @@
                     color: #26a69a ;
                     font-size: 1em ;
                 }
+            }
+            #ranger{
+               width: 90% ;
+               height: 1em;
+               margin-top: 2em ;
+               position: relative ;
+               right: 50%;
+               transform: translateX(50%) ;
+               .noUi-handle.circle{
+                   width: 2em ;
+                   height: 2em;
+                   border-radius: 50% ;
+                   background-color: #26a69a ;
+                   border: none ;
+                   box-shadow: none ;
+                   cursor: pointer;
+                   &::before{display: none ;}
+                   &::after{display: none ;}
+                   &:focus{
+                       outline: none ;
+                       .noUi-tooltip{outline: none ;}
+                    }
+               }               
+               .noUi-handle.right{
+                   right: 0 ;
+                   transform: translate(50%,-25%) ;
+                   top: 0% ;
+               }   
+               .noUi-handle.left{
+                   left: 0 ;
+                   top: 0% ;
+                   transform: translate(0%,-25%) ;
+               }   
+               .noUi-tooltip.newStyle{
+                   font-size: .8em ;
+               }
+               .noUi-tooltip.right{
+                   transform: translate(-90%,0) ;
+               }
+               .noUi-tooltip.left{
+                   transform: translate(0%,0) ;
+               }
             }
         }
     }
@@ -220,7 +262,7 @@
     width: 50% ;
     height: 100% ;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding: .5em ;
 }
 #hotels .right{
