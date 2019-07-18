@@ -43,7 +43,13 @@
                 bottom: 0 ;
                 transition: all .4s ease-in-out ;
             }
-            &:hover::before{
+            // &:hover::before{
+            //     width: 100% ;
+            // }
+        }
+        li.active{
+            background-color: rgb(245,245,245) ;    
+            &::before{
                 width: 100% ;
             }
         }
