@@ -1,1 +1,1279 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title><link rel="stylesheet" href="hotels.c8979dde.css"></head><body> <div id="nav"> <a id="home" href="#!"> <img src="logo.40d340d0.png" alt="logo.png"> <p>مستر اسکان</p> </a> <a id="sign-in" href="#!"> <i class="fas fa-sign-in-alt"></i> ورود </a> <a id="reg" href="#!"> <i class="fas fa-user"></i> ثبت نام </a> <div id="hamburger"> <span></span> <span></span> <span></span> </div> <i class="fas fa-bars"></i> <div id="mobile-nav"> <a href="#!" class="logo"> <img src="logo.40d340d0.png" alt="logo"> </a> <a href="#!"> <i class="fas fa-sign-in-alt"></i> ورود </a> <a href="#!"> <i class="fas fa-user"></i> ثبت نام </a> <a href="#!"> <i class="fas fa-hotel"></i> مکان های اقامتی </a> </div> </div> <div id="grid-menu"> <div class="flex-section"> <div id="close"> <div class="color"></div> <i class="fas fa-times"></i> </div> <a href="#!" id="motel"> <div class="color"></div> <div class="img"></div> <p>مهمان پذیر</p> </a> <a href="#!" id="inn"> <div class="color"></div> <div class="img"></div> <p>مسافرخانه</p> </a> </div> <div class="flex-section"> <a href="#!" id="hotel"> <div class="color"></div> <div class="img"></div> <p>هتل</p> </a> </div> <div class="flex-section"> <a href="#!" id="suite"> <div class="color"></div> <div class="img"></div> <p>سوییت</p> </a> <a href="#!" id="home"> <div class="color"></div> <div class="img"></div> <p>خانه</p> </a> <a href="#!" id="apartment"> <div class="color"></div> <div class="img"></div> <p>هتل آپارتمان</p> </a> </div> <div class="flex-section"> <a href="#!" id="residence"> <div class="color"></div> <div class="img"></div> <p>اقامتگاه</p> </a> <a href="#!" id="villa"> <div class="color"></div> <div class="img"></div> <p>ویلا</p> </a> </div> </div> <div id="slider"> <div id="slides"> <div class="slide show"> <img src="slide1.b813210b.jpg" alt="slide1"> <p>رزرو بهترین مکان ها</p> </div> <div class="slide"> <img src="slide2.a67153bd.jpg" alt="slide2"> <p>تضمین بهترین قیمت</p> </div> <div class="slide"> <img src="slide3.c6483bb6.jpg" alt="slide3"> <p>اطلاع از آخرین تخفیف ها</p> </div> <div class="slide"> <img src="slide4.7e6ae9f3.jpg" alt="slide4"> <p>رزرو تنها با چند کلیک</p> </div> </div> <div id="dots"> <span class="dot active" data-slide="0"></span> <span class="dot" data-slide="1"></span> <span class="dot" data-slide="2"></span> <span class="dot" data-slide="3"></span> </div> </div> <form id="search" name="search" action="#!" method="GET" autocomplete="off" enctype="text/plain"> <div class="input-wrapper"> <input type="text" id="dest" name="dest" class="auto-complete"> <label for="dest">مقصد</label> <i class="fas fa-map-marker-alt"></i> <span class="line"></span> <ul data-auto="شهر۱,شهر۲,شهر۳,شهر۴,شهر۵"></ul> </div> <div class="input-wrapper"> <input type="text" id="in" name="in"> <label for="in">تاریخ ورود</label> <i class="fas fa-calendar-alt"></i> <span class="line"></span> </div> <div class="input-wrapper"> <input type="text" id="out" name="out"> <label for="out">تاریخ خروج</label> <i class="fas fa-calendar-alt"></i> <span class="line"></span> </div> <input type="submit" value="جست و جو"> </form> <div id="sort-currFilters"> <div class="input-wrapper"> <input type="text" id="sort" name="sort" readonly="" value="بیشترین تخفیف"> <label for="sort">مرتب سازی بر اساس</label> <i class="fas fa-angle-down"></i> <ul> <li>بیشترین تخفیف</li> <li>بیشترین امتیاز</li> <li>ارزان ترین</li> <li>گران ترین</li> </ul> </div> <div id="curr-filters"> <h4>فیلتر های انتخاب شده</h4> <div id="currs"> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> <span class="filter"> <i class="fas fa-times"></i> فیلتر </span> </div> </div> </div> <div id="filters-hotels"> <form id="filters" name="filters" action="#!" method="GET" autocomplete="off" enctype="text/plain"> <div id="price"> <h4>تعیین بازه قیمت</h4> <p>some text</p> </div> <div id="types"> <h4>انتخاب نوع مکان اقامتی</h4> <div> <input type="checkbox" id="filter-hotel" name="filter-hotel" value="filter-hotel"> <label for="filter-hotel"> <span class="rect"></span> <p>هتل</p> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="filter-residence" name="filter-residence" value="filter-residence"> <label for="filter-residence"> <span class="rect"></span> <p>اقامتگاه</p> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="filter-inn" name="filter-inn" value="filter-inn"> <label for="filter-inn"> <span class="rect"></span> <p>مسافرخانه</p> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="filter-motel" name="filter-motel" value="filter-motel"> <label for="filter-motel"> <span class="rect"></span> <p>مهمان پذیر</p> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="filter-suite" name="filter-suite" value="filter-suite"> <label for="filter-suite"> <span class="rect"></span> <p>سوییت</p> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="filter-apartment" name="filter-apartment" value="filter-apartment"> <label for="filter-apartment"> <span class="rect"></span> <p>هتل آپارتمان</p> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="filter-home" name="filter-home" value="filter-home"> <label for="filter-home"> <span class="rect"></span> <p>خانه</p> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="filter-villa" name="filter-villa" value="filter-villa"> <label for="filter-villa"> <span class="rect"></span> <p>ویلا</p> </label> <span class="badge">10</span> </div> </div> <div id="stars"> <h4>بر اساس تعداد ستاره</h4> <div> <input type="checkbox" id="oneStar" name="oneStar" value="oneStar"> <label for="oneStar"> <span class="rect"></span> <i class="fas fa-star"></i> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="twoStar" name="twoStar" value="twoStar"> <label for="twoStar"> <span class="rect"></span> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="threeStar" name="threeStar" value="threeStar"> <label for="threeStar"> <span class="rect"></span> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="fourStar" name="fourStar" value="fourStar"> <label for="fourStar"> <span class="rect"></span> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </label> <span class="badge">10</span> </div> <div> <input type="checkbox" id="fiveStar" name="fiveStar" value="fiveStar"> <label for="fiveStar"> <span class="rect"></span> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </label> <span class="badge">10</span> </div> </div> <div id="features"> <h4>بر اساس ویژگی ها</h4> <div> <input type="checkbox" id="feature1" name="feature1" value="feature1"> <label for="feature1"> <span class="rect"></span> <p>امکان شماره ۱ </p> </label> </div> <div> <input type="checkbox" id="feature2" name="feature2" value="feature2"> <label for="feature2"> <span class="rect"></span> <p>امکان شماره ۱</p> </label> </div> <div> <input type="checkbox" id="feature3" name="feature3" value="feature3"> <label for="feature3"> <span class="rect"></span> <p>امکان شماره ۱</p> </label> </div> <div> <input type="checkbox" id="feature4" name="feature4" value="feature4"> <label for="feature4"> <span class="rect"></span> <p>امکان شماره ۱</p> </label> </div> <div> <input type="checkbox" id="feature5" name="feature5" value="feature5"> <label for="feature5"> <span class="rect"></span> <p>امکان شماره ۱</p> </label> </div> </div> </form> <div id="hotels"> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <div class="hotel"> <div class="front"> <div class="discount"> تخفیف <span>%30</span> </div> <div class="name"> <i class="fas fa-hotel"></i> نام هتل </div> <div class="location"> <i class="fas fa-map-marker-alt"></i> مشهد </div> <div class="score">5 امتیاز (10رای)</div> <div class="stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div> </div> <div class="back"> <div class="right section"> <h5>امکانات</h5> <div class="features"> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> <i class="fas fa-wifi" data-text="وای فای"></i> </div> </div> <div class="left section"> <h5>شروع قیمت</h5> <div class="price"> <span class="value">500.000 </span> تومان </div> </div> <a href="#"> رزرو </a> </div> </div> <button> نمایش بیشتر </button> </div> </div> <div id="mobile"> <div id="mobile-filter"> <i class="fas fa-filter"></i> فیلتر </div> <div id="mobile-sort"> <i class="fas fa-sort-amount-up-alt"></i> مرتب سازی </div> </div> <div id="footer"> <div id="content"> <ul id="support"> <h5> پشتیبانی </h5> <li> <a href="#!" data-modal="aboutus"> درباره ما </a> </li> <li> <a href="#!" data-modal="rules"> قوانین </a> </li> <li> <a href="#!" data-modal="faq"> سوالات متداول </a> </li> </ul> <ul class="contact-us"> <h5> ارتباط با ما </h5> <li> <a href="#"> <i class="fab fa-telegram-plane"></i> تلگرام </a> </li> <li> <a href="#"> <i class="fab fa-instagram"></i> اینستاگرام </a> </li> <li> <a href="#"> <i class="fab fa-twitter"></i> توییتر </a> </li> <li> <a href="#"> <i class="fas fa-envelope"></i> ایمیل </a> </li> </ul> <ul id="address"> <h5> آدرس </h5> <li> <i class="fas fa-map-marker-alt"></i> بلوار سید رضی - سید رضی 57 - پلاک 000 </li> <li> <i class="fas fa-phone"></i> تلفن : 05137826600 </li> </ul> </div> </div> <div id="copyright"> <p> <i class="far fa-copyright"></i> طراحی شده توسط <a href="http://www.ittoos.com/">ittoos</a> </p> </div> <div id="aboutus" class="modal"> <h4>درباره ما</h4> <p> متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن </p> <button>بستن</button> </div> <div id="rules" class="modal"> <h4>قوانین</h4> <p> متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن </p> <button>بستن</button> </div> <div id="faq" class="modal"> <h4>سوالات متداول</h4> <p> متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن متن </p> <button>بستن</button> </div> <div id="black"></div> <a href="hotel.html">some other page</a> <script src="hotels.c26ae28e.js"></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="/hotels.7ffa79f8.css"></head>
+
+<body>
+    <div id="nav">
+        <a id="home" href="#!">
+            <img src="/logo.f1f37117.png" alt="logo.png">
+            <p>مستر اسکان</p>
+        </a>
+        <a id="sign-in" href="#!">
+            <i class="fas fa-sign-in-alt"></i>
+            ورود
+        </a>
+        <a id="reg" href="#!">
+            <i class="fas fa-user"></i>
+            ثبت نام
+        </a>
+        <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <i class="fas fa-bars"></i>
+        <div id="mobile-nav">
+            <a href="#!" class="logo">
+                <img src="/logo.f1f37117.png" alt="logo">
+            </a>
+            <a href="#!">
+                <i class="fas fa-sign-in-alt"></i>
+                ورود
+            </a>
+            <a href="#!">
+                <i class="fas fa-user"></i>
+                ثبت نام
+            </a>
+            <a href="#!">
+                <i class="fas fa-hotel"></i>
+                مکان های اقامتی
+            </a>
+        </div>
+    </div>
+    <div id="grid-menu">
+        <div class="flex-section">
+            <div id="close">
+                <div class="color"></div>
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="#!" id="motel">
+                <div class="color"></div>
+                <div class="img"></div>
+                <p>مهمان پذیر</p>
+            </a>
+            <a href="#!" id="inn">
+                <div class="color"></div>
+                <div class="img"></div>
+                <p>مسافرخانه</p>
+            </a>
+        </div>
+        <div class="flex-section">
+            <a href="#!" id="hotel">
+                <div class="color"></div>
+                <div class="img"></div>
+                <p>هتل</p>
+            </a>
+        </div>
+        <div class="flex-section">
+            <a href="#!" id="suite">
+                <div class="color"></div>
+                <div class="img"></div>
+                <p>سوییت</p>
+            </a>
+            <a href="#!" id="home">
+                <div class="color"></div>
+                <div class="img"></div>
+                <p>خانه</p>
+            </a>
+            <a href="#!" id="apartment">
+                <div class="color"></div>
+                <div class="img"></div>
+                <p>هتل آپارتمان</p>
+            </a>
+        </div>
+        <div class="flex-section">
+            <a href="#!" id="residence">
+                <div class="color"></div>
+                <div class="img"></div>
+                <p>اقامتگاه</p>
+            </a>
+            <a href="#!" id="villa">
+                <div class="color"></div>
+                <div class="img"></div>
+                <p>ویلا</p>
+            </a>
+        </div>
+    </div>
+    <div id="slider">
+        <div id="slides">
+            <div class="slide show">
+                <img src="/slide1.80ad9a8c.jpg" alt="slide1">
+                <p>رزرو بهترین مکان ها</p>
+            </div>
+            <div class="slide">
+                <img src="/slide2.34290504.jpg" alt="slide2">
+                <p>تضمین بهترین قیمت</p>
+            </div>
+            <div class="slide">
+                <img src="/slide3.bf1e769b.jpg" alt="slide3">
+                <p>اطلاع از آخرین تخفیف ها</p>
+            </div>
+            <div class="slide">
+                <img src="/slide4.a161990a.jpg" alt="slide4">
+                <p>رزرو تنها با چند کلیک</p>
+            </div>
+        </div>
+        <div id="dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+    </div>
+    <form id="search" name="search" action="#!" method="GET" autocomplete="off" enctype="text/plain">
+        <div class="input-wrapper">
+            <input type="text" id="dest" name="dest" class="auto-complete">
+            <label for="dest">مقصد</label>
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="line"></span>
+            <ul data-auto="شهر۱,شهر۲,شهر۳,شهر۴,شهر۵"></ul>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" id="in" name="in">
+            <label for="in">تاریخ ورود</label>
+            <i class="fas fa-calendar-alt"></i>
+            <span class="line"></span>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" id="out" name="out">
+            <label for="out">تاریخ خروج</label>
+            <i class="fas fa-calendar-alt"></i>
+            <span class="line"></span>
+        </div>
+        <input type="submit" value="جست و جو">
+    </form>
+    <div id="sort-currFilters">
+        <div class="input-wrapper">
+            <input type="text" id="sort" name="sort" readonly="" value="بیشترین تخفیف">
+            <label for="sort">مرتب سازی بر اساس</label>
+            <i class="fas fa-angle-down"></i>
+            <ul>
+                <li>بیشترین تخفیف</li>
+                <li>بیشترین امتیاز</li>
+                <li>ارزان ترین</li>
+                <li>گران ترین</li>
+            </ul>
+        </div>
+        <div id="curr-filters">
+            <h4>فیلتر های انتخاب شده</h4>
+            <div id="currs">
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+                <span class="filter">
+                    <i class="fas fa-times"></i>
+                    فیلتر
+                </span>
+            </div>
+        </div>
+    </div>
+    <div id="filters-hotels">
+        <form id="filters" name="filters" action="#!" method="GET" autocomplete="off" enctype="text/plain">
+            <div id="price">
+                <h4>تعیین بازه قیمت</h4>
+                <div id="ranger">
+                    <input type="hidden" id="min-price" name="min-price">
+                    <input type="hidden" id="max-price" name="max-price">
+                </div>
+
+            </div>
+            <div id="types">
+                <h4>انتخاب نوع مکان اقامتی</h4>
+                <div>
+                    <input type="checkbox" id="filter-hotel" name="filter-hotel" value="filter-hotel">
+                    <label for="filter-hotel">
+                        <span class="rect"></span>
+                        <p>هتل</p>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-residence" name="filter-residence" value="filter-residence">
+                    <label for="filter-residence">
+                        <span class="rect"></span>
+                        <p>اقامتگاه</p>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-inn" name="filter-inn" value="filter-inn">
+                    <label for="filter-inn">
+                        <span class="rect"></span>
+                        <p>مسافرخانه</p>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-motel" name="filter-motel" value="filter-motel">
+                    <label for="filter-motel">
+                        <span class="rect"></span>
+                        <p>مهمان پذیر</p>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-suite" name="filter-suite" value="filter-suite">
+                    <label for="filter-suite">
+                        <span class="rect"></span>
+                        <p>سوییت</p>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-apartment" name="filter-apartment" value="filter-apartment">
+                    <label for="filter-apartment">
+                        <span class="rect"></span>
+                        <p>هتل آپارتمان</p>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-home" name="filter-home" value="filter-home">
+                    <label for="filter-home">
+                        <span class="rect"></span>
+                        <p>خانه</p>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-villa" name="filter-villa" value="filter-villa">
+                    <label for="filter-villa">
+                        <span class="rect"></span>
+                        <p>ویلا</p>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+
+            </div>
+            <div id="stars">
+                <h4>بر اساس تعداد ستاره</h4>
+                <div>
+                    <input type="checkbox" id="oneStar" name="oneStar" value="oneStar">
+                    <label for="oneStar">
+                        <span class="rect"></span>
+                        <i class="fas fa-star"></i>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="twoStar" name="twoStar" value="twoStar">
+                    <label for="twoStar">
+                        <span class="rect"></span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="threeStar" name="threeStar" value="threeStar">
+                    <label for="threeStar">
+                        <span class="rect"></span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="fourStar" name="fourStar" value="fourStar">
+                    <label for="fourStar">
+                        <span class="rect"></span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+                <div>
+                    <input type="checkbox" id="fiveStar" name="fiveStar" value="fiveStar">
+                    <label for="fiveStar">
+                        <span class="rect"></span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </label>
+                    <span class="badge">10</span>
+                </div>
+            </div>
+            <div id="features">
+                <h4>بر اساس ویژگی ها</h4>
+                <div>
+                    <input type="checkbox" id="feature1" name="feature1" value="feature1">
+                    <label for="feature1">
+                        <span class="rect"></span>
+                        <p>امکان شماره ۱ </p>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="feature2" name="feature2" value="feature2">
+                    <label for="feature2">
+                        <span class="rect"></span>
+                        <p>امکان شماره ۱</p>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="feature3" name="feature3" value="feature3">
+                    <label for="feature3">
+                        <span class="rect"></span>
+                        <p>امکان شماره ۱</p>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="feature4" name="feature4" value="feature4">
+                    <label for="feature4">
+                        <span class="rect"></span>
+                        <p>امکان شماره ۱</p>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="feature5" name="feature5" value="feature5">
+                    <label for="feature5">
+                        <span class="rect"></span>
+                        <p>امکان شماره ۱</p>
+                    </label>
+                </div>
+
+            </div>
+        </form>
+        <div id="hotels">
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="front">
+                    <div class="discount">
+                        تخفیف
+                        <span>%30</span>
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-hotel"></i>
+                        نام هتل
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        مشهد
+                    </div>
+                    <div class="score">5 امتیاز (10رای)</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="right section">
+                        <h5>امکانات</h5>
+                        <div class="features">
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                            <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                        </div>
+                    </div>
+                    <div class="left section">
+                        <h5>شروع قیمت</h5>
+                        <div class="price">
+                            <span class="value">500.000 </span>
+                            تومان
+                        </div>
+                    </div>
+                    <a href="#"> رزرو </a>
+                </div>
+            </div>
+            <button> نمایش بیشتر </button>
+        </div>
+    </div>
+    <div id="mobile">
+        <div id="mobile-filter">
+            <i class="fas fa-filter"></i>
+            فیلتر
+        </div>
+        <div id="mobile-sort">
+            <i class="fas fa-sort-amount-up-alt"></i>
+            مرتب سازی
+        </div>
+    </div>
+    <div id="footer">
+        <div id="content">
+            <ul id="support">
+                <h5> پشتیبانی </h5>
+                <li>
+                    <a href="#!" data-modal="aboutus"> درباره ما </a>
+                </li>
+                <li>
+                    <a href="#!" data-modal="rules"> قوانین </a>
+                </li>
+                <li>
+                    <a href="#!" data-modal="faq"> سوالات متداول </a>
+                </li>
+            </ul>
+            <ul class="contact-us">
+                <h5> ارتباط با ما </h5>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-telegram-plane"></i>
+                        تلگرام
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                        اینستاگرام
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                        توییتر
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                        ایمیل
+                    </a>
+                </li>
+            </ul>
+            <ul id="address">
+                <h5> آدرس </h5>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    بلوار سید رضی - سید رضی 57 - پلاک 000
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    تلفن : 05137826600
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="copyright">
+        <p>
+            <i class="far fa-copyright"></i>
+            طراحی شده توسط
+            <a href="http://www.ittoos.com/">ittoos</a>
+        </p>
+    </div>
+    <div id="aboutus" class="modal">
+        <h4>درباره ما</h4>
+        <p>
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+        </p>
+        <button>بستن</button>
+    </div>
+    <div id="rules" class="modal">
+        <h4>قوانین</h4>
+        <p>
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+        </p>
+        <button>بستن</button>
+    </div>
+    <div id="faq" class="modal">
+        <h4>سوالات متداول</h4>
+        <p>
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+            متن متن متن متن متن متن متن متن متن
+        </p>
+        <button>بستن</button>
+    </div>
+    <div id="black"></div>
+    <a href="/hotel.html">some other page</a>
+    <script src="/hotels.7ffa79f8.js"></script>
+</body>
+
+</html>
