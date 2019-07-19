@@ -32,6 +32,7 @@
                     font-size: .8em ;
                 }
                 ~.line{width: 100% ;}
+                // ~.calender{visibility: visible ; opacity: 1;}
             }
 
         }
@@ -59,7 +60,7 @@
             font-size: .8em;
             transform: translateY(-3em) ;
         }
-        i{
+        > i{
             color: #26a69a ;
             font-size: 1em ;
             position: absolute ;

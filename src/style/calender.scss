@@ -1,122 +1,143 @@
 .calender{
-    width: 200% ;
+    width: 20em ;
     height: auto;
-    background-color: white ;
-    box-shadow: 0 0 .5em .05em rgba(30,30,30,.5) ;
-    display: none ;
-    flex-direction: column ;
-    justify-content: flex-start ;
-    align-items: center ;
-    flex-wrap: nowrap ;
     position: absolute ;
-    top: 90% ;
-    right: -50% ;
-    z-index: 10;
-}
-.show-calender{display: flex ;}
-.calender > div{
-    width: 100% ;
-    height: auto;
-    flex-shrink: 0 ;
-}
-.calender .month-year{
-    display: flex ;
-    flex-direction: row ;
-    justify-content: space-around ;
-    align-items: center ;
-    flex-wrap: nowrap ;
-    padding: .5em ;
-}
-.calender .month-year > *{
-    flex-shrink: 0 ;
-}
-.calender .month-year .fas{
-    color: white ;
-    font-size: 2em ;
-    cursor: pointer;
-    width: 1.2em ;
-    height: 1.2em;
-    border-radius: 50% ;
-    text-align: center ;
-    line-height: 1.2em ;
-    background-color: teal
-}
-.calender .days{
-    display: flex ;
-    flex-direction: row ;
-    justify-content: space-around ;
-    align-items: center ;
-    flex-wrap: nowrap ;
-}
-.calender .days > div{
+    top: 100% ;
+    right: 50% ;
+    transform: translateX(50%) ;
     display: flex ;
     flex-direction: column ;
     justify-content: flex-start ;
     align-items: center ;
-    flex-wrap: nowrap ;
-    flex-shrink: 0 ;
-}
-.calender .days span {
-    width: 2em ;
-    height: 2em;
-    flex-shrink: 0 ;
-    margin: .5em ;
-    cursor: pointer;
-    transition: all .2s linear ;
-    font-size: .8em ;
-    line-height: 2em ;
-    text-align: center ;
-    color: rgb(50,50,50) ;
-    border-radius: .4em ;
-}
-.calender .days span:not(:first-child):not(.past):hover{
-    color: white ;
-    background-color: teal ;
-}
-.calender .days div span:nth-child(1){
-    cursor: auto;
-    transition: none ;
-    color: grey ;
-    font-size: 1em ;
-}
-.calender .days span.curr {
-    border-radius: 50% ;
-    color: white ;
-    background-color: orangered ;
-}
-.calender .days span.past {
-    background-color: rgb(226, 226, 226) ;
-    color: rgb(136, 136, 136)  ;
-    cursor: auto ;
-    transition: none ;
-}
-@media screen and (max-width:700px){
-    .calender{font-size: 16px ; top: 100% ;}
-}
-@media screen and (max-width:550px){
-    .calender{width: 150% ;right: -25%;}  
-}
-@media screen and (max-width:375px){
-    .calender{
-        width: 200% ;
+    flex-wrap: nowrap; 
+    padding: 1em ;
+    background-color: white ;
+    z-index: 5;
+    box-shadow: 0 0 .2em .02em rgba(30,30,30,.3) ;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease-in-out ;
+    .month-year{
+        width: auto;
+        height: auto;
+        display: flex ;
+        flex-direction: row ;
+        justify-content: flex-start ;
+        align-items: center ;
+        flex-wrap: nowrap ;
+        i{
+            width: 2.5em ;
+            height: 2.5em ;
+            border-radius: 50% ;
+            position: relative;
+            background-color: #26a69a ;
+            cursor: pointer;
+            margin: 0em .3em ;
+            &::before{
+                color: white ;
+                position: absolute ;
+                right: 50%;
+                top: 50% ;
+                transform: translate(50%,-50%) ;
+                font-size: 1.2em ;
+            }
+        }
+        .month,.year{
+            color: rgb(50,50,50);
+            font-size: 1.2em ;
+            margin: 0em .3em ;
+        }
+    }
+    .days{
+        width: 100% ;
+        height: auto;
+        display: flex ;
+        flex-direction: row ;
+        justify-content: space-around ;
+        align-items: flex-start ;
+        flex-wrap: nowrap ;
+        margin-top: 1.5em ;
+        >div{
+            width: auto ;
+            height: auto;
+            display: flex ;
+            flex-direction: column ;
+            justify-content: flex-start ;
+            align-items: center ;
+            flex-wrap: nowrap ;
+            .week-day{
+                font-size: 1em ;
+                color: rgb(100,100,100) ;
+                font-weight: 700 ;
+                margin-bottom: .5em; 
+            }
+            .month-day{
+                width: 2em ;
+                height: 2em;
+                border-radius: .5em ;
+                font-size: 1em ;
+                margin: .3em 0 ;
+                text-align: center ;
+                line-height: 2.2em ;
+                cursor: pointer;
+                transition: all .2s ease-in-out ;
+                &:hover{
+                    color: white ;
+                    background-color: #26a69a ;
+                }
+            }
+            .month-day.past{              
+                background-color: rgb(212, 211, 211) ;
+                color: rgb(50,50,50) ;
+                cursor: auto ;
+                transition: none ;
+                &:hover{
+                    color: rgb(50,50,50) ;
+                    background-color: rgb(212, 211, 211) ;
+                }
+            }
+            .month-day.curr{
+                border-radius: 50% ;
+                background-color: tomato ;
+                color: white ;   
+                transition: all .2s ease-in-out ;
+                &:hover{
+                    color: white ;
+                    background-color: #26a69a ;
+                }      
+            }
+            .month-day.empty{
+                background-color: transparent ;
+                color: transparent ;
+                cursor: auto ;
+                transition: none ;
+                &:hover{
+                    color: transparent ;
+                    background-color: transparent ;
+                }
+            }
+        }
     }
 }
-@media screen and (max-width:300px){
+.calender.show{
+    visibility: visible ;
+    opacity: 1;
+}
+@media screen and (max-width:380px) {
+    .calender{font-size: 15px ;}
+}
+@media screen and (max-width:350px) {
     .calender{
-        width: 200% ;
-        font-size: 13px ;
+        width: 100vw ;
+        max-height: 100vh ;
+        // position: fixed ;
+        // top: 0 ;
+        // right: 0 ;
+        // transform: translateX(0%) ;
     }
 }
-@media screen and (max-width:250px){
+@media screen and (max-width:260px) {
     .calender{
-        width: 280% ;
+        font-size: 10px ;
     }
 }
-@media screen and (max-width:200px){
-    .calender{
-        width: 450% ;
-    }
-}
-// @media screen and (max-width:320px){
-//     .calender{font-size: 13px;}
-// }
