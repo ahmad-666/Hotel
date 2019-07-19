@@ -20,7 +20,7 @@ import './header-grid' ;
 import './tooltip' ;
 import './hotel-info' ;
 import './search' ;
-//import './calender';
+import './calender';
 import './tabs' ;
 import './comments' ;
 import './user-imgs' ;
