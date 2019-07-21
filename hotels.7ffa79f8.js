@@ -10082,7 +10082,7 @@ var FormatOptions = [
 
 },{}],"node_modules/nouislider/distribute/nouislider.js":[function(require,module,exports) {
 var define;
-/*! nouislider - 14.0.2 - 6/28/2019 */
+/*! nouislider - 14.0.1 - 6/21/2019 */
 (function(factory) {
     if (typeof define === "function" && define.amd) {
         // AMD. Register as an anonymous module.
@@ -10097,7 +10097,7 @@ var define;
 })(function() {
     "use strict";
 
-    var VERSION = "14.0.2";
+    var VERSION = "14.0.1";
 
     //region Helper Methods
 
@@ -11922,7 +11922,7 @@ var define;
             // Decrement for down steps
             step = (isDown ? -1 : 1) * step;
 
-            setHandle(handleNumber, scope_Spectrum.toStepping(scope_Values[handleNumber] + step), true, true);
+            setHandle(handleNumber, resolveToValue(scope_Values[handleNumber] + step, handleNumber), true, true);
 
             fireEvent("slide", handleNumber);
             fireEvent("update", handleNumber);
@@ -12865,7 +12865,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "13444" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7514" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

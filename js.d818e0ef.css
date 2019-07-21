@@ -35,8 +35,8 @@ header {
   height: 100%;
   position: relative;
   background: url("/bg.289d5841.jpg") center center no-repeat;
-  -webkit-background-size: 100% 100%;
-          background-size: 100% 100%;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
 }
