@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin') ;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development', //development | production
-	//with runnint npm run build we still create ./dist even when we are in dev mode
     optimization: {
         minimize: false //for minify .js files
     },
@@ -16,16 +15,14 @@ module.exports = {
     },
     output: {//for each entry point we create one .js bundle(with the same name of entry point)
         filename: '[name].js',
-        //filename: '[name]/[name].js', 
-		//with above line we make our .js bundles to go to ./dist/scripts/ but we should not make our .js files 
-		//to go to another folder rather than where .html files are
         path: path.resolve(__dirname, './dist') 
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                loader: "babel-loader"
+                loader: "babel-loader" ,
+				exclude: /node_modules/,
             },
             { //for transfer .css via css files
                 test: /\.css$/,
@@ -117,9 +114,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({ //for each .html file we have one bundle .css file that its name is same as its entry point
             filename: "[name].css", 
-            //filename: "[name]/[name].css", 
-			//with above line we make our .css bundles to go to ./dist/styles/ but we should not make our .css files 
-			//to go to another folder rather than where .html files are because with file-loader we face some conflicts
             chunkFilename: '[id].css',
             ignoreOrder: false 
         }),

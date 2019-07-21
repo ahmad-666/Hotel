@@ -36,15 +36,15 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
-    "core-js": "^3.1.4",
-    "path-browserify": "^1.0.0",
     "@fortawesome/fontawesome-free": "^5.9.0",
     "animejs": "^3.0.1",
+    "core-js": "^3.1.4",
     "gh-pages": "^2.0.1",
     "moment": "^2.24.0",
     "moment-jalaali": "^0.8.3",
     "nouislider": "^14.0.2",
+    "path-browserify": "^1.0.0",
+    "regenerator-runtime": "^0.13.3",
     "wnumb": "^1.1.0"
   },
   "homepage": "https://ahmad-666.github.io/Hotel"

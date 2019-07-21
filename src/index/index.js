@@ -1,4 +1,3 @@
-import '@babel/polyfill';
 //load styles
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css' ;
 import './styles/init.scss' ;
