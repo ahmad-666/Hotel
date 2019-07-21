@@ -5,7 +5,7 @@
     position: relative ;
     right: 0 ;
     margin-top: 2em ; 
-    background-image: url('../assets/imgs/logo.png') , url('../assets/imgs/footer.svg') ;
+    background-image: url('../../assets/imgs/logo.png') , url('../../assets/imgs/footer.svg') ;
     background-position: 50% 0% , center center ;
     background-repeat: no-repeat, no-repeat ;
     background-size: 10em 10em, 100% 100% ;
@@ -71,7 +71,7 @@
 @media screen and (max-width:510px){
     #footer{
         height: 44em;
-        // background-image: url('../assets/imgs/logo.png') , url('../assets/imgs/footer1.svg') ;
+        // background-image: url('../../assets/imgs/logo.png') , url('../../assets/imgs/footer1.svg') ;
         background-position: 50% 20% , center center ;
         background-size: 8em 8em, 100% 100% ;
     }
@@ -80,7 +80,7 @@
 @media screen and (max-width:350px){
     #footer{
         height: 35em;
-        background-image: url('../assets/imgs/logo.png') , url('../assets/imgs/footer1.svg') ;
+        background-image: url('../../assets/imgs/logo.png') , url('../../assets/imgs/footer1.svg') ;
         background-position: 50% 0% , center center ;
     }
     #footer #content{top: 6em ;}
