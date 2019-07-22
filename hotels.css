@@ -46,7 +46,7 @@ header::before {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(30, 30, 30, 0.5);
+  background-color: rgba(30, 30, 30, 0);
   z-index: 2; }
 
 header .cloud {
@@ -418,6 +418,10 @@ header .cloud:nth-child(2) {
   #mobile-nav a {
     font-size: 10px; } }
 
+@media screen and (max-height: 700px) {
+  header {
+    height: 75%; } }
+
 #grid-menu {
   width: 100%;
   height: 100%;
@@ -576,7 +580,7 @@ header .cloud:nth-child(2) {
   #hotel .img {
     background-image: url(assets/imgs/hotel.jpg); }
   #hotel p {
-    font-size: 3em; }
+    font-size: 2em; }
 
 #suite {
   width: 100%;
