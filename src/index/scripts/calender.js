@@ -1,9 +1,11 @@
 import moment from 'moment-jalaali' ;
 import { throws } from 'assert';
 moment.loadPersian({dialect: 'persian-modern'}) ;
-function Calender(elm){
+function Calender(elm,needThreshold,compareTo){
     //html elements
     this.elm = elm ;
+    this.needThreshold = needThreshold ; //do we need to validate its value or not
+    this.compareTo = compareTo ; //other calender object(only for validation)
     this.input = this.elm.parentElement.querySelector('input[type="text"]') ;
     this.input.addEventListener('click',this.inputHandler.bind(this)) ;
     this.hiddenForm = this.elm.querySelector('input[type="hidden"]') ;
@@ -30,7 +32,7 @@ function Calender(elm){
     this.year = this.currDate.year ; //we will change it later(when we press next/prev btn)
     this.monthIndex = this.currDate.monthIndex ; //we will change it later(when we press next/prev btn)
     this.monthName = this.currDate.monthName ; //we will change it later(when we press next/prev btn) 
-    this.today = this.currDate.today ; //we will change it later(when we press next/prev btn) 
+    this.today = this.currDate.today ; //we will change it later(when we press clickable day) 
     this.monthNumDays = moment.jDaysInMonth(this.year,this.monthIndex) ;
     this.firstMonthDay = parseInt(moment(`${this.year}/${this.monthIndex+1}/01`,'jYYYY/jMM/jDD').format('e')) ; //first day of month is which day week [0,6]
     this.create() ;
@@ -105,11 +107,30 @@ Calender.prototype.handleEvent = function(e){
     e.stopPropagation() ;
     if(this.elm.contains(e.target)){ //click inside calender
         if(e.target.classList.contains('month-day') && !e.target.classList.contains('past')){
-            this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
-            this.input.parentElement.querySelector('label').classList.add('up') ;
-            this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${e.target.textContent} 12:00:00` ; //set form input value
-            this.elm.classList.remove('show') ;
-            document.removeEventListener('click',this) ;
+            this.today = e.target.textContent ;     
+            if(!this.needThreshold){
+                this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
+                this.input.parentElement.querySelector('label').classList.add('up') ;
+                this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
+                this.elm.classList.remove('show') ;
+                //console.log(this.hiddenForm.value) ;
+                //if current calender has no threshold we need to remove all values from other calender
+                this.compareTo.input.value = '' ;
+                this.compareTo.input.parentElement.querySelector('label').classList.remove('up') ;
+                this.compareTo.hiddenForm.value = `` ;
+                //this.compareTo.elm.classList.remove('show') ;
+                document.removeEventListener('click',this) ;
+            }     
+            else { //we need to check its value and validate it
+                if(this.checkThreshold(this.compareTo)){//we validate it 
+                    this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
+                    this.input.parentElement.querySelector('label').classList.add('up') ;
+                    this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
+                    this.elm.classList.remove('show') ;
+                    //console.log(this.hiddenForm.value) ;
+                    document.removeEventListener('click',this) ;
+                }
+            }      
         }
         else ;
     }
@@ -126,5 +147,16 @@ Calender.prototype.inputHandler = function(e){
     })
     document.addEventListener('click',this) ;
 }
-let calenderIn = new Calender(document.querySelector('#search .input-wrapper  input[type="text"]#in ~ .calender')) ;
-let calenderOut = new Calender(document.querySelector('#search .input-wrapper  input[type="text"]#out ~ .calender')) ;
+Calender.prototype.checkThreshold = function(otherCalender){ //this function prevents us from selecting dates before 'otherCalender'
+    //when we have date-in and date-out we should add this function to date-out to prevent us from selecting dates before date-in
+    let otherCalenderDate = moment(`${otherCalender.year}/${otherCalender.monthIndex+1}/${otherCalender.today}`,'jYYYY/jMM/jDD').format('YYYY/MM/DD') ;
+    let currDate = moment(`${this.year}/${this.monthIndex+1}/${this.today}`,'jYYYY/jMM/jDD').format('YYYY/MM/DD') ;
+    return (new Date(currDate).getTime() > new Date(otherCalenderDate).getTime()) ;
+}
+let calenderIn ;
+let calenderOut ;
+calenderIn = new Calender(document.querySelector('#search .input-wrapper  input[type="text"]#in ~ .calender'),false,null) ;
+calenderOut = new Calender(document.querySelector('#search .input-wrapper  input[type="text"]#out ~ .calender'),true,calenderIn) ;
+//we set second parameter to true so now everytime we click on new day we check its value and only if selected date is higher than 
+//date-in calender we select it
+calenderIn.compareTo = calenderOut ;

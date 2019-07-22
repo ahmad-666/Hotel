@@ -11,6 +11,7 @@ import './styles/tabs.scss' ;
 import './styles/comments.scss' ;
 import './styles/user-imgs.scss' ;
 import './styles/reserve.scss' ;
+import '../index/styles/suggestions.scss' ;
 import '../index/styles/footer.scss' ;
 import '../index/styles/copyright.scss' ;
 import '../index/styles/modals.scss' ;
@@ -25,5 +26,6 @@ import './scripts/tabs' ;
 import './scripts/comments' ;
 import './scripts/user-imgs' ;
 import './scripts/reserve' ;
+import '../index/scripts/suggestions' ;
 import '../index/scripts/modals'
 

@@ -32,12 +32,20 @@ Slider.prototype.nextBtnInit = function(){
         if(Math.abs(this.curPos-this.offset) <= this.threshold) this.slider.style.right = `${this.curPos-=this.offset}px` ;
     });
 }
-let discountSlider = new Slider('#discount') ;
-discountSlider.prevBtnInit() ;
-discountSlider.nextBtnInit() ;
-let topSlider = new Slider('#top') ;
-topSlider.prevBtnInit() ;
-topSlider.nextBtnInit() ;
-let suggestionsSlider = new Slider('#suggestion') ;
-suggestionsSlider.prevBtnInit() ;
-suggestionsSlider.nextBtnInit() ;
+if(document.querySelector('#discount')){
+    let discountSlider = new Slider('#discount') ;
+    discountSlider.prevBtnInit() ;
+    discountSlider.nextBtnInit() ;
+}
+if(document.querySelector('#top')) {
+    let topSlider = new Slider('#top') ;
+    topSlider.prevBtnInit() ;
+    topSlider.nextBtnInit() ;
+}
+if(document.querySelector('#suggestion')){
+    let suggestionsSlider = new Slider('#suggestion') ;
+    suggestionsSlider.prevBtnInit() ;
+    suggestionsSlider.nextBtnInit() ;
+}
+
+
