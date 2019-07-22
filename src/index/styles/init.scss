@@ -5,6 +5,8 @@
     margin: 0;
     direction: rtl ;
     font-family: byekan ;
+    -webkit-tap-highlight-color: transparent;
+
 }
 html,body{
     height: 100%;
@@ -15,3 +17,6 @@ a{
     outline: none ;
 }
 input:focus{outline: none ;}
+textPath:focus{outline: none;}
+button:focus{outline: none ;}
+a:focus{outline: none ;}

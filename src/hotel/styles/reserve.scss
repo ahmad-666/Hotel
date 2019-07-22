@@ -36,11 +36,11 @@
     align-items: center ;
     flex-wrap: nowrap ;
     color: rgb(40,40,40) ;
-    font-size: 1em ;
+    font-size: .8em ;
     border-bottom: 1px solid rgb(200,200,200) ;
 }
 #rooms .room > *{padding: 1em ;}
-#rooms .room .info > * , #rooms .room .price > * , #rooms .room .reserve > *{
+#rooms .room .info > * , #rooms .room .price > *{
     margin: .5em 0 ;
     width: auto ;
     height: auto;
@@ -67,7 +67,7 @@
     font-family: byekan ;
 }
 .room .price .before-discount p{display: inline-block ;}
-.room .price  .before-discount p{font-size: 1em}
+.room .price  .before-discount p{font-size: .8em}
 .room .price .discount ~ .before-discount p{font-size: .8em}
 .room .price .discount ~ .before-discount p:nth-child(1){
     position: relative;
@@ -84,16 +84,17 @@
 }
 
 .room .reserve .room-num{
-    width: 60% ;
+    width: 50% ;
     display: flex ;
     flex-direction: row ;
     justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
 }
+.room .reserve .room-num > * {flex-shrink: 0 ;}
 .room .reserve .room-num button{
-    width: 3em ;
-    height: 3em;
+    width: 2.5em ;
+    height: 2.5em;
     border-radius: 50% ;
     border: none ;
     cursor: pointer;
@@ -105,9 +106,9 @@
     color: white ;
     position: absolute ;
     top: 50% ;
-    right: 50%;
-    transform: translate(50%,-40%) ;
-    font-size: 2em ;
+    left: 50%;
+    transform: translate(-50%,-45%) ;
+    font-size: 1.5em ;
     width: auto ;
     height: auto ;
 }
@@ -118,7 +119,7 @@
     border: none ;
     position: relative ;
     top: calc(50% - 1em) ;
-    font-size: 1.3em ;
+    font-size: 1em ;
     color: rgb(40,40,40) ;
 }
 input[type='number']::-webkit-outer-spin-button,
@@ -133,16 +134,16 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 .room .reserve > button {
-    width: 50% ;
+    width: auto ;
     height: auto;
     font-family: byekan ;
-    font-size: 1.5em ;
+    font-size: 1.3em ;
     border-radius: 1.5em ;
-    padding: 0 2.5em ;
+    padding: .5em 3em;
     color: white ;
     border: none ;
     background-color: #26a69a ;
-    cursor: pointer;
+    cursor: pointer; 
     &:focus{outline: none ;}
 }
 .room .features{
@@ -151,7 +152,7 @@ input[type=number] {
 }
 .room .features p {
     display: inline-block ;
-    font-size: 2em ;
+    font-size: 1.2em ;
     font-weight: 600 ;
 }
 .room .features .features-wrapper{
@@ -164,7 +165,7 @@ input[type=number] {
     flex-wrap: wrap ;
     align-content: center ;
     margin-right: 2em ;
-    i{font-size: 1em ; color: rgb(40,40,40) ;}
+    i{font-size: .8em ; color: rgb(40,40,40) ;}
 }
 .room .features-wrapper > * {
     margin: 1em;
@@ -174,7 +175,7 @@ input[type=number] {
     text-align: center ;
 }
 .room .calender-show button{
-    font-size: 1em ;
+    font-size: .8em ;
     border-radius: 1.8em ;
     font-family: byekan ;
     padding: 1em 2em ;
@@ -192,15 +193,15 @@ input[type=number] {
     height: auto;
     display: none ;
     flex-direction: row ;
-    justify-content: space-around ;
+    justify-content: flex-start ;
     align-items: center ;
     flex-wrap: wrap ;
     align-content: center ;
 }
 .show-calender-grid{display: flex !important;}
 .room .room-calender .date{
-    width: 10em ;
-    height: 10em ;
+    width: 8em ;
+    height: 8em ;
     margin: .5em ;
     display: flex; 
     flex-direction: column ;
@@ -244,16 +245,23 @@ input[type=number] {
     #rooms .room .price{width: 50% ; height: 10em;}
     #rooms .room .reserve{width: 50% ; height: 10em;}
 }
+@media screen and (max-width:500px){
+    .room .room-calender{     
+        justify-content: space-around ;  
+    }
+}
 @media screen and (max-width:400px){
     #rooms .room .info{width: 100% ; height: auto; }
     #rooms .room .price{width: 100% ; height: auto;}
     #rooms .room .reserve{width: 100% ; height: auto;}
+    .room .reserve > button{margin-top: 1em ;}
+
 }
-@media screen and (max-width:365px){
-    .room .room-calender{     
-        justify-content: space-around ;     
-    }
-}
+// @media screen and (max-width:365px){
+//     .room .room-calender{     
+//         justify-content: space-around ;     
+//     }
+// }
 @media screen and (max-width:285px){  
     #rooms{font-size: 12px;}
 }

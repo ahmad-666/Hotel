@@ -59,7 +59,7 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
 #brand-name img{
     width: 22em ;
     height: 6em;
-    background-image: url('../../assets/imgs/mt.png') center center no-repeat ;
+    background-image: url('../../assets/imgs/black-logo.png') center center no-repeat ;
     background-size: 100% 100% ;
 }
 #brand-name .line{
@@ -92,11 +92,20 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     width: auto ;
     height: 3em;
     color: rgb(50,50,50) ;
-    font-size: 1.2em ;
+    font-size: 1em ;
     text-align: center ;
     margin: 0 .5em ;
     white-space: nowrap ;
     line-height: 3em;
+}
+#nav a#host{
+    width: 6em ;
+    height: 2.5em ;
+    line-height: 2.5em ;
+    text-align: center ;
+    margin-right: 1em ;
+    border: 2px solid rgb(50,50,50) ;
+    border-radius: 2em ;
 }
 #nav a .fas{
     position: relative; 
@@ -104,19 +113,15 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     right: -.2em ;
 }
 #nav #home{
-    display: flex ;
-    flex-direction: row ;
-    justify-content: flex-start ;
-    align-items: center ;
-    flex-wrap: nowrap ;
+    width: 10em ;
 }
 #nav #home > * {margin: 0 .1em ;}
-#nav #home p{
-    font-size: 1.2em ;
-    font-weight: 700 ;
-}
+// #nav #home p{
+//     font-size: 1em ;
+//     font-weight: 700 ;
+// }
 #nav img{
-    width: 3em ;
+    width: 100% ;
     height: 3em;
 }
 
@@ -145,6 +150,9 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     transition: width .4s ease-in-out ;
     margin-top: .5em ;
 }
+#nav .fas{
+    font-size: .8em ;
+}
 #hamburger span:nth-child(1){width: 3em ;}
 #hamburger span:nth-child(2){width: 2em}
 #hamburger span:nth-child(3){width: 3em ;}
@@ -160,7 +168,7 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
 }
 #mobile-nav{
     width: 0 ;
-    min-height: 50vh;
+    min-height: 30vh;
     position: absolute ;
     top: 100% ;
     right: 0 ;
@@ -197,7 +205,7 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     right: 48% ;
     transform: translateX(50%) ;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:900px){
     #nav{font-size: 15px ;}
 }
 @media screen and (max-width:550px){
@@ -219,7 +227,7 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     #slogan{font-size: 8px ;}
 }
 @media screen and (max-width:700px){
-    #nav #home ,#nav #sign-in , #nav #reg , #nav #hamburger{
+    #nav #home ,#nav #sign-in , #nav #reg , #nav #host , #nav #hamburger{
         display: none ;
     }
     #nav .fa-bars{

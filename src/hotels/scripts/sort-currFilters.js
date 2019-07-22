@@ -1,4 +1,7 @@
 let inputWrapper = document.querySelector('#sort-currFilters .input-wrapper') ;
+inputWrapper.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, false);
 let ul = inputWrapper.querySelector('ul') ;
 let input = inputWrapper.querySelector('input[type="text"]') ;
 input.addEventListener('click',wrapperHandler) ;

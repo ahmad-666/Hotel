@@ -9,12 +9,13 @@
 #sponsers h4{
     display: inline-block ;
     width: auto ;
-    font-size: 2em ;
+    font-size: 1.2em ;
     font-weight: 700 ;
     color: rgb(40,40,40) ;
     border-bottom: .8px solid #80808070 ;
     padding-bottom: 1em ;
     margin-right: 1em;
+    margin-top: 1em ;
 }
 #sponsers .my-slider{
     width: auto ;
@@ -55,7 +56,7 @@
     transform: translateX(50%) ;
     bottom : 5% ;
     color: rgb(50,50,50) ;
-    font-size: 1em ;
+    font-size: .8em ;
     font-weight: 600 ;
 }
 @media screen and (max-width:900px){
@@ -66,5 +67,5 @@
     #sponsers{font-size: 12px ;}
 }
 @media screen and (max-width:320px){
-    #sponsers h4{font-size: 1.5em ;}
+    #sponsers h4{font-size: 1.2em ;}
 }

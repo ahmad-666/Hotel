@@ -36,12 +36,12 @@
                 overflow-wrap: nowrap ;
                 color: rgb(50,50,50) ;
                 font-weight: 600 ;
-                font-size: 1.2em ;
+                font-size: .8em ;
                 margin: .5em 0 1em 0 ;
             }
             > div:not(#ranger){
                 width: 100% ;
-                min-height: 3em;
+                min-height: 2em;
                 margin: .2em 0 ;
                 position: relative ;       
                 input[type="checkbox"]{
@@ -69,7 +69,7 @@
                     // right: 0em;
                     // top: 50% ;
                     // transform: translateY(-50%) ;
-                    font-size: 1em ;
+                    font-size: .8em ;
                     color: rgb(100,100,100);
                     cursor: pointer;
                     display: flex ;
@@ -78,8 +78,8 @@
                     align-items: center ;
                     flex-wrap: nowrap ;
                     .rect{
-                        width: 2em ;
-                        height: 2em;
+                        width: 1.8em ;
+                        height: 1.8em;
                         border-radius: .3em ;
                         border: 1.8px solid rgb(50,50,50) ;
                         transition: all .15s ease-in-out ;
@@ -87,13 +87,13 @@
                     }
                     p{
                         color: rgb(100,100,100) ;
-                        font-size: 1em ;
+                        font-size: .9em ;
                         margin-right: .5em ;
                     }
                     .fa-star{
                         margin: 0 .1em ;
                         color: gold ;
-                        font-size: 1em ;
+                        font-size: .8em ;
                         &:nth-child(2){
                             margin-right: .6em;
                         }
@@ -105,14 +105,13 @@
                     top: 0% ;
                     // transform: translateY(-50%) ;
                     color: #26a69a ;
-                    font-size: 1em ;
+                    font-size: .8em ;
                 }
             }
-            #ranger{
-               
+            #ranger{    
                width: 90% ;
                height: 1em;
-               margin-top: 2em ;
+               margin-top: 3em ;
                position: relative ;
                left: 50%;
                transform: translateX(-50%) ;
@@ -216,7 +215,7 @@
 #hotels .front > *{
     width: 100% ;
     height: auto;
-    font-size: 1em ;
+    font-size: .7em ;
     text-align: center ;
     padding-right: .6em ;
     overflow-wrap: break-word ;
@@ -282,7 +281,7 @@
     align-items: start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
-    font-size: 1em ;
+    font-size: .8em ;
 
 }
 #hotels .right .features > * {
@@ -317,7 +316,7 @@
     text-align: center ;
     line-height: 3em;
     position: absolute ;
-    font-size: 1em ;
+    font-size: .8em ;
     z-index: 2;
     right: 50%;
     transform: translateX(50%) ;
@@ -334,7 +333,7 @@
     background-color: #26a69a ;
     border: none ;
     border-radius: 2em;
-    font-size: 1.5em ;
+    font-size: 1.2em ;
     cursor: pointer;
     margin-top: 2em ;
     position: absolute ;

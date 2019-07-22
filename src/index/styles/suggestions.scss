@@ -3,13 +3,13 @@
     height: auto;
     position: relative ;
     margin-top: 2em ;
-    overflow: hidden;
     padding: 1em 0 4em 0 ;
+    overflow: hidden;
 }
 .slider-wrapper h4{
     display: inline-block ;
     width: auto ;
-    font-size: 2em ;
+    font-size: 1.2em ;
     color: rgb(40,40,40) ;
     font-weight: 700 ;
     margin: 0 1em 0 0 ;
@@ -19,10 +19,10 @@
 .slider-wrapper > a {
     text-decoration: none ;
     width: auto ;
-    font-size: 1.1em ;
+    font-size: 1em ;
     position: absolute ;
-    right: 50% ;
-    transform: translateX(50%) ;
+    right: 2% ;
+    transform: translateX(0%) ;
     bottom: .5em ;
     z-index: 4;
     color: #26a69a ;
@@ -59,7 +59,7 @@
     right: 50% ;
     transform: translate(50%,-50%) ;
     color: white ;
-    font-size: 1.6em ;
+    font-size: 1.3em ;
     cursor: pointer;
 }
 .slider-wrapper .btn.btn-left{
@@ -70,6 +70,26 @@
     right: 0 ;
     margin: 4em 1em 0 0; 
 }
+.slider-wrapper .arrows {
+    visibility: hidden;
+    width: auto ;
+    height: auto;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-start ;
+    align-items: center ;
+    flex-wrap: nowrap ;
+    position: absolute ;
+    bottom: .5em;
+    left: .5em ;
+    .fas{
+        font-size: 2em ;
+        color: #26a69a ;
+        margin: 0 .2em ;
+        opacity: 1;
+    }
+}
+.slider-wrapper .arrows.show{visibility: visible ;}
 .slider-wrapper .slider{
     width: auto ;
     height: auto;
@@ -109,7 +129,7 @@
     width: 100% ;
     height: auto ;
     text-align: center ;
-    font-size: .8em ;
+    font-size: .7em ;
     color: rgb(40,40,40) ;
 }
 .slider-wrapper .slide p i {
@@ -123,7 +143,7 @@
     width: auto ;
     height: auto ;
     padding: .3em ;
-    font-size: 1em ;
+    font-size: .8em ;
     background-color: rgb(207, 64, 93) ;
     right: 0 ;
     top: 25% ;
@@ -134,7 +154,7 @@
 }
 #top{background-color: rgb(245,245,245);}
 @media screen and (max-width:1000px){
-    .slider-wrapper h4{font-size: 1.7em ;}
+    .slider-wrapper h4{font-size: 1.2em ;}
     .slider-wrapper{font-size: 15px ;}
 }
 @media screen and (max-width:800px){
@@ -147,10 +167,15 @@
     .slider-wrapper .fade{
         display: none ;
     }
-    .slider-wrapper .slider{overflow-x: auto;padding-bottom: 1em ;}  
+    .slider-wrapper .slider{
+        overflow-x: auto;
+        overflow-y: visible ;
+        padding-bottom: 1em ;
+    }  
+    .slider-wrapper .arrows{visibility: visible ;}
 }
 @media screen and (max-width:500px){
-    .slider-wrapper h4{font-size: 1.5em ;}
+    .slider-wrapper h4{font-size: 1em ;}
     .slider-wrapper .btn{
         font-size: 9px ;
     }
@@ -164,17 +189,19 @@
     }
 }
 @media screen and (max-width:300px){
-    .slider-wrapper h4{font-size: 1.2em ;}
+    .slider-wrapper h4{font-size: 1em ;}
     .slider-wrapper .btn{
         font-size: 8px ;
     }
 }
 @media screen and (max-width:280px){
     .slider-wrapper{font-size: 12px ;}
+    .slider-wrapper h4{font-size: 1.2em ;}
 }
 @media screen and (max-width:200px){
     .slider-wrapper{font-size: 9px ;}
     .slider-wrapper .btn{
         font-size: 6px ;
     }
+    .slider-wrapper h4{font-size: 1.4em ;}
 }
