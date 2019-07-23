@@ -2072,7 +2072,7 @@ header .cloud:nth-child(2) {
     display: -ms-flexbox;
     display: flex;
     width: 75vw;
-    height: auto;
+    height: 60vh;
     overflow: scroll;
     margin-left: 0em;
     background-color: white;
