@@ -2829,7 +2829,7 @@ input[type=number] {
   background-color: white;
   -webkit-box-shadow: 0 0 0.2em 0.02em rgba(30, 30, 30, 0.3);
           box-shadow: 0 0 0.2em 0.02em rgba(30, 30, 30, 0.3);
-  display: none;
+  visibility: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2883,11 +2883,7 @@ input[type=number] {
       outline: none; }
 
 .modal.show {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex; }
+  visibility: visible; }
 
 #black {
   width: 100%;
