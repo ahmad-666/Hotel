@@ -1552,37 +1552,22 @@ header .cloud:nth-child(2) {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-       -moz-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-       -moz-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     margin-left: 2em;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
     border: 1px solid #e6e6e6; }
-    #filters-hotels #filters #price {
-      direction: ltr; }
-    #filters-hotels #filters > * {
+    #filters-hotels #filters #mobile-fixer {
       width: 100%;
       height: auto;
-      padding: 1em .5em 2em .5em;
+      min-height: -webkit-min-content;
+      min-height: -moz-min-content;
+      min-height: min-content;
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-box;
@@ -1607,152 +1592,183 @@ header .cloud:nth-child(2) {
               align-items: flex-start;
       -webkit-flex-wrap: nowrap;
           -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap;
-      border-bottom: 1px solid #e6e6e6; }
-      #filters-hotels #filters > * h4 {
+              flex-wrap: nowrap; }
+      #filters-hotels #filters #mobile-fixer #price {
+        direction: ltr; }
+      #filters-hotels #filters #mobile-fixer > * {
         width: 100%;
         height: auto;
-        overflow-wrap: nowrap;
-        color: #323232;
-        font-weight: 600;
-        font-size: .8em;
-        margin: .5em 0 1em 0; }
-      #filters-hotels #filters > * > div:not(#ranger) {
-        width: 100%;
-        min-height: 2em;
-        margin: .2em 0;
-        position: relative; }
-        #filters-hotels #filters > * > div:not(#ranger) input[type="checkbox"] {
-          width: 0;
-          height: 0;
-          position: absolute;
-          display: none; }
-          #filters-hotels #filters > * > div:not(#ranger) input[type="checkbox"]:checked ~ label .rect {
-            width: .8em;
-            height: 1.8em;
-            border-top: 2px solid transparent;
-            border-left: 2px solid transparent;
-            border-right: 4px solid #26a69a;
-            border-bottom: 4px solid #26a69a;
-            -webkit-border-radius: .1em;
-                    border-radius: .1em;
-            -webkit-transform: translate(0.1em, -0.4em) rotate(35deg);
-               -moz-transform: translate(0.1em, -0.4em) rotate(35deg);
-                -ms-transform: translate(0.1em, -0.4em) rotate(35deg);
-                    transform: translate(0.1em, -0.4em) rotate(35deg); }
-        #filters-hotels #filters > * > div:not(#ranger) label {
-          width: auto;
+        padding: 1em .5em 2em .5em;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+           -moz-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+        border-bottom: 1px solid #e6e6e6; }
+        #filters-hotels #filters #mobile-fixer > * h4 {
+          width: 100%;
           height: auto;
+          overflow-wrap: nowrap;
+          color: #323232;
+          font-weight: 600;
           font-size: .8em;
-          color: #646464;
-          cursor: pointer;
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: row;
-             -moz-box-orient: horizontal;
-             -moz-box-direction: normal;
-              -ms-flex-direction: row;
-                  flex-direction: row;
-          -webkit-box-pack: start;
-          -webkit-justify-content: flex-start;
-             -moz-box-pack: start;
-              -ms-flex-pack: start;
-                  justify-content: flex-start;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-             -moz-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-flex-wrap: nowrap;
-              -ms-flex-wrap: nowrap;
-                  flex-wrap: nowrap; }
-          #filters-hotels #filters > * > div:not(#ranger) label .rect {
-            width: 1.8em;
-            height: 1.8em;
-            -webkit-border-radius: .3em;
-                    border-radius: .3em;
-            border: 1.8px solid #323232;
-            -webkit-transition: all .15s ease-in-out;
-            -moz-transition: all .15s ease-in-out;
-            transition: all .15s ease-in-out;
-            -webkit-flex-shrink: 0;
-                -ms-flex-negative: 0;
-                    flex-shrink: 0; }
-          #filters-hotels #filters > * > div:not(#ranger) label p {
+          margin: .5em 0 1em 0; }
+        #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) {
+          width: 100%;
+          min-height: 2em;
+          margin: .2em 0;
+          position: relative; }
+          #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) input[type="checkbox"] {
+            width: 0;
+            height: 0;
+            position: absolute;
+            display: none; }
+            #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) input[type="checkbox"]:checked ~ label .rect {
+              width: .8em;
+              height: 1.8em;
+              border-top: 2px solid transparent;
+              border-left: 2px solid transparent;
+              border-right: 4px solid #26a69a;
+              border-bottom: 4px solid #26a69a;
+              -webkit-border-radius: .1em;
+                      border-radius: .1em;
+              -webkit-transform: translate(0.1em, -0.4em) rotate(35deg);
+                 -moz-transform: translate(0.1em, -0.4em) rotate(35deg);
+                  -ms-transform: translate(0.1em, -0.4em) rotate(35deg);
+                      transform: translate(0.1em, -0.4em) rotate(35deg); }
+          #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) label {
+            width: auto;
+            height: auto;
+            font-size: .8em;
             color: #646464;
-            font-size: .9em;
-            margin-right: .5em; }
-          #filters-hotels #filters > * > div:not(#ranger) label .fa-star {
-            margin: 0 .1em;
-            color: gold;
+            cursor: pointer;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+               -moz-box-orient: horizontal;
+               -moz-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+               -moz-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap; }
+            #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) label .rect {
+              width: 1.8em;
+              height: 1.8em;
+              -webkit-border-radius: .3em;
+                      border-radius: .3em;
+              border: 1.8px solid #323232;
+              -webkit-transition: all .15s ease-in-out;
+              -moz-transition: all .15s ease-in-out;
+              transition: all .15s ease-in-out;
+              -webkit-flex-shrink: 0;
+                  -ms-flex-negative: 0;
+                      flex-shrink: 0; }
+            #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) label p {
+              color: #646464;
+              font-size: .9em;
+              margin-right: .5em; }
+            #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) label .fa-star {
+              margin: 0 .1em;
+              color: gold;
+              font-size: .8em; }
+              #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) label .fa-star:nth-child(2) {
+                margin-right: .6em; }
+          #filters-hotels #filters #mobile-fixer > * > div:not(#ranger) .badge {
+            position: absolute;
+            left: .3em;
+            top: 0%;
+            color: #26a69a;
             font-size: .8em; }
-            #filters-hotels #filters > * > div:not(#ranger) label .fa-star:nth-child(2) {
-              margin-right: .6em; }
-        #filters-hotels #filters > * > div:not(#ranger) .badge {
-          position: absolute;
-          left: .3em;
-          top: 0%;
-          color: #26a69a;
-          font-size: .8em; }
-      #filters-hotels #filters > * #ranger {
-        width: 90%;
-        height: 1em;
-        margin-top: 3em;
-        position: relative;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-           -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-                transform: translateX(-50%); }
-        #filters-hotels #filters > * #ranger .noUi-handle.circle {
-          width: 2em;
-          height: 2em;
-          -webkit-border-radius: 50%;
-                  border-radius: 50%;
-          background-color: #26a69a;
-          border: none;
-          -webkit-box-shadow: none;
-                  box-shadow: none;
-          cursor: pointer; }
-          #filters-hotels #filters > * #ranger .noUi-handle.circle::before {
-            display: none; }
-          #filters-hotels #filters > * #ranger .noUi-handle.circle::after {
-            display: none; }
-          #filters-hotels #filters > * #ranger .noUi-handle.circle:focus {
-            outline: none; }
-            #filters-hotels #filters > * #ranger .noUi-handle.circle:focus .noUi-tooltip {
+        #filters-hotels #filters #mobile-fixer > * #ranger {
+          width: 90%;
+          height: 1em;
+          margin-top: 3em;
+          position: relative;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+             -moz-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%); }
+          #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.circle {
+            width: 2em;
+            height: 2em;
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            background-color: #26a69a;
+            border: none;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            cursor: pointer; }
+            #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.circle::before {
+              display: none; }
+            #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.circle::after {
+              display: none; }
+            #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.circle:focus {
               outline: none; }
-        #filters-hotels #filters > * #ranger .noUi-handle.right {
-          right: 0;
-          -webkit-transform: translate(50%, -25%);
-             -moz-transform: translate(50%, -25%);
-              -ms-transform: translate(50%, -25%);
-                  transform: translate(50%, -25%);
-          top: 0%; }
-        #filters-hotels #filters > * #ranger .noUi-handle.left {
-          left: 0;
-          top: 0%;
-          -webkit-transform: translate(0%, -25%);
-             -moz-transform: translate(0%, -25%);
-              -ms-transform: translate(0%, -25%);
-                  transform: translate(0%, -25%); }
-        #filters-hotels #filters > * #ranger .noUi-tooltip.newStyle {
-          font-size: .8em; }
-        #filters-hotels #filters > * #ranger .noUi-tooltip.right {
-          -webkit-transform: translate(-90%, 0);
-             -moz-transform: translate(-90%, 0);
-              -ms-transform: translate(-90%, 0);
-                  transform: translate(-90%, 0); }
-        #filters-hotels #filters > * #ranger .noUi-tooltip.left {
-          -webkit-transform: translate(0%, 0);
-             -moz-transform: translate(0%, 0);
-              -ms-transform: translate(0%, 0);
-                  transform: translate(0%, 0); }
+              #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.circle:focus .noUi-tooltip {
+                outline: none; }
+          #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.right {
+            right: 0;
+            -webkit-transform: translate(50%, -25%);
+               -moz-transform: translate(50%, -25%);
+                -ms-transform: translate(50%, -25%);
+                    transform: translate(50%, -25%);
+            top: 0%; }
+          #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.left {
+            left: 0;
+            top: 0%;
+            -webkit-transform: translate(0%, -25%);
+               -moz-transform: translate(0%, -25%);
+                -ms-transform: translate(0%, -25%);
+                    transform: translate(0%, -25%); }
+          #filters-hotels #filters #mobile-fixer > * #ranger .noUi-tooltip.newStyle {
+            font-size: .8em; }
+          #filters-hotels #filters #mobile-fixer > * #ranger .noUi-tooltip.right {
+            -webkit-transform: translate(-90%, 0);
+               -moz-transform: translate(-90%, 0);
+                -ms-transform: translate(-90%, 0);
+                    transform: translate(-90%, 0); }
+          #filters-hotels #filters #mobile-fixer > * #ranger .noUi-tooltip.left {
+            -webkit-transform: translate(0%, 0);
+               -moz-transform: translate(0%, 0);
+                -ms-transform: translate(0%, 0);
+                    transform: translate(0%, 0); }
   #filters-hotels #filters.show {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2068,14 +2084,14 @@ header .cloud:nth-child(2) {
   #filters-hotels #filters {
     display: none;
     width: 75vw;
-    height: 15em;
+    height: 60vh;
     overflow: auto;
     margin-left: 0em;
     background-color: white;
     -webkit-box-shadow: 0 0 0.2em 0.05em rgba(30, 30, 30, 0.5);
             box-shadow: 0 0 0.2em 0.05em rgba(30, 30, 30, 0.5);
     border: none;
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 50%;
     -webkit-transform: translate(50%, -50%);
