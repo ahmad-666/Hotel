@@ -328,11 +328,11 @@ header .cloud:nth-child(2) {
      -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start !important;
-  -webkit-align-items: flex-start !important;
-     -moz-box-align: start !important;
-      -ms-flex-align: start !important;
-          align-items: flex-start !important;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
