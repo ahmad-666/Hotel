@@ -2068,7 +2068,7 @@ header .cloud:nth-child(2) {
   #filters-hotels #filters {
     display: none;
     width: 75vw;
-    max-height: 60vh;
+    height: 15em;
     overflow: auto;
     margin-left: 0em;
     background-color: white;
