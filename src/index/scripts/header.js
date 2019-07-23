@@ -9,6 +9,7 @@ let mobileNav = document.querySelector('#mobile-nav') ;
 mobileNav.addEventListener('touchmove',function(e){
     e.preventDefault() ;
 })
+
 let host = document.querySelector('#host') ;
 let logoImg = document.querySelector('#home img') ;
 window.addEventListener('scroll',e=>{
@@ -27,6 +28,7 @@ window.addEventListener('scroll',e=>{
         mobileBars.style.color = 'rgb(57,57,57)' ;
         host.style.border = '2px solid rgb(50,50,50)' ;
         logoImg.setAttribute('src',blackLogo) ;
+        logoImg.setAttribute('src','../assets/imgs/black-logo.png') ;
     }
 })
 
