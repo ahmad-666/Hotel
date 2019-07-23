@@ -5508,7 +5508,7 @@ header .cloud:nth-child(2) {
 #services h4 {
   display: inline-block;
   width: auto;
-  font-size: 1.2em;
+  font-size: 24px;
   font-weight: 700;
   color: #282828;
   margin: 0 1em 0 0;
@@ -5696,7 +5696,10 @@ header .cloud:nth-child(2) {
 
 @media screen and (max-width: 450px) {
   #services form {
-    height: 45vw; }
+    height: 45vw;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
   #services label {
     width: 40vw;
     height: 40vw;
@@ -5714,9 +5717,9 @@ header .cloud:nth-child(2) {
   #services label {
     font-size: 13px; } }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   #services h4 {
-    font-size: 1.2em; } }
+    font-size: 20px; } }
 
 @media screen and (max-width: 600px) {
   #services input[type="submit"] {
@@ -5724,15 +5727,11 @@ header .cloud:nth-child(2) {
 
 @media screen and (max-width: 500px) {
   #services h4 {
-    font-size: 1em; } }
+    font-size: 16px; } }
 
 @media screen and (max-width: 300px) {
   #services h4 {
-    font-size: .8em; } }
-
-@media screen and (max-width: 270px) {
-  #services h4 {
-    font-size: .7em; } }
+    font-size: 14px; } }
 
 .slider-wrapper {
   width: 100%;
@@ -5745,7 +5744,7 @@ header .cloud:nth-child(2) {
 .slider-wrapper h4 {
   display: inline-block;
   width: auto;
-  font-size: 1.2em;
+  font-size: 24px;
   color: #282828;
   font-weight: 700;
   margin: 0 1em 0 0;
@@ -5983,10 +5982,12 @@ header .cloud:nth-child(2) {
   background-color: whitesmoke; }
 
 @media screen and (max-width: 1000px) {
-  .slider-wrapper h4 {
-    font-size: 1.2em; }
   .slider-wrapper {
     font-size: 15px; } }
+
+@media screen and (max-width: 900px) {
+  .slider-wrapper h4 {
+    font-size: 20px; } }
 
 @media screen and (max-width: 800px) {
   .slider-wrapper .btn {
@@ -6004,7 +6005,7 @@ header .cloud:nth-child(2) {
 
 @media screen and (max-width: 500px) {
   .slider-wrapper h4 {
-    font-size: 1em; }
+    font-size: 16px; }
   .slider-wrapper .btn {
     font-size: 9px; } }
 
@@ -6015,23 +6016,19 @@ header .cloud:nth-child(2) {
 
 @media screen and (max-width: 300px) {
   .slider-wrapper h4 {
-    font-size: 1em; }
+    font-size: 14px; }
   .slider-wrapper .btn {
     font-size: 8px; } }
 
 @media screen and (max-width: 280px) {
   .slider-wrapper {
-    font-size: 12px; }
-  .slider-wrapper h4 {
-    font-size: 1.2em; } }
+    font-size: 12px; } }
 
 @media screen and (max-width: 200px) {
   .slider-wrapper {
     font-size: 9px; }
   .slider-wrapper .btn {
-    font-size: 6px; }
-  .slider-wrapper h4 {
-    font-size: 1.4em; } }
+    font-size: 6px; } }
 
 #features {
   width: 100%;
