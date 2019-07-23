@@ -2066,14 +2066,10 @@ header .cloud:nth-child(2) {
 
 @media screen and (max-width: 850px) {
   #filters-hotels #filters {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     width: 75vw;
-    height: 60vh;
-    overflow: scroll;
+    max-height: 60vh;
+    overflow: auto;
     margin-left: 0em;
     background-color: white;
     -webkit-box-shadow: 0 0 0.2em 0.05em rgba(30, 30, 30, 0.5);
