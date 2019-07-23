@@ -1537,10 +1537,10 @@ header .cloud:nth-child(2) {
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: start;
-  -webkit-align-items: start;
+  -webkit-align-items: flex-start;
      -moz-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
@@ -1565,10 +1565,10 @@ header .cloud:nth-child(2) {
         -ms-flex-pack: start;
             justify-content: flex-start;
     -webkit-box-align: start;
-    -webkit-align-items: start;
+    -webkit-align-items: flex-start;
        -moz-box-align: start;
         -ms-flex-align: start;
-            align-items: start;
+            align-items: flex-start;
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
@@ -1601,10 +1601,10 @@ header .cloud:nth-child(2) {
           -ms-flex-pack: start;
               justify-content: flex-start;
       -webkit-box-align: start;
-      -webkit-align-items: start;
+      -webkit-align-items: flex-start;
          -moz-box-align: start;
           -ms-flex-align: start;
-              align-items: start;
+              align-items: flex-start;
       -webkit-flex-wrap: nowrap;
           -ms-flex-wrap: nowrap;
               flex-wrap: nowrap;
@@ -1779,10 +1779,10 @@ header .cloud:nth-child(2) {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   -webkit-box-align: start;
-  -webkit-align-items: start;
+  -webkit-align-items: flex-start;
      -moz-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -1984,10 +1984,10 @@ header .cloud:nth-child(2) {
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: start;
-  -webkit-align-items: start;
+  -webkit-align-items: flex-start;
      -moz-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
