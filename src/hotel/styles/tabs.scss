@@ -6,6 +6,26 @@
     transform: translateX(50%) ;
     border: 1px solid rgb(170,170,170) ;
     margin-top: 4em ;
+    .arrows{
+        visibility: hidden;
+        width: auto ;
+        height: auto;
+        position: absolute ;
+        left: 0em;
+        top: 0em ;
+        transform: translateY(-100%) ;
+        display: flex ;
+        flex-direction: row ;
+        justify-content: flex-start ;
+        align-items: center ;
+        flex-wrap: nowrap ;
+        .fas{     
+            font-size: 1.2em ;
+            color: #26a69a ;
+            margin: 0 .1em ;
+            opacity: 1;         
+        }
+    }
     ul{
         width: 100% ;
         height: auto ;
@@ -24,7 +44,7 @@
             height: 4em;
             line-height: 3em ;
             padding: .5em ;
-            font-size: 1em ;
+            font-size: .8em ;
             color: #26a69a ; 
             text-align: center ;
             cursor: pointer;
@@ -69,7 +89,7 @@
         }
         #about.show,#map-dist.show,#comments.show{opacity: 1;}
         #about p {
-            font-size: .9em ;
+            font-size: .8em ;
             font-weight: lighter ;
             line-height: 3em ;
             overflow-wrap: nowrap ;
@@ -88,7 +108,7 @@
                 margin-top: 1em ;
                 display: flex ;
                 flex-direction: row ;
-                justify-content: space-around ;
+                justify-content: flex-start ;
                 align-items: center ;
                 flex-wrap: wrap ;
                 align-content: flex-start ;
@@ -104,7 +124,7 @@
                     align-content: flex-start ;
                     i,h6,p{margin: .1em ;}
                     i{
-                        font-size: .8em ;
+                        font-size: .6em ;
                         color: #26a69a ;
                     }
                     h6{
@@ -136,6 +156,7 @@
         width: 50% ;
         flex-shrink: 0 ;
     }  
+    #tabs .arrows{visibility: visible ;}
 }
 @media screen and (max-width: 560px){
     #tabs #content #map-dist #dist{justify-content: space-around ;}

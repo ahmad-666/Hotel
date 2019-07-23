@@ -57,3 +57,29 @@ function tabTriggerHandler(e){
 // function dragging(e){
 //     console.log(e.x) ;
 // }
+let arrows = document.querySelectorAll('#tabs .arrows .fas') ;
+let animation = null ;
+if(window.innerWidth < 605) swipeAnimation() ;
+window.addEventListener('resize',checkSize) ;
+function checkSize(e){
+    if(window.innerWidth < 605) {
+        if(animation) animation.play() ;   
+        swipeAnimation() ;
+    }
+    else {
+        if(animation) animation.pause() ;      
+    }
+}
+function swipeAnimation(){
+    if(!animation) {
+        animation = anime({
+            targets: arrows ,
+            duration: 600 ,
+            delay: anime.stagger(200) ,
+            opacity: [0,1] ,
+            easing: 'linear' ,
+            loop: true ,
+            direction: 'alternate'
+        })
+    }   
+}

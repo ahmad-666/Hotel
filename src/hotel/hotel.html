@@ -11,8 +11,7 @@
 <body>
     <div id="nav">
         <a id="home" href="#!">
-            <img src="../assets/imgs/logo.png" alt="logo.png">
-            <p>مستر اسکان</p>
+            <img src="../assets/imgs/black-logo.png" alt="logo.png">      
         </a>
         <a id="sign-in" href="#!">
             <i class="fas fa-sign-in-alt"></i>
@@ -21,6 +20,10 @@
         <a id="reg" href="#!">
             <i class="fas fa-user"></i>
             ثبت نام
+        </a>
+        <a id="host" href="#!">
+            <!-- <i class="fas fa-user"></i> -->
+            میزبان شوید
         </a>
         <div id="hamburger">
             <span></span>
@@ -34,15 +37,19 @@
             </a>
             <a href="#!">
                 <i class="fas fa-sign-in-alt"></i>
-                ورود
+                ورود    
             </a>
             <a href="#!">
                 <i class="fas fa-user"></i>
-                ثبت نام
+                ثبت نام 
             </a>
             <a href="#!">
                 <i class="fas fa-hotel"></i>
-                مکان های اقامتی
+                میزبان شوید 
+            </a>
+            <a href="#!">
+                <i class="fas fa-hotel"></i>
+                مکان های اقامتی    
             </a>
         </div>
     </div>
@@ -179,6 +186,11 @@
             <li data-tab="map-dist">نقشه/فاصله تا اماکن مهم</li>
             <li data-tab="comments">نظرات کاربران</li>
         </ul>
+        <div class="arrows">
+            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-left"></i>
+        </div>
         <div id="content">
             <div id="about" class="show">
                 <p>
@@ -346,7 +358,7 @@
                             <div class="polygon">4.5</div>
                         </div>
                     </div>
-                    <div class="images">
+                    <!-- <div class="images">
                         <div class="img" data-text="متن ۱"></div>
                         <div class="img" data-text="متن ۲"></div>
                         <div class="img" data-text="متن ۳"></div>
@@ -356,7 +368,7 @@
                         <div class="img" data-text="متن ۷"></div>
                         <div class="img" data-text="متن ۸"></div>
                         <div class="img" data-text="متن ۹"></div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="comment">
                     <div class="info">
@@ -405,7 +417,7 @@
                             <div class="polygon">4.5</div>
                         </div>
                     </div>
-                    <div class="images">
+                    <!-- <div class="images">
                         <div class="img" data-text="متن ۱"></div>
                         <div class="img" data-text="متن ۲"></div>
                         <div class="img" data-text="متن ۳"></div>
@@ -415,7 +427,7 @@
                         <div class="img" data-text="متن ۷"></div>
                         <div class="img" data-text="متن ۸"></div>
                         <div class="img" data-text="متن ۹"></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>  
@@ -787,6 +799,201 @@
                 </div>
             </div>
         </div>
+        <div class="room">
+            <div class="info">
+                <div class="room-name">
+                    نام اتاق
+                </div>
+                <div class="guests">
+                    <div class="icon">
+                        <i class="fas fa-male"></i>
+                        <i class="fas fa-male"></i>
+                        <i class="fas fa-male"></i>
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <p class="guest-num">۴نفر</p>
+                </div>
+                <div class="food">صبحانه,نهار,شام</div>
+            </div>
+            <div class="price">
+                <div class="before-discount">
+                    <p>1.000.000 تومان</p>
+                    <p>(هر شب اقامت)</p>
+                </div>
+            </div>
+            <div class="reserve">
+                <div class="room-num">
+                    <p>تعداد اتاق</p>
+                    <button class="increase">
+                        <span>+</span>
+                    </button>
+                    <input type="number" value="0">
+                    <button class="decrease">
+                        <span>-</span>
+                    </button>
+                </div>
+                <button>رزرو</button>
+            </div>
+            <div class="features">
+                <p> امکانات </p>
+                <div class="features-wrapper">
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                </div>
+            </div>
+            <div class="calender-show">
+                <button>
+                    نمایش تقویم
+                    <i class="fas fa-angle-down"></i>
+                </button>
+            </div>
+            <div class="room-calender">
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="suggestion" class="slider-wrapper">
         <h4> مکان های اقامتی مشابه</h4>
@@ -798,6 +1005,11 @@
         <div class="fade right"></div>
         <div class="btn btn-left"><i class="fas fa-chevron-left"></i></div>
         <div class="btn btn-right"><i class="fas fa-chevron-right"></i></div>
+        <div class="arrows">
+            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-left"></i>
+        </div>
         <div class="slider">
             <a class="slide" href="#!">
                 <img src="../assets/imgs/slide1.jpg" alt="slide1.jpg">

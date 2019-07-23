@@ -17,7 +17,7 @@
     h4,p,button{margin: .5em 0 ;}
     h4{
         color: rgb(50,50,50) ;
-        font-size: 2em ;
+        font-size: 1.4em ;
         font-weight: 600 ;
     }
     p{
@@ -25,7 +25,7 @@
         max-height: 50vh ;
         color: rgb(50,50,50) ;
         line-height: 2em ;
-        font-size: 1em ;
+        font-size: .8em ;
         overflow-y: auto ;
         overflow-wrap: nowrap ;
     }
@@ -40,7 +40,7 @@
         background-color: #26a69a ;
         cursor: pointer;
         border: none ;
-        font-size: 1.5em ;
+        font-size: 1.2em ;
         &:focus{outline: none ;}
     }
 }

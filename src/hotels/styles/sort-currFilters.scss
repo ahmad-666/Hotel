@@ -18,7 +18,7 @@
             width: 100% ;
             border: none ;
             border-bottom: 1px solid rgb(170,170,170) ;
-            font-size: 1.2em ;
+            font-size: 1em ;
             color: #26a69a ;
             position: absolute ;
             right: 0 ;
@@ -29,7 +29,7 @@
             }
         }
         label{
-            font-size: 1em ;
+            font-size: .8em ;
             color: grey ;
             position: absolute ;
             right: 0 ;
@@ -66,7 +66,7 @@
                 height: 2.5em ;
                 color: #26a69a ;
                 padding: .5em ;
-                font-size: 1em ;
+                font-size: .8em ;
                 transition: all .3 ease-in-out ;
                 cursor: pointer;
                 &:hover{
@@ -87,7 +87,7 @@
         align-items: start ;
         flex-wrap: nowrap ;
         h4{
-            font-size: 1.3em ;
+            font-size: 1.1em ;
             color: rgb(50,50,50) ;
             font-weight: 600 ;
         }
@@ -115,7 +115,7 @@
                 align-items: center ;
                 flex-wrap: nowrap ;
                 cursor: pointer;
-                font-size: 1em ;
+                font-size: .8em ;
                 i {
                     margin: 0 0 0 1em;
                 }

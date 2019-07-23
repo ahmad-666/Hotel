@@ -10,7 +10,7 @@
 #services h4{
     display: inline-block ;
     width: auto ;
-    font-size: 2em ;
+    font-size: 1.2em ;
     font-weight: 700 ;
     color: rgb(40,40,40) ;
     margin: 0 1em 0 0 ;
@@ -19,23 +19,24 @@
 }
 #services form{
     width: 100% ;
-    height: 12em ;
+    height: 15vw ;
     text-align: center ;
     overflow: hidden;
     display: flex;
     flex-direction: row ;
-    justify-content: space-around ;
+    justify-content: flex-start ;
     align-items: flex-start;
     flex-wrap: wrap ;
     align-content: flex-start ;
-    padding: 1em;
+    padding: 1vw;
     transition: all .6s ease-in-out ;
     
 }
 #services label{
-    width: 10em ;
-    height: 10em;
-    margin: .5em ;
+    width: 11.8vw ;
+    height: 11.8vw;
+    // seven cols in each row
+    margin: 1vw ;
     display: flex ;
     flex-direction: column ;
     justify-content: space-around ;
@@ -46,9 +47,10 @@
     border-radius: 1.5em ;
     box-shadow: 0 0 .5em 0.01em rgba(50,50,50,.3) ;
     cursor: pointer;
+    overflow: hidden;
 }
 #services label > *{
-    flex-shrink: 0 ;
+    // flex-shrink: 0 ;
 }
 #services label input[type="checkbox"]{
     width: 0 ;
@@ -62,8 +64,13 @@
     text-align: center ;
     overflow-wrap: nowrap ; 
 }
-#services label i {font-size: 2em ;}
-#services label p{font-size: 1.3em ;}
+#services label i {font-size: 1.5em ;}
+#services label p{
+    font-size: 1em ; 
+    overflow: hidden;
+    text-overflow: ellipsis ;
+    white-space: nowrap ;
+}
 // #services label:hover{background-color: #fb636f ; }
 // #services label:hover i , #services label:hover p{color: white ;}
 #services label.red-bg{background-color: #fb636f;}
@@ -89,21 +96,76 @@
     transform: translateX(50%) ;
     margin-top: 1em ;
     font-family: byekan ;
-    font-size: 1.2em ;
+    font-size: 1em ;
     border:none ;
     cursor: pointer;
     padding: 1em 2em ;
     border-radius: 2em ;
 }
+@media screen and (max-width:1450px){ //six cols in each row
+    #services form{height: 17vw;}
+    #services label{
+        width: 14vw ;
+        height: 14vw;
+    }
+}
+@media screen and (max-width:1200px){ //five cols in each row
+    #services form{height: 20vw;}
+    #services label{
+        width: 17vw ;
+        height: 17vw;
+    }
+}
+@media screen and (max-width:900px){ //four cols in each row
+    #services form{height: 25vw;}
+    #services label{
+        width: 22vw ;
+        height: 22vw;
+        // margin: 2vw ;
+        // font-size: 16px ;
+    }
+}
+@media screen and (max-width:750px){ //four cols in each row
+    #services form{height: 24vw;}
+    #services label{
+        width: 21vw ;
+        height: 21vw;
+        font-size: 16px ;
+    }
+}
+@media screen and (max-width:600px){ //three cols in each row
+    #services form{height: 32vw;}
+    #services label{
+        width: 29vw ;
+        height: 29vw;
+    }
+}
+@media screen and (max-width:450px){ //two col in each row
+    #services form{height: 45vw;}
+    #services label{
+        width: 40vw ;
+        height: 40vw;
+        margin: 3vw ;
+    }
+}
+@media screen and (max-width:320px){ //two col in each row
+    #services form{height: 77vw;}
+    #services label{
+        width: 70vw ;
+        height: 70vw;
+        margin: 3vw auto ;
+    }
+}
+@media screen and (max-width:250px){ //two col in each row
+    #services label{
+        font-size: 13px ;
+    }
+}
 @media screen and (max-width:1000px){
-    #services h4{font-size: 1.5em ;}
+    #services h4{font-size: 1.2em ;}
 }
 @media screen and (max-width:800px){
-    #services form{height: 12em ;}
-    #services label{
-        width: 10em ;
-        height: 10em;
-    }
+    
 }
 @media screen and (max-width:600px){
     #services input[type="submit"]{
@@ -111,30 +173,15 @@
     }
 }
 @media screen and (max-width:500px){
-    #services h4{font-size: 1.2em ;}
-    #services form{height: 7.6em ;}
-    #services label{
-        font-size: 12px ;
-    }
+    #services h4{font-size: 1em ;}
+   
 }
 @media screen and (max-width:350px){
-    #services form{  
-        justify-content: space-around ;
-       
-    }
-    #services > p {
-        
-        // margin-top: 2em;
-        // position: relative ;
-        // right: 40% ;
-        // transform: translateX(50%) ;
-        // border: 1px solid blue ;
-        // text-align: center;
-    }
+  
 }
 @media screen and (max-width:300px){
-    #services h4{font-size: 1em ;}
+    #services h4{font-size: .8em ;}
 }
 @media screen and (max-width:270px){
-    #services h4{font-size: .8em ;}
+    #services h4{font-size: .7em ;}
 }

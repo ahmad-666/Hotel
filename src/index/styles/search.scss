@@ -18,7 +18,7 @@
         input[type="text"],input[type="number"]{
             width: 100% ;
             height: auto;
-            font-size: 1.2em ;
+            font-size: 1em ;
             color: rgb(50,50,50) ;
             position: absolute ;
             right: 0;
@@ -29,7 +29,7 @@
                 outline: none ;
                 ~label{
                     transform: translateY(-3em) ;
-                    font-size: .8em ;
+                    font-size: .6em ;
                 }
                 ~.line{width: 100% ;}
                 // ~.calender{visibility: visible ; opacity: 1;}
@@ -48,7 +48,7 @@
             -moz-appearance:textfield;
         }
         label{
-            font-size: 1em ;
+            font-size: .8em ;
             transform: translateY(0) ;
             color: #26a69a ;
             position: absolute ;
@@ -57,7 +57,7 @@
             transition: all .3s ease-in-out ;         
         }
         label.up{
-            font-size: .8em;
+            font-size: .6em;
             transform: translateY(-3em) ;
         }
         > i{
@@ -116,7 +116,7 @@
     input[type="submit"]{
         width: 8em ;
         height: 3em;
-        font-size: 1.2em ;
+        font-size: 1em ;
         margin: 1em 1.5em ;  
         color: white ;
         background-color: #26a69a ;

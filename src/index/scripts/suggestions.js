@@ -1,3 +1,4 @@
+import anime from 'animejs' ;
 function Slider(id){
     this.id = id ;
     this.sliderWrapper = document.querySelector(id) ;
@@ -5,10 +6,38 @@ function Slider(id){
     this.slide = this.slider.querySelector('.slide') ;
     this.prevBtn = this.sliderWrapper.querySelector('.btn-right') ;
     this.nextBtn = this.sliderWrapper.querySelector('.btn-left') ;
+    this.arrowsWrapper = this.sliderWrapper.querySelector('.arrows') ;
+    this.arrows = this.arrowsWrapper.querySelectorAll('.fas') ;
     this.curPos = 0 ;
     this.offset = null ;
     this.visibleSlidesNum = null ; //number of visible slides in viewport
     this.threshold = null ;
+    this.animation = null ;
+    if(window.innerWidth < 800) this.swipeAnimation() ;
+    window.addEventListener('resize',this.checkSize.bind(this)) ;
+}
+Slider.prototype.checkSize = function(e){
+    if(window.innerWidth < 800) {
+        if(this.animation) this.animation.play() ;   
+        this.swipeAnimation() ;
+    }
+    else {
+        if(this.animation) this.animation.pause() ;      
+    }
+}
+Slider.prototype.swipeAnimation = function(){
+    if(!this.animation) {
+        this.animation = anime({
+            targets: this.arrows ,
+            duration: 600 ,
+            delay: anime.stagger(200) ,
+            opacity: [0,1] ,
+            easing: 'linear' ,
+            loop: true ,
+            direction: 'alternate'
+        })
+    }
+    
 }
 Slider.prototype.prevBtnInit = function(){
     this.prevBtn.addEventListener('click',e=>{
@@ -47,5 +76,3 @@ if(document.querySelector('#suggestion')){
     suggestionsSlider.prevBtnInit() ;
     suggestionsSlider.nextBtnInit() ;
 }
-
-
