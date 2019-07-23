@@ -28,7 +28,6 @@ window.addEventListener('scroll',e=>{
         mobileBars.style.color = 'rgb(57,57,57)' ;
         host.style.border = '2px solid rgb(50,50,50)' ;
         logoImg.setAttribute('src',blackLogo) ;
-        logoImg.setAttribute('src','../assets/imgs/black-logo.png') ;
     }
 })
 
