@@ -1,6 +1,20 @@
 let modalTriggers = document.querySelectorAll('#footer #support li a') ;
 let black = document.querySelector('#black') ;
 let modals = document.querySelectorAll('.modal') ;
+modals.forEach(function(modal){   
+    if(modal.querySelector('p').scrollHeight > modal.querySelector('p').clientHeight) {       
+        modal.addEventListener('touchmove',hasScroll) ;
+    }
+    else {
+        modal.addEventListener('touchmove',noScroll) ;
+    }
+})
+function hasScroll(e){
+    e.stopPropagation() ;
+}
+function noScroll(e){
+    e.preventDefault();
+}
 let currModal = null ;
 modalTriggers.forEach(modalTrigger=>{
     modalTrigger.addEventListener('click',modalHandler) ;

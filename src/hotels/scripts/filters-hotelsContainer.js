@@ -82,3 +82,7 @@ ranger.noUiSlider.on('end',()=>{
     minPrice.value = ranger.noUiSlider.get()[0];
     maxPrice.value = ranger.noUiSlider.get()[1];
 });
+let filters = document.querySelector('#filters') ;
+filters.addEventListener('touchmove',e=>{
+    e.stopPropagation() ;
+})

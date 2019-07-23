@@ -10,7 +10,7 @@
 #services h4{
     display: inline-block ;
     width: auto ;
-    font-size: 1.2em ;
+    font-size: 24px ;
     font-weight: 700 ;
     color: rgb(40,40,40) ;
     margin: 0 1em 0 0 ;
@@ -141,7 +141,10 @@
     }
 }
 @media screen and (max-width:450px){ //two col in each row
-    #services form{height: 45vw;}
+    #services form{
+        height: 45vw;
+        justify-content: space-around ;
+    }
     #services label{
         width: 40vw ;
         height: 40vw;
@@ -162,10 +165,10 @@
     }
 }
 @media screen and (max-width:1000px){
-    #services h4{font-size: 1.2em ;}
+    // #services h4{font-size: 1.2em ;}
 }
-@media screen and (max-width:800px){
-    
+@media screen and (max-width:900px){
+    #services h4{font-size: 20px ;}
 }
 @media screen and (max-width:600px){
     #services input[type="submit"]{
@@ -173,15 +176,15 @@
     }
 }
 @media screen and (max-width:500px){
-    #services h4{font-size: 1em ;}
+    #services h4{font-size: 16px ;}
    
 }
 @media screen and (max-width:350px){
   
 }
 @media screen and (max-width:300px){
-    #services h4{font-size: .8em ;}
+    #services h4{font-size: 14px ;}
 }
 @media screen and (max-width:270px){
-    #services h4{font-size: .7em ;}
+    // #services h4{font-size: .7em ;}
 }

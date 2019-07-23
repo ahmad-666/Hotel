@@ -6,149 +6,159 @@
     display: flex ;
     flex-direction: row ;
     justify-content: flex-start ;
-    align-items: start ;
+    align-items: flex-start ;
     flex-wrap: nowrap ;
     #filters{
         width: 25% ;
         height: auto;
         display: flex ;
-        flex-direction: column ;
-        justify-content: flex-start ;
-        align-items: start ;
-        flex-wrap: nowrap ;
+        flex: 1 ;
+        // flex-direction: column ;
+        // justify-content: flex-start ;
+        // align-items: flex-start ;
+        // flex-wrap: nowrap ;
         margin-left: 2em ;
         flex-shrink: 0 ;
         border: 1px solid rgb(230,230,230) ;
-        #price{direction: ltr ;}
-        > * {
+        #mobile-fixer{
             width: 100% ;
-            height: auto;
-            padding: 1em .5em 2em .5em ;
+            min-height: min-content ;
             display: flex ;
             flex-direction: column ;
             justify-content: flex-start ;
-            align-items: start ;
+            align-items: flex-start ;
             flex-wrap: nowrap ;
-            border-bottom: 1px solid rgb(230,230,230) ;
-            h4{
+            #price{direction: ltr ;}
+            > * {
                 width: 100% ;
                 height: auto;
-                overflow-wrap: nowrap ;
-                color: rgb(50,50,50) ;
-                font-weight: 600 ;
-                font-size: .8em ;
-                margin: .5em 0 1em 0 ;
-            }
-            > div:not(#ranger){
-                width: 100% ;
-                min-height: 2em;
-                margin: .2em 0 ;
-                position: relative ;       
-                input[type="checkbox"]{
-                    width:  0 ;
-                    height: 0;
-                    position: absolute ;
-                    display: none ;
-                    &:checked{
-                        ~label .rect{
-                            width: .8em ;
-                            height: 1.8em;
-                            border-top: 2px solid transparent ;
-                            border-left: 2px solid transparent ;
-                            border-right: 4px solid #26a69a ;
-                            border-bottom: 4px solid #26a69a ;
-                            border-radius: .1em ;
-                            transform: translate(.1em,-.4em) rotate(35deg) ;
-                        }
-                    }
-                }
-                label{
-                    width: auto ;
+                padding: 1em .5em 2em .5em ;
+                display: flex ;
+                flex-direction: column ;
+                justify-content: flex-start ;
+                align-items: flex-start ;
+                flex-wrap: nowrap ;
+                border-bottom: 1px solid rgb(230,230,230) ;
+                h4{
+                    width: 100% ;
                     height: auto;
-                    // position: absolute ;
-                    // right: 0em;
-                    // top: 50% ;
-                    // transform: translateY(-50%) ;
+                    overflow-wrap: nowrap ;
+                    color: rgb(50,50,50) ;
+                    font-weight: 600 ;
                     font-size: .8em ;
-                    color: rgb(100,100,100);
-                    cursor: pointer;
-                    display: flex ;
-                    flex-direction: row ;
-                    justify-content: flex-start ;
-                    align-items: center ;
-                    flex-wrap: nowrap ;
-                    .rect{
-                        width: 1.8em ;
-                        height: 1.8em;
-                        border-radius: .3em ;
-                        border: 1.8px solid rgb(50,50,50) ;
-                        transition: all .15s ease-in-out ;
-                        flex-shrink: 0 ;
-                    }
-                    p{
-                        color: rgb(100,100,100) ;
-                        font-size: .9em ;
-                        margin-right: .5em ;
-                    }
-                    .fa-star{
-                        margin: 0 .1em ;
-                        color: gold ;
-                        font-size: .8em ;
-                        &:nth-child(2){
-                            margin-right: .6em;
+                    margin: .5em 0 1em 0 ;
+                }
+                > div:not(#ranger){
+                    width: 100% ;
+                    min-height: 2em;
+                    margin: .2em 0 ;
+                    position: relative ;       
+                    input[type="checkbox"]{
+                        width:  0 ;
+                        height: 0;
+                        position: absolute ;
+                        display: none ;
+                        &:checked{
+                            ~label .rect{
+                                width: .8em ;
+                                height: 1.8em;
+                                border-top: 2px solid transparent ;
+                                border-left: 2px solid transparent ;
+                                border-right: 4px solid #26a69a ;
+                                border-bottom: 4px solid #26a69a ;
+                                border-radius: .1em ;
+                                transform: translate(.1em,-.4em) rotate(35deg) ;
+                            }
                         }
                     }
-                }                      
-                .badge{
-                    position: absolute ;
-                    left: .3em;
+                    label{
+                        width: auto ;
+                        height: auto;
+                        // position: absolute ;
+                        // right: 0em;
+                        // top: 50% ;
+                        // transform: translateY(-50%) ;
+                        font-size: .8em ;
+                        color: rgb(100,100,100);
+                        cursor: pointer;
+                        display: flex ;
+                        flex-direction: row ;
+                        justify-content: flex-start ;
+                        align-items: center ;
+                        flex-wrap: nowrap ;
+                        .rect{
+                            width: 1.8em ;
+                            height: 1.8em;
+                            border-radius: .3em ;
+                            border: 1.8px solid rgb(50,50,50) ;
+                            transition: all .15s ease-in-out ;
+                            flex-shrink: 0 ;
+                        }
+                        p{
+                            color: rgb(100,100,100) ;
+                            font-size: .9em ;
+                            margin-right: .5em ;
+                        }
+                        .fa-star{
+                            margin: 0 .1em ;
+                            color: gold ;
+                            font-size: .8em ;
+                            &:nth-child(2){
+                                margin-right: .6em;
+                            }
+                        }
+                    }                      
+                    .badge{
+                        position: absolute ;
+                        left: .3em;
+                        top: 0% ;
+                        // transform: translateY(-50%) ;
+                        color: #26a69a ;
+                        font-size: .8em ;
+                    }
+                }
+                #ranger{    
+                width: 90% ;
+                height: 1em;
+                margin-top: 3em ;
+                position: relative ;
+                left: 50%;
+                transform: translateX(-50%) ;
+                .noUi-handle.circle{
+                    width: 2em ;
+                    height: 2em;
+                    border-radius: 50% ;
+                    background-color: #26a69a ;
+                    border: none ;
+                    box-shadow: none ;
+                    cursor: pointer;
+                    &::before{display: none ;}
+                    &::after{display: none ;}
+                    &:focus{
+                        outline: none ;
+                        .noUi-tooltip{outline: none ;}
+                        }
+                }               
+                .noUi-handle.right{
+                    right: 0 ;
+                    transform: translate(50%,-25%) ;
                     top: 0% ;
-                    // transform: translateY(-50%) ;
-                    color: #26a69a ;
+                }   
+                .noUi-handle.left{
+                    left: 0 ;
+                    top: 0% ;
+                    transform: translate(0%,-25%) ;
+                }   
+                .noUi-tooltip.newStyle{
                     font-size: .8em ;
                 }
-            }
-            #ranger{    
-               width: 90% ;
-               height: 1em;
-               margin-top: 3em ;
-               position: relative ;
-               left: 50%;
-               transform: translateX(-50%) ;
-               .noUi-handle.circle{
-                   width: 2em ;
-                   height: 2em;
-                   border-radius: 50% ;
-                   background-color: #26a69a ;
-                   border: none ;
-                   box-shadow: none ;
-                   cursor: pointer;
-                   &::before{display: none ;}
-                   &::after{display: none ;}
-                   &:focus{
-                       outline: none ;
-                       .noUi-tooltip{outline: none ;}
-                    }
-               }               
-               .noUi-handle.right{
-                   right: 0 ;
-                   transform: translate(50%,-25%) ;
-                   top: 0% ;
-               }   
-               .noUi-handle.left{
-                   left: 0 ;
-                   top: 0% ;
-                   transform: translate(0%,-25%) ;
-               }   
-               .noUi-tooltip.newStyle{
-                   font-size: .8em ;
-               }
-               .noUi-tooltip.right{
-                   transform: translate(-90%,0) ;
-               }
-               .noUi-tooltip.left{
-                   transform: translate(0%,0) ;
-               }
+                .noUi-tooltip.right{
+                    transform: translate(-90%,0) ;
+                }
+                .noUi-tooltip.left{
+                    transform: translate(0%,0) ;
+                }
+                }
             }
         }
     }
@@ -160,7 +170,7 @@
     display: flex ;
     flex-direction: row ;
     justify-content: space-around ;
-    align-items: start ;
+    align-items: flex-start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
     padding: 1em 1em 8em 1em ;
@@ -278,7 +288,7 @@
     display: flex ;
     flex-direction: row ;
     justify-content: flex-start ;
-    align-items: start ;
+    align-items: flex-start ;
     flex-wrap: wrap ;
     align-content: flex-start ;
     font-size: .8em ;

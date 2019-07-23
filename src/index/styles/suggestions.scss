@@ -9,7 +9,7 @@
 .slider-wrapper h4{
     display: inline-block ;
     width: auto ;
-    font-size: 1.2em ;
+    font-size: 24px ;
     color: rgb(40,40,40) ;
     font-weight: 700 ;
     margin: 0 1em 0 0 ;
@@ -154,8 +154,11 @@
 }
 #top{background-color: rgb(245,245,245);}
 @media screen and (max-width:1000px){
-    .slider-wrapper h4{font-size: 1.2em ;}
+    
     .slider-wrapper{font-size: 15px ;}
+}
+@media screen and (max-width:900px){
+    .slider-wrapper h4{font-size: 20px ;}
 }
 @media screen and (max-width:800px){
     .slider-wrapper .btn{
@@ -175,7 +178,7 @@
     .slider-wrapper .arrows{visibility: visible ;}
 }
 @media screen and (max-width:500px){
-    .slider-wrapper h4{font-size: 1em ;}
+    .slider-wrapper h4{font-size: 16px; ;}
     .slider-wrapper .btn{
         font-size: 9px ;
     }
@@ -189,19 +192,19 @@
     }
 }
 @media screen and (max-width:300px){
-    .slider-wrapper h4{font-size: 1em ;}
+    .slider-wrapper h4{font-size: 14px ;}
     .slider-wrapper .btn{
         font-size: 8px ;
     }
 }
 @media screen and (max-width:280px){
     .slider-wrapper{font-size: 12px ;}
-    .slider-wrapper h4{font-size: 1.2em ;}
+    // .slider-wrapper h4{font-size: 1.2em ;}
 }
 @media screen and (max-width:200px){
     .slider-wrapper{font-size: 9px ;}
     .slider-wrapper .btn{
         font-size: 6px ;
     }
-    .slider-wrapper h4{font-size: 1.4em ;}
+    // .slider-wrapper h4{font-size: 1.4em ;}
 }

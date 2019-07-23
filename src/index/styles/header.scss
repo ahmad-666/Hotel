@@ -176,7 +176,7 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     display: none ;
     flex-direction: column ;
     justify-content: flex-start ;
-    align-items: start ;
+    align-items: flex-start ;
     flex-wrap: nowrap ;
     transition: all .3s ease-in-out ;
     box-shadow: 0 0 .5em .01em rgba(30,30,30,.5) ;

@@ -359,174 +359,176 @@
     </div>
     <div id="filters-hotels">
         <form id="filters" name="filters" action="#!" method="GET" autocomplete="off" enctype="text/plain">
-            <div id="price">
-                <h4>تعیین بازه قیمت</h4>
-                <div id="ranger">
-                    <input type="hidden" id="min-price" name="min-price">
-                    <input type="hidden" id="max-price" name="max-price">
+            <div id="mobile-fixer">
+                <div id="price">
+                    <h4>تعیین بازه قیمت</h4>
+                    <div id="ranger">
+                        <input type="hidden" id="min-price" name="min-price">
+                        <input type="hidden" id="max-price" name="max-price">
+                    </div>
                 </div>
-
+                <div id="types">
+                    <h4>انتخاب نوع مکان اقامتی</h4>
+                    <div>
+                        <input type="checkbox" id="filter-hotel" name="filter-hotel" value="filter-hotel">
+                        <label for="filter-hotel">
+                            <span class="rect"></span>
+                            <p>هتل</p>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-residence" name="filter-residence" value="filter-residence">
+                        <label for="filter-residence">
+                            <span class="rect"></span>
+                            <p>اقامتگاه</p>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-inn" name="filter-inn" value="filter-inn">
+                        <label for="filter-inn">
+                            <span class="rect"></span>
+                            <p>مسافرخانه</p>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-motel" name="filter-motel" value="filter-motel">
+                        <label for="filter-motel">
+                            <span class="rect"></span>
+                            <p>مهمان پذیر</p>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-suite" name="filter-suite" value="filter-suite">
+                        <label for="filter-suite">
+                            <span class="rect"></span>
+                            <p>سوییت</p>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-apartment" name="filter-apartment" value="filter-apartment">
+                        <label for="filter-apartment">
+                            <span class="rect"></span>
+                            <p>هتل آپارتمان</p>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-home" name="filter-home" value="filter-home">
+                        <label for="filter-home">
+                            <span class="rect"></span>
+                            <p>خانه</p>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-villa" name="filter-villa" value="filter-villa">
+                        <label for="filter-villa">
+                            <span class="rect"></span>
+                            <p>ویلا</p>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+    
+                </div>
+                <div id="stars">
+                    <h4>بر اساس تعداد ستاره</h4>
+                    <div>
+                        <input type="checkbox" id="oneStar" name="oneStar" value="oneStar">
+                        <label for="oneStar">
+                            <span class="rect"></span>
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="twoStar" name="twoStar" value="twoStar">
+                        <label for="twoStar">
+                            <span class="rect"></span>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="threeStar" name="threeStar" value="threeStar">
+                        <label for="threeStar">
+                            <span class="rect"></span>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="fourStar" name="fourStar" value="fourStar">
+                        <label for="fourStar">
+                            <span class="rect"></span>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="fiveStar" name="fiveStar" value="fiveStar">
+                        <label for="fiveStar">
+                            <span class="rect"></span>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <span class="badge">10</span>
+                    </div>
+                </div>
+                <div id="features">
+                    <h4>بر اساس ویژگی ها</h4>
+                    <div>
+                        <input type="checkbox" id="feature1" name="feature1" value="feature1">
+                        <label for="feature1">
+                            <span class="rect"></span>
+                            <p>امکان شماره ۱ </p>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature2" name="feature2" value="feature2">
+                        <label for="feature2">
+                            <span class="rect"></span>
+                            <p>امکان شماره ۱</p>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature3" name="feature3" value="feature3">
+                        <label for="feature3">
+                            <span class="rect"></span>
+                            <p>امکان شماره ۱</p>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature4" name="feature4" value="feature4">
+                        <label for="feature4">
+                            <span class="rect"></span>
+                            <p>امکان شماره ۱</p>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature5" name="feature5" value="feature5">
+                        <label for="feature5">
+                            <span class="rect"></span>
+                            <p>امکان شماره ۱</p>
+                        </label>
+                    </div>
+    
+                </div>
             </div>
-            <div id="types">
-                <h4>انتخاب نوع مکان اقامتی</h4>
-                <div>
-                    <input type="checkbox" id="filter-hotel" name="filter-hotel" value="filter-hotel">
-                    <label for="filter-hotel">
-                        <span class="rect"></span>
-                        <p>هتل</p>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-residence" name="filter-residence" value="filter-residence">
-                    <label for="filter-residence">
-                        <span class="rect"></span>
-                        <p>اقامتگاه</p>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-inn" name="filter-inn" value="filter-inn">
-                    <label for="filter-inn">
-                        <span class="rect"></span>
-                        <p>مسافرخانه</p>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-motel" name="filter-motel" value="filter-motel">
-                    <label for="filter-motel">
-                        <span class="rect"></span>
-                        <p>مهمان پذیر</p>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-suite" name="filter-suite" value="filter-suite">
-                    <label for="filter-suite">
-                        <span class="rect"></span>
-                        <p>سوییت</p>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-apartment" name="filter-apartment" value="filter-apartment">
-                    <label for="filter-apartment">
-                        <span class="rect"></span>
-                        <p>هتل آپارتمان</p>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-home" name="filter-home" value="filter-home">
-                    <label for="filter-home">
-                        <span class="rect"></span>
-                        <p>خانه</p>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-villa" name="filter-villa" value="filter-villa">
-                    <label for="filter-villa">
-                        <span class="rect"></span>
-                        <p>ویلا</p>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-
-            </div>
-            <div id="stars">
-                <h4>بر اساس تعداد ستاره</h4>
-                <div>
-                    <input type="checkbox" id="oneStar" name="oneStar" value="oneStar">
-                    <label for="oneStar">
-                        <span class="rect"></span>
-                        <i class="fas fa-star"></i>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="twoStar" name="twoStar" value="twoStar">
-                    <label for="twoStar">
-                        <span class="rect"></span>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="threeStar" name="threeStar" value="threeStar">
-                    <label for="threeStar">
-                        <span class="rect"></span>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="fourStar" name="fourStar" value="fourStar">
-                    <label for="fourStar">
-                        <span class="rect"></span>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-                <div>
-                    <input type="checkbox" id="fiveStar" name="fiveStar" value="fiveStar">
-                    <label for="fiveStar">
-                        <span class="rect"></span>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </label>
-                    <span class="badge">10</span>
-                </div>
-            </div>
-            <div id="features">
-                <h4>بر اساس ویژگی ها</h4>
-                <div>
-                    <input type="checkbox" id="feature1" name="feature1" value="feature1">
-                    <label for="feature1">
-                        <span class="rect"></span>
-                        <p>امکان شماره ۱ </p>
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox" id="feature2" name="feature2" value="feature2">
-                    <label for="feature2">
-                        <span class="rect"></span>
-                        <p>امکان شماره ۱</p>
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox" id="feature3" name="feature3" value="feature3">
-                    <label for="feature3">
-                        <span class="rect"></span>
-                        <p>امکان شماره ۱</p>
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox" id="feature4" name="feature4" value="feature4">
-                    <label for="feature4">
-                        <span class="rect"></span>
-                        <p>امکان شماره ۱</p>
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox" id="feature5" name="feature5" value="feature5">
-                    <label for="feature5">
-                        <span class="rect"></span>
-                        <p>امکان شماره ۱</p>
-                    </label>
-                </div>
-
-            </div>
+            
         </form>
         <div id="hotels">
             <div class="hotel">
