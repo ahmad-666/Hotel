@@ -1,0 +1,320 @@
+#grid-menu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 6;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  direction: ltr;
+  background-color: transparent !important;
+  overflow: hidden;
+}
+
+#grid-menu.show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-section {
+  width: 50%;
+  height: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  direction: ltr;
+}
+
+.flex-section .color {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.flex-section .img {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.flex-section .img::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+.flex-section p {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  opacity: 0;
+}
+
+.flex-section > * {
+  position: relative;
+}
+
+#close {
+  width: 50%;
+  height: 40%;
+}
+
+#close .color {
+  background-color: #353841;
+}
+
+#close .fa-times {
+  opacity: 0;
+  font-size: 5em;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  cursor: pointer;
+}
+
+#motel {
+  width: 50%;
+  height: 40%;
+}
+
+#motel .color {
+  background-color: #636363;
+}
+
+#motel .img {
+  background-image: url("../assets/imgs/motel.jpg");
+}
+
+#inn {
+  width: 100%;
+  height: 61%;
+}
+
+#inn .color {
+  background-color: #AC865C;
+}
+
+#inn .img {
+  background-image: url("../assets/imgs/inn.jpg");
+}
+
+#hotel {
+  width: 100%;
+  height: 100%;
+}
+
+#hotel .color {
+  background-color: #fabe3c;
+}
+
+#hotel .img {
+  background-image: url("../assets/imgs/hotel.jpg");
+}
+
+#hotel p {
+  font-size: 2em;
+}
+
+#suite {
+  width: 100%;
+  height: 50%;
+}
+
+#suite .color {
+  background-color: #C3CEE4;
+}
+
+#suite .img {
+  background-image: url("../assets/imgs/suite.jpg");
+}
+
+#home {
+  width: 50%;
+  height: 50%;
+}
+
+#home .color {
+  background-color: #5097BB;
+}
+
+#home .img {
+  background-image: url("../assets/imgs/home.jpg");
+}
+
+#apartment {
+  width: 50%;
+  height: 50%;
+}
+
+#apartment .color {
+  background-color: #F6A744;
+}
+
+#apartment .img {
+  background-image: url("../assets/imgs/apartment.jpg");
+}
+
+#residence {
+  width: 50%;
+  height: 100%;
+}
+
+#residence .color {
+  background-color: #B09270;
+}
+
+#residence .img {
+  background-image: url("../assets/imgs/residence.jpg");
+}
+
+#villa {
+  width: 50%;
+  height: 100%;
+}
+
+#villa .color {
+  background-color: #86A9D1;
+}
+
+#villa .img {
+  background-image: url("../assets/imgs/villa.jpg");
+}
+
+@media screen and (max-width: 1000px) {
+  #grid-menu {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #grid-menu {
+    position: absolute;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+  .flex-section {
+    width: 100%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+  #close, #motel, #inn, #hotel, #suite, #home, #apartment,
+  #residence, #villa {
+    width: 100%;
+    height: 12em;
+  }
+}
+/*# sourceMappingURL=header-grid.css.map */

@@ -1,0 +1,111 @@
+#sponsers {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 0em 0 1em 0;
+  overflow-x: hidden;
+}
+
+#sponsers h4 {
+  display: inline-block;
+  width: auto;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #282828;
+  border-bottom: .8px solid #80808070;
+  padding-bottom: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
+#sponsers .my-slider {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  margin-top: 2em;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+#sponsers .my-slider .my-slide {
+  text-decoration: none;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 12em;
+  height: 12em;
+  margin: 0 1em;
+  -webkit-box-shadow: 0 0 0.5em 0.01em rgba(60, 60, 60, 0.3);
+          box-shadow: 0 0 0.5em 0.01em rgba(60, 60, 60, 0.3);
+  position: relative;
+  border-radius: 1.5em;
+}
+
+#sponsers .my-slide img {
+  width: 100%;
+  height: 65%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#sponsers .my-slide p {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  bottom: 5%;
+  color: #323232;
+  font-size: .8em;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+  #sponsers {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #sponsers {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #sponsers h4 {
+    font-size: 1.2em;
+  }
+}
+/*# sourceMappingURL=sponsers.css.map */

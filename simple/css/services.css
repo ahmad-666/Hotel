@@ -1,0 +1,281 @@
+#services {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4em;
+  padding: 1em 0;
+  background-color: whitesmoke;
+}
+
+#services h4 {
+  display: inline-block;
+  width: auto;
+  font-size: 24px;
+  font-weight: 700;
+  color: #282828;
+  margin: 0 1em 0 0;
+  border-bottom: .8px solid #80808070;
+  padding-bottom: 1em;
+}
+
+#services form {
+  width: 100%;
+  height: 15vw;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  padding: 1vw;
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+#services label {
+  width: 11.8vw;
+  height: 11.8vw;
+  margin: 1vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-color: white;
+  border-radius: 1.5em;
+  -webkit-box-shadow: 0 0 0.5em 0.01em rgba(50, 50, 50, 0.3);
+          box-shadow: 0 0 0.5em 0.01em rgba(50, 50, 50, 0.3);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#services label input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+#services label i, #services label p {
+  color: #fb636f;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  width: 100%;
+  text-align: center;
+  overflow-wrap: nowrap;
+}
+
+#services label i {
+  font-size: 1.5em;
+}
+
+#services label p {
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#services label.red-bg {
+  background-color: #fb636f;
+}
+
+#services label i.white-text {
+  color: white;
+}
+
+#services label p.white-text {
+  color: white;
+}
+
+#services > p {
+  width: auto;
+  height: auto;
+  margin-top: 2em;
+  margin-right: 2em;
+  cursor: pointer;
+  color: #26a69a;
+}
+
+#services form.show-all {
+  height: auto;
+}
+
+#services > p i {
+  -webkit-transform: translate(-50%, 15%);
+     -moz-transform: translate(-50%, 15%);
+      -ms-transform: translate(-50%, 15%);
+          transform: translate(-50%, 15%);
+}
+
+#services input[type="submit"] {
+  color: white;
+  background-color: #26a69a;
+  position: relative;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  margin-top: 1em;
+  font-family: byekan;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  padding: 1em 2em;
+  border-radius: 2em;
+}
+
+@media screen and (max-width: 1450px) {
+  #services form {
+    height: 17vw;
+  }
+  #services label {
+    width: 14vw;
+    height: 14vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #services form {
+    height: 20vw;
+  }
+  #services label {
+    width: 17vw;
+    height: 17vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #services form {
+    height: 25vw;
+  }
+  #services label {
+    width: 22vw;
+    height: 22vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #services form {
+    height: 24vw;
+  }
+  #services label {
+    width: 21vw;
+    height: 21vw;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #services form {
+    height: 32vw;
+  }
+  #services label {
+    width: 29vw;
+    height: 29vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #services form {
+    height: 45vw;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  #services label {
+    width: 40vw;
+    height: 40vw;
+    margin: 3vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #services form {
+    height: 77vw;
+  }
+  #services label {
+    width: 70vw;
+    height: 70vw;
+    margin: 3vw auto;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  #services label {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #services h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #services input[type="submit"] {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #services h4 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #services h4 {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=services.css.map */

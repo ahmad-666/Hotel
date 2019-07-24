@@ -1,0 +1,323 @@
+#tabs {
+  width: 90%;
+  height: auto;
+  position: relative;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  border: 1px solid #aaaaaa;
+  margin-top: 4em;
+}
+
+#tabs .arrows {
+  visibility: hidden;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 0em;
+  top: 0em;
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+#tabs .arrows .fas {
+  font-size: 1.2em;
+  color: #26a69a;
+  margin: 0 .1em;
+  opacity: 1;
+}
+
+#tabs ul {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  right: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+#tabs ul li {
+  width: 33.3%;
+  height: 4em;
+  line-height: 3em;
+  padding: .5em;
+  font-size: .8em;
+  color: #26a69a;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  position: relative;
+}
+
+#tabs ul li:hover {
+  background-color: whitesmoke;
+}
+
+#tabs ul li::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #26a69a;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#tabs ul li.active {
+  background-color: whitesmoke;
+}
+
+#tabs ul li.active::before {
+  width: 100%;
+}
+
+#tabs #content {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+#tabs #content #about, #tabs #content #map-dist, #tabs #content #comments {
+  width: 100%;
+  height: auto;
+  display: none;
+  padding: 1em;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#tabs #content #about.show, #tabs #content #map-dist.show, #tabs #content #comments.show {
+  opacity: 1;
+}
+
+#tabs #content #about p {
+  font-size: .8em;
+  font-weight: lighter;
+  line-height: 3em;
+  overflow-wrap: nowrap;
+  color: #323232;
+}
+
+#tabs #content #map-dist #map {
+  width: 100%;
+  height: 20em;
+  background: url("../assets/imgs/map.jpg") center center no-repeat;
+  background-size: 100% 100%;
+}
+
+#tabs #content #map-dist #dist {
+  width: 100%;
+  height: auto;
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+#tabs #content #map-dist #dist .place {
+  width: auto;
+  height: auto;
+  margin: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+#tabs #content #map-dist #dist .place i, #tabs #content #map-dist #dist .place h6, #tabs #content #map-dist #dist .place p {
+  margin: .1em;
+}
+
+#tabs #content #map-dist #dist .place i {
+  font-size: .6em;
+  color: #26a69a;
+}
+
+#tabs #content #map-dist #dist .place h6 {
+  font-size: .8em;
+  color: #26a69a;
+  font-weight: normal;
+}
+
+#tabs #content #map-dist #dist .place p {
+  font-size: .8em;
+  color: #323232;
+}
+
+@media screen and (max-width: 780px) {
+  #tabs ul {
+    font-size: 16px;
+  }
+  #tabs #content {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  #tabs ul {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #tabs ul li {
+    width: 50%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+  }
+  #tabs .arrows {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #tabs #content #map-dist #dist {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #tabs ul {
+    font-size: 12px;
+  }
+  #tabs #content {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #tabs ul li {
+    width: 75%;
+  }
+  #tabs #content #map-dist #map {
+    height: 15em;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  #tabs #content #map-dist #dist {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 220px) {
+  #tabs ul li {
+    width: 80vw;
+  }
+}
+/*# sourceMappingURL=tabs.css.map */

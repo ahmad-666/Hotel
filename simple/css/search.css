@@ -1,0 +1,237 @@
+#search {
+  width: 90%;
+  height: auto;
+  padding: 1em;
+  margin: 4em auto 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  border: 1px solid #c8c8c8;
+}
+
+#search .input-wrapper {
+  width: 12em;
+  height: 3em;
+  position: relative;
+  margin: 1em 1.5em;
+}
+
+#search .input-wrapper input[type="text"], #search .input-wrapper input[type="number"] {
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+  color: #323232;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+#search .input-wrapper input[type="text"]:focus, #search .input-wrapper input[type="number"]:focus {
+  outline: none;
+}
+
+#search .input-wrapper input[type="text"]:focus ~ label, #search .input-wrapper input[type="number"]:focus ~ label {
+  -webkit-transform: translateY(-3em);
+     -moz-transform: translateY(-3em);
+      -ms-transform: translateY(-3em);
+          transform: translateY(-3em);
+  font-size: .6em;
+}
+
+#search .input-wrapper input[type="text"]:focus ~ .line, #search .input-wrapper input[type="number"]:focus ~ .line {
+  width: 100%;
+}
+
+#search .input-wrapper input[type='number']::-webkit-outer-spin-button,
+#search .input-wrapper input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+#search .input-wrapper input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#search .input-wrapper label {
+  font-size: .8em;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  color: #26a69a;
+  position: absolute;
+  right: 0;
+  bottom: .3em;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#search .input-wrapper label.up {
+  font-size: .6em;
+  -webkit-transform: translateY(-3em);
+     -moz-transform: translateY(-3em);
+      -ms-transform: translateY(-3em);
+          transform: translateY(-3em);
+}
+
+#search .input-wrapper > i {
+  color: #26a69a;
+  font-size: 1em;
+  position: absolute;
+  bottom: .6em;
+  right: -1.2em;
+}
+
+#search .input-wrapper .line {
+  display: inline-block;
+  width: 0%;
+  height: 2px;
+  background-color: #26a69a;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#search .input-wrapper input[type="text"].auto-complete ~ ul {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 98%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  list-style: none;
+  -webkit-box-shadow: 0 0 0.2em 0.02em rgba(30, 30, 30, 0.3);
+          box-shadow: 0 0 0.2em 0.02em rgba(30, 30, 30, 0.3);
+  z-index: 10;
+}
+
+#search .input-wrapper input[type="text"].auto-complete ~ ul li {
+  width: 100%;
+  height: 2.5em;
+  line-height: 2.5em;
+  padding-right: .5em;
+  color: #323232;
+  background-color: white;
+  overflow-wrap: nowrap;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#search .input-wrapper input[type="text"].auto-complete ~ ul li:hover {
+  background-color: whitesmoke;
+  color: #26a69a;
+}
+
+#search .input-wrapper input[type="text"].auto-complete ~ ul.show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#search input[type="submit"] {
+  width: 8em;
+  height: 3em;
+  font-size: 1em;
+  margin: 1em 1.5em;
+  color: white;
+  background-color: #26a69a;
+  text-align: center;
+  line-height: 3em;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.5em;
+}
+
+@media screen and (max-width: 1060px) {
+  #search {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #search input[type="submit"] {
+    width: 10em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #search {
+    width: 75%;
+  }
+  #search .input-wrapper {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #search {
+    width: 90%;
+  }
+  #search .input-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #search {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=search.css.map */
