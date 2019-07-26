@@ -18,7 +18,7 @@ window.addEventListener('scroll',e=>{
         navbarLinks.forEach(link=>link.style.color = 'white') ;
         hamburgerLines.forEach(line => line.style.backgroundColor ="white") ;
         mobileBars.style.color = 'white' ;
-        host.style.border = '2px solid white' ;
+        //host.style.border = '2px solid white' ;
         logoImg.setAttribute('src',whiteLogo) ;
     }
     else {
@@ -26,7 +26,7 @@ window.addEventListener('scroll',e=>{
         navbarLinks.forEach(link=>link.style.color = 'rgb(50,50,50)') ;
         hamburgerLines.forEach(line => line.style.backgroundColor ="rgb(50,50,50)") ;
         mobileBars.style.color = 'rgb(57,57,57)' ;
-        host.style.border = '2px solid rgb(50,50,50)' ;
+        //host.style.border = '2px solid rgb(50,50,50)' ;
         logoImg.setAttribute('src',blackLogo) ;
     }
 })

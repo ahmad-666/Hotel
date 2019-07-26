@@ -94,18 +94,18 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     color: rgb(50,50,50) ;
     font-size: 1em ;
     text-align: center ;
-    margin: 0 .5em ;
+    margin: 0 1.5em ;
     white-space: nowrap ;
     line-height: 3em;
 }
 #nav a#host{
-    width: 6em ;
-    height: 2.5em ;
-    line-height: 2.5em ;
-    text-align: center ;
-    margin-right: 1em ;
-    border: 2px solid rgb(50,50,50) ;
-    border-radius: 2em ;
+    width: auto ;
+    // height: 2.5em ;
+    // line-height: 2.5em ;
+    // text-align: center ;
+    // margin-right: 1em ;
+    // border: 2px solid rgb(50,50,50) ;
+    // border-radius: 2em ;
 }
 #nav a .fas{
     position: relative; 
@@ -126,8 +126,8 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
 }
 
 #nav #sign-in{
-    width: 7em ;
-    border-radius: 40px ;
+    // width: 7em ;
+    // border-radius: 40px ;
 }
 #hamburger{
     width: auto ;

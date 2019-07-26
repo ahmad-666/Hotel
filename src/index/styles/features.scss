@@ -15,22 +15,23 @@
 }
 #features .feature{
     width: 11em ;
-    height: 11em;
+    min-height: 6em;
     display: flex ;
     flex-direction: column ;
-    justify-content: space-around ;
+    justify-content: flex-start ;
     align-items: center ;
     flex-wrap: nowrap ;
     margin: 1em ;
 }
 .feature .fas{
-    font-size: 5em ;
+    font-size: 3.5em ;
     color: rgb(91, 142, 209) ;
 }
 .feature h5 {
     color: rgb(70, 67, 67) ;
-    font-size: 1em ;
+    font-size: .8em ;
     font-weight: lighter ;
+    margin-top: 1.5em ;
 }
 @media screen and (max-width:1000px){
     #features{font-size: 16px;}

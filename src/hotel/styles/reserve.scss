@@ -90,6 +90,9 @@
     justify-content: space-around ;
     align-items: center ;
     flex-wrap: nowrap ;
+    p,button,input{
+        margin: 0 .2em ;
+    }
 }
 .room .reserve .room-num > * {flex-shrink: 0 ;}
 .room .reserve .room-num button{
