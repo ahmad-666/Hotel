@@ -1,4 +1,4 @@
-#features{
+#myfeatures{
     width: 100% ;
     height: auto;
     position: relative ;
@@ -13,7 +13,7 @@
     align-content: center ;
     background-color: rgb(245,245,245) ;
 }
-#features .feature{
+#myfeatures .feature{
     width: 11em ;
     min-height: 6em;
     display: flex ;
@@ -34,8 +34,8 @@
     margin-top: 1.5em ;
 }
 @media screen and (max-width:1000px){
-    #features{font-size: 16px;}
+    #myfeatures{font-size: 16px;}
 }
 @media screen and (max-width:550px){
-    #features{font-size: 12px;}
+    #myfeatures{font-size: 12px;}
 }

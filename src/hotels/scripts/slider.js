@@ -1,7 +1,7 @@
 import { throws } from "assert";
 
-let dots = document.querySelectorAll('#slider #dots .dot') ;
-let slides = document.querySelectorAll('#slider #slides .slide') ;
+let dots = document.querySelectorAll('#myslider #dots .dot') ;
+let slides = document.querySelectorAll('#myslider #slides .slide') ;
 dots.forEach(dot=>{
     dot.addEventListener('click',dotHandler) ;
 }) ;

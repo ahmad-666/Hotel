@@ -1,4 +1,4 @@
-#slider{
+#myslider{
     width: 100% ;
     height: auto;
     display: flex ;
@@ -75,16 +75,16 @@
     }
 }
 @media screen and (max-width:1000px){
-    #slider{font-size: 16px ;}
+    #myslider{font-size: 16px ;}
 }
 @media screen and (max-width:500px){
-    #slider{font-size: 12px ;}
+    #myslider{font-size: 12px ;}
 }
 @media screen and (max-width:380px){
-    #slider{height: 75vh;}
-    #slider #slides .slide p{font-size: 1.8em ;}
+    #myslider{height: 75vh;}
+    #myslider #slides .slide p{font-size: 1.8em ;}
 }
 @media screen and (max-width:290px){
-    #slider{height: 100vh;}
-    #slider #slides .slide p{font-size: 1.4em ;}
+    #myslider{height: 100vh;}
+    #myslider #slides .slide p{font-size: 1.4em ;}
 }
