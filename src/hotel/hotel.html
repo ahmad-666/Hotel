@@ -312,6 +312,41 @@
                 </div>
             </div>
             <div id="comments">
+                <div class="add-comment">
+                    <p>برای ثبت نظر وارد حساب کاربری خود شوید</p>
+                    <button>افزودن نظر</button>
+                </div>
+                <form id="user-comment" name="user-comment" method="GET" action="#!" enctype="text/plain">
+                    <textarea name="comment-content" id="comment-content" placeholder="نظر شما درباره این مکان اقامتی"></textarea>
+                    <div class="params">
+                        <div class="param">
+                            <div class="ranger"></div>
+                            <p>پارامتر</p>
+                            <input type="hidden" id="param1" name="param1">
+                        </div>
+                        <div class="param">
+                            <div class="ranger"></div>
+                            <p>پارامتر</p>
+                            <input type="hidden" id="param2" name="param2">
+                        </div>
+                        <div class="param">
+                            <div class="ranger"></div>
+                            <p>پارامتر</p>
+                            <input type="hidden" id="param3" name="param3">
+                        </div>
+                        <div class="param">
+                            <div class="ranger"></div>
+                            <p>پارامتر</p>
+                            <input type="hidden" id="param4" name="param4">
+                        </div>
+                        <div class="param">
+                            <div class="ranger"></div>
+                            <p>پارامتر</p>
+                            <input type="hidden" id="param5" name="param5">
+                        </div>
+                    </div>
+                    <button type="submit">ثبت نظر</button>
+                </form>
                 <div class="comment">
                     <div class="info">
                         <img src="../assets/imgs/profile.png" alt="profile-pic">
@@ -603,7 +638,7 @@
         <input type="submit" value="جست و جو" class="teal white-text lighten-1">   
     </form>
     <div id="rooms">
-        <div class="room">
+        <div class="room hotel">
             <div class="info">
                 <div class="room-name">
                     نام اتاق
@@ -800,31 +835,42 @@
                 </div>
             </div>
         </div>
-        <div class="room">
+        <div class="room suite">
             <div class="info">
                 <div class="room-name">
-                    نام اتاق
+                    نام سوییت
                 </div>
                 <div class="guests">
-                    <div class="icon">
-                        <i class="fas fa-male"></i>
-                        <i class="fas fa-male"></i>
-                        <i class="fas fa-male"></i>
-                        <i class="fas fa-male"></i>
+                    <div class="base">
+                        <div class="icons">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <p>2 نفر</p>
+                        <p>ظرفیت پایه</p>
                     </div>
-                    <p class="guest-num">۴نفر</p>
+                    <div class="max">
+                        <div class="icons">
+                            <i class="fas fa-male"></i>
+                            <i class="fas fa-male"></i>
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <p>10 نفر</p>
+                        <p>حداکثر ظرفیت</p>
+                    </div>
                 </div>
                 <div class="food">صبحانه,نهار,شام</div>
             </div>
             <div class="price">
+                <p class="discount"> تخفیف %30</p>
                 <div class="before-discount">
                     <p>1.000.000 تومان</p>
                     <p>(هر شب اقامت)</p>
                 </div>
+                <p class="after-discount">750.000 تومان</p>
             </div>
             <div class="reserve">
                 <div class="room-num">
-                    <p>تعداد اتاق</p>
+                    <p>تعداد نفرات</p>
                     <button class="increase">
                         <span>+</span>
                     </button>
@@ -995,6 +1041,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
     <div id="suggestion" class="slider-wrapper">
         <h4> مکان های اقامتی مشابه</h4>

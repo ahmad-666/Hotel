@@ -29,10 +29,40 @@ function docHandler(e){
     }
 }
 
-let currFilters = document.querySelectorAll('#curr-filters .filter') ;
-currFilters.forEach(curr=>{
-    curr.addEventListener('click',currFilterHandler) ;
+//let currFilters = document.querySelectorAll('#curr-filters .filter') ;
+// currFilters.forEach(curr=>{
+//     curr.addEventListener('click',currFilterHandler) ;
+// })
+
+//add to curr filters :
+let checkboxes = document.querySelectorAll('#filters input[type="checkbox"]') ;
+let currWrapper = document.querySelector('#currs') ;
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change',checkboxClick) ;
 })
+function checkboxClick(e){
+    if(this.checked){
+        let filter = document.createElement('span') ;
+        filter.classList.add('filter') ;
+        let closeIcon = document.createElement('i') ;
+        closeIcon.classList.add('fas','fa-times') ;
+        let text = document.createElement('p') ;
+        text.textContent = this.parentElement.querySelector('p').textContent ;
+        filter.appendChild(closeIcon) ;
+        filter.appendChild(text) ;
+        filter.setAttribute('id',`f-${this.getAttribute('id')}`) ;
+        currWrapper.appendChild(filter) ;
+        filter.addEventListener('click',currFilterHandler)
+    }
+    else {
+        let filter = currWrapper.querySelector(`#f-${this.getAttribute('id')}`) ;
+        currWrapper.removeChild(filter) ;
+    }
+
+}
 function currFilterHandler(e){
-    this.classList.add('hide') ;
+    this.parentElement.removeChild(this) ;
+    let id = this.getAttribute('id') ;
+    id = id.slice(2,id.length) ;
+    document.querySelector(`#${id}`).checked = false ;
 }

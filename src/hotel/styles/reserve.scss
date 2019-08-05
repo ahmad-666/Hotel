@@ -240,13 +240,75 @@ input[type=number] {
     transform: translateY(-50%) ;
     background-color: white ;
 }
+#rooms .room.suite .info{width: 33.3% ; height: 12em; }
+#rooms .room.suite .price{width: 33.3% ; height: 12em;}
+#rooms .room.suite .reserve{width: 33.3% ; height: 12em;}
+// #rooms .room.suite .features{width: 100% ; height: auto;;}
+// #rooms .room.suite .calender-show{width: 100% ; height: auto;}
+// #rooms .room.suite .room-calender{width: 100% ; height: auto ;}
+#rooms .room.suite .info > *{
+    margin: .2em 0 ;
+    width: 100% ;
+}
+.room.suite {
+    .guests{
+        width: 100% ;
+        height: auto;
+        display: flex ;
+        flex-direction: row ;
+        justify-content: space-around ;
+        align-items: center ;
+        flex-wrap: wrap ;
+        align-content: flex-start ;
+        .base,.max{   
+            width: auto ;
+            height: auto;
+            margin: 1em ;
+            display: flex ;
+            flex-direction: column;
+            justify-content: flex-start ;
+            align-items: center; 
+            flex-wrap: nowrap ;
+            .icons{
+                width: auto ;
+                height: auto;
+                display: flex ;
+                flex-direction: row ;
+                justify-content: flex-start ;
+                align-items: center ;
+                flex-wrap: nowrap ;
+                i{            
+                }
+            }
+            .icons,p{
+                margin: .1em 0 ;
+            }
+        }
+    }
+}
 @media screen and (max-width:900px){
     #rooms{font-size: 15px ;}
 }
+@media screen and (max-width:680px){
+    #rooms .room.suite .info{width: 33.3% ; height: 17em; }
+    #rooms .room.suite .price{width: 33.3% ; height: 17em;}
+    #rooms .room.suite .reserve{width: 33.3% ; height: 17em;}
+    #rooms .room.suite .info > *{
+        margin: .3em 0 ;
+    }
+    .room.suite {
+        .guests{
+            .base,.max{   
+                margin: .3em ;
+            }
+        }
+       
+    }
+}
 @media screen and (max-width:600px){
-    #rooms .room .info{width: 100% ; height: auto; }
-    #rooms .room .price{width: 50% ; height: 10em;}
-    #rooms .room .reserve{width: 50% ; height: 10em;}
+    #rooms .room .info,#rooms .room.suite .info{width: 100% ; height: auto; }
+    #rooms .room .price,#rooms .room.suite .price{width: 50% ; height: 10em;}
+    #rooms .room .reserve,#rooms .room.suite .reserve{width: 50% ; height: 10em;}
 }
 @media screen and (max-width:500px){
     .room .room-calender{     
@@ -254,9 +316,9 @@ input[type=number] {
     }
 }
 @media screen and (max-width:400px){
-    #rooms .room .info{width: 100% ; height: auto; }
-    #rooms .room .price{width: 100% ; height: auto;}
-    #rooms .room .reserve{width: 100% ; height: auto;}
+    #rooms .room .info,#rooms .room.suite .info{width: 100% ; height: auto; }
+    #rooms .room .price,#rooms .room.suite .price{width: 100% ; height: auto;}
+    #rooms .room .reserve,#rooms .room.suite .reserve{width: 100% ; height: auto;}
     .room .reserve > button{margin-top: 1em ;}
 
 }

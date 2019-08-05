@@ -1,5 +1,6 @@
 //load styles
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css' ;
+import '../../node_modules/nouislider/distribute/nouislider.min.css' ;
 import '../index/styles/init.scss' ;
 import '../index/styles/header.scss' ;
 import '../index/styles/header-grid.scss' ;
