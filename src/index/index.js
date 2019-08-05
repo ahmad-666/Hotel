@@ -1,4 +1,4 @@
-//load styles
+//-----------------------------load styles
 //index.html
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css' ;
 import './styles/init.scss' ;
@@ -26,7 +26,7 @@ import './styles/modals.scss' ;
 // import '../hotel/styles/tabs.scss' ;
 // import '../hotel/styles/comments.scss' ;
 // import '../hotel/styles/reserve.scss' ;
-//load scripts
+//-----------------------------------load scripts
 //index.html
 import './scripts/header' ;
 import './scripts/header-grid' ;
