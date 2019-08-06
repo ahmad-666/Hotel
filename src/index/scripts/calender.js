@@ -30,7 +30,7 @@ function Calender(elm,needThreshold,compareTo){
         today: parseInt(moment().format('jDD')) 
     } //we need current date and we never change it 
     this.year = this.currDate.year ; //we will change it later(when we press next/prev btn)
-    this.monthIndex = this.currDate.monthIndex ; //we will change it later(when we press next/prev btn)
+    this.monthIndex = this.currDate.monthIndex ; //we will change it later(when we press next/prev btn) , [0,11]
     this.monthName = this.currDate.monthName ; //we will change it later(when we press next/prev btn) 
     this.today = this.currDate.today ; //we will change it later(when we press clickable day) 
     this.monthNumDays = moment.jDaysInMonth(this.year,this.monthIndex) ;
@@ -112,9 +112,7 @@ Calender.prototype.handleEvent = function(e){
                 this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
                 this.input.parentElement.querySelector('label').classList.add('up') ;
                 this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
-                let evt = document.createEvent("HTMLEvents");
-                evt.initEvent("change", false, true);
-                this.hiddenForm.dispatchEvent(evt);
+                
                 this.elm.classList.remove('show') ;
                 //console.log(this.hiddenForm.value) ;
                 //if current calender has no threshold we need to remove all values from other calender
@@ -122,18 +120,21 @@ Calender.prototype.handleEvent = function(e){
                 this.compareTo.input.parentElement.querySelector('label').classList.remove('up') ;
                 this.compareTo.hiddenForm.value = `` ;
                 //this.compareTo.elm.classList.remove('show') ;
+                let evt = document.createEvent("HTMLEvents");
+                evt.initEvent("change", false, true);
+                this.hiddenForm.dispatchEvent(evt);
                 document.removeEventListener('click',this) ;
-            }     
+            }
             else { //we need to check its value and validate it
                 if(this.checkThreshold(this.compareTo)){//we validate it 
                     this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
                     this.input.parentElement.querySelector('label').classList.add('up') ;
-                    this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
+                    this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value                
+                    this.elm.classList.remove('show') ;
+                    //console.log(this.hiddenForm.value) ;
                     let evt = document.createEvent("HTMLEvents");
                     evt.initEvent("change", false, true);
                     this.hiddenForm.dispatchEvent(evt);
-                    this.elm.classList.remove('show') ;
-                    //console.log(this.hiddenForm.value) ;
                     document.removeEventListener('click',this) ;
                 }
             }      
@@ -157,7 +158,10 @@ Calender.prototype.checkThreshold = function(otherCalender){ //this function pre
     //when we have date-in and date-out we should add this function to date-out to prevent us from selecting dates before date-in
     let otherCalenderDate = moment(`${otherCalender.year}/${otherCalender.monthIndex+1}/${otherCalender.today}`,'jYYYY/jMM/jDD').format('YYYY/MM/DD') ;
     let currDate = moment(`${this.year}/${this.monthIndex+1}/${this.today}`,'jYYYY/jMM/jDD').format('YYYY/MM/DD') ;
-    return (new Date(currDate).getTime() > new Date(otherCalenderDate).getTime()) ;
+    return (new Date(currDate).getTime() >= new Date(otherCalenderDate).getTime()) ;
+    //if we change it to :
+    //return (new Date(currDate).getTime() > new Date(otherCalenderDate).getTime()) ; 
+    //then we cant select that date that we select in date-in
 }
 let calenderIn ;
 let calenderOut ;

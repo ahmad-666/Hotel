@@ -67,7 +67,7 @@
     font-family: byekan ;
 }
 .room .price .before-discount p{display: inline-block ;}
-.room .price  .before-discount p{font-size: .8em}
+.room .price  .before-discount p{font-size: 1.1em}
 .room .price .discount ~ .before-discount p{font-size: .8em}
 .room .price .discount ~ .before-discount p:nth-child(1){
     position: relative;
@@ -240,17 +240,17 @@ input[type=number] {
     transform: translateY(-50%) ;
     background-color: white ;
 }
-#rooms .room.suite .info{width: 33.3% ; height: 12em; }
-#rooms .room.suite .price{width: 33.3% ; height: 12em;}
-#rooms .room.suite .reserve{width: 33.3% ; height: 12em;}
-// #rooms .room.suite .features{width: 100% ; height: auto;;}
-// #rooms .room.suite .calender-show{width: 100% ; height: auto;}
-// #rooms .room.suite .room-calender{width: 100% ; height: auto ;}
-#rooms .room.suite .info > *{
+#rooms .room.villa .info{width: 33.3% ; height: 12em; }
+#rooms .room.villa .price{width: 33.3% ; height: 12em;}
+#rooms .room.villa .reserve{width: 33.3% ; height: 12em;}
+// #rooms .room.villa .features{width: 100% ; height: auto;;}
+// #rooms .room.villa .calender-show{width: 100% ; height: auto;}
+// #rooms .room.villa .room-calender{width: 100% ; height: auto ;}
+#rooms .room.villa .info > *{
     margin: .2em 0 ;
     width: 100% ;
 }
-.room.suite {
+.room.villa {
     .guests{
         width: 100% ;
         height: auto;
@@ -290,13 +290,13 @@ input[type=number] {
     #rooms{font-size: 15px ;}
 }
 @media screen and (max-width:680px){
-    #rooms .room.suite .info{width: 33.3% ; height: 17em; }
-    #rooms .room.suite .price{width: 33.3% ; height: 17em;}
-    #rooms .room.suite .reserve{width: 33.3% ; height: 17em;}
-    #rooms .room.suite .info > *{
+    #rooms .room.villa .info{width: 33.3% ; height: 17em; }
+    #rooms .room.villa .price{width: 33.3% ; height: 17em;}
+    #rooms .room.villa .reserve{width: 33.3% ; height: 17em;}
+    #rooms .room.villa .info > *{
         margin: .3em 0 ;
     }
-    .room.suite {
+    .room.villa {
         .guests{
             .base,.max{   
                 margin: .3em ;
@@ -306,9 +306,9 @@ input[type=number] {
     }
 }
 @media screen and (max-width:600px){
-    #rooms .room .info,#rooms .room.suite .info{width: 100% ; height: auto; }
-    #rooms .room .price,#rooms .room.suite .price{width: 50% ; height: 10em;}
-    #rooms .room .reserve,#rooms .room.suite .reserve{width: 50% ; height: 10em;}
+    #rooms .room .info,#rooms .room.villa .info{width: 100% ; height: auto; }
+    #rooms .room .price,#rooms .room.villa .price{width: 50% ; height: 10em;}
+    #rooms .room .reserve,#rooms .room.villa .reserve{width: 50% ; height: 10em;}
 }
 @media screen and (max-width:500px){
     .room .room-calender{     
@@ -316,9 +316,9 @@ input[type=number] {
     }
 }
 @media screen and (max-width:400px){
-    #rooms .room .info,#rooms .room.suite .info{width: 100% ; height: auto; }
-    #rooms .room .price,#rooms .room.suite .price{width: 100% ; height: auto;}
-    #rooms .room .reserve,#rooms .room.suite .reserve{width: 100% ; height: auto;}
+    #rooms .room .info,#rooms .room.villa .info{width: 100% ; height: auto; }
+    #rooms .room .price,#rooms .room.villa .price{width: 100% ; height: auto;}
+    #rooms .room .reserve,#rooms .room.villa .reserve{width: 100% ; height: auto;}
     .room .reserve > button{margin-top: 1em ;}
 
 }
