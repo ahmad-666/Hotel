@@ -12,6 +12,7 @@ import '../index/styles/calender.scss' ;
 import '../index/styles/suggestions.scss' ;
 // import '../index/styles/features.scss' ;
 // import '../index/styles/sponsers.scss' ;
+import './styles/checkout.scss' ;
 import '../index/styles/footer.scss' ;
 // import '../index/styles/index.scss' ;
 import '../index/styles/copyright.scss' ;
@@ -39,6 +40,7 @@ import './scripts/tabs' ;
 import './scripts/comments' ;
 //import './scripts/user-imgs' ;
 import './scripts/reserve' ;
+import './scripts/checkout' ;
 import '../index/scripts/suggestions' ;
 import '../index/scripts/modals'
 

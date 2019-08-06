@@ -112,6 +112,9 @@ Calender.prototype.handleEvent = function(e){
                 this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
                 this.input.parentElement.querySelector('label').classList.add('up') ;
                 this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
+                let evt = document.createEvent("HTMLEvents");
+                evt.initEvent("change", false, true);
+                this.hiddenForm.dispatchEvent(evt);
                 this.elm.classList.remove('show') ;
                 //console.log(this.hiddenForm.value) ;
                 //if current calender has no threshold we need to remove all values from other calender
@@ -126,6 +129,9 @@ Calender.prototype.handleEvent = function(e){
                     this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
                     this.input.parentElement.querySelector('label').classList.add('up') ;
                     this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
+                    let evt = document.createEvent("HTMLEvents");
+                    evt.initEvent("change", false, true);
+                    this.hiddenForm.dispatchEvent(evt);
                     this.elm.classList.remove('show') ;
                     //console.log(this.hiddenForm.value) ;
                     document.removeEventListener('click',this) ;
@@ -160,3 +166,7 @@ calenderOut = new Calender(document.querySelector('#search .input-wrapper  input
 //we set second parameter to true so now everytime we click on new day we check its value and only if selected date is higher than 
 //date-in calender we select it
 calenderIn.compareTo = calenderOut ;
+export {
+    calenderIn ,
+    calenderOut
+} ;

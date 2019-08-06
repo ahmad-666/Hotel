@@ -836,6 +836,7 @@
             </div>
         </div>
         <div class="room suite">
+            <input type="hidden" name="extra-price" value="375000">
             <div class="info">
                 <div class="room-name">
                     نام سوییت
@@ -1040,8 +1041,7 @@
                     <p class="my-price">1.000.000 تومان</p>
                 </div>
             </div>
-        </div>
-        
+        </div>      
     </div>
     <div id="suggestion" class="slider-wrapper">
         <h4> مکان های اقامتی مشابه</h4>
@@ -1259,6 +1259,26 @@
             </a>
         </div>
     </div>
+    <form id="villa-checkout" name="villa-checkout" method="GET" action="#!" enctype="text/plain">
+        <p class="night">مبلغ قابل پرداخت برای ۲ شب اقامت</p>
+        <div class="norm-price">
+            <p class="person-num">نرخ هر شب تا ۸ نفر</p>
+            <p class="price">375000 تومان</p>
+        </div>
+        <div class="extra-price">
+            <p> نرخ هر نفر اظافه </p>
+            <p class="price">375000 تومان</p>
+        </div>
+        <div class="sum">
+            <p> مجموع </p>
+            <p class="price">750000 تومان</p>
+            <input type="hidden" id="sum-price" name="sum-price">
+        </div>
+        <button type="submit">پرداخت</button>
+        <p class="desc">
+            با انتخاب این ویلا شما از تاریخ ۵ مرداد تا ۱۰ مرداد و به مدت دو شب در آن اقامت خواهید داشت
+        </p>
+    </form>
     <div id="footer">
         <div id="content">
             <ul id="support">

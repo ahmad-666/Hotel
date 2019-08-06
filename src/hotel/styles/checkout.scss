@@ -1,0 +1,57 @@
+@import '../../colors.scss' ;
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+#villa-checkout{
+    width: 20em ;
+    height: auto;
+    position: fixed ;
+    top: 50% ;
+    right: 50% ;
+    transform: translate(50%,-50%) ;
+    background-color: $whiteColor1 ;
+    box-shadow: 0 0 .2em .05em $shadowColor ;
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    padding: .5em ;
+    display: none ;
+
+    .night,.norm-price,.extra-price,.sum,button[type="submit"],.desc{
+        margin: .5em 0 ;
+    }
+    .night{
+        font-size: $font-m ;
+        color: darken($greyColor,40%) ;
+    }
+    .norm-price,.extra-price,.sum{
+        width: 100% ;
+        height: auto;
+        display: flex ;
+        @include flex(row,space-between,center,nowrap,"") ;
+        p{
+            font-size: $font-m - .1em ;
+            color: darken($greyColor,40%) ;
+            margin: 0 $dist2 ;
+        }        
+    }
+    .sum{
+        p{
+            font-size: $font-m ;
+            color: $darkColor ;
+        }
+    }
+    button[type="submit"]{
+        width: auto ;
+        height: auto;
+        padding: ($dist1 - .2em) $dist3 ;
+        font-size: $font-l ;
+        color: white ;
+        background-color: $greenColor2 ;
+        border-radius: 2em ;
+        border: none ;
+        cursor: pointer;
+    }
+    .desc{
+        font-size: $font-m - .1em ;
+        color: darken($greyColor,40%) ;
+    }
+}
