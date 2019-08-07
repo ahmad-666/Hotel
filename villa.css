@@ -1371,193 +1371,6 @@ header .cloud:nth-child(2) {
   .slider-wrapper .btn {
     font-size: 6px; } }
 
-#confirm {
-  width: 100%;
-  height: auto;
-  padding: 1em;
-  background-color: white;
-  -webkit-box-shadow: 0 0 0.2em 0.05em rgba(70, 69, 85, 0.3);
-          box-shadow: 0 0 0.2em 0.05em rgba(70, 69, 85, 0.3);
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  -webkit-align-content: "";
-      -ms-flex-line-pack: "";
-          align-content: "";
-  z-index: 5; }
-  #confirm button {
-    width: auto;
-    height: auto;
-    padding: 0.5em 2em;
-    color: white;
-    background-color: #1EC198;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
-    -webkit-border-radius: 2em;
-            border-radius: 2em; }
-
-#villa-checkout {
-  z-index: 5;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  width: 20em;
-  height: auto;
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  -webkit-transform: translate(50%, -50%);
-     -moz-transform: translate(50%, -50%);
-      -ms-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
-  background-color: #f8f8f8;
-  -webkit-box-shadow: 0 0 0.2em 0.05em rgba(70, 69, 85, 0.3);
-          box-shadow: 0 0 0.2em 0.05em rgba(70, 69, 85, 0.3);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  -webkit-align-content: "";
-      -ms-flex-line-pack: "";
-          align-content: "";
-  padding: .5em; }
-  #villa-checkout .fa-times {
-    position: absolute;
-    cursor: pointer;
-    color: #2d2d31;
-    font-size: 1.2em;
-    right: .5em;
-    top: .2em; }
-  #villa-checkout .night, #villa-checkout .norm-price, #villa-checkout .extra-price, #villa-checkout .sum, #villa-checkout button[type="submit"], #villa-checkout .desc {
-    margin: .5em 0; }
-  #villa-checkout .night {
-    font-size: 0.8em;
-    color: #52525c; }
-  #villa-checkout .norm-price, #villa-checkout .extra-price, #villa-checkout .sum {
-    width: 100%;
-    height: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-align-content: "";
-        -ms-flex-line-pack: "";
-            align-content: ""; }
-    #villa-checkout .norm-price p, #villa-checkout .extra-price p, #villa-checkout .sum p {
-      font-size: 0.7em;
-      color: #52525c;
-      margin: 0 1em; }
-  #villa-checkout .sum p {
-    font-size: 0.8em;
-    color: #2d2d31; }
-  #villa-checkout button[type="submit"] {
-    width: auto;
-    height: auto;
-    padding: 0.3em 2em;
-    font-size: 1em;
-    color: white;
-    background-color: #1EC198;
-    -webkit-border-radius: 2em;
-            border-radius: 2em;
-    border: none;
-    cursor: pointer; }
-  #villa-checkout .desc {
-    font-size: 0.7em;
-    color: #52525c; }
-
-#villa-checkout.show {
-  visibility: visible;
-  opacity: 1; }
-
-@media screen and (max-width: 800px) {
-  #villa-checkout {
-    width: 18em;
-    font-size: 18px; }
-  #confirm {
-    font-size: 17px; } }
-
-@media screen and (max-width: 400px) {
-  #villa-checkout {
-    width: 80%;
-    font-size: 17px; }
-  #confirm {
-    font-size: 13px; } }
-
-@media screen and (max-width: 300px) {
-  #villa-checkout {
-    width: 90%;
-    font-size: 14px; } }
-
 #footer {
   width: 100%;
   height: 25em;
@@ -3500,4 +3313,191 @@ input[type=number] {
   .room .reserve .room-num button {
     width: 2em;
     height: 2em; } }
+
+#confirm {
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  background-color: white;
+  -webkit-box-shadow: 0 0 0.2em 0.05em rgba(70, 69, 85, 0.3);
+          box-shadow: 0 0 0.2em 0.05em rgba(70, 69, 85, 0.3);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  z-index: 5; }
+  #confirm button {
+    width: auto;
+    height: auto;
+    padding: 0.5em 2em;
+    color: white;
+    background-color: #1EC198;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    -webkit-border-radius: 2em;
+            border-radius: 2em; }
+
+#villa-checkout {
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  width: 20em;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 0 0 0.2em 0.05em rgba(70, 69, 85, 0.3);
+          box-shadow: 0 0 0.2em 0.05em rgba(70, 69, 85, 0.3);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  padding: .5em; }
+  #villa-checkout .fa-times {
+    position: absolute;
+    cursor: pointer;
+    color: #2d2d31;
+    font-size: 1.2em;
+    right: .5em;
+    top: .2em; }
+  #villa-checkout .night, #villa-checkout .norm-price, #villa-checkout .extra-price, #villa-checkout .sum, #villa-checkout button[type="submit"], #villa-checkout .desc {
+    margin: .5em 0; }
+  #villa-checkout .night {
+    font-size: 0.8em;
+    color: #52525c; }
+  #villa-checkout .norm-price, #villa-checkout .extra-price, #villa-checkout .sum {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: ""; }
+    #villa-checkout .norm-price p, #villa-checkout .extra-price p, #villa-checkout .sum p {
+      font-size: 0.7em;
+      color: #52525c;
+      margin: 0 1em; }
+  #villa-checkout .sum p {
+    font-size: 0.8em;
+    color: #2d2d31; }
+  #villa-checkout button[type="submit"] {
+    width: auto;
+    height: auto;
+    padding: 0.3em 2em;
+    font-size: 1em;
+    color: white;
+    background-color: #1EC198;
+    -webkit-border-radius: 2em;
+            border-radius: 2em;
+    border: none;
+    cursor: pointer; }
+  #villa-checkout .desc {
+    font-size: 0.7em;
+    color: #52525c; }
+
+#villa-checkout.show {
+  visibility: visible;
+  opacity: 1; }
+
+@media screen and (max-width: 800px) {
+  #villa-checkout {
+    width: 18em;
+    font-size: 18px; }
+  #confirm {
+    font-size: 17px; } }
+
+@media screen and (max-width: 400px) {
+  #villa-checkout {
+    width: 80%;
+    font-size: 17px; }
+  #confirm {
+    font-size: 13px; } }
+
+@media screen and (max-width: 300px) {
+  #villa-checkout {
+    width: 90%;
+    font-size: 14px; } }
 

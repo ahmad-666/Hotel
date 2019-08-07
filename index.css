@@ -4613,19 +4613,12 @@ header .cloud:nth-child(2) {
   color: #323232;
   font-size: 1em;
   text-align: center;
-  margin: 0 .5em;
+  margin: 0 1.5em;
   white-space: nowrap;
   line-height: 3em; }
 
 #nav a#host {
-  width: 6em;
-  height: 2.5em;
-  line-height: 2.5em;
-  text-align: center;
-  margin-right: 1em;
-  border: 2px solid #323232;
-  -webkit-border-radius: 2em;
-          border-radius: 2em; }
+  width: auto; }
 
 #nav a .fas {
   position: relative;
@@ -4641,11 +4634,6 @@ header .cloud:nth-child(2) {
 #nav img {
   width: 100%;
   height: 3em; }
-
-#nav #sign-in {
-  width: 7em;
-  -webkit-border-radius: 40px;
-          border-radius: 40px; }
 
 #hamburger {
   width: auto;
@@ -5250,6 +5238,9 @@ header .cloud:nth-child(2) {
     cursor: pointer;
     -webkit-border-radius: 1.5em;
             border-radius: 1.5em; }
+
+#search.villa-search {
+  width: 70%; }
 
 @media screen and (max-width: 1060px) {
   #search {
@@ -6030,7 +6021,7 @@ header .cloud:nth-child(2) {
   .slider-wrapper .btn {
     font-size: 6px; } }
 
-#features {
+#myfeatures {
   width: 100%;
   height: auto;
   position: relative;
@@ -6065,9 +6056,9 @@ header .cloud:nth-child(2) {
           align-content: center;
   background-color: whitesmoke; }
 
-#features .feature {
+#myfeatures .feature {
   width: 11em;
-  height: 11em;
+  min-height: 6em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -6080,9 +6071,11 @@ header .cloud:nth-child(2) {
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;
@@ -6094,20 +6087,21 @@ header .cloud:nth-child(2) {
   margin: 1em; }
 
 .feature .fas {
-  font-size: 5em;
+  font-size: 3.5em;
   color: #5b8ed1; }
 
 .feature h5 {
   color: #464343;
-  font-size: 1em;
-  font-weight: lighter; }
+  font-size: .8em;
+  font-weight: lighter;
+  margin-top: 1.5em; }
 
 @media screen and (max-width: 1000px) {
-  #features {
+  #myfeatures {
     font-size: 16px; } }
 
 @media screen and (max-width: 550px) {
-  #features {
+  #myfeatures {
     font-size: 12px; } }
 
 #sponsers {
