@@ -632,7 +632,7 @@
     </form>
     <div id="rooms">
         <div class="room villa">
-            <input type="hidden" name="extra-price" value="375000">
+            <input type="hidden" id="extra-price" value="35000">
             <div class="info">
                 <div class="room-name">
                     نام ویلا
@@ -642,7 +642,7 @@
                         <div class="icons">
                             <i class="fas fa-male"></i>
                         </div>
-                        <p class="base-num">2 نفر</p>
+                        <p class="base-num">5 نفر</p>
                         <p>ظرفیت پایه</p>
                     </div>
                     <div class="max">
@@ -673,12 +673,12 @@
                     <button class="increase">
                         <span>+</span>
                     </button>
-                    <input type="number" value="0">
+                    <input type="number" readonly value="0" id="guest-num">
                     <button class="decrease">
                         <span>-</span>
                     </button>
                 </div>
-                <button>رزرو</button>
+                <!-- <button>رزرو</button> -->
             </div>
             <div class="features">
                 <p> امکانات </p>
@@ -1058,10 +1058,11 @@
         </div>
     </div>
     <form id="villa-checkout" name="villa-checkout" method="GET" action="#!" enctype="text/plain">
-        <p class="night">مبلغ قابل پرداخت برای ۲ شب اقامت</p>
+        <i class="fas fa-times"></i>
+        <p class="night"></p>
         <div class="norm-price">
-            <p class="person-num">نرخ هر شب تا ۸ نفر</p>
-            <p class="price">375000 تومان</p>
+            <p class="person-num"> </p>
+            <p class="price"></p>
         </div>
         <div class="extra-price">
             <p> نرخ هر نفر اظافه </p>
@@ -1077,6 +1078,9 @@
             با انتخاب این ویلا شما از تاریخ ۵ مرداد تا ۱۰ مرداد و به مدت دو شب در آن اقامت خواهید داشت
         </p>
     </form>
+    <div id="confirm">
+        <button>تایید رزرو</button>
+    </div>
     <div id="footer">
         <div id="content">
             <ul id="support">

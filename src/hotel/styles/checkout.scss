@@ -1,7 +1,36 @@
 @import '../../colors.scss' ;
 @import '../../variables.scss' ;
 @import '../../mixins.scss' ;
+#confirm{
+    width: 100% ;
+    height: auto;
+    padding: 1em ;
+    background-color: white ;
+    box-shadow: 0 0 .2em .05em $shadowColor ;
+    position: fixed ;
+    bottom: 0 ;
+    right: 0 ;
+    display: flex ;
+    @include flex(row,center,center,nowrap,"") ;
+    z-index: 5;
+    button{
+        width: auto ;
+        height: auto;
+        padding: $dist1 $dist3 ;
+        color: white ;
+        background-color: $greenColor2 ;
+        font-size: $font-l ;
+        border: none ;
+        cursor: pointer;
+        border-radius: 2em ;
+
+    }
+}
 #villa-checkout{
+    z-index: 5;
+    visibility: hidden ;
+    opacity: 0;
+    transition: all .4s ease-in-out ;
     width: 20em ;
     height: auto;
     position: fixed ;
@@ -13,8 +42,14 @@
     display: flex ;
     @include flex(column,flex-start,center,nowrap,"") ;
     padding: .5em ;
-    display: none ;
-
+    .fa-times{
+        position: absolute ;
+        cursor: pointer;
+        color: $darkColor ;
+        font-size: $font-xl ;
+        right: .5em ;
+        top: .2em ;
+    }
     .night,.norm-price,.extra-price,.sum,button[type="submit"],.desc{
         margin: .5em 0 ;
     }
@@ -54,4 +89,8 @@
         font-size: $font-m - .1em ;
         color: darken($greyColor,40%) ;
     }
+}
+#villa-checkout.show{
+    visibility: visible ;
+    opacity: 1;
 }

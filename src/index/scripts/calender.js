@@ -1,6 +1,6 @@
 import moment from 'moment-jalaali' ;
-import { throws } from 'assert';
 moment.loadPersian({dialect: 'persian-modern'}) ;
+
 function Calender(elm,needThreshold,compareTo){
     //html elements
     this.elm = elm ;

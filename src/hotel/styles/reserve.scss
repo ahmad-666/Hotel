@@ -1,3 +1,6 @@
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import '../../variables.scss' ;
 #rooms{
     width: 90% ;
     height: auto;
@@ -29,6 +32,8 @@
 #rooms .room .features{width: 100% ; height: auto;;}
 #rooms .room .calender-show{width: 100% ; height: auto;}
 #rooms .room .room-calender{width: 100% ; height: auto ;}
+#rooms .room #villa-checkout{width: 100% ; height: auto ;}
+
 #rooms .room .info , #rooms .room .price , #rooms .room .reserve{
     display: flex;
     flex-direction: column ;
@@ -286,6 +291,91 @@ input[type=number] {
         }
     }
 }
+// #rooms {
+//     .room.villa{
+//         #villa-checkout{
+//             width: 50% ;
+//             border-top: 1px solid rgba(200,200,200,1)  ;
+//             padding: 1em ;
+//             display: flex ;
+//             @include flex(column,flex-start,flex-start,nowrap,"");
+//             .night,.price-info,.sum,button[type="submit"],.info{
+//                 margin: $dist2 0 ;
+//             }
+//             .night{
+//                 font-size: $font-l ;
+//                 color: $darkColor ;
+//             }
+//             .price-info{
+//                 width:auto ;
+//                 height: auto;
+//                 // margin-left: auto ;
+//                 // margin-right: auto ;
+//                 display: flex ;
+//                 @include flex(column,flex-start,flex-start,nowrap,"") ;
+//                 .base-price,.extra-price{
+//                     margin: 1em .5em  ;
+//                 }
+//                 .base-price,.extra-price{
+//                     width: auto ;
+//                     height: auto;
+//                     display: flex ;
+//                     @include flex(row,flex-start,center,nowrap,"");
+//                     p{
+//                         width: auto ;
+//                         height: auto;
+//                         font-size: $font-m ;
+//                         color: $darkGrey ;
+//                         margin: 0 $dist3 ;
+//                         border: none ;
+//                     }
+//                     .price{
+//                         height: auto;
+//                     }
+//                 }
+//             }
+//             .sum{
+//                 width: auto ;
+//                 height: auto;
+//                 margin-left: auto ;
+//                 margin-right: auto ;
+//                 display: flex ;
+//                 @include flex(row,flex-start,center,nowrap,"");
+//                 p{
+//                     height: auto;
+//                     font-size: $font-l;
+//                     color: $darkColor ;
+//                     font-weight: 700 ;
+//                     margin: 0 $dist4 ;
+//                     border: none ;
+
+//                 }
+//             }
+//             button[type="submit"]{
+//                 width: auto ;
+//                 height: auto;
+//                 padding: $dist1 $dist3 ;
+//                 font-size: $font-l ;
+//                 color: white ;
+//                 background-color: $greenColor2 ;
+//                 margin-left: auto ;
+//                 margin-right: auto ;
+//                 cursor: pointer;
+//                 border: none ;
+//                 border-radius: 2em ;
+//             }
+//             .checkout-info{
+//                 font-size: $font-m ;
+//                 color: $darkGrey ;
+//                 line-height: 2em ;
+//                 width: 100% ;
+//                 height: auto;
+//                 text-align: right ;
+//                 border: none ;
+//             }
+//         }
+//     }
+// }
 @media screen and (max-width:900px){
     #rooms{font-size: 15px ;}
 }
