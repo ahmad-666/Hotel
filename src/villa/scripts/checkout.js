@@ -70,7 +70,7 @@ Villa.prototype.handleEvent = function(e){
                 this.guestsNum.disabled = true ;
                 this.addGuest.removeEventListener('click',this) ;
             }    
-            updateCheckout()  
+            updateCheckout(false)  
         }
         else if(e.currentTarget == this.reduceGuest) { //reduce guest
             this.addGuest.addEventListener('click',this) ;
@@ -91,7 +91,7 @@ Villa.prototype.handleEvent = function(e){
                 this.guestsNum.disabled = true ;
                 this.reduceGuest.removeEventListener('click',this) ;
             }   
-            updateCheckout()   
+            updateCheckout(false)   
         }
     }
 }
@@ -106,23 +106,27 @@ let extraPriceElm = checkout.querySelector('.extra-price .price') ;
 let sumElm = checkout.querySelector('.sum .price') ;
 let checkoutInfoElm = checkout.querySelector('.desc') ;
 let hiddenSumElm = checkout.querySelector('input[type="hidden"]#sum-price') ;
-updateCheckout() ;
-function updateCheckout(){
+updateCheckout(false) ;
+function updateCheckout(changeDaysNum){
     nightCountElm.textContent = 'مبلغ قابل پرداخت برای' +  ` ${daysNum}` + 'شب اقامت' ;
     basePersonElm.textContent = 'نرخ هر شب تا' + ' ' +  `${villa.base}` + ' ' + 'نفر' ;
     basePriceElm.textContent = `${villa.price}` + 'تومان' ;
     extraPriceElm.textContent = `${villa.extraPrice}` + 'تومان' ;
-    let checkoutTemp = villa.checkoutPrice ;
-    if(parseInt(villa.guestsNum.value)==0){
-        checkoutTemp = 0 ;
-    }
-    else if(parseInt(villa.guestsNum.value)<=villa.base && parseInt(villa.guestsNum.value)>0){
-        checkoutTemp = (villa.price*daysNum) ;
-    }
-    else if(parseInt(villa.guestsNum.value)>villa.base && parseInt(villa.guestsNum.value)<=villa.max){
-        checkoutTemp+=(villa.extraPrice*daysNum) ;
-    }
-    sumElm.textContent = `${checkoutTemp}` + 'تومان' ;
+    if(changeDaysNum){
+        let checkoutTemp = villa.checkoutPrice ;
+        if(parseInt(villa.guestsNum.value)==0){
+            checkoutTemp = 0 ;
+        }
+        else if(parseInt(villa.guestsNum.value)<=villa.base && parseInt(villa.guestsNum.value)>0){
+            checkoutTemp = (villa.price*daysNum) ;
+        }
+        else if(parseInt(villa.guestsNum.value)>villa.base && parseInt(villa.guestsNum.value)<=villa.max){
+            checkoutTemp = (villa.price*daysNum) ;
+            checkoutTemp+=(villa.extraPrice*daysNum*(villa.guestsNum.value-villa.base)) ;
+        }
+        villa.checkoutPrice = checkoutTemp ;
+    }  
+    sumElm.textContent = `${villa.checkoutPrice}` + 'تومان' ;
     hiddenSumElm.value = parseInt(sumElm.textContent) ;
     checkoutInfoElm.textContent = 
         'با انتخاب این ویلا شما از تاریخ' + ' ' + `${calenderIn.today}${calenderIn.monthName}` + ' ' 
@@ -133,7 +137,7 @@ function updateCheckout(){
 let calenders = [calenderIn.hiddenForm,calenderOut.hiddenForm] ;
 calenders.forEach(calender => {
     calender.addEventListener('change',()=>{
-        updateCheckout() ;
+        updateCheckout(true) ;
     })
 })
 

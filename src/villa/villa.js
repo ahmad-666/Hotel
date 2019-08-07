@@ -31,5 +31,6 @@ import '../hotel/scripts/comments' ;
 import '../hotel/scripts/initCalender' ;
 import '../hotel/scripts/daysNum' ;
 import './scripts/checkout' ;
+import '../hotel/scripts/reserve' ;
 import '../index/scripts/suggestions' ;
 import '../index/scripts/modals' ;
