@@ -19,6 +19,7 @@ import '../hotel/styles/tabs.scss' ;
 import '../hotel/styles/comments.scss' ;
 import '../hotel/styles/reserve.scss' ;
 import '../hotel/styles/checkout.scss' ;
+import '../hotel/styles/rules.scss' ;
 //---------------------------------load scripts
 import '../index/scripts/header' ;
 import '../index/scripts/header-grid' ;

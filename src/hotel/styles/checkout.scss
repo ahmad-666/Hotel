@@ -42,6 +42,7 @@
     display: flex ;
     @include flex(column,flex-start,center,nowrap,"") ;
     padding: .5em ;
+    z-index: 6;
     .fa-times{
         position: absolute ;
         cursor: pointer;

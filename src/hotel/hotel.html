@@ -470,7 +470,7 @@
     </div>
     <form action="#!" method="GET" id="search" autocomplete="off" enctype="text/plain" name="search">
         <div class="input-wrapper">
-            <input type="text" id="in" name="in">
+            <input type="text" id="in" name="in" readonly>
             <label for="in">تاریخ ورود</label>
             <i class="fas fa-calendar-alt"></i>
             <span class="line"></span>
@@ -550,7 +550,7 @@
             </div>
         </div>
         <div class="input-wrapper">
-            <input type="text" id="out" name="out">
+            <input type="text" id="out" name="out" readonly>
             <label for="out">تاریخ خروج</label>
             <i class="fas fa-calendar-alt"></i>
             <span class="line"></span>
@@ -835,213 +835,7 @@
                 </div>
             </div>
         </div>
-        <div class="room suite">
-            <input type="hidden" name="extra-price" value="375000">
-            <div class="info">
-                <div class="room-name">
-                    نام سوییت
-                </div>
-                <div class="guests">
-                    <div class="base">
-                        <div class="icons">
-                            <i class="fas fa-male"></i>
-                        </div>
-                        <p>2 نفر</p>
-                        <p>ظرفیت پایه</p>
-                    </div>
-                    <div class="max">
-                        <div class="icons">
-                            <i class="fas fa-male"></i>
-                            <i class="fas fa-male"></i>
-                            <i class="fas fa-male"></i>
-                        </div>
-                        <p>10 نفر</p>
-                        <p>حداکثر ظرفیت</p>
-                    </div>
-                </div>
-                <div class="food">صبحانه,نهار,شام</div>
-            </div>
-            <div class="price">
-                <p class="discount"> تخفیف %30</p>
-                <div class="before-discount">
-                    <p>1.000.000 تومان</p>
-                    <p>(هر شب اقامت)</p>
-                </div>
-                <p class="after-discount">750.000 تومان</p>
-            </div>
-            <div class="reserve">
-                <div class="room-num">
-                    <p>تعداد نفرات</p>
-                    <button class="increase">
-                        <span>+</span>
-                    </button>
-                    <input type="number" value="0">
-                    <button class="decrease">
-                        <span>-</span>
-                    </button>
-                </div>
-                <button>رزرو</button>
-            </div>
-            <div class="features">
-                <p> امکانات </p>
-                <div class="features-wrapper">
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
-                </div>
-            </div>
-            <div class="calender-show">
-                <button>
-                    نمایش تقویم
-                    <i class="fas fa-angle-down"></i>
-                </button>
-            </div>
-            <div class="room-calender">
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-            </div>
-        </div>      
+         
     </div>
     <div id="suggestion" class="slider-wrapper">
         <h4> مکان های اقامتی مشابه</h4>

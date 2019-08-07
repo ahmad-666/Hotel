@@ -6,7 +6,7 @@ import {daysNum} from '../../hotel/scripts/daysNum' ;
 //Open/close checkout menu
 //--------------------------
 //--------------------------
-let checkOutTrigger = document.querySelector('#confirm button') ;
+let checkOutTrigger = document.querySelector('#rooms .villa .reserve > button') ;
 let checkout = document.querySelector('#villa-checkout') ;
 checkOutTrigger.addEventListener('click',toggleCheckout) ;
 function toggleCheckout(e){

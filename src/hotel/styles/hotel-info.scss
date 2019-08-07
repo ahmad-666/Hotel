@@ -38,7 +38,7 @@
     display: inline-block ;  
 }
 #name , #type p , #city p , #score p {font-size: 1em ;}
-#type .fas , #city .fas{font-size: .8em;}
+#type .fas , #city .fas,#type .fab , #city .fab,#type .far , #city .far{font-size: .8em;}
 #hotel-features {
     display: flex ;
     flex-direction: row ;
@@ -47,7 +47,7 @@
     flex-wrap: wrap ;
     align-content: flex-start ;
 }
-#hotel-features .fas{
+#hotel-features .fas,#hotel-features .fab,#hotel-features .far{
     font-size: .8em ;
     margin: 1em ;
 }

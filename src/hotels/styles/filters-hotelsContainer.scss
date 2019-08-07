@@ -258,7 +258,7 @@
 #hotels .discount span{
     margin-right: 1em;
 }
-#hotels .front .fas:not(.fa-star){
+#hotels .front .fas:not(.fa-star),#hotels .front .fab:not(.fa-star),#hotels .front .far:not(.fa-star){
     position: relative ;
     right: -.5em ;
 }
@@ -310,7 +310,7 @@
     font-size: .8em ;
     font-weight: lighter ;
 }
-#hotels .back .fas{
+#hotels .back .fas,#hotels .back .fab,#hotels .back .far{
     color: rgb(200,200,200) ;
     font-size: .8em ;
 }

@@ -1,0 +1,126 @@
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import '../../variables.scss' ;
+#rules{
+    width: 90vw ;
+    height: auto;
+    border: 1.2px solid rgb(220,220,220) ;
+    padding: 1em ;
+    margin-top: $dist3 ;
+    margin-left: auto ;
+    margin-right: auto ;
+    display: flex ;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    h4{
+        font-size: $font-l ;
+        font-weight: 700 ;
+        color: $darkColor ;
+    }
+    .content{
+        margin-top: 1em ;
+        width: 100% ;
+        height: auto;
+        display: flex ;
+        @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+        .general-rules{           
+            width: 60% ;
+            height: auto;
+            display: flex ;
+            @include flex(row,flex-start,flex-start,wrap,flex-start);
+            .in-out,.cancel{
+                width: 45% ;
+                height: auto;
+                display: flex ;
+                @include flex(column,flex-start,center,nowrap,"") ;
+                img,h4,p{margin: .5em 0 ;}
+                img{
+                    width: 6em ;
+                    height: 6em;
+                }
+                h4{
+                    font-size: $font-m ;
+                    color: $darkColor ;
+                    font-weight: 700 ;
+                }
+                p{
+                    font-size: $font-m ;
+                    color: $darkGrey ;
+                    line-height: 2em ;
+                }
+                h4,p{
+                    width: 100% ;
+                    text-align: center ;
+                }
+            }
+            .cancel{margin-right: 5% ;}
+        }
+        .sub-rules{
+            width: 40% ;
+            height: auto;
+            display: flex ;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            .sub-rule{
+                margin: .5em 0 ;
+                width: 100% ;
+                height: auto;
+                display: flex ;
+                @include flex(row,flex-start,flex-start,nowrap,"") ;
+                i{
+                    font-size: $font-xl ;
+                    
+                    transform: translateY(-25%) ;
+                }
+                p{
+                    width: 100% ;
+                    height: auto;
+                    line-height: $dist3 ;
+                    font-size: $font-m ;
+                    color: $darkColor ;
+                    margin-right: .5em ;
+                }
+            }
+        }
+        .sub-rule.allow{
+            i{color: $greenColor2 ;}
+        }
+        .sub-rule.not-allow{
+            i{color: $redColor2 ;}
+        }
+    }
+}
+@media screen and (max-width:900px){
+    #rules{
+        font-size: 15px ;
+    }
+}
+@media screen and (max-width:600px){
+    #rules{
+        .content{
+            .general-rules{           
+                width: 100% ;
+            }
+            .sub-rules{
+                width: 100% ;
+                margin-top: 2em ;
+            }
+        }
+    }
+}
+@media screen and (max-width:380px){
+    #rules{
+        .content{
+            .general-rules{
+                .in-out,.cancel{
+                    width: 100% ;        
+                }
+                .cancel{margin-top: 1em ;}
+            }
+            
+        }
+    }
+}
+@media screen and (max-width:280px){
+    #rules{
+        font-size: 12px ;
+    }
+}
