@@ -172,6 +172,7 @@ function updateCheckout(){
         sumCheckout+=hotel.checkout ;
     })
     sum.textContent = `${sumCheckout} تومان` ;
+    hotelCheckout.querySelector('input[type="hidden"]#sum-hotel').value = sumCheckout ;
 }
 //trigger on calender changing 
 let calenders = [calenderIn.hiddenForm,calenderOut.hiddenForm] ;
