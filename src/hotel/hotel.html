@@ -468,7 +468,66 @@
             </div>
         </div>  
     </div>
-    <form action="#!" method="GET" id="search" autocomplete="off" enctype="text/plain" name="search">
+    <div id="rules">
+        <h4>قوانین حضور در این مکان اقامتی</h4>
+        <div class="content">
+            <div class="general-rules">
+                <div class="in-out">
+                    <img src="../assets/imgs/clock.png" alt="clock">
+                    <h4>قوانین ورود خروج</h4>
+                    <p>مسافرین گرامی میتوانند بعد از ساعت 14 اتاق خود را تحویل بگیرند و قبل از ساعت 12 اتاق رو تحویل دهند</p>
+                </div>
+                <div class="cancel">
+                    <img src="../assets/imgs/refund.png" alt="refund">
+                    <h4>قوانین  لغو رزرو</h4>
+                    <p>
+                        قوانین قوانین قوانین قوانین قوانین قوانین
+                        قوانین قوانین قوانین قوانین قوانین قوانین
+                        قوانین قوانین قوانین قوانین قوانین قوانین
+                    </p>
+                </div>
+            </div>
+            <div class="sub-rules">
+                <div class="sub-rule allow">
+                    <i class="fas fa-smoking"></i>
+                    <p>
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                    </p>
+                </div>
+                <div class="sub-rule not-allow">
+                    <i class="fas fa-smoking"></i>
+                    <p>
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                    </p>
+                </div>
+                <div class="sub-rule allow">
+                    <i class="fas fa-smoking"></i>
+                    <p>
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                    </p>
+                </div>
+                <div class="sub-rule not-allow">
+                    <i class="fas fa-smoking"></i>
+                    <p>
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                        قانون قانون قانون قانون 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="#!" method="GET" id="search" name="search" class="villa-search" autocomplete="off" enctype="text/plain">
         <div class="input-wrapper">
             <input type="text" id="in" name="in" readonly>
             <label for="in">تاریخ ورود</label>
@@ -629,19 +688,14 @@
                 <input type="hidden" id="in-date" name="in-date">
             </div>
         </div>
-        <div class="input-wrapper">
-            <input type="number" id="guests-num" name="guests-num">
-            <label for="guests-num">تعداد مهمان</label>
-            <i class="fas fa-map-marker-alt"></i>
-            <span class="line"></span>
-        </div>
-        <input type="submit" value="جست و جو" class="teal white-text lighten-1">   
     </form>
     <div id="rooms">
-        <div class="room hotel">
+        <div class="room hotel" id="room1">
+            <input type="hidden" value="10">
+            <!-- above input is max number of available room -->
             <div class="info">
                 <div class="room-name">
-                    نام اتاق
+                    اتاق معمولی
                 </div>
                 <div class="guests">
                     <div class="icon">
@@ -655,12 +709,14 @@
                 <div class="food">صبحانه,نهار,شام</div>
             </div>
             <div class="price">
-                <p class="discount"> تخفیف %30</p>
+                <p class="discount"> تخفیف %25</p>
+                <input type="hidden" value=".25">
                 <div class="before-discount">
-                    <p>1.000.000 تومان</p>
+                    <p>80000 تومان</p>
+                    <input type="hidden" value="80000">
                     <p>(هر شب اقامت)</p>
                 </div>
-                <p class="after-discount">750.000 تومان</p>
+                <p class="after-discount">60000 تومان</p>
             </div>
             <div class="reserve">
                 <div class="room-num">
@@ -673,7 +729,7 @@
                         <span>-</span>
                     </button>
                 </div>
-                <button>رزرو</button>
+                <button>مشاهده قیمت</button>
             </div>
             <div class="features">
                 <p> امکانات </p>
@@ -716,110 +772,74 @@
                     <p class="day">13 تیر</p>
                     <p class="my-price">1.000.000 تومان</p>
                 </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
+            </div>
+        </div>
+        <div class="room hotel" id="room2">
+            <input type="hidden" value="10">
+            <!-- above input is max number of available room -->
+            <div class="info">
+                <div class="room-name">
+                    نام ويژه
                 </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
+                <div class="guests">
+                    <div class="icon">
+                        <i class="fas fa-male"></i>
+                        <i class="fas fa-male"></i>
+                        <i class="fas fa-male"></i>
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <p class="guest-num">۴نفر</p>
                 </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
+                <div class="food">صبحانه,نهار,شام</div>
+            </div>
+            <div class="price">
+                <div class="before-discount">
+                    <p>80000 تومان</p>
+                    <input type="hidden" value="80000">
+                    <p>(هر شب اقامت)</p>
                 </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
+            </div>
+            <div class="reserve">
+                <div class="room-num">
+                    <p>تعداد اتاق</p>
+                    <button class="increase">
+                        <span>+</span>
+                    </button>
+                    <input type="number" value="0">
+                    <button class="decrease">
+                        <span>-</span>
+                    </button>
                 </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
+                <button>مشاهده قیمت</button>
+            </div>
+            <div class="features">
+                <p> امکانات </p>
+                <div class="features-wrapper">
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
                 </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
-                <div class="date full">
-                    <p class="day">13 تیر</p>
-                    <p class="capacity">تکمیل ظرفیت</p>
-                </div>
-                <div class="date discount">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                    <p class="discount">750.000 تومان</p>
-                </div>
-                <div class="date">
-                    <p class="day">13 تیر</p>
-                    <p class="my-price">1.000.000 تومان</p>
-                </div>
+            </div>
+            <div class="calender-show">
+                <button>
+                    نمایش تقویم
+                    <i class="fas fa-angle-down"></i>
+                </button>
+            </div>
+            <div class="room-calender">
                 <div class="date full">
                     <p class="day">13 تیر</p>
                     <p class="capacity">تکمیل ظرفیت</p>
@@ -835,7 +855,99 @@
                 </div>
             </div>
         </div>
-         
+        <div class="room villa">
+            <input type="hidden" id="extra-price" value="35000">
+            <div class="info">
+                <div class="room-name">
+                    نام ویلا
+                </div>
+                <div class="guests">
+                    <div class="base">
+                        <div class="icons">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <p class="base-num">5 نفر</p>
+                        <p>ظرفیت پایه</p>
+                    </div>
+                    <div class="max">
+                        <div class="icons">
+                            <i class="fas fa-male"></i>
+                            <i class="fas fa-male"></i>
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <p class="max-num">10 نفر</p>
+                        <p>حداکثر ظرفیت</p>
+                    </div>
+                </div>
+                <div class="food">صبحانه,نهار,شام</div>
+            </div>
+            <div class="price">
+                <p class="discount"> تخفیف %25</p>
+                <input type="hidden" id="discount-val" value=".25">
+                <div class="before-discount">
+                    <p>100000 تومان</p>
+                    <input type="hidden" id="base-price" value="100000">
+                    <p>(هر شب اقامت)</p>
+                </div>
+                <p class="after-discount"> </p>
+            </div>
+            <div class="reserve">
+                <div class="room-num">
+                    <p>تعداد نفرات</p>
+                    <button class="increase">
+                        <span>+</span>
+                    </button>
+                    <input type="number" readonly value="0" id="guest-num">
+                    <button class="decrease">
+                        <span>-</span>
+                    </button>
+                </div>
+                <!-- <button>رزرو</button> -->
+                <button>مشاهده قیمت</button>
+            </div>
+            <div class="features">
+                <p> امکانات </p>
+                <div class="features-wrapper">
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                    <i class="fas fa-wifi tooltip" data-text="وای فای"></i>
+                </div>
+            </div>
+            <div class="calender-show">
+                <button>
+                    نمایش تقویم
+                    <i class="fas fa-angle-down"></i>
+                </button>
+            </div>
+            <div class="room-calender">
+                <div class="date full">
+                    <p class="day">13 تیر</p>
+                    <p class="capacity">تکمیل ظرفیت</p>
+                </div>
+                <div class="date discount">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                    <p class="discount">750.000 تومان</p>
+                </div>
+                <div class="date">
+                    <p class="day">13 تیر</p>
+                    <p class="my-price">1.000.000 تومان</p>
+                </div>
+            </div>
+        </div>      
     </div>
     <div id="suggestion" class="slider-wrapper">
         <h4> مکان های اقامتی مشابه</h4>
@@ -1054,10 +1166,11 @@
         </div>
     </div>
     <form id="villa-checkout" name="villa-checkout" method="GET" action="#!" enctype="text/plain">
-        <p class="night">مبلغ قابل پرداخت برای ۲ شب اقامت</p>
+        <i class="fas fa-times"></i>
+        <p class="night"></p>
         <div class="norm-price">
-            <p class="person-num">نرخ هر شب تا ۸ نفر</p>
-            <p class="price">375000 تومان</p>
+            <p class="person-num"> </p>
+            <p class="price"></p>
         </div>
         <div class="extra-price">
             <p> نرخ هر نفر اظافه </p>
@@ -1072,6 +1185,23 @@
         <p class="desc">
             با انتخاب این ویلا شما از تاریخ ۵ مرداد تا ۱۰ مرداد و به مدت دو شب در آن اقامت خواهید داشت
         </p>
+    </form>
+    <form id="hotel-checkout" name="hotel-checkout" method="GET" action="#!" enctype="text/plain">
+        <i class="fas fa-times"></i>
+        <p class="night"></p>
+        <div class="hotels">
+            <!-- <div class="hotel" id="checkout-room1">
+                <p class="name">اتاق دوتخته(۵عدد)</p>
+                <p class="price">1000000 تومان</p>
+            </div> -->
+        </div>      
+        <div class="sum">
+            <p> مجموع </p>
+            <p class="price"></p>
+            <input type="hidden" id="sum-price" name="sum-price">
+        </div>
+        <button type="submit">پرداخت</button>
+        <p class="desc"></p>
     </form>
     <div id="footer">
         <div id="content">

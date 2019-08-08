@@ -95,6 +95,87 @@
     visibility: visible ;
     opacity: 1;
 }
+#hotel-checkout{
+    visibility: hidden ;
+    opacity: 0;
+    transition: all .4s ease-in-out ;
+    width: 20em ;
+    height: auto;
+    position: fixed ;
+    top: 50% ;
+    right: 50% ;
+    transform: translate(50%,-50%) ;
+    background-color: $whiteColor1 ;
+    box-shadow: 0 0 .2em .05em $shadowColor ;
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    padding: .5em ;
+    z-index: 6;
+    .fa-times{
+        position: absolute ;
+        cursor: pointer;
+        color: $darkColor ;
+        font-size: $font-xl ;
+        right: .5em ;
+        top: .2em ;
+    }
+    .night,.hotels,.sum,button[type="submit"],.desc{
+        margin: .5em 0 ;
+    }
+    .night{
+        font-size: $font-m ;
+        color: darken($greyColor,40%) ;
+    }
+    .hotels{
+        width: 100% ;
+        height: auto;
+        display: flex ;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        .hotel{
+            width: 100% ;
+            height: auto ;
+            display: flex ;
+            @include flex(row,space-between,center,nowrap,"") ;
+            margin-top: .5em ;
+            p{
+                font-size: $font-m - .1em ;
+                color: darken($greyColor,40%) ;
+                margin: 0 $dist2 ;
+            }       
+        }
+    }
+    .sum{
+        width: 100% ;
+        height: auto;
+        display: flex ;
+        @include flex(row,space-between,center,nowrap,"") ;
+        p{
+            font-size: $font-m - .1em ;
+            color: darken($greyColor,40%) ;
+            margin: 0 $dist2 ;
+        }       
+    }
+    button[type="submit"]{
+        width: auto ;
+        height: auto;
+        padding: ($dist1 - .2em) $dist3 ;
+        font-size: $font-l ;
+        color: white ;
+        background-color: $greenColor2 ;
+        border-radius: 2em ;
+        border: none ;
+        cursor: pointer;
+    }
+    .desc{
+        font-size: $font-m - .1em ;
+        color: darken($greyColor,40%) ;
+    }
+    
+}
+#hotel-checkout.show{
+    visibility: visible ;
+    opacity: 1;
+}
 @media screen and (max-width:800px){
     #villa-checkout{
         width: 18em ;

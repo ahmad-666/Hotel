@@ -29,6 +29,8 @@ import './styles/hotel-info.scss' ;
 import './styles/tabs.scss' ;
 import './styles/comments.scss' ;
 import './styles/reserve.scss' ;
+import './styles/checkout.scss' ;
+import './styles/rules.scss' ;
 //---------------------------------load scripts
 import '../index/scripts/header' ;
 import '../index/scripts/header-grid' ;
@@ -39,8 +41,11 @@ import '../index/scripts/calender';
 import './scripts/tabs' ;
 import './scripts/comments' ;
 //import './scripts/user-imgs' ;
+import './scripts/initCalender' ;
+import './scripts/daysNum' ;
+import './scripts/villa-checkout' ;
+import './scripts/hotel-checkout' ;
 import './scripts/reserve' ;
-import './scripts/checkout' ;
 import '../index/scripts/suggestions' ;
 import '../index/scripts/modals'
 
