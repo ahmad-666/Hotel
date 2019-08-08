@@ -182,13 +182,27 @@
         font-size: 18px ;
     }
     #confirm{font-size: 17px ;}
+    #hotel-checkout{
+        width: 18em ;
+        font-size: 18px ;
+    }
 }
 @media screen and (max-width:400px){
     #villa-checkout{
         width: 80% ;
         font-size: 17px ;
     }
+    #hotel-checkout{
+        width: 80% ;
+        font-size: 17px ;
+    }
     #confirm{font-size: 13px ;}
+}
+@media screen and (max-width:360px){
+    #hotel-checkout{
+        width: 90% ;
+        font-size: 14px ;
+    }
 }
 @media screen and (max-width:300px){
     #villa-checkout{
