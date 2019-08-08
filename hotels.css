@@ -5101,7 +5101,7 @@ header .cloud:nth-child(2) {
   -webkit-align-content: flex-start;
       -ms-flex-line-pack: start;
           align-content: flex-start;
-  border: 1px solid #c8c8c8; }
+  border: 1.2px solid gainsboro; }
   #search .input-wrapper {
     width: 12em;
     height: 3em;
@@ -6635,7 +6635,7 @@ header .cloud:nth-child(2) {
 #hotels .discount span {
   margin-right: 1em; }
 
-#hotels .front .fas:not(.fa-star) {
+#hotels .front .fas:not(.fa-star), #hotels .front .fab:not(.fa-star), #hotels .front .far:not(.fa-star) {
   position: relative;
   right: -.5em; }
 
@@ -6730,7 +6730,7 @@ header .cloud:nth-child(2) {
   font-size: .8em;
   font-weight: lighter; }
 
-#hotels .back .fas {
+#hotels .back .fas, #hotels .back .fab, #hotels .back .far {
   color: #c8c8c8;
   font-size: .8em; }
 

@@ -5101,7 +5101,7 @@ header .cloud:nth-child(2) {
   -webkit-align-content: flex-start;
       -ms-flex-line-pack: start;
           align-content: flex-start;
-  border: 1px solid #c8c8c8; }
+  border: 1.2px solid gainsboro; }
   #search .input-wrapper {
     width: 12em;
     height: 3em;
