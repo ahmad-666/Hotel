@@ -112,7 +112,13 @@ Calender.prototype.handleEvent = function(e){
                 this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
                 this.input.parentElement.querySelector('label').classList.add('up') ;
                 //this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
-                this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today}` ; //set form input value
+                let tmpMonthIndex = null ; //for times when monthIndex+1 is smaller than 10 and we want to append 0 to start of it
+                let tmtToday = null ;
+                if(this.monthIndex+1<10) tmpMonthIndex = `0${this.monthIndex+1}` ;
+                else tmpMonthIndex = `${this.monthIndex+1}`;
+                if(this.today<10) tmtToday = `0${this.today}`;
+                else tmtToday = `${this.today}`;
+                this.hiddenForm.value = `${this.year}/${tmpMonthIndex}/${tmtToday}` ; //set form input value
                 
                 this.elm.classList.remove('show') ;
                 //console.log(this.hiddenForm.value) ;
@@ -130,7 +136,13 @@ Calender.prototype.handleEvent = function(e){
                 if(this.checkThreshold(this.compareTo)){//we validate it 
                     this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
                     this.input.parentElement.querySelector('label').classList.add('up') ;
-                    this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today}` ; //set form input value                
+                    let tmpMonthIndex = null ; //for times when monthIndex+1 is smaller than 10 and we want to append 0 to start of it
+                    let tmtToday = null ;
+                    if(this.monthIndex+1<10) tmpMonthIndex = `0${this.monthIndex+1}` ;
+                    else tmpMonthIndex = `${this.monthIndex+1}`;
+                    if(this.today<10) tmtToday = `0${this.today}`;
+                    else tmtToday = `${this.today}`;
+                    this.hiddenForm.value = `${this.year}/${tmpMonthIndex}/${tmtToday}` ; //set form input value
                     this.elm.classList.remove('show') ;
                     //console.log(this.hiddenForm.value) ;
                     let evt = document.createEvent("HTMLEvents");
