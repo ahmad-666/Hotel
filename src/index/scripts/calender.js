@@ -111,7 +111,8 @@ Calender.prototype.handleEvent = function(e){
             if(!this.needThreshold){
                 this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
                 this.input.parentElement.querySelector('label').classList.add('up') ;
-                this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
+                //this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value
+                this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today}` ; //set form input value
                 
                 this.elm.classList.remove('show') ;
                 //console.log(this.hiddenForm.value) ;
@@ -129,7 +130,7 @@ Calender.prototype.handleEvent = function(e){
                 if(this.checkThreshold(this.compareTo)){//we validate it 
                     this.input.value = `${e.target.textContent} ${this.monthName} ${this.year}` ;
                     this.input.parentElement.querySelector('label').classList.add('up') ;
-                    this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today} 12:00:00` ; //set form input value                
+                    this.hiddenForm.value = `${this.year}/${this.monthIndex+1}/${this.today}` ; //set form input value                
                     this.elm.classList.remove('show') ;
                     //console.log(this.hiddenForm.value) ;
                     let evt = document.createEvent("HTMLEvents");
