@@ -11,7 +11,7 @@ mobileNav.addEventListener('touchmove',function(e){
 })
 
 let host = document.querySelector('#host') ;
-let logoImg = document.querySelector('#home img') ;
+let logoImg = document.querySelector('#myHome img') ;
 window.addEventListener('scroll',e=>{
     if(parseInt(window.scrollY) > navbar.getBoundingClientRect().height) {
         navbar.style.backgroundColor = 'rgba(10,10,10,.85)' ;
@@ -19,7 +19,7 @@ window.addEventListener('scroll',e=>{
         hamburgerLines.forEach(line => line.style.backgroundColor ="white") ;
         mobileBars.style.color = 'white' ;
         //host.style.border = '2px solid white' ;
-        logoImg.setAttribute('src',whiteLogo) ;
+        logoImg.setAttribute('src','/assets/imgs/white-logo.png') ;
     }
     else {
         navbar.style.backgroundColor = 'rgb(245,245,245)' ;
@@ -27,7 +27,7 @@ window.addEventListener('scroll',e=>{
         hamburgerLines.forEach(line => line.style.backgroundColor ="rgb(50,50,50)") ;
         mobileBars.style.color = 'rgb(57,57,57)' ;
         //host.style.border = '2px solid rgb(50,50,50)' ;
-        logoImg.setAttribute('src',blackLogo) ;
+        logoImg.setAttribute('src','/assets/imgs/black-logo.png') ;
     }
 })
 

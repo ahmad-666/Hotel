@@ -112,10 +112,10 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     top: .2em ;
     right: -.2em ;
 }
-#nav #home{
+#nav #myHome{
     width: 10em ;
 }
-#nav #home > * {margin: 0 .1em ;}
+#nav #myHome > * {margin: 0 .1em ;}
 // #nav #home p{
 //     font-size: 1em ;
 //     font-weight: 700 ;
@@ -227,7 +227,7 @@ header .cloud:nth-child(2){background-image: url('../../assets/imgs/cloud2.png')
     #slogan{font-size: 8px ;}
 }
 @media screen and (max-width:700px){
-    #nav #home ,#nav #sign-in , #nav #reg , #nav #host , #nav #hamburger{
+    #nav #myHome ,#nav #sign-in , #nav #reg , #nav #host , #nav #hamburger{
         display: none ;
     }
     #nav .fa-bars{

@@ -12,8 +12,8 @@ checkOutTrigger.addEventListener('click',toggleCheckout) ;
 function toggleCheckout(e){
     e.stopPropagation();
     checkout.classList.toggle('show') ;
-    //if(checkout.classList.contains('show')) document.addEventListener('click',docHandler) ;
-    //else document.removeEventListener('click',docHandler) ;
+    if(checkout.classList.contains('show')) document.addEventListener('click',docHandler) ;
+    else document.removeEventListener('click',docHandler) ;
 }
 let closeCheckoutIcon = checkout.querySelector('.fa-times') ;
 closeCheckoutIcon.addEventListener('click',closeCheckout) ;
@@ -33,7 +33,6 @@ function docHandler(e){
 //Villa Obj
 //-------------------------------------------
 //-------------------------------------------
-let villaElm = document.querySelector('.room.villa') ;
 function Villa(elm){
     this.elm = elm ;
     this.base = parseInt(this.elm.querySelector('.info .base-num').textContent) ;
@@ -44,6 +43,7 @@ function Villa(elm){
         this.price -= (this.price*this.discount) ;
         this.elm.querySelector('.price p.after-discount').textContent = `${this.price} تومان` ;
     }
+    this.avg = parseFloat(this.elm.querySelector('#avg').value) ;
     this.extraPrice = parseInt(this.elm.querySelector('input[type="hidden"]#extra-price').value) ;
     this.checkoutPrice = 0 ;
     this.guestsNum = this.elm.querySelector('.reserve input[type="number"]#guest-num');
@@ -60,7 +60,7 @@ Villa.prototype.handleEvent = function(e){
                 this.guestsNum.disabled = false ;
                 this.guestsNum.value = parseInt(this.guestsNum.value) + 1 ;
                 if(parseInt(this.guestsNum.value)>=1 && parseInt(this.guestsNum.value)<=this.base){
-                    this.checkoutPrice = this.price*daysNum ;
+                    this.checkoutPrice = this.avg ;
                 }
                 else if(parseInt(this.guestsNum.value)>this.base && parseInt(this.guestsNum.value)<=this.max){
                     this.checkoutPrice+=(this.extraPrice*daysNum) ;
@@ -70,7 +70,7 @@ Villa.prototype.handleEvent = function(e){
                 this.guestsNum.disabled = true ;
                 this.addGuest.removeEventListener('click',this) ;
             }    
-            updateCheckout(false)  
+            //updateCheckout(false)  
         }
         else if(e.currentTarget == this.reduceGuest) { //reduce guest
             this.addGuest.addEventListener('click',this) ;
@@ -81,7 +81,7 @@ Villa.prototype.handleEvent = function(e){
                     this.checkoutPrice = 0 ;
                 }
                 else if(parseInt(this.guestsNum.value)<=this.base && parseInt(this.guestsNum.value)>0){
-                    this.checkoutPrice = (this.price*daysNum) ;
+                    this.checkoutPrice = this.avg ;
                 }
                 else if(parseInt(this.guestsNum.value)>this.base){
                     this.checkoutPrice-=(this.extraPrice*daysNum) ;
@@ -91,11 +91,24 @@ Villa.prototype.handleEvent = function(e){
                 this.guestsNum.disabled = true ;
                 this.reduceGuest.removeEventListener('click',this) ;
             }   
-            updateCheckout(false)   
+            //updateCheckout(false)   
         }
     }
 }
+let villaElm = document.querySelector('.room.villa') ;
 let villa = new Villa(villaElm);
+let prevDaysNum = daysNum ;
+document.querySelector('.room.villa .reserve > button').addEventListener('click',e=>{
+    //villa.addGuest.removeEventListener('click',villa) ;
+    //villa.reduceGuest.removeEventListener('click',villa) ;
+    //villa = new Villa(document.querySelector('.room.villa'));
+    villa.avg = parseInt(villa.elm.querySelector('#avg').value);  
+    if(prevDaysNum == daysNum) updateCheckout(false);
+    else {
+        prevDaysNum = daysNum ;
+        updateCheckout(true) ;
+    }
+})
 //Init checkout----------------
 //Init checkout----------------
 //Init checkout----------------
@@ -106,7 +119,7 @@ let extraPriceElm = checkout.querySelector('.extra-price .price') ;
 let sumElm = checkout.querySelector('.sum .price') ;
 let checkoutInfoElm = checkout.querySelector('.desc') ;
 let hiddenSumElm = checkout.querySelector('input[type="hidden"]#sum-price') ;
-updateCheckout(false) ;
+//updateCheckout(false) ;
 function updateCheckout(changeDaysNum){
     nightCountElm.textContent = 'مبلغ قابل پرداخت برای' +  ` ${daysNum}` + 'شب اقامت' ;
     basePersonElm.textContent = 'نرخ هر شب تا' + ' ' +  `${villa.base}` + ' ' + 'نفر' ;
@@ -118,14 +131,26 @@ function updateCheckout(changeDaysNum){
             checkoutTemp = 0 ;
         }
         else if(parseInt(villa.guestsNum.value)<=villa.base && parseInt(villa.guestsNum.value)>0){
-            checkoutTemp = (villa.price*daysNum) ;
+            checkoutTemp = villa.avg ;
         }
         else if(parseInt(villa.guestsNum.value)>villa.base && parseInt(villa.guestsNum.value)<=villa.max){
-            checkoutTemp = (villa.price*daysNum) ;
+            checkoutTemp = villa.avg ;
             checkoutTemp+=(villa.extraPrice*daysNum*(villa.guestsNum.value-villa.base)) ;
         }
         villa.checkoutPrice = checkoutTemp ;
     }  
+    else{
+        if(parseInt(villa.guestsNum.value)==0){
+            villa.checkoutPrice = 0 ;
+        }
+        else if(parseInt(villa.guestsNum.value)<=villa.base && parseInt(villa.guestsNum.value)>0){
+            villa.checkoutPrice = villa.avg ;
+        }
+        else if(parseInt(villa.guestsNum.value)>villa.base && parseInt(villa.guestsNum.value)<=villa.max){
+            villa.checkoutPrice = villa.avg ;
+            villa.checkoutPrice+=(villa.extraPrice*daysNum*(villa.guestsNum.value-villa.base)) ;
+        }    
+    }
     sumElm.textContent = `${villa.checkoutPrice}` + 'تومان' ;
     hiddenSumElm.value = parseInt(sumElm.textContent) ;
     checkoutInfoElm.textContent = 
