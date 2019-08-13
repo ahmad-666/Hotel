@@ -6,6 +6,21 @@
     padding: 1em 0 4em 0 ;
     overflow: hidden;
 }
+.slider-wrapper button.show_all{
+    width: auto ;
+    font-size: 1em ;
+    position: absolute ;
+    right: 2% ;
+    transform: translateX(0%) ;
+    bottom: .5em ;
+    z-index: 4;
+    color: #26a69a ;
+    background-color: transparent ;
+    border: none ;
+    cursor: pointer;
+    
+}
+.slider-wrapper button.show_all i{transform: translateY(10%) ;}
 .slider-wrapper h4{
     display: inline-block ;
     width: auto ;
