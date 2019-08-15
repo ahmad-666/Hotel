@@ -36,8 +36,47 @@ let tooltips = document.querySelectorAll('#comments #user-comment .ranger .noUi-
 tooltips.forEach(tooltip=>{
     tooltip.classList.add('newStyle') ;
 }) 
+// handlers.forEach(handler => {
+//     handler.addEventListener('mousedown',e=>{
+//         let tooltip = handler.querySelector('.noUi-tooltip') ;
+//         console.log(tooltip)
+//         //tooltip.style.display = "block" ;
+//         tooltip.classList.remove('hide') ;
+//     }) ;
+//     handler.addEventListener('mouseup',e=>{
+//         let tooltip = handler.querySelector('.noUi-tooltip') ;
+//         console.log(tooltip)
+//         tooltip.classList.add('hide') ;
+//     }) ;
+// })
+// handlers[0].addEventListener('mousedown',e=>{
+//     let tooltip = handlers[0].querySelector('.noUi-tooltip') ;
+    
+//     tooltip.style.display = "block" ;
+//     //sconsole.log(tooltip)
+//     //tooltip.classList.remove('hide') ;
+// }) ;
+// handlers[0].addEventListener('mouseup',e=>{
+//     let tooltip = handlers[0].querySelector('.noUi-tooltip') ;
+    
+//     tooltip.style.display = "none" ;
+//     console.log(tooltip)
+//     //tooltip.classList.add('hide') ;
+// }) ;
+// let hands = document.querySelectorAll('#comments .ranger .noUi-handle')
+// hands.forEach(hand => {
+//     hand.addEventListener('mousedown',e=>{
+//         let tooltip = hand.querySelector('.noUi-tooltip') ;
+//         tooltip.style.display = "block" ;
+//     }) ;
+//     hand.addEventListener('mouseup',e=>{
+//         let tooltip = hand.querySelector('.noUi-tooltip') ;
+//         tooltip.style.display = "none" ;
+//     }) ;
+// })
 rangers.forEach(ranger => {
     ranger.noUiSlider.on('end',()=>{
         ranger.parentElement.querySelector('input[type="hidden"]').value = ranger.noUiSlider.get()[0];
     });   
 })
+

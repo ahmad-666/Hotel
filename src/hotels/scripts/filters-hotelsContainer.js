@@ -37,12 +37,12 @@ noUiSlider.create(ranger,{
         wNumb({
             decimals: 0, 
             thousand: '.', 
-            suffix: ' تومان' 
+            // suffix: ' تومان' 
         }) ,
         wNumb({
             decimals: 0, 
             thousand: '.', 
-            suffix: ' تومان' 
+            // suffix: ' تومان' 
         })      
     ] ,
     format: wNumb({ 
@@ -78,6 +78,16 @@ tooltips.forEach((tooltip,i)=>{
 }) 
 let minPrice = ranger.querySelector('#min-price') ;
 let maxPrice = ranger.querySelector('#max-price') ;
+handlers.forEach(handler => {
+    handler.addEventListener('mousedown',e=>{
+        let tooltip = handler.querySelector('.noUi-tooltip') ;
+        tooltip.style.display = "block" ;
+    }) ;
+    handler.addEventListener('mouseup',e=>{
+        let tooltip = handler.querySelector('.noUi-tooltip') ;
+        tooltip.style.display = "none" ;
+    }) ;
+})
 ranger.noUiSlider.on('end',()=>{
     minPrice.value = ranger.noUiSlider.get()[0];
     maxPrice.value = ranger.noUiSlider.get()[1];

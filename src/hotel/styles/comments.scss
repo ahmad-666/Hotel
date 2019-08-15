@@ -180,17 +180,17 @@
                 }
                 .ranger{
                     width: 100% ;
-                    height: .4em;
+                    height: .25em;
                     .noUi-handle.circle{
-                        width: 1.5em ;
-                        height: 1.5em;
+                        width: 1.2em ;
+                        height: 1.2em;
                         border-radius: 50% ;
                         background-color: #26a69a ;
                         border: none ;
                         box-shadow: none ;
                         cursor: pointer;
                         right: 0 ;
-                        transform: translate(50%,-35%) ;
+                        transform: translate(50%,-45%) ;
                         top: 0% ;
                         &::before{display: none ;}
                         &::after{display: none ;}
@@ -198,7 +198,10 @@
                             outline: none ;
                             .noUi-tooltip{outline: none ;}
                             }
-                    }                 
+                    }     
+                    .noUi-tooltip.hide{
+                        display: none !important ;
+                    }            
                     .noUi-tooltip.newStyle{
                         font-size: .7em ;
                         // transform: translate(-90%,0) ;

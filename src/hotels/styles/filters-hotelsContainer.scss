@@ -119,14 +119,14 @@
                 }
                 #ranger{    
                 width: 90% ;
-                height: 1em;
+                height: .25em;
                 margin-top: 3em ;
                 position: relative ;
                 left: 50%;
                 transform: translateX(-50%) ;
                 .noUi-handle.circle{
-                    width: 2em ;
-                    height: 2em;
+                    width: 1.2em ;
+                    height: 1.2em;
                     border-radius: 50% ;
                     background-color: #26a69a ;
                     border: none ;
@@ -141,14 +141,17 @@
                 }               
                 .noUi-handle.right{
                     right: 0 ;
-                    transform: translate(50%,-25%) ;
+                    transform: translate(0%,-40%) ;
                     top: 0% ;
                 }   
                 .noUi-handle.left{
                     left: 0 ;
                     top: 0% ;
-                    transform: translate(0%,-25%) ;
+                    transform: translate(0%,-40%) ;
                 }   
+                .noUi-tooltip{
+                    display: block ;
+                }
                 .noUi-tooltip.newStyle{
                     font-size: .8em ;
                 }
@@ -390,10 +393,18 @@
 @media screen and (max-width:350px){
     #filters-hotels{
         font-size: 12px ;
-        #filters{
-            width: 90vw ;
-        }
+        // #filters{
+        //     width: 90vw ;
+        // }
     }
+    #ranger{
+        font-size: 15px ;
+    }
+    // #filters-hotels #filters #mobile-fixer > * #ranger .noUi-tooltip.left{
+    //     transform: translate(-100%,-40%) ;
+    // }
+   
+    
 }
 @media screen and (max-width:280px){
     #hotels .hotel{
