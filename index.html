@@ -25,7 +25,7 @@
         </div>
     </header>
     <div id="nav">
-        <a id="home" href="#!">
+        <a id="myHome" href="#!">
             <img src="assets/imgs/black-logo.png" alt="logo.png">      
         </a>
         <a id="sign-in" href="#!">
@@ -288,7 +288,7 @@
                         <span class="month-day"></span>
                     </div>
                 </div>
-                <input type="hidden" id="in-date" name="in-date">
+                <input type="hidden" id="out-date" name="out-date">
             </div>
         </div>
         <input type="submit" value="جست و جو">
@@ -384,10 +384,12 @@
     </div>
     <div id="discount" class="slider-wrapper">
         <h4>تخفیف های ویژه</h4>
-        <a href="#!">
-            مشاهده همه
-            <i class="fas fa-angle-double-left"></i>
-        </a>
+        <form action="#!">
+            <button class="show_all">
+                مشاهده همه
+                <i class="fas fa-angle-double-left"></i>
+            </button>
+        </form>    
         <div class="fade left"></div>
         <div class="fade right"></div>
         <div class="btn btn-left"><i class="fas fa-chevron-left"></i></div>

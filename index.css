@@ -4625,10 +4625,10 @@ header .cloud:nth-child(2) {
   top: .2em;
   right: -.2em; }
 
-#nav #home {
+#nav #myHome {
   width: 10em; }
 
-#nav #home > * {
+#nav #myHome > * {
   margin: 0 .1em; }
 
 #nav img {
@@ -4801,7 +4801,7 @@ header .cloud:nth-child(2) {
     font-size: 8px; } }
 
 @media screen and (max-width: 700px) {
-  #nav #home, #nav #sign-in, #nav #reg, #nav #host, #nav #hamburger {
+  #nav #myHome, #nav #sign-in, #nav #reg, #nav #host, #nav #hamburger {
     display: none; }
   #nav .fa-bars {
     display: block; } }
@@ -5731,6 +5731,28 @@ header .cloud:nth-child(2) {
   margin-top: 2em;
   padding: 1em 0 4em 0;
   overflow: hidden; }
+
+.slider-wrapper button.show_all {
+  width: auto;
+  font-size: 1em;
+  position: absolute;
+  right: 2%;
+  -webkit-transform: translateX(0%);
+     -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  bottom: .5em;
+  z-index: 4;
+  color: #26a69a;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+
+.slider-wrapper button.show_all i {
+  -webkit-transform: translateY(10%);
+     -moz-transform: translateY(10%);
+      -ms-transform: translateY(10%);
+          transform: translateY(10%); }
 
 .slider-wrapper h4 {
   display: inline-block;

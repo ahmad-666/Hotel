@@ -4625,10 +4625,10 @@ header .cloud:nth-child(2) {
   top: .2em;
   right: -.2em; }
 
-#nav #home {
+#nav #myHome {
   width: 10em; }
 
-#nav #home > * {
+#nav #myHome > * {
   margin: 0 .1em; }
 
 #nav img {
@@ -4801,7 +4801,7 @@ header .cloud:nth-child(2) {
     font-size: 8px; } }
 
 @media screen and (max-width: 700px) {
-  #nav #home, #nav #sign-in, #nav #reg, #nav #host, #nav #hamburger {
+  #nav #myHome, #nav #sign-in, #nav #reg, #nav #host, #nav #hamburger {
     display: none; }
   #nav .fa-bars {
     display: block; } }
@@ -6419,7 +6419,7 @@ header .cloud:nth-child(2) {
             font-size: .8em; }
         #filters-hotels #filters #mobile-fixer > * #ranger {
           width: 90%;
-          height: 1em;
+          height: .25em;
           margin-top: 3em;
           position: relative;
           left: 50%;
@@ -6428,8 +6428,8 @@ header .cloud:nth-child(2) {
               -ms-transform: translateX(-50%);
                   transform: translateX(-50%); }
           #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.circle {
-            width: 2em;
-            height: 2em;
+            width: 1.2em;
+            height: 1.2em;
             -webkit-border-radius: 50%;
                     border-radius: 50%;
             background-color: #26a69a;
@@ -6447,18 +6447,20 @@ header .cloud:nth-child(2) {
                 outline: none; }
           #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.right {
             right: 0;
-            -webkit-transform: translate(50%, -25%);
-               -moz-transform: translate(50%, -25%);
-                -ms-transform: translate(50%, -25%);
-                    transform: translate(50%, -25%);
+            -webkit-transform: translate(0%, -40%);
+               -moz-transform: translate(0%, -40%);
+                -ms-transform: translate(0%, -40%);
+                    transform: translate(0%, -40%);
             top: 0%; }
           #filters-hotels #filters #mobile-fixer > * #ranger .noUi-handle.left {
             left: 0;
             top: 0%;
-            -webkit-transform: translate(0%, -25%);
-               -moz-transform: translate(0%, -25%);
-                -ms-transform: translate(0%, -25%);
-                    transform: translate(0%, -25%); }
+            -webkit-transform: translate(0%, -40%);
+               -moz-transform: translate(0%, -40%);
+                -ms-transform: translate(0%, -40%);
+                    transform: translate(0%, -40%); }
+          #filters-hotels #filters #mobile-fixer > * #ranger .noUi-tooltip {
+            display: block; }
           #filters-hotels #filters #mobile-fixer > * #ranger .noUi-tooltip.newStyle {
             font-size: .8em; }
           #filters-hotels #filters #mobile-fixer > * #ranger .noUi-tooltip.right {
@@ -6818,8 +6820,8 @@ header .cloud:nth-child(2) {
 @media screen and (max-width: 350px) {
   #filters-hotels {
     font-size: 12px; }
-    #filters-hotels #filters {
-      width: 90vw; } }
+  #ranger {
+    font-size: 15px; } }
 
 @media screen and (max-width: 280px) {
   #hotels .hotel {
