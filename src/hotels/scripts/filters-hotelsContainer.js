@@ -26,6 +26,7 @@ noUiSlider.create(ranger,{
     animate: true,
     animationDuration: 300,
     behaviour: 'tap', 
+    margin: 100000 ,
     range: {
         'min': [0],
         'max': [2000000]
@@ -78,21 +79,36 @@ tooltips.forEach((tooltip,i)=>{
 }) 
 let minPrice = ranger.querySelector('#min-price') ;
 let maxPrice = ranger.querySelector('#max-price') ;
+let price = document.querySelector('#price') ;
 handlers.forEach(handler => {
     handler.addEventListener('mousedown',e=>{
         let tooltip = handler.querySelector('.noUi-tooltip') ;
         tooltip.style.display = "block" ;
     }) ;
-    handler.addEventListener('mouseup',e=>{
+    //console.log(handler.parentElement)
+    price.addEventListener('mouseup',e=>{
+        tooltips.forEach(tooltip => {
+            tooltip.style.display = 'none' ;
+        })
+    }) ;
+})
+handlers.forEach(handler => {
+    handler.addEventListener('touchstart',e=>{
         let tooltip = handler.querySelector('.noUi-tooltip') ;
-        tooltip.style.display = "none" ;
+        tooltip.style.display = "block" ;
+    }) ;
+    //console.log(handler.parentElement)
+    price.addEventListener('touchend',e=>{
+        tooltips.forEach(tooltip => {
+            tooltip.style.display = 'none' ;
+        })
     }) ;
 })
 ranger.noUiSlider.on('end',()=>{
     minPrice.value = ranger.noUiSlider.get()[0];
-    maxPrice.value = ranger.noUiSlider.get()[1];
+    maxPrice.value = ranger.noUiSlider.get()[1];   
 });
-let filters = document.querySelector('#filters') ;
-filters.addEventListener('touchmove',e=>{
-    e.stopPropagation() ;
-})
+// let filters = document.querySelector('#filters') ;
+// filters.addEventListener('touchmove',e=>{
+//     e.stopPropagation() ;
+// })
