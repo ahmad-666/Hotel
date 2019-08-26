@@ -36,6 +36,17 @@ let tooltips = document.querySelectorAll('#comments #user-comment .ranger .noUi-
 tooltips.forEach(tooltip=>{
     tooltip.classList.add('newStyle') ;
 }) 
+// let params = document.querySelector('#comments .params') ;
+// handlers.forEach(handler => {
+//     handler.addEventListener('mousedown',e=>{
+//         let tooltip = handler.querySelector('.noUi-tooltip') ;
+//         tooltip.style.display = 'block' ;
+//     })
+//     params.addEventListener('mouseup',e=>{
+//         let tooltip = handler.querySelector('.noUi-tooltip') ;
+//         tooltip.style.display = 'none' ;
+//     })
+// })
 // handlers.forEach(handler => {
 //     handler.addEventListener('mousedown',e=>{
 //         let tooltip = handler.querySelector('.noUi-tooltip') ;
