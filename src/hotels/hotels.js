@@ -36,4 +36,4 @@ import './scripts/sort-currFilters' ;
 import './scripts/filters-hotelsContainer' ;
 import './scripts/tooltip' ;
 import './scripts/mobile' ;
-import '../index/scripts/modals'
+//import '../index/scripts/modals'

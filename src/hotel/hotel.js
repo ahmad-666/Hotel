@@ -47,5 +47,5 @@ import './scripts/villa-checkout' ;
 import './scripts/hotel-checkout' ;
 import './scripts/reserve' ;
 import '../index/scripts/suggestions' ;
-import '../index/scripts/modals'
+//import '../index/scripts/modals'
 

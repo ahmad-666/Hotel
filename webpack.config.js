@@ -12,6 +12,9 @@ module.exports = {
         'index' : './src/index/index.js' ,
 		'hotels' : './src/hotels/hotels.js' ,
 		'hotel' : './src/hotel/hotel.js' ,    
+		'aboutus' : './src/aboutus/aboutus.js' ,    
+		'rules' : './src/rules/rules.js' ,    
+		'faq' : './src/faq/faq.js' ,    
 		// 'villa' : './src/villa/villa.js' ,    
     },
     output: {//for each entry point we create one .js bundle(with the same name of entry point)
@@ -135,6 +138,24 @@ module.exports = {
             inject: true,
             chunks: ['hotel'],
             template: './src/hotel/hotel.html'
+        }),
+		new HtmlWebpackPlugin({
+            filename: 'aboutus.html' ,
+            inject: true,
+            chunks: ['aboutus'],
+            template: './src/aboutus/aboutus.html'
+        }),
+		new HtmlWebpackPlugin({
+            filename: 'rules.html' ,
+            inject: true,
+            chunks: ['rules'],
+            template: './src/rules/rules.html'
+        }),
+		new HtmlWebpackPlugin({
+            filename: 'faq.html' ,
+            inject: true,
+            chunks: ['faq'],
+            template: './src/faq/faq.html'
         }),
 		// new HtmlWebpackPlugin({
         //     filename: 'villa.html' ,
